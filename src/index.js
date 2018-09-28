@@ -13,3 +13,5 @@ export { Buttons } from './Buttons';
 export { Column } from './Column';
 export { Columns } from './Columns';
 export { Spinner } from './Spinner';
+
+console.log('test');
