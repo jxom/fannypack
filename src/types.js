@@ -58,6 +58,14 @@ export type DividerThemeConfig = {
   content?: Stylesheet,
   vertical?: Stylesheet
 };
+export type FieldThemeConfig = {
+  base?: Stylesheet,
+  label?: Stylesheet,
+  description?: Stylesheet,
+  hint?: Stylesheet,
+  optional?: Stylesheet,
+  validation?: Stylesheet
+};
 export type FontSizeThemeConfig = {
   small: number,
   medium: number,
@@ -163,6 +171,16 @@ export type RatingThemeConfig = {
     }
   }
 };
+export type SelectThemeConfig = {
+  base?: Stylesheet,
+  disabled?: Stylesheet,
+  focus?: Stylesheet,
+  sizes?: {
+    small?: Stylesheet,
+    medium?: Stylesheet,
+    large?: Stylesheet
+  }
+};
 export type SpinnerThemeConfig = {
   base?: Stylesheet,
   sizes?: {
@@ -221,6 +239,7 @@ export type ThemeConfig = {
   Columns?: ColumnsThemeConfig,
   Container?: ContainerThemeConfig,
   Divider?: DividerThemeConfig,
+  Field?: FieldThemeConfig,
   Group?: GroupThemeConfig,
   Heading?: HeadingThemeConfig,
   Image?: ImageThemeConfig,
@@ -233,6 +252,7 @@ export type ThemeConfig = {
   Radio?: RadioThemeConfig,
   RadioGroup?: RadioGroupThemeConfig,
   Rating?: RatingThemeConfig,
+  Select?: SelectThemeConfig,
   Spinner?: SpinnerThemeConfig,
   Table?: TableThemeConfig,
   Text?: TextThemeConfig

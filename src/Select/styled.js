@@ -1,17 +1,26 @@
 // @flow
 import styled, { css } from 'reakit/styled';
-import { tint } from 'polished';
 import { palette, theme } from 'styled-tools';
-import Input from 'reakit/Input';
+import { tint } from 'polished';
 
 import Spinner from '../Spinner';
+
+export const Icon = styled.svg`
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 2px;
+  z-index: 1;
+  fill: ${palette('text')};
+  transform: translateY(50%);
+`;
 
 export const LoadingSpinner = styled(Spinner)`
   position: absolute;
   width: 15px;
   height: 15px;
   top: 12px;
-  right: 10px;
+  right: 7px;
   z-index: 1;
 `;
 
@@ -19,6 +28,10 @@ const sizeProperties = {
   small: css`
     font-size: 0.8rem;
 
+    & + ${Icon} {
+      width: 15px;
+      height: 15px;
+    }
     & + ${LoadingSpinner} {
       width: 10px;
       height: 10px;
@@ -26,12 +39,16 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('Input.sizes.small')};
+      ${theme('Select.sizes.small')};
     }
   `,
   medium: css`
     font-size: 1.25rem;
 
+    & + ${Icon} {
+      width: 25px;
+      height: 25px;
+    }
     & + ${LoadingSpinner} {
       width: 20px;
       height: 20px;
@@ -40,12 +57,16 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('Input.sizes.medium')};
+      ${theme('Select.sizes.medium')};
     }
   `,
   large: css`
     font-size: 1.5rem;
 
+    & + ${Icon} {
+      width: 30px;
+      height: 30px;
+    }
     & + ${LoadingSpinner} {
       width: 25px;
       height: 25px;
@@ -54,7 +75,7 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('Input.sizes.large')};
+      ${theme('Select.sizes.large')};
     }
   `
 };
@@ -64,20 +85,27 @@ const stateProperties = css`
   box-shadow: ${props => tint(0.3, palette(props.state)(props))} 0px 0px 0px 1px !important;
 `;
 
-export default styled(Input)`
+export default styled.select`
+  appearance: none;
+  background: linear-gradient(rgb(255, 255, 255), rgb(249, 250, 251));
   border: 1px solid #bdbdbd;
-  box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
-  padding: 0.4em 0.6em;
+  color: ${props => (props.isPlaceholderSelected ? tint(0.4, palette('text')(props)) : palette('text')(props))};
+  padding: 0.4em 1.4em 0.4em 0.6em;
+  line-height: 1.5;
+  width: 100%;
 
   &[disabled] {
-    background-color: ${palette('whiteDarker')};
+    background: ${palette('whiteDarker')};
     box-shadow: unset;
     color: ${palette('grayLight')}
 
     & {
-      ${theme('Input.disabled')}
+      ${theme('Select.disabled')}
     }
+  }
+  &[disabled] + ${Icon} {
+    fill: ${palette('grayLight')}
   }
 
   &:focus {
@@ -87,25 +115,10 @@ export default styled(Input)`
     box-shadow: ${props => tint(0.3, palette('primary')(props))} 0px 0px 0px 1px !important;
 
     & {
-      ${theme('Input.focus')}
+      ${theme('Select.focus')}
     }
   }
 
-  &::placeholder {
-    opacity: 0.6;
-
-    & {
-      ${theme('Input.placeholder')}
-    }
-  }
-
-  & {
-    ${props =>
-      props.isFullWidth &&
-      css`
-        width: 100%;
-      `}
-  }
   & {
     ${props => props.size && sizeProperties[props.size]}
   }
@@ -113,5 +126,5 @@ export default styled(Input)`
     ${props => props.state && stateProperties}
   }
 
-  ${theme('Input.base')};
+  ${theme('Select.base')};
 `;

@@ -1,6 +1,6 @@
 {
   "name": "fannypack",
-  "version": "2.7.0",
+  "version": "2.9.1",
   "description": "An accessible, composable, and friendly React UI Kit",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -38,6 +38,7 @@
     "@reactions/component": "2.0.2",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
     "babel-preset-env": "1.7.0",
     "babel-preset-flow": "6.23.0",
     "babel-preset-react": "6.24.1",
