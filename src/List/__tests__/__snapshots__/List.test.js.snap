@@ -243,6 +243,7 @@ exports[`renders correctly for horizontal lists 1`] = `
 .c2 li {
   display: inline-block;
   margin-right: 1rem;
+  margin-bottom: unset;
 }
 
 <div

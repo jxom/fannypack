@@ -23,6 +23,7 @@ const horizontalProperties = css`
   & li {
     display: inline-block;
     margin-right: 1rem;
+    margin-bottom: unset;
   }
 
   & {
