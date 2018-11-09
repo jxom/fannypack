@@ -21,17 +21,25 @@ To start using the components, please follow these steps:
 1. Wrap your application in a `<ThemeProvider>` which is provided by **Fannypack**:
 
 ```jsx
-import { ThemeProvider } from "fannypack";
+import { ThemeProvider } from 'fannypack';
 
-const App = () => <ThemeProvider>// ... your app</ThemeProvider>;
+const App = () => (
+  <ThemeProvider>
+    // ... your app
+  </ThemeProvider>
+);
 ```
 
 2. Now you can start using components like so!:
 
 ```jsx
-import { Button } from "fannypack";
+import { Button } from 'fannypack';
 
-const MyApp = () => <Button>Hello world!</Button>;
+const MyApp = () => (
+  <Button>
+    Hello world!
+  </Button>
+);
 ```
 
 ## Contributors
