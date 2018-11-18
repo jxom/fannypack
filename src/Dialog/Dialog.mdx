@@ -21,10 +21,15 @@ import Dialog from './index';
 ## Basic Usage
 
 <Playground>
-  <Dialog title="This is a title">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
+  <Dialog>
+    <Dialog.Header>
+      <Dialog.Title>This is a title</Dialog.Title>
+    </Dialog.Header>
+    <Dialog.Content>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+      ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
+      lectus augue sit amet justo.
+    </Dialog.Content>
   </Dialog>
 </Playground>
 
@@ -33,10 +38,18 @@ import Dialog from './index';
 You can render a footer for the dialog using the `footer` prop.
 
 <Playground>
-  <Dialog title="This is a title" footer={<ActionButtons/>}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
+  <Dialog>
+    <Dialog.Header>
+      <Dialog.Title>This is a title</Dialog.Title>
+    </Dialog.Header>
+    <Dialog.Content>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+      ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
+      lectus augue sit amet justo.
+    </Dialog.Content>
+    <Dialog.Footer>
+      <ActionButtons />
+    </Dialog.Footer>
   </Dialog>
 </Playground>
 

@@ -1,6 +1,7 @@
 import { palette, theme } from 'styled-tools';
 import styled from '../styled';
 import { Box } from '../primitives';
+import Heading from '../Heading';
 import Pane from '../Pane';
 
 export const DialogContent = styled(Box)`
@@ -12,7 +13,10 @@ export const DialogContent = styled(Box)`
   }
 `;
 export const DialogHeader = styled(Box)`
+  align-items: center;
   border-bottom: 1px solid ${palette('whiteDarkest')};
+  display: flex;
+  justify-content: space-between;
   padding: ${theme('fannypack.layout.spacing.small')}rem;
   width: 100%;
   & {
@@ -25,6 +29,11 @@ export const DialogFooter = styled(Box)`
   width: 100%;
   & {
     ${theme('fannypack.Dialog.Footer.base')};
+  }
+`;
+export const DialogTitle = styled(Heading)`
+  & {
+    ${theme('fannypack.Dialog.Title.base')};
   }
 `;
 
