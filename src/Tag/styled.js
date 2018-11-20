@@ -19,7 +19,7 @@ const sizeAttributes = {
   `
 };
 
-export default styled(InlineBlock)`
+const Tag = styled(InlineBlock)`
   background-color: ${palette()};
   border-radius: 4px;
   color: ${props => palette(`${props.palette}Inverted`)};
@@ -35,3 +35,5 @@ export default styled(InlineBlock)`
     ${theme('fannypack.Tag.base')};
   }
 `;
+
+export default Tag;

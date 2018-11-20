@@ -1,6 +1,6 @@
 {
   "name": "fannypack",
-  "version": "2.14.0",
+  "version": "2.18.4",
   "description": "An accessible, composable, and friendly React UI Kit",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -21,6 +21,7 @@
     "docs": "docz dev"
   },
   "dependencies": {
+    "@blueprintjs/icons": "3.3.0",
     "classnames": "2.2.6",
     "conditional-wrap": "1.0.0",
     "lodash": "4.17.11",

@@ -11,7 +11,10 @@ export type Size = 'default' | 'small' | 'medium' | 'large';
 /* ====== START: THEMES ====== */
 export type Stylesheet = string | Object;
 export type AlertThemeConfig = {
-  base?: Stylesheet
+  base?: Stylesheet,
+  Title?: {
+    base?: Stylesheet
+  }
 };
 export type BlockquoteThemeConfig = {
   base?: Stylesheet
@@ -57,6 +60,18 @@ export type ContainerThemeConfig = {
   fluidMargin?: string,
   tabletMargin?: string
 };
+export type DialogThemeConfig = {
+  base?: Stylesheet,
+  Header?: {
+    base?: Stylesheet
+  },
+  Content?: {
+    base?: Stylesheet
+  },
+  Footer?: {
+    base?: Stylesheet
+  }
+};
 export type DividerThemeConfig = {
   base?: Stylesheet,
   content?: Stylesheet,
@@ -93,6 +108,9 @@ export type HeadingThemeConfig = {
   h5?: Stylesheet,
   h6?: Stylesheet,
   subHeading?: Stylesheet
+};
+export type IconThemeConfig = {
+  base?: Stylesheet
 };
 export type ImageThemeConfig = {
   base?: Stylesheet,
@@ -146,6 +164,13 @@ export type ListThemeConfig = {
 export type NavigationThemeConfig = {
   base?: Stylesheet
 };
+export type PaneThemeConfig = {
+  base?: Stylesheet,
+  border?: {
+    default?: Stylesheet,
+    shadow?: Stylesheet
+  }
+};
 export type ParagraphThemeConfig = {
   base?: Stylesheet
 };
@@ -187,6 +212,10 @@ export type SelectThemeConfig = {
     medium?: Stylesheet,
     large?: Stylesheet
   }
+};
+export type SetThemeConfig = {
+  base?: Stylesheet,
+  child?: Stylesheet
 };
 export type SpinnerThemeConfig = {
   base?: Stylesheet,
@@ -265,21 +294,25 @@ export type ThemeConfig = {
   Column?: ColumnThemeConfig,
   Columns?: ColumnsThemeConfig,
   Container?: ContainerThemeConfig,
+  Dialog?: DialogThemeConfig,
   Divider?: DividerThemeConfig,
   FieldWrapper?: FieldWrapperThemeConfig,
   Group?: GroupThemeConfig,
   Heading?: HeadingThemeConfig,
+  Icon?: IconThemeConfig,
   Image?: ImageThemeConfig,
   Input?: InputThemeConfig,
   Label?: LabelThemeConfig,
   Link?: LinkThemeConfig,
   List?: ListThemeConfig,
   Navigation?: NavigationThemeConfig,
+  Pane?: PaneThemeConfig,
   Paragraph?: ParagraphThemeConfig,
   Radio?: RadioThemeConfig,
   RadioGroup?: RadioGroupThemeConfig,
   Rating?: RatingThemeConfig,
   Select?: SelectThemeConfig,
+  Set?: SetThemeConfig,
   Spinner?: SpinnerThemeConfig,
   Switch?: SwitchThemeConfig,
   Table?: TableThemeConfig,

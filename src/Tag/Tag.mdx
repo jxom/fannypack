@@ -6,6 +6,8 @@ menu: Components
 
 import { Playground, PropsTable } from 'docz';
 import Tag from '../Tag';
+import Group from '../Group';
+import Set from '../Set';
 
 # Tag
 
@@ -17,45 +19,75 @@ import Tag from '../Tag';
 
 <Playground>
   <Tag>Default</Tag>
-  <Tag textTransform="uppercase" marginLeft="xxxsmall">Uppercase</Tag>
 </Playground>
 
 ## Colors
 
 <Playground>
-  <Tag palette="primary">Primary</Tag>
-  <Tag palette="secondary" marginLeft="xxxsmall">Secondary</Tag>
-  <Tag palette="success" marginLeft="xxxsmall">Success</Tag>
-  <Tag palette="warning" marginLeft="xxxsmall">Warning</Tag>
-  <Tag palette="danger" marginLeft="xxxsmall">Danger</Tag>
+  <Set spacing="xxxsmall">
+    <Tag palette="primary">Primary</Tag>
+    <Tag palette="secondary">Secondary</Tag>
+    <Tag palette="success">Success</Tag>
+    <Tag palette="warning">Warning</Tag>
+    <Tag palette="danger">Danger</Tag>
+  </Set>
 </Playground>
 
 ### Tints
 
 <Playground>
-  <Tag palette="textTint">Default</Tag>
-  <Tag palette="primaryTint" marginLeft="xxxsmall">Primary</Tag>
-  <Tag palette="secondaryTint" marginLeft="xxxsmall">Secondary</Tag>
-  <Tag palette="successTint" marginLeft="xxxsmall">Success</Tag>
-  <Tag palette="warningTint" marginLeft="xxxsmall">Warning</Tag>
-  <Tag palette="dangerTint" marginLeft="xxxsmall">Danger</Tag>
+  <Set spacing="xxxsmall">
+    <Tag palette="textTint">Default</Tag>
+    <Tag palette="primaryTint">Primary</Tag>
+    <Tag palette="secondaryTint">Secondary</Tag>
+    <Tag palette="successTint">Success</Tag>
+    <Tag palette="warningTint">Warning</Tag>
+    <Tag palette="dangerTint">Danger</Tag>
+  </Set>
 </Playground>
 
 ## Sizes
 
 <Playground>
-  <Tag>Default</Tag>
-  <Tag size="medium" marginLeft="xxxsmall">Medium</Tag>
-  <Tag size="large" marginLeft="xxxsmall">Large</Tag>
+  <Set spacing="xxxsmall">
+    <Tag>Default</Tag>
+    <Tag size="medium">Medium</Tag>
+    <Tag size="large">Large</Tag>
+  </Set>
 </Playground>
 
-## Props
+## Sets
+
+To group a set of tags, use the [`<Set>` component](/components/set).
+
+<Playground>
+  <Set spacing="xxxsmall">
+    <Tag>Hello</Tag>
+    <Tag>World</Tag>
+    <Tag>This</Tag>
+    <Tag>Is</Tag>
+    <Tag>Me</Tag>
+  </Set>
+</Playground>
+
+## Grouping
+
+You can group tags to make one tag with the `<Group>` component.
+
+<Playground>
+  <Group>
+    <Tag>Default</Tag>
+    <Tag palette="textTint">Hello</Tag>
+  </Group>
+</Playground>
+
+## `<Tag>` Props
 
 <PropsTable of={Tag} />
 
 ## Theming
 
-### Schema
+### `<Tag>` Schema
 
 ```jsx
 {

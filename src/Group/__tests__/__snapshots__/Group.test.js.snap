@@ -81,7 +81,7 @@ exports[`renders correctly for a basic group 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -152,10 +152,6 @@ exports[`renders correctly for a basic group 1`] = `
   position: relative;
 }
 
-.c2 > *:first-child {
-  border-right-width: 0;
-}
-
 .c2 > *:first-child input,
 .c2 > *:first-child select {
   border-bottom-right-radius: 0;
@@ -189,8 +185,8 @@ exports[`renders correctly for a basic group 1`] = `
     </div>
     <button
       class="c5 c6"
+      kind="default"
       style="size: default;"
-      type="default"
     >
       <span>
         Send
@@ -281,7 +277,7 @@ exports[`renders correctly for a responsive group 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -346,10 +342,6 @@ exports[`renders correctly for a responsive group 1`] = `
 .c2 select:focus {
   z-index: 1;
   position: relative;
-}
-
-.c2 > *:first-child {
-  border-right-width: 0;
 }
 
 .c2 > *:first-child input,
@@ -437,8 +429,8 @@ exports[`renders correctly for a responsive group 1`] = `
     </div>
     <button
       class="c5 c6"
+      kind="default"
       style="size: default;"
-      type="default"
     >
       <span>
         Send
@@ -529,7 +521,7 @@ exports[`renders correctly for a vertical group 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -600,10 +592,6 @@ exports[`renders correctly for a vertical group 1`] = `
   position: relative;
 }
 
-.c2 > *:first-child {
-  border-bottom-width: 0;
-}
-
 .c2 > *:first-child input,
 .c2 > *:first-child select {
   border-bottom-right-radius: 0;
@@ -637,8 +625,8 @@ exports[`renders correctly for a vertical group 1`] = `
     </div>
     <button
       class="c5 c6"
+      kind="default"
       style="size: default;"
-      type="default"
     >
       <span>
         Send

@@ -1,6 +1,7 @@
 // @flow
 import { darken, lighten, shade, tint, readableColor } from 'polished';
 import { palette as p, theme } from 'styled-tools';
+import _get from 'lodash/get';
 import type { ThemeConfig } from '../types';
 
 export default (overrides: ThemeConfig = {}): ThemeConfig => ({
@@ -12,7 +13,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     textLightest: lighten(0.2, '#435a6f'),
     textTint: tint(0.8, '#435a6f'),
     textInverted: readableColor('#435a6f'),
-    textTintInverted: '#435a6f',
+    textTintInverted: shade(0.3, '#435a6f'),
 
     black: 'black',
 
@@ -41,7 +42,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     primaryDarkest: shade(0.5, '#3926a5'),
     primaryTint: tint(0.8, '#3926a5'),
     primaryInverted: readableColor('#3926a5'),
-    primaryTintInverted: '#3926a5',
+    primaryTintInverted: shade(0.5, '#3926a5'),
 
     secondary: '#112ebb',
     secondaryLight: tint(0.1, '#112ebb'),
@@ -52,7 +53,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     secondaryDarkest: shade(0.5, '#112ebb'),
     secondaryTint: tint(0.8, '#112ebb'),
     secondaryInverted: readableColor('#112ebb'),
-    secondaryTintInverted: '#112ebb',
+    secondaryTintInverted: shade(0.5, '#112ebb'),
 
     success: '#007b2e',
     successLight: tint(0.1, '#007b2e'),
@@ -63,7 +64,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     successDarkest: shade(0.5, '#007b2e'),
     successTint: tint(0.8, '#007b2e'),
     successInverted: readableColor('#007b2e'),
-    successTintInverted: shade(0.3, '#007b2e'),
+    successTintInverted: shade(0.5, '#007b2e'),
 
     danger: '#d60027',
     dangerLight: tint(0.1, '#d60027'),
@@ -74,7 +75,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     dangerDarkest: shade(0.5, '#d60027'),
     dangerTint: tint(0.8, '#d60027'),
     dangerInverted: readableColor('#d60027'),
-    dangerTintInverted: shade(0.3, '#d60027'),
+    dangerTintInverted: shade(0.5, '#d60027'),
 
     warning: '#ffb300',
     warningLight: tint(0.1, '#ffb300'),
@@ -85,9 +86,9 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     warningDarkest: shade(0.5, '#ffb300'),
     warningTint: tint(0.8, '#ffb300'),
     warningInverted: readableColor('#ffb300'),
-    warningTintInverted: shade(0.5, '#ffb300'),
+    warningTintInverted: shade(0.7, '#ffb300'),
 
-    ...overrides.palette
+    ..._get(overrides, 'palette', {})
   },
   layout: {
     gapFactor: 0.5,
@@ -100,42 +101,46 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
       xxxsmall: 0.25,
       xxsmall: 0.5,
       xsmall: 1,
-      small: 1.5,
-      medium: 2,
-      large: 2.5,
-      xlarge: 3,
-      xxlarge: 3.5,
-      xxxlarge: 4
+      small: 1.25,
+      medium: 1.5,
+      large: 2,
+      xlarge: 2.5,
+      xxlarge: 3,
+      xxxlarge: 3.5
     },
-    ...overrides.layout
+    ..._get(overrides, 'layout', {})
   },
   fontSizes: {
     small: 0.8,
     medium: 1.5,
     large: 2,
-    xlarge: 2.25,
-    xxlarge: 2.5,
-    xxxlarge: 3
+    xlarge: 2.5,
+    xxlarge: 3,
+    xxxlarge: 4,
+    ..._get(overrides, 'fontSizes', {})
   },
   fontWeights: {
     normal: 400,
-    semibold: 500,
-    bold: 700
+    semibold: 600,
+    bold: 700,
+    ..._get(overrides, 'fontWeights', {})
   },
   Container: {
     fluidMargin: '0 2rem',
     tabletMargin: '0 1rem',
-    ...overrides.Container
+    ..._get(overrides, 'Container', {})
   },
   Table: {
     borderColor: p('grayLightest'),
+    spacing: theme('fannypack.layout.spacing.xxsmall'),
     hover: {
-      backgroundColor: p('whiteDarker')
+      backgroundColor: p('whiteDarker'),
+      ..._get(overrides, 'Table.hover', {})
     },
     striped: {
-      backgroundColor: p('whiteDark')
+      backgroundColor: p('whiteDark'),
+      ..._get(overrides, 'Table.striped', {})
     },
-    spacing: theme('fannypack.layout.spacing.xxsmall'),
-    ...overrides.Table
+    ..._get(overrides, 'Table', {})
   }
 });

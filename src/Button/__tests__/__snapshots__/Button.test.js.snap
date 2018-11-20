@@ -94,7 +94,7 @@ exports[`renders correctly for a button that is loading 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -123,6 +123,7 @@ exports[`renders correctly for a button that is loading 1`] = `
 }
 
 .c2:focus {
+  box-shadow: unset !important;
   outline: unset !important;
 }
 
@@ -151,8 +152,8 @@ exports[`renders correctly for a button that is loading 1`] = `
 >
   <button
     class="c2 c3"
+    kind="default"
     style="size: default;"
-    type="default"
   >
     <div
       class="c4 c1"
@@ -236,7 +237,7 @@ exports[`renders correctly for a button with a custom element 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -274,8 +275,8 @@ exports[`renders correctly for a button with a custom element 1`] = `
   <a
     class="c2 c3"
     href="#"
+    kind="default"
     style="size: default;"
-    type="default"
   >
     <span>
       Test
@@ -350,7 +351,7 @@ exports[`renders correctly for a button with a palette prop set 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -387,8 +388,8 @@ exports[`renders correctly for a button with a palette prop set 1`] = `
 >
   <button
     class="c2 c3"
+    kind="default"
     style="size: default;"
-    type="default"
   >
     <span>
       Test
@@ -491,7 +492,7 @@ exports[`renders correctly for a colored button that is loading 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -520,6 +521,7 @@ exports[`renders correctly for a colored button that is loading 1`] = `
 }
 
 .c2:focus {
+  box-shadow: unset !important;
   outline: unset !important;
 }
 
@@ -548,8 +550,8 @@ exports[`renders correctly for a colored button that is loading 1`] = `
 >
   <button
     class="c2 c3"
+    kind="default"
     style="size: default;"
-    type="default"
   >
     <div
       class="c4 c1"
@@ -633,7 +635,7 @@ exports[`renders correctly for a default button 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -670,8 +672,8 @@ exports[`renders correctly for a default button 1`] = `
 >
   <button
     class="c2 c3"
+    kind="default"
     style="size: default;"
-    type="default"
   >
     <span>
       Test
@@ -746,7 +748,7 @@ exports[`renders correctly for a disabled button 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -776,8 +778,8 @@ exports[`renders correctly for a disabled button 1`] = `
   <button
     class="c2 c3"
     disabled=""
+    kind="default"
     style="size: default;"
-    type="default"
   >
     <span>
       Test
@@ -852,7 +854,7 @@ exports[`renders correctly for a link button 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -879,7 +881,6 @@ exports[`renders correctly for a link button 1`] = `
 .c2 {
   border: 0;
   background: unset;
-  box-shadow: unset !important;
   color: #435a6f;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -894,8 +895,8 @@ exports[`renders correctly for a link button 1`] = `
 >
   <button
     class="c2 c3"
+    kind="link"
     style="size: default;"
-    type="link"
   >
     <span>
       Test
@@ -998,7 +999,7 @@ exports[`renders correctly for a link button that is loading 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -1025,7 +1026,6 @@ exports[`renders correctly for a link button that is loading 1`] = `
 .c2 {
   border: 0;
   background: unset;
-  box-shadow: unset !important;
   color: #435a6f;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1040,6 +1040,7 @@ exports[`renders correctly for a link button that is loading 1`] = `
 }
 
 .c2:focus {
+  box-shadow: unset !important;
   outline: unset !important;
 }
 
@@ -1068,8 +1069,8 @@ exports[`renders correctly for a link button that is loading 1`] = `
 >
   <button
     class="c2 c3"
+    kind="link"
     style="size: default;"
-    type="link"
   >
     <div
       class="c4 c1"
@@ -1084,6 +1085,170 @@ exports[`renders correctly for a link button that is loading 1`] = `
       Test
     </span>
   </button>
+</div>
+`;
+
+exports[`renders correctly for a list of buttons 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c5 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  color: inherit;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  color: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #7467c0 0px 0px 0px 2px;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.c4:hover {
+  background-color: #efefef;
+}
+
+.c4:hover:active {
+  background-color: #e3e3e3;
+}
+
+.c2 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.c2 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    class="c2 c3 c1"
+    spacing="xxsmall"
+  >
+    <button
+      class="c4 c5"
+      kind="default"
+      style="size: default;"
+    >
+      <span>
+        Test
+      </span>
+    </button>
+    <button
+      class="c4 c5"
+      kind="default"
+      style="size: default;"
+    >
+      <span>
+        Test 2
+      </span>
+    </button>
+    <button
+      class="c4 c5"
+      kind="default"
+      style="size: default;"
+    >
+      <span>
+        Test 3
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
@@ -1153,7 +1318,7 @@ exports[`renders correctly for an outlined button 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -1200,8 +1365,8 @@ exports[`renders correctly for an outlined button 1`] = `
 >
   <button
     class="c2 c3"
+    kind="outlined"
     style="size: default;"
-    type="outlined"
   >
     <span>
       Test
@@ -1304,7 +1469,7 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: 600;
   height: 2.5em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -1343,6 +1508,7 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
 }
 
 .c2:focus {
+  box-shadow: unset !important;
   outline: unset !important;
 }
 
@@ -1371,8 +1537,8 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
 >
   <button
     class="c2 c3"
+    kind="outlined"
     style="size: default;"
-    type="outlined"
   >
     <div
       class="c4 c1"
@@ -1387,5 +1553,197 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
       Test
     </span>
   </button>
+</div>
+`;
+
+exports[`renders correctly for grouped buttons 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c5 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  color: inherit;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  color: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #7467c0 0px 0px 0px 2px;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.c4:hover {
+  background-color: #efefef;
+}
+
+.c4:hover:active {
+  background-color: #e3e3e3;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c3 > *:not(:first-child):not(:last-child),
+.c3 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
+  border-radius: 0;
+  border-left-width: 0;
+}
+
+.c3 > *:first-child,
+.c3 > *:first-child .GroupItem-sc-2orogz-0 {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c3 > *:last-child,
+.c3 > *:last-child .GroupItem-sc-2orogz-0 {
+  border-top-left-radius: 0;
+  border-left-width: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c2 > * {
+  border-radius: 4px;
+}
+
+.c2 input:focus,
+.c2 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c2 > *:first-child input,
+.c2 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c2 > *:last-child input,
+.c2 > *:last-child select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c2 > *:not(:first-child):not(:last-child) > input,
+.c2 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    class="c2 c3 c1"
+    role="group"
+  >
+    <button
+      class="c4 c5"
+      kind="default"
+      style="size: default;"
+    >
+      <span>
+        Test
+      </span>
+    </button>
+    <button
+      class="c4 c5"
+      kind="default"
+      style="size: default;"
+    >
+      <span>
+        Test 2
+      </span>
+    </button>
+    <button
+      class="c4 c5"
+      kind="default"
+      style="size: default;"
+    >
+      <span>
+        Test 3
+      </span>
+    </button>
+  </div>
 </div>
 `;
