@@ -32,7 +32,19 @@ export type ButtonThemeConfig = {
   }
 };
 export type CardThemeConfig = {
-  base?: Stylesheet
+  base?: Stylesheet,
+  Content?: {
+    base?: Stylesheet
+  },
+  Header?: {
+    base?: Stylesheet
+  },
+  Footer?: {
+    base?: Stylesheet
+  },
+  Title?: {
+    base?: Stylesheet
+  }
 };
 export type CheckboxThemeConfig = {
   base?: Stylesheet,
