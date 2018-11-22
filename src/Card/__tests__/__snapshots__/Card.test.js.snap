@@ -176,11 +176,11 @@ h6.c6 {
     <div
       class="c4 c1"
     >
-      <h6
+      <h5
         class="c5 sub-heading c6 c1"
       >
         This is a title
-      </h6>
+      </h5>
       <div>
         <div>
           test
@@ -330,7 +330,7 @@ h6.c7 {
 }
 
 .c8 {
-  padding-top: 1rem;
+  padding-top: 1.25rem;
   width: 100%;
 }
 
@@ -380,11 +380,11 @@ h6.c7 {
       <div
         class="c5 c1"
       >
-        <h6
+        <h5
           class="c6 sub-heading c7 c1"
         >
           This is a title
-        </h6>
+        </h5>
       </div>
       <div
         class="c4 c1"
@@ -580,11 +580,11 @@ h6.c7 {
       <div
         class="c5 c1"
       >
-        <h6
+        <h5
           class="c6 sub-heading c7 c1"
         >
           This is a title
-        </h6>
+        </h5>
       </div>
       <div
         class="c4 c1"
