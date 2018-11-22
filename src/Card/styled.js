@@ -35,7 +35,7 @@ export const CardHeader = styled(Box)`
   }
 `;
 export const CardFooter = styled(Box)`
-  padding-top: ${theme('fannypack.layout.spacing.xsmall')}rem;
+  padding-top: ${theme('fannypack.layout.spacing.small')}rem;
   width: 100%;
   & {
     ${theme('fannypack.Card.Footer.base')};
