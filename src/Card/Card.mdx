@@ -1,7 +1,7 @@
 ---
 name: Card
-route: /layout/card
-menu: Layout
+route: /components/card
+menu: Components
 ---
 
 import { Playground, PropsTable } from 'docz';
@@ -16,8 +16,6 @@ import Set from '../Set';
 `import { Card } from 'fannypack'`
 
 ## Basic Usage
-
-A `<Card>` is the same as a `<Pane>`, except it has a default border radius, shadow and padding.
 
 <Playground>
   <Card>Hello world</Card>
@@ -49,7 +47,7 @@ You can render a header with actions for the card using the `headerActions` prop
 
 ## Footer
 
-You can render a footer for the dialog using the `footer` prop.
+You can render a footer for the card using the `footer` prop.
 
 <Playground>
   <Card title="This is a title" footer={<ActionButtons />}>
