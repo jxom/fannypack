@@ -20,6 +20,18 @@ const sizeAttributes = {
   `
 };
 
+const outlinedProperties = css`
+  & {
+    background-color: unset;
+    border: 1px solid ${palette()};
+    color: ${palette()};
+    fill: ${palette()};
+  }
+  & {
+    ${theme('fannypack.Tag.outlined')};
+  }
+`;
+
 const Tag = styled(InlineBlock)`
   background-color: ${palette()};
   border-radius: 4px;
@@ -31,21 +43,11 @@ const Tag = styled(InlineBlock)`
 
   & {
     ${props => props.size && sizeAttributes[props.size]};
-    ${props => props.kind === 'outlined' && outlinedProperties} & {
-      ${theme('fannypack.Tag.base')};
-    }
+    ${props => props.kind === 'outlined' && outlinedProperties};
   }
-`;
 
-const outlinedProperties = css`
   & {
-    background-color: unset;
-    border: 1px solid ${palette()};
-    color: ${palette()};
-    fill: ${palette()};
-  }
-  & {
-    ${theme('fannypack.Tag.outlined')};
+    ${theme('fannypack.Tag.base')};
   }
 `;
 
