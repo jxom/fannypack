@@ -1,3 +1,4 @@
+// @flow
 import styled, { css } from 'reakit/styled';
 import InlineBlock from 'reakit/InlineBlock';
 import { palette, theme } from 'styled-tools';
@@ -30,10 +31,21 @@ const Tag = styled(InlineBlock)`
 
   & {
     ${props => props.size && sizeAttributes[props.size]};
+    ${props => props.kind === 'outlined' && outlinedProperties} & {
+      ${theme('fannypack.Tag.base')};
+    }
   }
+`;
 
+const outlinedProperties = css`
   & {
-    ${theme('fannypack.Tag.base')};
+    background-color: unset;
+    border: 1px solid ${palette()};
+    color: ${palette()};
+    fill: ${palette()};
+  }
+  & {
+    ${theme('fannypack.Tag.outlined')};
   }
 `;
 
