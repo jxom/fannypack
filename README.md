@@ -5,7 +5,7 @@
 
 <p align="center"><img src="./fannypack.png" width="400px"></img></p>
 
-> Note: Fannypack is still work in progress, meaning that it's APIs will most likely change in the future until a stable 1.0.0 release.
+> Note: Fannypack is still work in progress, meaning that it's APIs will most likely change in the future until a stable release.
 
 [Read the docs here](https://fannypack.style)
 
