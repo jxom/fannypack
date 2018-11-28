@@ -1,3 +1,4 @@
+export type AvatarType = 'circle' | 'square';
 export type ButtonType = 'default' | 'outlined' | 'link';
 export type Breakpoint = 'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile';
 
@@ -10,6 +11,9 @@ export type Size = 'default' | 'small' | 'medium' | 'large';
 
 /* ====== START: THEMES ====== */
 export type Stylesheet = string | Object;
+export type AvatarThemeConfig = {
+  base?: Stylesheet
+};
 export type AlertThemeConfig = {
   base?: Stylesheet,
   Title?: {
@@ -333,6 +337,7 @@ export type ThemeConfig = {
   fontSizes?: FontSizeThemeConfig,
 
   Alert?: AlertThemeConfig,
+  Avatar?: AvatarThemeConfig,
   Blockquote?: BlockquoteThemeConfig,
   Button?: ButtonThemeConfig,
   Checkbox?: CheckboxThemeConfig,

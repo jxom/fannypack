@@ -1,0 +1,70 @@
+---
+name: Avatar
+route: /components/avatar
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Avatar from './index';
+import Set from '../Set';
+
+# Image
+
+## Import
+
+`import { Avatar } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" fit="cover" height={100} width={100} />
+</Playground>
+
+## Avatar shapes
+
+Avatars are available in two different shapes and can be changed using the `kind` prop.
+
+<Playground>
+  <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" kind="circle" alt="Bean" fit="cover" height={100} width={100} />
+</Playground>
+
+## Avatar sizes
+
+Avatars are available in four different sizes and can be added with a `size` prop.
+
+<Playground>
+  <Set>
+    <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="xsmall" />
+    <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="small" />
+    <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="medium" />
+    <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="large" />
+  </Set>
+</Playground>
+
+## Avatar using initials
+
+You can use initials to create an avatar with the `initials` prop.
+
+<Playground>
+  <Avatar palette="primary" initials="MB" alt="Bean" kind="circle" fit="cover" size="xsmall" />
+</Playground>
+
+## Props
+
+<PropsTable of={Avatar} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  fixed: string | Object,
+  fit: {
+    base: string | Object,
+    cover: string | Object,
+    contain: string | Object
+  }
+}
+```
