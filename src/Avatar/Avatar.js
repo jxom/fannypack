@@ -3,17 +3,17 @@ import React, { Fragment } from 'react';
 import classNames from 'classnames';
 import _Avatar, { AvatarCircle, AvatarInitials } from './styled';
 
-import type { AvatarType } from '../types';
+type AvatarType = 'circle' | 'square';
 
 type Size = 'default' | 'xSmall' | 'small' | 'medium' | 'large';
 
 type Props = {
   a11yLabel?: string,
-  kind: AvatarType,
+  kind?: AvatarType,
   className?: string,
   fit?: 'cover' | 'contain',
   initials?: string,
-  size: Size,
+  size?: Size,
   source?: string
 };
 
@@ -51,6 +51,7 @@ const Avatar = ({ a11yLabel, className, initials, kind, size, source, ...props }
 
 Avatar.defaultProps = {
   a11yLabel: undefined,
+  kind: 'square',
   className: null,
   fit: null,
   initials: undefined,

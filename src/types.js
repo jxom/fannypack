@@ -1,4 +1,3 @@
-export type AvatarType = 'circle' | 'square';
 export type ButtonType = 'default' | 'outlined' | 'link';
 export type Breakpoint = 'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile';
 

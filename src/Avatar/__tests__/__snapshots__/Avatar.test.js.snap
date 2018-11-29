@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly for a default avatar 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+  fill: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c2 {
+  font-size: 1.5em;
+  width: 60px;
+  height: 60px;
+}
+
+<div
+  class="c0 c1"
+>
+  <img
+    alt="Mr bean"
+    class="c2 c1"
+    kind="square"
+    src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg"
+    style="size: default;"
+  />
+</div>
+`;
+
+exports[`renders correctly for an avatar with a fit prop set 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+  fill: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c2 {
+  font-size: 1.5em;
+  width: 60px;
+  height: 60px;
+}
+
+.c2 {
+  object-fit: cover;
+}
+
+<div
+  class="c0 c1"
+>
+  <img
+    alt="Mr bean"
+    class="c2 c1"
+    kind="square"
+    src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg"
+    style="size: default;"
+  />
+</div>
+`;
+
+exports[`renders correctly for an avatar with a palette prop set 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+  fill: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #3926a5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 {
+  font-size: 1.5em;
+  width: 60px;
+  height: 60px;
+}
+
+.c3 {
+  color: #fff;
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    alt="SW"
+    class="c2"
+    kind="square"
+  >
+    <div
+      alt="SW"
+      class="c3"
+    >
+      SW
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly for an avatar with a size prop set 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+  fill: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 {
+  font-size: 3em;
+  width: 100px;
+  height: 100px;
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    alt="SW"
+    class="c2"
+    kind="square"
+  >
+    <div
+      alt="SW"
+      class=""
+    >
+      SW
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly for an avatar with an initials prop set 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+  fill: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 {
+  font-size: 1.5em;
+  width: 60px;
+  height: 60px;
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    alt="SW"
+    class="c2"
+    kind="square"
+  >
+    <div
+      alt="SW"
+      class=""
+    >
+      SW
+    </div>
+  </div>
+</div>
+`;
