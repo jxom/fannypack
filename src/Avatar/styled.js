@@ -103,6 +103,8 @@ export const AvatarCircle = styled.div`
 
   ${props => props.kind === 'circle' && circleProperties};
   ${props => sizeProperties[props.size]};
+  ${props => typeof props.size === 'number' && `height: ${props.size}px`};
+  ${props => typeof props.size === 'number' && `width: ${props.size}px`};
 
   ${theme('fannypack.Avatar.Circle.base')};
 `;
@@ -110,6 +112,8 @@ export const AvatarCircle = styled.div`
 const AvatarImage = styled(_Avatar)`
   ${props => props.kind === 'circle' && circleProperties};
   ${props => sizeProperties[props.size]};
+  ${props => typeof props.size === 'number' && `height: ${props.size}px`};
+  ${props => typeof props.size === 'number' && `width: ${props.size}px`};
 
   & {
     ${fitProperties};
