@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/sam/.nvm/versions/node/v10.9.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js test --watch
+  /Users/sam/.nvm/versions/node/v10.9.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js test
 
 PATH: 
   /Users/sam/.nvm/versions/node/v10.9.0/bin:/Users/sam/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/sam/.fastlane/bin:/Users/sam/Library/Android/sdk/platform-tools:/Users/sam/Library/Android/sdk/tools:/Users/sam/.fastlane/bin:/usr/local/opt/fzf/bin
@@ -15068,7 +15068,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c yarn flow && yarn lint && jest --watch
+  Arguments: -c yarn flow && yarn lint && jest
   Directory: /Users/sam/Documents/fannypack
   Output:
   

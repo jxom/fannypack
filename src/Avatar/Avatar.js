@@ -53,7 +53,7 @@ Avatar.defaultProps = {
   className: null,
   fit: null,
   initials: undefined,
-  size: 'default',
+  size: undefined,
   src: undefined
 };
 

@@ -62,16 +62,6 @@ const sizeProperties = {
       ${theme('fannypack.Avatar.sizes.small')};
     }
   `,
-  default: css`
-    & {
-      font-size: 24px;
-      width: 60px;
-      height: 60px;
-    }
-    & {
-      ${theme('fannypack.Avatar.sizes.small')};
-    }
-  `,
   medium: css`
     & {
       font-size: 32px;
@@ -100,20 +90,22 @@ export const AvatarCircle = styled.div`
   color: ${props => (props.fontColor ? props.fontColor : palette(`${props.palette}Inverted`)(props))};
   display: flex;
   justify-content: center;
+  font-size: 24px;
+  height: ${props => (typeof props.size === 'number' ? `${props.size}px` : '60px')};
+  width: ${props => (typeof props.size === 'number' ? `${props.size}px` : '60px')};
 
   ${props => props.kind === 'circle' && circleProperties};
-  ${props => sizeProperties[props.size]};
-  ${props => typeof props.size === 'number' && `height: ${props.size}px`};
-  ${props => typeof props.size === 'number' && `width: ${props.size}px`};
+  ${props => (typeof props.size === 'string' ? sizeProperties[props.size] : null)};
 
   ${theme('fannypack.Avatar.Circle.base')};
 `;
 
 const AvatarImage = styled(_Avatar)`
+  font-size: 24px;
+  height: ${props => (typeof props.size === 'number' ? `${props.size}px` : '60px')};
+  width: ${props => (typeof props.size === 'number' ? `${props.size}px` : '60px')};
   ${props => props.kind === 'circle' && circleProperties};
-  ${props => sizeProperties[props.size]};
-  ${props => typeof props.size === 'number' && `height: ${props.size}px`};
-  ${props => typeof props.size === 'number' && `width: ${props.size}px`};
+  ${props => (typeof props.size === 'string' ? sizeProperties[props.size] : null)};
 
   & {
     ${fitProperties};
