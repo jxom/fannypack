@@ -1,5 +1,5 @@
 // @flow
-import React, { type Element, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import classNames from 'classnames';
 import _Avatar, { AvatarCircle, AvatarInitials } from './styled';
 
@@ -12,7 +12,7 @@ type Props = {
   kind: AvatarType,
   className?: string,
   fit?: 'cover' | 'contain',
-  initials?: string | Element<any>,
+  initials?: string,
   size: Size,
   source?: string
 };
@@ -41,7 +41,9 @@ const Avatar = ({ a11yLabel, className, initials, kind, size, source, ...props }
         size={size}
         {...props}
       >
-        <AvatarInitials {...props}>{initials}</AvatarInitials>
+        <AvatarInitials {...props}>
+          {initials.split(' ').length === 2 ? initials.match(/\b\w/g) : initials.substring(0, 2)}
+        </AvatarInitials>
       </AvatarCircle>
     )}
   </Fragment>
