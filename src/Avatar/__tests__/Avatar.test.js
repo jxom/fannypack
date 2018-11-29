@@ -20,6 +20,11 @@ it('renders correctly for an avatar with a size prop set', () => {
   expect(container.firstChild).toMatchSnapshot();
 });
 
+it('renders correctly for an avatar with a custom size prop set', () => {
+  const { container } = render(<Avatar initials="SW" size={50} alt="SW" />);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
 it('renders correctly for an avatar with a palette prop set', () => {
   const { container } = render(<Avatar initials="SW" palette="primary" alt="SW" />);
   expect(container.firstChild).toMatchSnapshot();
