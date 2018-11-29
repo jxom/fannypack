@@ -17,7 +17,7 @@ import Set from '../Set';
 ## Basic Usage
 
 <Playground>
-  <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" fit="cover" height={100} width={100} />
+  <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" fit="cover" height={100} width={100} />
 </Playground>
 
 ## Avatar shapes
@@ -25,7 +25,7 @@ import Set from '../Set';
 Avatars are available in two different shapes and can be changed using the `kind` prop.
 
 <Playground>
-  <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" kind="circle" alt="Bean" fit="cover" height={100} width={100} />
+  <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" kind="circle" alt="Bean" fit="cover" height={100} width={100} />
 </Playground>
 
 ## Avatar sizes
@@ -34,11 +34,11 @@ Avatars are available in five different sizes and can be added with a `size` pro
 
 <Playground>
   <Set>
-    <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="xsmall" />
-    <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="small" />
-    <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" />
-    <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="medium" />
-    <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="large" />
+    <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="xsmall" />
+    <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="small" />
+    <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" />
+    <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="medium" />
+    <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="large" />
   </Set>
 </Playground>
 
@@ -66,12 +66,11 @@ Avatars can also be initials using the `initials` prop.
 
 ```jsx
 {
-  base: string | Object,
-  fixed: string | Object,
   fit: {
     base: string | Object,
     cover: string | Object,
-    contain: string | Object
+    contain: string | Object,
+    size: string | Object
   }
 }
 ```

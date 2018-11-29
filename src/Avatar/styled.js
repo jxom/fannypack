@@ -44,7 +44,7 @@ const fitProperties = props => {
 const sizeProperties = {
   xsmall: css`
     & {
-      font-size: 0.5em;
+      font-size: 8px;
       width: 20px;
       height: 20px;
     }
@@ -54,7 +54,7 @@ const sizeProperties = {
   `,
   small: css`
     & {
-      font-size: 1em;
+      font-size: 16px;
       width: 40px;
       height: 40px;
     }
@@ -64,7 +64,7 @@ const sizeProperties = {
   `,
   default: css`
     & {
-      font-size: 1.5em;
+      font-size: 24px;
       width: 60px;
       height: 60px;
     }
@@ -74,7 +74,7 @@ const sizeProperties = {
   `,
   medium: css`
     & {
-      font-size: 2em;
+      font-size: 32px;
       width: 80px;
       height: 80px;
     }
@@ -84,7 +84,7 @@ const sizeProperties = {
   `,
   large: css`
     & {
-      font-size: 3em;
+      font-size: 48px;
       width: 100px;
       height: 100px;
     }
@@ -97,21 +97,14 @@ const sizeProperties = {
 export const AvatarCircle = styled.div`
   align-items: center;
   background-color: ${props => palette(props.palette)(props)};
+  color: ${props => (props.fontColor ? props.fontColor : palette(`${props.palette}Inverted`)(props))};
   display: flex;
   justify-content: center;
 
   ${props => props.kind === 'circle' && circleProperties};
   ${props => sizeProperties[props.size]};
 
-  & {
-    ${fitProperties};
-  }
-
-  ${theme('fannypack.AvatarCircle.base')};
-`;
-
-export const AvatarInitials = styled.div`
-  color: ${props => (props.fontColor ? props.fontColor : palette(`${props.palette}Inverted`)(props))};
+  ${theme('fannypack.Avatar.Circle.base')};
 `;
 
 const AvatarImage = styled(_Avatar)`
@@ -122,7 +115,7 @@ const AvatarImage = styled(_Avatar)`
     ${fitProperties};
   }
 
-  ${theme('fannypack.AvatarImage.base')};
+  ${theme('fannypack.Avatar.Image.base')};
 `;
 
 export default AvatarImage;

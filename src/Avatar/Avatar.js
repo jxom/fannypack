@@ -1,11 +1,11 @@
 // @flow
 import React, { Fragment } from 'react';
 import classNames from 'classnames';
-import _Avatar, { AvatarCircle, AvatarInitials } from './styled';
+import _Avatar, { AvatarCircle } from './styled';
 
 type AvatarType = 'circle' | 'square';
 
-type Size = 'default' | 'xSmall' | 'small' | 'medium' | 'large';
+type Size = 'default' | 'xsmall' | 'small' | 'medium' | 'large';
 
 type Props = {
   a11yLabel?: string,
@@ -13,13 +13,13 @@ type Props = {
   className?: string,
   fit?: 'cover' | 'contain',
   initials?: string,
-  size?: Size,
-  source?: string
+  size?: Size | number,
+  src?: string
 };
 
-const Avatar = ({ a11yLabel, className, initials, kind, size, source, ...props }: Props) => (
+const Avatar = ({ a11yLabel, className, initials, kind, size, src, ...props }: Props) => (
   <Fragment>
-    {source && (
+    {src && (
       <_Avatar
         alt={a11yLabel}
         className={classNames({
@@ -27,7 +27,7 @@ const Avatar = ({ a11yLabel, className, initials, kind, size, source, ...props }
         })}
         kind={kind}
         size={size}
-        src={source}
+        src={src}
         {...props}
       />
     )}
@@ -41,9 +41,7 @@ const Avatar = ({ a11yLabel, className, initials, kind, size, source, ...props }
         size={size}
         {...props}
       >
-        <AvatarInitials {...props}>
-          {initials.split(' ').length === 2 ? initials.match(/\b\w/g) : initials.substring(0, 2)}
-        </AvatarInitials>
+        {initials.split(' ').length === 2 ? initials.match(/\b\w/g) : initials.substring(0, 2)}
       </AvatarCircle>
     )}
   </Fragment>
@@ -56,7 +54,7 @@ Avatar.defaultProps = {
   fit: null,
   initials: undefined,
   size: 'default',
-  source: undefined
+  src: undefined
 };
 
 export default Avatar;
