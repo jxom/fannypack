@@ -30,12 +30,13 @@ Avatars are available in two different shapes and can be changed using the `kind
 
 ## Avatar sizes
 
-Avatars are available in four different sizes and can be added with a `size` prop.
+Avatars are available in five different sizes and can be added with a `size` prop.
 
 <Playground>
   <Set>
     <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="xsmall" />
     <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="small" />
+    <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" />
     <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="medium" />
     <Avatar source="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="large" />
   </Set>
@@ -43,10 +44,16 @@ Avatars are available in four different sizes and can be added with a `size` pro
 
 ## Avatar using initials
 
-You can use initials to create an avatar with the `initials` prop.
+Avatars can also be initials using the `initials` prop.
 
 <Playground>
-  <Avatar palette="primary" initials="MB" alt="Bean" kind="circle" fit="cover" size="xsmall" />
+  <Set>
+    <Avatar palette="primary" initials="MB" alt="Bean" kind="circle" size="xsmall" />
+    <Avatar palette="success" initials="MB" alt="Bean" kind="circle" size="small" />
+    <Avatar palette="primary" initials="MB" alt="Bean" />
+    <Avatar palette="danger" initials="MB" alt="Bean" kind="circle" size="medium" />
+    <Avatar palette="warning" initials="MB" alt="Bean" kind="circle" size="large" />
+  </Set>
 </Playground>
 
 ## Props

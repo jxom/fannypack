@@ -44,6 +44,7 @@ const fitProperties = props => {
 const sizeProperties = {
   xsmall: css`
     & {
+      font-size: 0.5em;
       width: 20px;
       height: 20px;
     }
@@ -53,6 +54,7 @@ const sizeProperties = {
   `,
   small: css`
     & {
+      font-size: 1em;
       width: 40px;
       height: 40px;
     }
@@ -62,6 +64,7 @@ const sizeProperties = {
   `,
   default: css`
     & {
+      font-size: 1.5em;
       width: 60px;
       height: 60px;
     }
@@ -71,6 +74,7 @@ const sizeProperties = {
   `,
   medium: css`
     & {
+      font-size: 2em;
       width: 80px;
       height: 80px;
     }
@@ -80,8 +84,9 @@ const sizeProperties = {
   `,
   large: css`
     & {
-      width: 160px;
-      height: 160px;
+      font-size: 3em;
+      width: 100px;
+      height: 100px;
     }
     & {
       ${theme('fannypack.Avatar.sizes.large')};
@@ -89,8 +94,27 @@ const sizeProperties = {
   `
 };
 
+export const AvatarCircle = styled.div`
+  align-items: center;
+  background-color: ${props => palette(props.palette)(props)};
+  display: flex;
+  justify-content: center;
+
+  ${props => props.kind === 'circle' && circleProperties};
+  ${props => sizeProperties[props.size]};
+
+  & {
+    ${fitProperties};
+  }
+
+  ${theme('fannypack.AvatarCircle.base')};
+`;
+
 export const AvatarInitials = styled.div`
-  background-color: ${props => palette(`${props.palette}Inverted`)(props)};
+  color: ${props => (props.fontColor ? props.fontColor : palette(`${props.palette}Inverted`)(props))};
+`;
+
+const AvatarImage = styled(_Avatar)`
   ${props => props.kind === 'circle' && circleProperties};
   ${props => sizeProperties[props.size]};
 
@@ -98,18 +122,7 @@ export const AvatarInitials = styled.div`
     ${fitProperties};
   }
 
-  ${theme('fannypack.AvatarInitials.base')};
+  ${theme('fannypack.AvatarImage.base')};
 `;
 
-const Avatar = styled(_Avatar)`
-  ${props => props.kind === 'circle' && circleProperties};
-  ${props => sizeProperties[props.size]};
-
-  & {
-    ${fitProperties};
-  }
-
-  ${theme('fannypack.Avatar.base')};
-`;
-
-export default Avatar;
+export default AvatarImage;

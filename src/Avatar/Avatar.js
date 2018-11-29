@@ -1,7 +1,7 @@
 // @flow
 import React, { type Element, Fragment } from 'react';
 import classNames from 'classnames';
-import _Avatar, { AvatarInitials } from './styled';
+import _Avatar, { AvatarCircle, AvatarInitials } from './styled';
 
 import type { AvatarType } from '../types';
 
@@ -32,16 +32,17 @@ const Avatar = ({ a11yLabel, className, initials, kind, size, source, ...props }
       />
     )}
     {initials && (
-      <AvatarInitials
+      <AvatarCircle
         alt={a11yLabel}
         className={classNames({
           [className || '']: Boolean(className)
         })}
-        initials="MB"
         kind={kind}
         size={size}
         {...props}
-      />
+      >
+        <AvatarInitials {...props}>{initials}</AvatarInitials>
+      </AvatarCircle>
     )}
   </Fragment>
 );
