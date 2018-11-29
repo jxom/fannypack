@@ -1,6 +1,6 @@
 {
   "name": "fannypack",
-  "version": "2.22.1",
+  "version": "2.23.0",
   "description": "An accessible, composable, and friendly React UI Kit",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -27,7 +27,7 @@
     "lodash": "4.17.11",
     "polished": "2.3.0",
     "react-syntax-highlighter": "8.0.1",
-    "reakit": "0.15.11",
+    "reakit": "0.16.0-beta.0",
     "styled-tools": "1.5.2"
   },
   "peerDependencies": {
@@ -51,7 +51,7 @@
     "flow-bin": "0.83.0",
     "jest": "23.6.0",
     "jest-styled-components": "6.2.2",
-    "nodemon": "1.18.4",
+    "nodemon": "1.18.7",
     "nwb": "0.23.0",
     "prop-types": "15.6.2",
     "react": "16.5.2",
@@ -60,9 +60,9 @@
     "rimraf": "2.6.2"
   },
   "author": "Jake Moxey",
-  "homepage": "https://github.com/bigbellies",
+  "homepage": "https://github.com/fannypackui",
   "license": "MIT",
-  "repository": "bigbellies/fannypack",
+  "repository": "fannypackui/fannypack",
   "keywords": [
     "fannypack",
     "ui",

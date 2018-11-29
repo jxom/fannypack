@@ -1,11 +1,12 @@
 export * from './primitives';
 
-export { styled, css, injectGlobal } from './styled';
+export { styled, css, createGlobalStyle } from './styled';
 export { defaultTheme } from './themes';
 export { ThemeProvider } from './ThemeProvider';
 
 export { Alert } from './Alert';
 export { Avatar } from './Avatar';
+export { Backdrop } from './Backdrop';
 export { Blockquote } from './Blockquote';
 export { Button } from './Button';
 export { Card } from './Card';
@@ -26,6 +27,7 @@ export { Label } from './Label';
 export { Link } from './Link';
 export { List, ListItem } from './List';
 export { Navigation } from './Navigation';
+export { Overlay, OverlayContainer, OverlayShow, OverlayHide, OverlayToggle } from './Overlay';
 export { Pane } from './Pane';
 export { Paragraph } from './Paragraph';
 export { Radio, RadioGroup, RadioGroupField } from './Radio';
