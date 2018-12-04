@@ -5,20 +5,22 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "unpkg": "dist/fannypack.min.js",
+  "types": "ts/index.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn build:lib && yarn build:proxies && yarn build:docs",
+    "build": "yarn clean && yarn build:lib && yarn build:types && yarn build:proxies && yarn build:docs",
     "build:lib": "rollup -c",
+    "build:types": "tsc --emitDeclarationOnly",
     "build:docs": "docz build",
     "build:proxies": "node ./scripts/create-proxies",
-    "clean": "rimraf es/ lib/ dist/ && yarn remove-proxies",
+    "clean": "rimraf es/ lib/ dist/ ts/ && yarn remove-proxies",
     "remove-proxies": "node ./scripts/remove-proxies",
     "develop": "rollup -c -w",
     "prepublish": "yarn build",
     "postpublish": "yarn clean",
-    "flow": "flow",
-    "lint": "eslint src/",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/ --ext js,ts,tsx",
     "lint:fix": "eslint src/ --fix",
-    "test": "yarn flow && yarn lint && jest",
+    "test": "yarn type-check && yarn lint && jest",
     "docs": "docz dev"
   },
   "dependencies": {
@@ -44,17 +46,23 @@
     "@babel/preset-env": "7.2.0",
     "@babel/preset-flow": "7.0.0",
     "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.1.0",
     "@medipass/eslint-config-react-medipass": "8.3.7",
     "@reactions/component": "2.0.2",
+    "@types/jest": "23.3.10",
+    "@types/prop-types": "15.5.6",
+    "@types/react": "16.7.13",
+    "@types/react-dom": "16.0.11",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
     "babel-plugin-styled-components": "1.9.2",
     "babel-polyfill": "6.26.0",
-    "docz": "0.12.5",
+    "docz": "0.12.14",
     "docz-theme-default": "0.12.14",
     "eslint": "5.9.0",
     "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-typescript": "0.14.0",
     "flow-bin": "0.83.0",
     "jest": "23.6.0",
     "jest-styled-components": "6.3.1",
@@ -70,7 +78,9 @@
     "rollup-plugin-json": "3.1.0",
     "rollup-plugin-node-resolve": "3.4.0",
     "rollup-plugin-replace": "2.1.0",
-    "rollup-plugin-uglify": "6.0.0"
+    "rollup-plugin-uglify": "6.0.0",
+    "typescript": "3.1.1",
+    "typescript-eslint-parser": "21.0.2"
   },
   "author": "Jake Moxey",
   "homepage": "https://github.com/fannypackui",
@@ -86,6 +96,8 @@
     "transform": {
       "^.+\\.(js|jsx|tsx|ts)$": "babel-jest"
     },
+    "testMatch": ["**/__tests__/**/*.(js|ts)?(x)", "**/?(*.)+(spec|test).(ts|js)?(x)"],
+    "moduleFileExtensions": ["js", "ts", "tsx"],
     "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js"
   }
 }

@@ -1,12 +1,11 @@
-// @flow
-import React, { type Node } from 'react';
+import * as React from 'react';
 import { AlertTitle as _AlertTitle } from './styled';
 
-type Props = {
-  children: Node
-};
+export interface AlertTitleProps {
+  children: React.ReactNode;
+}
 
-const AlertTitle = ({ children, ...props }: Props) => (
+const AlertTitle = ({ children, ...props }: AlertTitleProps) => (
   <_AlertTitle use="h6" isSemiBold {...props}>
     {children}
   </_AlertTitle>

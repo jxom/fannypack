@@ -1,6 +1,9 @@
-import React from 'react';
+import * as React from 'react';
+// @ts-ignore
 import render from '../../_utils/tests/render';
-import Alert from '../Alert';
+// @ts-ignore
+import Alert from '../Alert.tsx';
+
 it('renders correctly', () => {
   const { container } = render(<Alert>Alert</Alert>);
   expect(container.firstChild).toMatchSnapshot();
