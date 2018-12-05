@@ -213,6 +213,7 @@ samp.c8 {
     class="c2 c3 "
     kind="default"
     style="size: default;"
+    type="button"
   >
     Toggle popover
   </button>
@@ -446,6 +447,7 @@ samp.c8 {
     class="c2 c3 "
     kind="default"
     style="size: default;"
+    type="button"
   >
     Toggle popover
   </button>
@@ -767,6 +769,7 @@ samp.c14 {
     class="c2 c3 "
     kind="default"
     style="size: default;"
+    type="button"
   >
     Toggle popover
   </button>
@@ -784,6 +787,7 @@ samp.c14 {
       class="c8 c9 c3 "
       kind="link"
       style="size: small;"
+      type="button"
     >
       <div
         class="c10 c11"

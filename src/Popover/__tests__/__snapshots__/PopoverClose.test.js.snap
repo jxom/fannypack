@@ -120,6 +120,7 @@ exports[`renders correctly 1`] = `
   class="c0 c1 c2 "
   kind="link"
   style="size: small;"
+  type="button"
 >
   <div
     class="c3 c4"

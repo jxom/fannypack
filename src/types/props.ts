@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types';
 
 export type ButtonType = 'default' | 'outlined' | 'link';
+export const buttonTypePropType = PropTypes.oneOf(['default', 'outlined', 'link']);
 export type Breakpoint = 'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile';
 export type Column = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 export type ColumnSpreadOffset = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 'left' | 'both' | 'right';
@@ -21,6 +22,7 @@ export type Placement =
   | 'bottom-end'
   | 'left-end';
 export type Size = 'default' | 'small' | 'medium' | 'large';
+export const sizePropType = PropTypes.oneOf(['default', 'small', 'medium', 'large']);
 
 export interface AnimateProps {
   /** Delay of the animation if one is specified. */

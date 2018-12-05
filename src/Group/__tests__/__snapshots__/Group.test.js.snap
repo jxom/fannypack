@@ -160,6 +160,7 @@ exports[`renders correctly for a basic group 1`] = `
     class="c3 c4"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Send
   </button>
@@ -374,6 +375,7 @@ exports[`renders correctly for a responsive group 1`] = `
     class="c3 c4"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Send
   </button>
@@ -540,6 +542,7 @@ exports[`renders correctly for a vertical group 1`] = `
     class="c3 c4"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Send
   </button>

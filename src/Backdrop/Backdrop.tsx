@@ -18,6 +18,7 @@ export interface BackdropProps {
   className?: string;
   /** Whether or not to show the component */
   isVisible?: boolean;
+  onClick?(): void;
 }
 
 export const Backdrop: React.SFC<BackdropProps & AnimateProps & RestrictHideProps> = ({
@@ -35,6 +36,7 @@ Backdrop.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   isVisible: PropTypes.bool,
+  onClick: PropTypes.func,
   ...animatePropTypes,
   ...restrictHidePropTypes
 };
@@ -43,6 +45,7 @@ Backdrop.defaultProps = {
   children: undefined,
   className: undefined,
   isVisible: false,
+  onClick: undefined,
   ...animateDefaultProps,
   ...restrictDefaultProps
 };

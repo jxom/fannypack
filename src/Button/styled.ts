@@ -1,11 +1,15 @@
-// @flow
-import { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
+// @ts-ignore
 import _Button from 'reakit/Button';
-import styled from 'reakit/styled';
+// @ts-ignore
+import styled, { css } from '../styled';
+import { StyledProps } from '../types';
+import { ButtonProps } from './Button';
 
-const sizeProperties = {
+type Props = StyledProps & ButtonProps;
+
+const sizeProperties: { [key: string]: string } = {
   small: css`
     & {
       font-size: 0.8em;
@@ -41,14 +45,14 @@ const linkProperties = css`
   & {
     border: 0;
     background: unset;
-    color: ${props => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
-    fill: ${props => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
+    color: ${(props: Props) => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
+    fill: ${(props: Props) => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
     text-decoration: underline;
 
     &:hover {
-      color: ${props =>
+      color: ${(props: Props) =>
         props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props))};
-      fill: ${props =>
+      fill: ${(props: Props) =>
         props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props))};
     }
   }
@@ -64,8 +68,8 @@ const outlinedProperties = css`
     fill: ${palette()};
 
     &:hover {
-      color: ${props => palette(`${props.palette}Inverted`)(props)};
-      fill: ${props => palette(`${props.palette}Inverted`)(props)};
+      color: ${(props: Props) => palette(`${props.palette}Inverted`)(props)};
+      fill: ${(props: Props) => palette(`${props.palette}Inverted`)(props)};
     }
   }
   & {
@@ -102,10 +106,10 @@ const staticProperties = css`
 
 const interactiveProperties = css`
   &:hover {
-    background-color: ${props => darken(0.05, palette()(props))};
+    background-color: ${(props: Props) => darken(0.05, palette()(props))};
   }
   &:hover:active {
-    background-color: ${props => darken(0.1, palette()(props))};
+    background-color: ${(props: Props) => darken(0.1, palette()(props))};
   }
 `;
 const loadingProperties = css`
@@ -125,11 +129,11 @@ const loadingProperties = css`
 const Button = styled(_Button)`
   align-items: center;
   background-color: ${palette()};
-  border: 1px solid ${props =>
-    darken(0.2, palette(props.palette === 'default' ? 'whiteDarker' : props.palette)(props))};
+  border: 1px solid ${(props: Props) =>
+    darken(0.2, palette(props.palette === 'default' ? 'whiteDarker' : props.palette || '')(props))};
   border-radius: 4px;
-  color: ${props => palette(`${props.palette}Inverted`)(props)};
-  fill: ${props => palette(`${props.palette}Inverted`)(props)};
+  color: ${(props: Props) => palette(`${props.palette}Inverted`)(props)};
+  fill: ${(props: Props) => palette(`${props.palette}Inverted`)(props)};
   cursor: pointer;
   display: inline-flex;
   font-weight: ${theme('fannypack.fontWeights.semibold')};
@@ -141,27 +145,23 @@ const Button = styled(_Button)`
   &:focus {
     outline: unset;
     z-index: 2;
-    box-shadow: ${props =>
+    box-shadow: ${(props: Props) =>
       palette(props.palette === 'default' ? 'primaryLighter' : `${props.palette}Lighter`)(props)} 0px 0px 0px 2px;
-  }
+  };
 
   &[disabled] {
     ${disabledProperties}
-  }
+  };
 
-  {/* Add size styles */}
-  ${props => sizeProperties[props.size]}
+  ${(props: Props) => (props.size ? sizeProperties[props.size] : null)}
 
-  {/* Add kind styles */}
-  ${props => props.kind === 'outlined' && outlinedProperties}
-  ${props => props.kind === 'link' && linkProperties}
+  ${(props: Props) => props.kind === 'outlined' && outlinedProperties}
+  ${(props: Props) => props.kind === 'link' && linkProperties}
 
-  ${props => props.isLoading && loadingProperties} {/* Add loading styles */}
-  ${props => props.isStatic && staticProperties} {/* Add static styles */}
-  ${props =>
-    !props.isStatic && !props.isLoading && !props.disabled && props.kind !== 'link'
-      ? interactiveProperties
-      : ''} /* Add interactive styles */
+  ${(props: Props) => props.isLoading && loadingProperties};
+  ${(props: Props) => props.isStatic && staticProperties};
+  ${(props: Props) =>
+    !props.isStatic && !props.isLoading && !props.disabled && props.kind !== 'link' ? interactiveProperties : ''};
 
   & {
     ${theme('fannypack.Button.base')}

@@ -432,6 +432,7 @@ h6.c8 {
             class="c9 c10 c11"
             kind="link"
             style="size: default;"
+            type="button"
           >
             <div
               class="c12 c1"
@@ -1342,6 +1343,7 @@ h6.c8 {
                 class="c12 c13 "
                 kind="default"
                 style="size: default;"
+                type="button"
               >
                 Cancel
               </button>
@@ -1349,6 +1351,7 @@ h6.c8 {
                 class="c14 c15"
                 kind="default"
                 style="size: default;"
+                type="button"
               >
                 Submit
               </button>

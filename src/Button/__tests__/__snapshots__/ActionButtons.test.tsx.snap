@@ -231,6 +231,7 @@ exports[`renders correctly for action buttons that is loading 1`] = `
     class="c2 c3"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Cancel
   </button>
@@ -238,6 +239,7 @@ exports[`renders correctly for action buttons that is loading 1`] = `
     class="c4 c5"
     kind="default"
     style="size: default;"
+    type="button"
   >
     <div
       class="c6 c1"
@@ -428,6 +430,7 @@ exports[`renders correctly for action buttons with a type 1`] = `
     class="c2 c3"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Cancel
   </button>
@@ -605,6 +608,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
     class="c2 c3"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Reject
   </button>
@@ -613,6 +617,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
     disabled=""
     kind="default"
     style="size: default;"
+    type="button"
   >
     Submit
   </button>
@@ -790,6 +795,7 @@ exports[`renders correctly for action buttons with custom text 1`] = `
     class="c2 c3"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Close
   </button>
@@ -797,6 +803,7 @@ exports[`renders correctly for action buttons with custom text 1`] = `
     class="c4 c5"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Save
   </button>
@@ -974,6 +981,7 @@ exports[`renders correctly for default action buttons 1`] = `
     class="c2 c3"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Cancel
   </button>
@@ -981,6 +989,7 @@ exports[`renders correctly for default action buttons 1`] = `
     class="c4 c5"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Submit
   </button>
@@ -1158,6 +1167,7 @@ exports[`renders correctly when a palette prop is set 1`] = `
     class="c2 c3"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Cancel
   </button>
@@ -1165,6 +1175,7 @@ exports[`renders correctly when a palette prop is set 1`] = `
     class="c4 c5"
     kind="default"
     style="size: default;"
+    type="button"
   >
     Submit
   </button>

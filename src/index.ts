@@ -14,11 +14,8 @@ export { getUniqueId } from './uniqueId';
 
 export { Alert } from './Alert';
 export { Avatar } from './Avatar';
-// @ts-ignore
 export { Backdrop } from './Backdrop';
-// @ts-ignore
 export { Blockquote } from './Blockquote';
-// @ts-ignore
 export { Button } from './Button';
 // @ts-ignore
 export { Card, CardCard, CardContent, CardFooter, CardHeader, CardTitle } from './Card';

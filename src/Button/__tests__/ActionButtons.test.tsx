@@ -1,6 +1,8 @@
-import React from 'react';
+import * as React from 'react';
+// @ts-ignore
 import render from '../../_utils/tests/render';
 import ActionButtons from '../ActionButtons';
+
 it('renders correctly for default action buttons', () => {
   const { container } = render(<ActionButtons />);
   expect(container.firstChild).toMatchSnapshot();

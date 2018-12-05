@@ -1,8 +1,12 @@
-import React from 'react';
+import * as React from 'react';
+// @ts-ignore
 import render from '../../_utils/tests/render';
 import Button from '../Button';
+// @ts-ignore
 import Set from '../../Set';
+// @ts-ignore
 import Group from '../../Group';
+
 it('renders correctly for a default button', () => {
   const { container } = render(<Button>Test</Button>);
   expect(container.firstChild).toMatchSnapshot();
@@ -10,6 +14,7 @@ it('renders correctly for a default button', () => {
 
 it('renders correctly for a button with a custom element', () => {
   const { container } = render(
+    // @ts-ignore
     <Button use="a" href="#">
       Test
     </Button>
