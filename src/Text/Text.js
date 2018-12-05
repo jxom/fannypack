@@ -1,6 +1,6 @@
 import React, { type Node } from 'react';
 
-import type { Palette } from '../types';
+import type { Palette } from '../typesold';
 import _Text from './styled';
 
 type Props = {

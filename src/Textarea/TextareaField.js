@@ -1,6 +1,6 @@
 import React, { type Node } from 'react';
 
-import type { Size } from '../types';
+import type { Size } from '../typesold';
 import Textarea from './Textarea';
 import FieldWrapper from '../FieldWrapper';
 

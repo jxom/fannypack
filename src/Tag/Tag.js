@@ -1,7 +1,7 @@
 // @flow
 import React, { type Node } from 'react';
 
-import type { Palette, Size } from '../types';
+import type { Palette, Size } from '../typesold';
 import _Tag from './styled';
 
 type Props = {

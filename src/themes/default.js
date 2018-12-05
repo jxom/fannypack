@@ -2,7 +2,7 @@
 import { darken, lighten, shade, tint, readableColor } from 'polished';
 import { palette as p, theme } from 'styled-tools';
 import _get from 'lodash/get';
-import type { ThemeConfig } from '../types';
+import type { ThemeConfig } from '../typesold';
 
 export default (overrides: ThemeConfig = {}): ThemeConfig => ({
   ...overrides,

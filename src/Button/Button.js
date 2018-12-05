@@ -3,7 +3,7 @@ import React, { Fragment, type Node } from 'react';
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
 
-import type { ButtonType, Palette, Size } from '../types';
+import type { ButtonType, Palette, Size } from '../typesold';
 import Spinner from '../Spinner';
 import _Button from './styled';
 

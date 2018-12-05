@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-import { type Palette } from '../types';
+import { type Palette } from '../typesold';
 import Text from '../Text';
 import _Switch, { HiddenSwitch, SwitchIcon } from './styled';
 

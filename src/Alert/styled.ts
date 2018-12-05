@@ -6,8 +6,9 @@ import styled, { css } from '../styled';
 // @ts-ignore
 import Heading from '../Heading';
 import { AlertProps } from './Alert';
+import { StyledProps } from '../types';
 
-type Props = AlertProps & { theme: {}; tone?: number };
+type Props = AlertProps & StyledProps;
 
 export const AlertTitle = styled(Heading)`
   font-weight: ${theme('fannypack.fontWeights.semibold')};

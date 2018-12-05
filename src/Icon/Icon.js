@@ -5,7 +5,7 @@ import { IconSvgPaths16, IconSvgPaths20 } from '@blueprintjs/icons';
 import _get from 'lodash/get';
 
 import _Icon from './styled';
-import type { Size } from '../types';
+import type { Size } from '../typesold';
 
 type Props = {
   /** A label for the icon which can be read by screen readers. This is required! */

@@ -1,7 +1,7 @@
 // @flow
 import React, { PureComponent, type Node } from 'react';
 
-import type { Size } from '../types';
+import type { Size } from '../typesold';
 import { InlineBlock } from '../primitives';
 
 import _Select, { LoadingSpinner } from './styled';

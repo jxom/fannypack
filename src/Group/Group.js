@@ -2,7 +2,7 @@
 import React, { type Node } from 'react';
 import { withTheme } from 'reakit/styled';
 import _get from 'lodash/get';
-import { type Breakpoint } from '../types';
+import { type Breakpoint } from '../typesold';
 import _Group from './styled';
 
 type Props = {

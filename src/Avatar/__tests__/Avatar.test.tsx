@@ -1,6 +1,8 @@
-import React from 'react';
+import * as React from 'react';
+// @ts-ignore
 import render from '../../_utils/tests/render';
 import Avatar from '../Avatar';
+
 it('renders correctly for a default avatar', () => {
   const { container } = render(
     <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Mr bean" />

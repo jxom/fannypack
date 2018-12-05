@@ -2,7 +2,7 @@
 import React, { type Element, type Node } from 'react';
 
 import { InlineFlex } from '../primitives';
-import type { Size } from '../types';
+import type { Size } from '../typesold';
 import _Input, { Icon, InputWrapper, LoadingSpinner } from './styled';
 
 export type Props = {

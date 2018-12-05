@@ -1,7 +1,7 @@
 // @flow
 import React, { type Node } from 'react';
 
-import type { ColumnSpread, ColumnSpreadOffset } from '../types';
+import type { ColumnSpread, ColumnSpreadOffset } from '../typesold';
 import ColumnsContext from '../Columns/ColumnsContext';
 import _Column from './styled';
 

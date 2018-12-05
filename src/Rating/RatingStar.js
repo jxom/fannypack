@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-import type { Size } from '../types';
+import type { Size } from '../typesold';
 import { RatingStar as _RatingStar } from './styled';
 
 type Props = {

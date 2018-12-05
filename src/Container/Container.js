@@ -1,6 +1,6 @@
 // @flow
 import React, { type Node } from 'react';
-import type { Breakpoint } from '../types';
+import type { Breakpoint } from '../typesold';
 import _Container from './styled';
 
 type Props = {

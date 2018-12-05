@@ -2,7 +2,7 @@
 import React, { type Node, type Element } from 'react';
 import ConditionalWrap from 'conditional-wrap';
 
-import type { Size } from '../types';
+import type { Size } from '../typesold';
 import Group from '../Group';
 import Input from './Input';
 import FieldWrapper from '../FieldWrapper';

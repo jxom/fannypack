@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react';
 import ThemeProvider from 'reakit/Provider';
 
-import type { ThemeConfig } from '../types';
+import type { ThemeConfig } from '../typesold';
 import Global from '../_utils/Global';
 import reakitTheme from '../_utils/reakitTheme';
 

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import times from 'lodash/times';
 
-import type { Size } from '../types';
+import type { Size } from '../typesold';
 import RatingStar from './RatingStar';
 import { Rating as _Rating } from './styled';
 

@@ -1,0 +1,74 @@
+// @ts-ignore
+import PropTypes from 'prop-types';
+
+export type ButtonType = 'default' | 'outlined' | 'link';
+export type Breakpoint = 'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile';
+export type Column = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+export type ColumnSpreadOffset = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 'left' | 'both' | 'right';
+export type Palette = 'default' | 'primary' | 'secondary' | 'success' | 'danger' | 'warning';
+export type Placement =
+  | 'auto'
+  | 'top'
+  | 'right'
+  | 'bottom'
+  | 'left'
+  | 'top-start'
+  | 'right-start'
+  | 'bottom-start'
+  | 'left-start'
+  | 'top-end'
+  | 'right-end'
+  | 'bottom-end'
+  | 'left-end';
+export type Size = 'default' | 'small' | 'medium' | 'large';
+
+export interface AnimateProps {
+  /** Delay of the animation if one is specified. */
+  delay?: string;
+  /** Duration of the animation if one is specified. */
+  duration?: string;
+  /** Will the component have an expand animation when it is toggled on/off? */
+  expand?: boolean | string;
+  /** Will the component have a fade animation when it is toggled on/off? */
+  fade?: boolean;
+  /** Will the component have a slide animation when it is toggled on/off? */
+  slide?: boolean | string;
+  /** Timing of the animation */
+  timing?: string;
+}
+export const animatePropTypes = {
+  delay: PropTypes.string,
+  duration: PropTypes.string,
+  expand: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  fade: PropTypes.bool,
+  slide: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  timing: PropTypes.string
+};
+export const animateDefaultProps = {
+  delay: undefined,
+  duration: '100ms',
+  expand: undefined,
+  fade: false,
+  slide: false,
+  timing: undefined
+};
+
+export interface RestrictHideProps {
+  /** Should the component be hidden when 'esc' is pressed?  */
+  hideOnEsc?: boolean;
+  /** Should the component be hidden when outside is clicked?  */
+  hideOnClickOutside?: boolean;
+}
+export const restrictHidePropTypes = {
+  hideOnEsc: PropTypes.bool,
+  hideOnClickOutside: PropTypes.bool
+};
+export const restrictDefaultProps = {
+  hideOnEsc: undefined,
+  hideOnClickOutside: undefined
+};
+
+export interface StyledProps {
+  theme: {};
+  tone?: number;
+}

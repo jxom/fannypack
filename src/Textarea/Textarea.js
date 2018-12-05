@@ -1,6 +1,6 @@
 import React, { type Node } from 'react';
 
-import type { Size } from '../types';
+import type { Size } from '../typesold';
 import _Textarea, { LoadingSpinner } from './styled';
 import { InlineBlock } from '../primitives';
 

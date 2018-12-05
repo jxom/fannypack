@@ -2,7 +2,7 @@
 import React, { type Node } from 'react';
 import classNames from 'classnames';
 
-import type { Palette } from '../types';
+import type { Palette } from '../typesold';
 import _Heading from './styled';
 
 type Props = {

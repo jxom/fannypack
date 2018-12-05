@@ -1,7 +1,7 @@
 // @flow
 import React, { type Element } from 'react';
 
-import { type Palette } from '../types';
+import { type Palette } from '../typesold';
 import Switch from './Switch';
 import FieldWrapper from '../FieldWrapper';
 

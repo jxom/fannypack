@@ -1,7 +1,7 @@
 // @flow
 import React, { type Node } from 'react';
 
-import type { Placement } from '../types';
+import type { Placement } from '../typesold';
 import _Tooltip from './styled';
 
 type Props = {

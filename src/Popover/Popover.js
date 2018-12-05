@@ -1,7 +1,7 @@
 // @flow
 import React, { Fragment, type Element } from 'react';
 
-import type { Placement } from '../types';
+import type { Placement } from '../typesold';
 import { InlineBlock } from '../primitives';
 import { getUniqueId } from '../uniqueId';
 import Pane from '../Pane';

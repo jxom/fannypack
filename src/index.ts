@@ -13,7 +13,6 @@ export { ThemeProvider } from './ThemeProvider';
 export { getUniqueId } from './uniqueId';
 
 export { Alert } from './Alert';
-// @ts-ignore
 export { Avatar } from './Avatar';
 // @ts-ignore
 export { Backdrop } from './Backdrop';
