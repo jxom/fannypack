@@ -2,7 +2,7 @@ import { palette, theme } from 'styled-tools';
 import styled from '../styled';
 import { Box } from '../primitives';
 
-import Button from '../Button';
+import Button from '../Button/Button.tsx';
 import Heading from '../Heading';
 import Pane from '../Pane';
 

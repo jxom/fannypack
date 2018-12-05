@@ -1,9 +1,11 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
+import { BackdropProps as ReakitBackdropProps } from 'reakit/ts/Backdrop/Backdrop';
 
 import _Backdrop from './styled';
 import {
+  Omit,
   AnimateProps,
   animatePropTypes,
   animateDefaultProps,
@@ -12,7 +14,7 @@ import {
   restrictDefaultProps
 } from '../types';
 
-export interface BackdropProps {
+export interface LocalBackdropProps {
   use?: any;
   children?: React.ReactNode;
   className?: string;
@@ -20,12 +22,9 @@ export interface BackdropProps {
   isVisible?: boolean;
   onClick?(): void;
 }
+type Props = LocalBackdropProps & AnimateProps & RestrictHideProps;
 
-export const Backdrop: React.SFC<BackdropProps & AnimateProps & RestrictHideProps> = ({
-  children,
-  isVisible,
-  ...props
-}) => (
+export const Backdrop: React.SFC<Props> = ({ children, isVisible, ...props }) => (
   <_Backdrop visible={isVisible} {...props}>
     {children}
   </_Backdrop>
@@ -50,4 +49,7 @@ Backdrop.defaultProps = {
   ...restrictDefaultProps
 };
 
-export default Backdrop;
+export type BackdropProps = Props & ReakitBackdropProps;
+//@ts-ignore
+const C: React.SFC<BackdropProps> = Backdrop;
+export default C;

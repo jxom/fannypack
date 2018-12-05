@@ -1,7 +1,7 @@
 import Popover from 'reakit/Popover';
 import { theme } from 'styled-tools';
 import styled from '../styled';
-import Button from '../Button';
+import Button from '../Button/Button.tsx';
 
 export const PopoverHide = styled(Popover.Hide)`
   ${theme('fannypack.Popover.Hide.base')};

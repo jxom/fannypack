@@ -2,14 +2,13 @@
 import React, { type Node, type Element } from 'react';
 
 import { getUniqueId } from '../uniqueId';
-import { type Props as ActionButtonsProps } from '../Button/ActionButtons';
 import Dialog from '../Dialog';
 import Modal from '../Modal';
 
 type Props = {
   a11yDescriptionId?: string,
   a11yTitleId?: string,
-  actionButtonsProps?: ActionButtonsProps,
+  actionButtonsProps?: Object,
   children: Node,
   className?: string,
   /** Delay of the animation if one is specified. */

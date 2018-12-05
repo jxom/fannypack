@@ -137,7 +137,6 @@ exports[`renders correctly for a button that is loading 1`] = `
 <button
   class="c0 c1"
   kind="default"
-  style="size: default;"
   type="button"
 >
   <div
@@ -222,7 +221,6 @@ exports[`renders correctly for a button with a custom element 1`] = `
   class="c0 c1"
   href="#"
   kind="default"
-  style="size: default;"
   type="button"
 >
   Test
@@ -293,7 +291,6 @@ exports[`renders correctly for a button with a palette prop set 1`] = `
 <button
   class="c0 c1"
   kind="default"
-  style="size: default;"
   type="button"
 >
   Test
@@ -437,7 +434,6 @@ exports[`renders correctly for a colored button that is loading 1`] = `
 <button
   class="c0 c1"
   kind="default"
-  style="size: default;"
   type="button"
 >
   <div
@@ -521,7 +517,6 @@ exports[`renders correctly for a default button 1`] = `
 <button
   class="c0 c1"
   kind="default"
-  style="size: default;"
   type="button"
 >
   Test
@@ -585,7 +580,6 @@ exports[`renders correctly for a disabled button 1`] = `
   class="c0 c1"
   disabled=""
   kind="default"
-  style="size: default;"
   type="button"
 >
   Test
@@ -662,7 +656,6 @@ exports[`renders correctly for a link button 1`] = `
 <button
   class="c0 c1"
   kind="link"
-  style="size: default;"
   type="button"
 >
   Test
@@ -820,7 +813,6 @@ exports[`renders correctly for a link button that is loading 1`] = `
 <button
   class="c0 c1"
   kind="link"
-  style="size: default;"
   type="button"
 >
   <div
@@ -950,7 +942,6 @@ exports[`renders correctly for a list of buttons 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Test
@@ -958,7 +949,6 @@ exports[`renders correctly for a list of buttons 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Test 2
@@ -966,7 +956,6 @@ exports[`renders correctly for a list of buttons 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Test 3
@@ -1050,7 +1039,6 @@ exports[`renders correctly for an outlined button 1`] = `
 <button
   class="c0 c1"
   kind="outlined"
-  style="size: default;"
   type="button"
 >
   Test
@@ -1206,7 +1194,6 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
 <button
   class="c0 c1"
   kind="outlined"
-  style="size: default;"
   type="button"
 >
   <div
@@ -1363,7 +1350,6 @@ exports[`renders correctly for grouped buttons 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Test
@@ -1371,7 +1357,6 @@ exports[`renders correctly for grouped buttons 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Test 2
@@ -1379,7 +1364,6 @@ exports[`renders correctly for grouped buttons 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Test 3

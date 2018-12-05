@@ -1,6 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
-import Button from '../../Button';
+import Button from '../../Button/Button.tsx';
 import Group from '../Group';
 import Box from 'reakit/Box';
 it('renders correctly for a basic group', () => {

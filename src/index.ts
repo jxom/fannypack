@@ -1,10 +1,8 @@
 // NOTE: All modules with '@ts-ignores' are modules pending TypeScript conversion.
 
-// @ts-ignore
 export * from './primitives';
+export * from './styled';
 
-// @ts-ignore
-export { styled, css, createGlobalStyle } from './styled';
 // @ts-ignore
 export { defaultTheme } from './themes';
 // @ts-ignore

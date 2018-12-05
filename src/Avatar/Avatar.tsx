@@ -3,9 +3,10 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import _Avatar, { AvatarCircle } from './styled';
-import { Palette } from '../types';
+import { AvatarProps as ReakitAvatarProps } from 'reakit/ts';
+import { Omit } from '../types';
 
-export interface AvatarProps {
+export interface LocalAvatarProps {
   a11yLabel?: string;
   alt?: string;
   color?: string;
@@ -14,12 +15,12 @@ export interface AvatarProps {
   fitPosition?: string;
   initials?: string;
   kind?: 'circle' | 'square';
-  palette?: Palette;
+  palette?: string;
   size?: number | 'default' | 'xsmall' | 'small' | 'medium' | 'large';
   src?: string;
 }
 
-const defaultProps: Partial<AvatarProps> = {
+const defaultProps: Partial<LocalAvatarProps> = {
   a11yLabel: undefined,
   alt: undefined,
   kind: 'square',
@@ -33,7 +34,7 @@ const defaultProps: Partial<AvatarProps> = {
   src: undefined
 };
 
-export const Avatar: React.SFC<AvatarProps> = ({ a11yLabel, className, initials, kind, size, src, ...props }) => (
+export const Avatar: React.SFC<LocalAvatarProps> = ({ a11yLabel, className, initials, size, src, ...props }) => (
   <React.Fragment>
     {src && (
       <_Avatar
@@ -41,20 +42,17 @@ export const Avatar: React.SFC<AvatarProps> = ({ a11yLabel, className, initials,
         className={classNames({
           [className || '']: Boolean(className)
         })}
-        kind={kind}
-        size={size}
+        styledSize={size}
         src={src}
         {...props}
       />
     )}
     {initials && (
       <AvatarCircle
-        alt={a11yLabel}
         className={classNames({
           [className || '']: Boolean(className)
         })}
-        kind={kind}
-        size={size}
+        styledSize={size}
         {...props}
       >
         {initials.split(' ').length === 2 ? initials.match(/\b\w/g) : initials.substring(0, 2)}
@@ -78,4 +76,6 @@ Avatar.propTypes = {
 };
 Avatar.defaultProps = defaultProps;
 
-export default Avatar;
+export type AvatarProps = LocalAvatarProps & Omit<ReakitAvatarProps, 'size'>;
+const C: React.SFC<AvatarProps> = Avatar;
+export default C;

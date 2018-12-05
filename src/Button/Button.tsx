@@ -1,12 +1,11 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-// @ts-ignore
-import styled from 'reakit/styled';
-// @ts-ignore
-import Box from 'reakit/Box';
+import { Box } from '../primitives';
+import styled from '../styled';
+import { ButtonProps as ReakitButtonProps } from 'reakit/ts/Button/Button';
 
-import { ButtonType, buttonTypePropType, Size, sizePropType } from '../types';
+import { Omit, ButtonType, buttonTypePropType, Size, sizePropType } from '../types';
 // @ts-ignore
 import Spinner from '../Spinner';
 import _Button from './styled';
@@ -26,7 +25,7 @@ export const SpinnerWrapper = styled(Box)`
   }
 `;
 
-export interface ButtonProps {
+export interface LocalButtonProps {
   use?: any;
   /** Specifies that the button should have focus when the page loads. */
   autoFocus?: boolean;
@@ -40,18 +39,12 @@ export interface ButtonProps {
   /** Makes the button not interactable. */
   isStatic?: boolean;
   kind?: ButtonType;
-  /** Callback when clicked */
-  onClick?(): void;
-  /** Callback when button becomes focussed */
-  onFocus?(): void;
-  /** Callback when focus leaves button */
-  onBlur?(): void;
   palette?: string;
   size?: Size;
   type?: string;
 }
 
-const defaultProps: Partial<ButtonProps> = {
+const defaultProps: Partial<LocalButtonProps> = {
   use: undefined,
   autoFocus: false,
   className: undefined,
@@ -60,15 +53,12 @@ const defaultProps: Partial<ButtonProps> = {
   isLoading: false,
   isStatic: false,
   kind: 'default',
-  onClick: undefined,
-  onFocus: undefined,
-  onBlur: undefined,
   palette: 'default',
   size: 'default',
   type: 'button'
 };
 
-export const Button: React.SFC<ButtonProps> = ({
+export const Button = ({
   children,
   className,
   disabled,
@@ -78,7 +68,7 @@ export const Button: React.SFC<ButtonProps> = ({
   palette,
   size,
   ...props
-}) => {
+}: LocalButtonProps) => {
   return (
     <_Button
       className={className}
@@ -87,7 +77,7 @@ export const Button: React.SFC<ButtonProps> = ({
       isStatic={isStatic}
       kind={kind}
       palette={palette}
-      size={size}
+      styledSize={size}
       {...props}
     >
       {isLoading ? (
@@ -114,13 +104,13 @@ Button.propTypes = {
   isLoading: PropTypes.bool,
   isStatic: PropTypes.bool,
   kind: buttonTypePropType,
-  onClick: PropTypes.func,
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
   palette: PropTypes.string,
   size: sizePropType,
   type: PropTypes.string
 };
 Button.defaultProps = defaultProps;
 
-export default Button;
+export type ButtonProps = LocalButtonProps & Omit<ReakitButtonProps, 'size'>;
+//@ts-ignore
+const C: React.SFC<ButtonProps> = Button;
+export default C;

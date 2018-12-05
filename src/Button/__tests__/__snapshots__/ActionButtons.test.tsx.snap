@@ -230,7 +230,6 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Cancel
@@ -238,7 +237,6 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   <button
     class="c4 c5"
     kind="default"
-    style="size: default;"
     type="button"
   >
     <div
@@ -429,7 +427,6 @@ exports[`renders correctly for action buttons with a type 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Cancel
@@ -437,7 +434,6 @@ exports[`renders correctly for action buttons with a type 1`] = `
   <button
     class="c4 c5"
     kind="default"
-    style="size: default;"
     type="submit"
   >
     Submit
@@ -607,7 +603,6 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Reject
@@ -616,7 +611,6 @@ exports[`renders correctly for action buttons with custom props 1`] = `
     class="c4 c5"
     disabled=""
     kind="default"
-    style="size: default;"
     type="button"
   >
     Submit
@@ -794,7 +788,6 @@ exports[`renders correctly for action buttons with custom text 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Close
@@ -802,7 +795,6 @@ exports[`renders correctly for action buttons with custom text 1`] = `
   <button
     class="c4 c5"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Save
@@ -980,7 +972,6 @@ exports[`renders correctly for default action buttons 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Cancel
@@ -988,7 +979,6 @@ exports[`renders correctly for default action buttons 1`] = `
   <button
     class="c4 c5"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Submit
@@ -1166,7 +1156,6 @@ exports[`renders correctly when a palette prop is set 1`] = `
   <button
     class="c2 c3"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Cancel
@@ -1174,7 +1163,6 @@ exports[`renders correctly when a palette prop is set 1`] = `
   <button
     class="c4 c5"
     kind="default"
-    style="size: default;"
     type="button"
   >
     Submit

@@ -2,22 +2,23 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
+import { BlockquoteProps as ReakitBlockquoteProps } from 'reakit/ts/Blockquote/Blockquote';
 
 import { Palette } from '../types';
 import _Blockquote from './styled';
 
-export interface BlockquoteProps {
+export interface LocalBlockquoteProps {
   children: React.ReactNode;
   className?: string;
   palette?: Palette;
 }
 
-const defaultProps: Partial<BlockquoteProps> = {
+const defaultProps: Partial<LocalBlockquoteProps> = {
   className: undefined,
   palette: undefined
 };
 
-const Blockquote: React.SFC<BlockquoteProps> = ({ children, className, ...props }) => (
+const Blockquote: React.SFC<LocalBlockquoteProps> = ({ children, className, ...props }) => (
   <_Blockquote className={className} {...props}>
     {children}
   </_Blockquote>
@@ -30,4 +31,6 @@ Blockquote.propTypes = {
 };
 Blockquote.defaultProps = defaultProps;
 
-export default Blockquote;
+export type BlockquoteProps = LocalBlockquoteProps & ReakitBlockquoteProps;
+const C: React.SFC<BlockquoteProps> = Blockquote;
+export default C;

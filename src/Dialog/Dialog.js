@@ -3,7 +3,7 @@ import React, { type Element, type Node } from 'react';
 
 import { getUniqueId } from '../uniqueId';
 import { Box } from '../primitives';
-import ActionButtons, { type Props as ActionButtonsProps } from '../Button/ActionButtons';
+import ActionButtons from '../Button/ActionButtons.tsx';
 import DialogDialog from './DialogDialog';
 import DialogContent from './DialogContent';
 import DialogHeader from './DialogHeader';
@@ -12,7 +12,7 @@ import DialogTitle from './DialogTitle';
 import DialogClose from './DialogClose';
 
 type Props = {
-  actionButtonsProps?: ActionButtonsProps,
+  actionButtonsProps?: Object,
   a11yDescriptionId?: string,
   a11yTitleId?: string,
   border?: true | 'shadow',

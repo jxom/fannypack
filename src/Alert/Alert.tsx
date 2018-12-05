@@ -1,13 +1,14 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
+import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import _Alert from './styled';
 import AlertTitle from './AlertTitle';
 // @ts-ignore
 import Text from '../Text';
 
-export interface AlertProps {
+export interface LocalAlertProps {
   className?: string;
   children?: React.ReactNode;
   hasTint?: boolean;
@@ -15,7 +16,7 @@ export interface AlertProps {
   title?: string;
 }
 
-const defaultProps: Partial<AlertProps> = {
+const defaultProps: Partial<LocalAlertProps> = {
   className: undefined,
   children: undefined,
   hasTint: false,
@@ -23,7 +24,7 @@ const defaultProps: Partial<AlertProps> = {
   title: undefined
 };
 
-export const Alert: React.SFC<AlertProps> = ({ className, children, palette, title, ...props }) => (
+export const Alert: React.SFC<LocalAlertProps> = ({ className, children, palette, title, ...props }) => (
   <_Alert role="alert" className={className} palette={palette} {...props}>
     {title && <AlertTitle>{title}</AlertTitle>}
     {typeof children === 'string' ? <Text>{children}</Text> : children}
@@ -39,4 +40,6 @@ Alert.propTypes = {
 };
 Alert.defaultProps = defaultProps;
 
-export default Alert;
+export type AlertProps = LocalAlertProps & ReakitBoxProps;
+const C: React.SFC<AlertProps> = Alert;
+export default C;

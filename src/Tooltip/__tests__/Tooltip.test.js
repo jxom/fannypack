@@ -1,6 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
-import Button from '../../Button';
+import Button from '../../Button/Button.tsx';
 import Tooltip from '../Tooltip';
 
 it('renders correctly for a default tooltip', () => {

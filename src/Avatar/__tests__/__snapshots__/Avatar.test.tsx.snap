@@ -29,6 +29,19 @@ exports[`renders correctly for a default avatar 1`] = `
 `;
 
 exports[`renders correctly for an avatar with a custom size prop set 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
 .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -49,9 +62,8 @@ exports[`renders correctly for an avatar with a custom size prop set 1`] = `
 
 <div
   alt="SW"
-  class="c0"
+  class="c0 c1"
   kind="square"
-  size="50"
 >
   SW
 </div>
@@ -90,6 +102,19 @@ exports[`renders correctly for an avatar with a fit prop set 1`] = `
 `;
 
 exports[`renders correctly for an avatar with a palette prop set 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: #3926a5;
+}
+
 .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -112,7 +137,7 @@ exports[`renders correctly for an avatar with a palette prop set 1`] = `
 
 <div
   alt="SW"
-  class="c0"
+  class="c0 c1"
   kind="square"
 >
   SW
@@ -120,6 +145,19 @@ exports[`renders correctly for an avatar with a palette prop set 1`] = `
 `;
 
 exports[`renders correctly for an avatar with a size prop set 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
 .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -146,7 +184,7 @@ exports[`renders correctly for an avatar with a size prop set 1`] = `
 
 <div
   alt="SW"
-  class="c0"
+  class="c0 c1"
   kind="square"
 >
   SW
@@ -154,6 +192,19 @@ exports[`renders correctly for an avatar with a size prop set 1`] = `
 `;
 
 exports[`renders correctly for an avatar with an initials prop set 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
 .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -174,7 +225,7 @@ exports[`renders correctly for an avatar with an initials prop set 1`] = `
 
 <div
   alt="SW"
-  class="c0"
+  class="c0 c1"
   kind="square"
 >
   SW

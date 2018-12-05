@@ -119,7 +119,6 @@ exports[`renders correctly 1`] = `
   aria-haspopup="true"
   class="c0 c1 c2 "
   kind="link"
-  style="size: small;"
   type="button"
 >
   <div

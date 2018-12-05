@@ -30,11 +30,11 @@ export interface AnimateProps {
   /** Duration of the animation if one is specified. */
   duration?: string;
   /** Will the component have an expand animation when it is toggled on/off? */
-  expand?: boolean | string;
+  expand?: boolean | 'bottom' | 'left' | 'right' | 'top' | 'center';
   /** Will the component have a fade animation when it is toggled on/off? */
   fade?: boolean;
   /** Will the component have a slide animation when it is toggled on/off? */
-  slide?: boolean | string;
+  slide?: boolean | 'bottom' | 'left' | 'right' | 'top';
   /** Timing of the animation */
   timing?: string;
 }

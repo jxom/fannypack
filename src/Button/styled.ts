@@ -1,15 +1,11 @@
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
-// @ts-ignore
-import _Button from 'reakit/Button';
-// @ts-ignore
-import styled, { css } from '../styled';
-import { StyledProps } from '../types';
+import { Button as _Button } from 'reakit';
+
+import { styled, css } from '../styled';
 import { ButtonProps } from './Button';
 
-type Props = StyledProps & ButtonProps;
-
-const sizeProperties: { [key: string]: string } = {
+const sizeProperties: any = {
   small: css`
     & {
       font-size: 0.8em;
@@ -45,14 +41,14 @@ const linkProperties = css`
   & {
     border: 0;
     background: unset;
-    color: ${(props: Props) => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
-    fill: ${(props: Props) => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
+    color: ${(props: any) => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
+    fill: ${(props: any) => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
     text-decoration: underline;
 
     &:hover {
-      color: ${(props: Props) =>
+      color: ${(props: any) =>
         props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props))};
-      fill: ${(props: Props) =>
+      fill: ${(props: any) =>
         props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props))};
     }
   }
@@ -68,8 +64,8 @@ const outlinedProperties = css`
     fill: ${palette()};
 
     &:hover {
-      color: ${(props: Props) => palette(`${props.palette}Inverted`)(props)};
-      fill: ${(props: Props) => palette(`${props.palette}Inverted`)(props)};
+      color: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
+      fill: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
     }
   }
   & {
@@ -106,10 +102,10 @@ const staticProperties = css`
 
 const interactiveProperties = css`
   &:hover {
-    background-color: ${(props: Props) => darken(0.05, palette()(props))};
+    background-color: ${(props: any) => darken(0.05, palette()(props))};
   }
   &:hover:active {
-    background-color: ${(props: Props) => darken(0.1, palette()(props))};
+    background-color: ${(props: any) => darken(0.1, palette()(props))};
   }
 `;
 const loadingProperties = css`
@@ -126,14 +122,14 @@ const loadingProperties = css`
   }
 `;
 
-const Button = styled(_Button)`
+const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
   align-items: center;
   background-color: ${palette()};
-  border: 1px solid ${(props: Props) =>
+  border: 1px solid ${(props: any) =>
     darken(0.2, palette(props.palette === 'default' ? 'whiteDarker' : props.palette || '')(props))};
   border-radius: 4px;
-  color: ${(props: Props) => palette(`${props.palette}Inverted`)(props)};
-  fill: ${(props: Props) => palette(`${props.palette}Inverted`)(props)};
+  color: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
+  fill: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
   cursor: pointer;
   display: inline-flex;
   font-weight: ${theme('fannypack.fontWeights.semibold')};
@@ -145,7 +141,7 @@ const Button = styled(_Button)`
   &:focus {
     outline: unset;
     z-index: 2;
-    box-shadow: ${(props: Props) =>
+    box-shadow: ${(props: any) =>
       palette(props.palette === 'default' ? 'primaryLighter' : `${props.palette}Lighter`)(props)} 0px 0px 0px 2px;
   };
 
@@ -153,14 +149,14 @@ const Button = styled(_Button)`
     ${disabledProperties}
   };
 
-  ${(props: Props) => (props.size ? sizeProperties[props.size] : null)}
+  ${(props: any) => (props.styledSize ? sizeProperties[props.styledSize] : null)}
 
-  ${(props: Props) => props.kind === 'outlined' && outlinedProperties}
-  ${(props: Props) => props.kind === 'link' && linkProperties}
+  ${(props: any) => props.kind === 'outlined' && outlinedProperties}
+  ${(props: any) => props.kind === 'link' && linkProperties}
 
-  ${(props: Props) => props.isLoading && loadingProperties};
-  ${(props: Props) => props.isStatic && staticProperties};
-  ${(props: Props) =>
+  ${(props: any) => props.isLoading && loadingProperties};
+  ${(props: any) => props.isStatic && staticProperties};
+  ${(props: any) =>
     !props.isStatic && !props.isLoading && !props.disabled && props.kind !== 'link' ? interactiveProperties : ''};
 
   & {

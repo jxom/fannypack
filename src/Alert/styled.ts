@@ -1,14 +1,9 @@
 import { palette, theme } from 'styled-tools';
-// @ts-ignore
 import { Box } from '../primitives';
-// @ts-ignore
 import styled, { css } from '../styled';
 // @ts-ignore
 import Heading from '../Heading';
 import { AlertProps } from './Alert';
-import { StyledProps } from '../types';
-
-type Props = AlertProps & StyledProps;
 
 export const AlertTitle = styled(Heading)`
   font-weight: ${theme('fannypack.fontWeights.semibold')};
@@ -19,7 +14,7 @@ export const AlertTitle = styled(Heading)`
   }
 `;
 
-const getTextColor = (props: Props) => {
+const getTextColor = (props: any) => {
   const { palette: _palette } = props;
   if (_palette === 'default') {
     return palette('text')(props);
@@ -31,29 +26,28 @@ const getTextColor = (props: Props) => {
 };
 
 const tintAttributes = css`
-  background-color: ${(props: Props) =>
+  background-color: ${(props: any) =>
     props.palette === 'default' ? palette('textTint')(props) : palette(`${props.palette}Tint`)(props)};
   border-top-width: 0;
   border-right-width: 0;
   border-bottom-width: 0;
-  color: ${(props: Props) =>
+  color: ${(props: any) =>
     props.palette === 'default' ? palette('textTintInverted')(props) : palette(`${props.palette}TintInverted`)(props)};
-  fill: ${(props: Props) =>
+  fill: ${(props: any) =>
     props.palette === 'default' ? palette('textTintInverted')(props) : palette(`${props.palette}TintInverted`)(props)};
 `;
 
-export default styled(Box)`
+export default styled(Box)<AlertProps>`
   background-color: white;
   border: 1px solid ${palette('whiteDarkest')};
   border-left: 4px solid
-    ${(props: Props) =>
-      props.palette === 'default' ? palette('text')(props) : palette(props.palette || 'default')(props)};
+    ${props => (props.palette === 'default' ? palette('text')(props) : palette(props.palette || 'default')(props))};
   border-radius: 4px;
   color: ${getTextColor};
   padding: 1rem;
 
   & {
-    ${(props: Props) => props.hasTint && tintAttributes};
+    ${props => props.hasTint && tintAttributes};
   }
 
   & {

@@ -2,6 +2,7 @@ import React from 'react';
 import render from '../../_utils/tests/render';
 import Modal from '../../Modal';
 import DialogModal from '../DialogModal';
+
 jest.mock('reakit/Portal', () => 'portal');
 
 it('renders correctly for a default dialog modal', () => {

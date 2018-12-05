@@ -1,13 +1,9 @@
-// @ts-ignore
-import styled, { css } from 'reakit/styled';
+import { Avatar as _Avatar } from 'reakit';
 import { palette, theme } from 'styled-tools';
-// @ts-ignore
-import _Avatar from 'reakit/Avatar';
 
+import { styled, css } from '../styled';
+import { Box } from '../primitives';
 import { AvatarProps } from './Avatar';
-import { StyledProps } from '../types';
-
-type Props = AvatarProps & StyledProps;
 
 const circleProperties = css`
   & {
@@ -15,12 +11,12 @@ const circleProperties = css`
   }
 `;
 
-const fitProperties = (props: Props) => {
-  if (!props.fit) return;
+const fitProperties = (props: any) => {
+  if (!props.fit) return null;
   if (props.fit === 'contain') {
     return css`
       object-fit: contain;
-      ${(props: Props) =>
+      ${(props: any) =>
         props.fitPosition
           ? css`
               object-position: ${props.fitPosition};
@@ -34,7 +30,7 @@ const fitProperties = (props: Props) => {
   if (props.fit === 'cover') {
     return css`
       object-fit: cover;
-      ${(props: Props) =>
+      ${(props: any) =>
         props.fitPosition
           ? css`
               object-position: ${props.fitPosition};
@@ -45,9 +41,10 @@ const fitProperties = (props: Props) => {
       ${theme('fannypack.Avatar.fit.cover')};
     `;
   }
+  return null;
 };
 
-const sizeProperties: { [key: string]: string } = {
+const sizeProperties: any = {
   xsmall: css`
     & {
       font-size: 8px;
@@ -90,28 +87,28 @@ const sizeProperties: { [key: string]: string } = {
   `
 };
 
-export const AvatarCircle = styled.div`
+export const AvatarCircle = styled(Box)<AvatarProps & { styledSize: any }>`
   align-items: center;
-  background-color: ${(props: Props) => palette(props.palette || '')(props)};
-  color: ${(props: Props) => (props.color ? props.color : palette(`${props.palette}Inverted`)(props))};
+  background-color: ${(props: any) => palette(props.palette || '')(props)};
+  color: ${(props: any) => (props.color ? props.color : palette(`${props.palette}Inverted`)(props))};
   display: flex;
   justify-content: center;
   font-size: 24px;
-  height: ${(props: Props) => (typeof props.size === 'number' ? `${props.size}px` : '60px')};
-  width: ${(props: Props) => (typeof props.size === 'number' ? `${props.size}px` : '60px')};
+  height: ${(props: any) => (typeof props.styledSize === 'number' ? `${props.styledSize}px` : '60px')};
+  width: ${(props: any) => (typeof props.styledSize === 'number' ? `${props.styledSize}px` : '60px')};
 
-  ${(props: Props) => props.kind === 'circle' && circleProperties};
-  ${(props: Props) => (typeof props.size === 'string' ? sizeProperties[props.size] : null)};
+  ${(props: any) => props.kind === 'circle' && circleProperties};
+  ${(props: any) => (typeof props.styledSize === 'string' ? sizeProperties[props.styledSize] : null)};
 
   ${theme('fannypack.Avatar.Circle.base')};
 `;
 
-const AvatarImage = styled(_Avatar)`
+const AvatarImage = styled(_Avatar)<AvatarProps & { styledSize: any }>`
   font-size: 24px;
-  height: ${(props: Props) => (typeof props.size === 'number' ? `${props.size}px` : '60px')};
-  width: ${(props: Props) => (typeof props.size === 'number' ? `${props.size}px` : '60px')};
-  ${(props: Props) => props.kind === 'circle' && circleProperties};
-  ${(props: Props) => (typeof props.size === 'string' ? sizeProperties[props.size] : null)};
+  height: ${(props: any) => (typeof props.styledSize === 'number' ? `${props.styledSize}px` : '60px')};
+  width: ${(props: any) => (typeof props.styledSize === 'number' ? `${props.styledSize}px` : '60px')};
+  ${(props: any) => props.kind === 'circle' && circleProperties};
+  ${(props: any) => (typeof props.styledSize === 'string' ? sizeProperties[props.styledSize] : null)};
 
   & {
     ${fitProperties};

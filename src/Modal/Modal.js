@@ -2,7 +2,7 @@
 import React, { Fragment, type Node } from 'react';
 import Portal from 'reakit/Portal';
 
-import Backdrop from '../Backdrop';
+import Backdrop from '../Backdrop/Backdrop.tsx';
 import TrapFocus from '../_utils/TrapFocus';
 import ModalContainer from './ModalContainer';
 import _Modal, { ModalHide, ModalShow } from './styled';

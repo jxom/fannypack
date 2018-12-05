@@ -62,6 +62,17 @@ exports[`renders correctly for a default popover 1`] = `
   display: inline-block;
 }
 
+.c5 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c5[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
 .c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -180,17 +191,6 @@ samp.c8 {
   box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
 }
 
-.c5 {
-  -webkit-transform: translate3d(0px,0px,0px);
-  -ms-transform: translate3d(0px,0px,0px);
-  transform: translate3d(0px,0px,0px);
-}
-
-.c5[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
 .c4 {
   position: absolute;
   top: 0;
@@ -212,7 +212,6 @@ samp.c8 {
     aria-haspopup="true"
     class="c2 c3 "
     kind="default"
-    style="size: default;"
     type="button"
   >
     Toggle popover
@@ -296,6 +295,17 @@ exports[`renders correctly when a placement prop is set 1`] = `
   display: inline-block;
 }
 
+.c5 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c5[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
 .c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -414,17 +424,6 @@ samp.c8 {
   box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
 }
 
-.c5 {
-  -webkit-transform: translate3d(0px,0px,0px);
-  -ms-transform: translate3d(0px,0px,0px);
-  transform: translate3d(0px,0px,0px);
-}
-
-.c5[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
 .c4 {
   position: absolute;
   top: 0;
@@ -446,7 +445,6 @@ samp.c8 {
     aria-haspopup="true"
     class="c2 c3 "
     kind="default"
-    style="size: default;"
     type="button"
   >
     Toggle popover
@@ -528,6 +526,17 @@ exports[`renders correctly when showCloseButton is truthy 1`] = `
 
 .c0 {
   display: inline-block;
+}
+
+.c5 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c5[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
 }
 
 .c2 {
@@ -714,17 +723,6 @@ samp.c14 {
   box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
 }
 
-.c5 {
-  -webkit-transform: translate3d(0px,0px,0px);
-  -ms-transform: translate3d(0px,0px,0px);
-  transform: translate3d(0px,0px,0px);
-}
-
-.c5[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
 .c8 {
   position: absolute;
   width: 24px;
@@ -768,7 +766,6 @@ samp.c14 {
     aria-haspopup="true"
     class="c2 c3 "
     kind="default"
-    style="size: default;"
     type="button"
   >
     Toggle popover
@@ -786,7 +783,6 @@ samp.c14 {
       aria-haspopup="true"
       class="c8 c9 c3 "
       kind="link"
-      style="size: small;"
       type="button"
     >
       <div
