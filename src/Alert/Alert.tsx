@@ -1,4 +1,6 @@
 import * as React from 'react';
+// @ts-ignore
+import PropTypes from 'prop-types';
 
 import _Alert from './styled';
 import AlertTitle from './AlertTitle';
@@ -28,6 +30,13 @@ export const Alert: React.SFC<AlertProps> = ({ className, children, palette, tit
   </_Alert>
 );
 
+Alert.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node,
+  hasTint: PropTypes.bool,
+  palette: PropTypes.string,
+  title: PropTypes.string
+};
 Alert.defaultProps = defaultProps;
 
 export default Alert;

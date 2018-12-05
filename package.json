@@ -30,6 +30,7 @@
     "focus-trap": "3.0.0",
     "lodash": "4.17.11",
     "polished": "2.3.0",
+    "prop-types": "15.6.2",
     "react-syntax-highlighter": "8.0.1",
     "reakit": "0.16.0-beta.0",
     "styled-tools": "1.5.2"
@@ -66,7 +67,6 @@
     "flow-bin": "0.83.0",
     "jest": "23.6.0",
     "jest-styled-components": "6.3.1",
-    "prop-types": "15.6.2",
     "react": "16.6.3",
     "react-dom": "16.6.3",
     "react-testing-library": "5.3.1",

@@ -1,4 +1,6 @@
 import * as React from 'react';
+// @ts-ignore
+import PropTypes from 'prop-types';
 import { AlertTitle as _AlertTitle } from './styled';
 
 export interface AlertTitleProps {
@@ -10,5 +12,9 @@ const AlertTitle = ({ children, ...props }: AlertTitleProps) => (
     {children}
   </_AlertTitle>
 );
+
+AlertTitle.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default AlertTitle;
