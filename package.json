@@ -94,20 +94,5 @@
     "ui",
     "accessible",
     "composable"
-  ],
-  "jest": {
-    "transform": {
-      "^.+\\.(js|jsx|tsx|ts)$": "babel-jest"
-    },
-    "testMatch": [
-      "**/__tests__/**/*.(js|ts)?(x)",
-      "**/?(*.)+(spec|test).(ts|js)?(x)"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "ts",
-      "tsx"
-    ],
-    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js"
-  }
+  ]
 }
