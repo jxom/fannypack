@@ -4,6 +4,30 @@ order: 1
 route: /
 ---
 
+import { Box } from '../primitives/index';
+import Columns from '../Columns';
+import Column from '../Column';
+import Heading from '../Heading';
+
+import ComponentButton from './ComponentButtons/ComponentButton';
+import Alert from './ComponentButtons/Alert';
+import Avatar from './ComponentButtons/Avatar';
+import Button from './ComponentButtons/Button';
+import Card from './ComponentButtons/Card';
+import Dialog from './ComponentButtons/Dialog';
+import DialogModal from './ComponentButtons/DialogModal';
+import Divider from './ComponentButtons/Divider';
+import Icon from './ComponentButtons/Icon';
+import Image from './ComponentButtons/Image';
+import Navigation from './ComponentButtons/Navigation';
+import Popover from './ComponentButtons/Popover';
+import Ratings from './ComponentButtons/Ratings';
+import Spinner from './ComponentButtons/Spinner';
+import Table from './ComponentButtons/Table';
+import Tabs from './ComponentButtons/Tabs';
+import Tag from './ComponentButtons/Tag';
+import Tooltip from './ComponentButtons/Tooltip';
+
 > Note: Fannypack is still work in progress, meaning that it's APIs will most likely change in the future until a stable release.
 
 # Getting Started
@@ -57,3 +81,94 @@ Using:
 
 If you are using **Webpack@>=4**, **Rollup** or **Parcel**, then you can use named imports without it effecting your bundle size. However, if you are using older versions of Webpack or a bundler that does not support tree shaking, it is recommended to use default imports.
 
+<div>
+  <Heading use="h4">Components</Heading>
+  <Columns>
+    <Column>
+      <ComponentButton title="Alert">
+        <Alert />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Avatar">
+        <Avatar />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Button">
+        <Button />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Card">
+        <Card />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Dialog">
+        <Dialog />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="DialogModal">
+        <DialogModal />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Divider">
+        <Divider />
+      </ComponentButton>
+    </Column>
+    <Column>
+    <ComponentButton title="Icon">
+        <Icon />
+      </ComponentButton>
+    </Column>
+    <Column>
+    <ComponentButton title="Image">
+        <Image />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Navigation">
+        <Navigation />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Popover">
+        <Popover />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Ratings">
+        <Ratings />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Spinner">
+        <Spinner />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Table">
+        <Table />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Tabs">
+        <Tabs />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Tag">
+        <Tag />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Tooltip">
+        <Tooltip />
+      </ComponentButton>
+    </Column>
+    <Column />
+  </Columns>
+</div>
