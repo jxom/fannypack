@@ -1,14 +1,19 @@
-// @flow
-import React, { PureComponent, type Node } from 'react';
+import * as React from 'react';
+// @ts-ignore
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/prism-light';
+// @ts-ignore
 import defaultTheme from 'react-syntax-highlighter/styles/prism/atom-dark';
+// @ts-ignore
 import javascript from 'react-syntax-highlighter/languages/prism/javascript';
+// @ts-ignore
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import Box from 'reakit/Box';
-import _Code from 'reakit/Code';
-import styled, { css } from 'reakit/styled';
+import { Code as _Code } from 'reakit';
+import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
-const Wrapper = styled(Box)`
+import { Box } from '../primitives';
+import { styled, css } from '../styled';
+
+const Wrapper = styled(Box)<HighlightedCodeProps>`
   ${props =>
     props.showLabel &&
     css`
@@ -28,17 +33,17 @@ const Wrapper = styled(Box)`
   `};
 `;
 
-type Props = {
-  children: Node,
-  className?: string,
-  codeClassName?: string,
-  isBlock?: boolean,
-  lang: string,
-  showLabel?: boolean,
-  showLineNumbers?: boolean
-};
+export interface LocalHighlightedCodeProps {
+  children: React.ReactNode;
+  className?: string;
+  codeClassName?: string;
+  isBlock?: boolean;
+  lang: string;
+  showLabel?: boolean;
+  showLineNumbers?: boolean;
+}
 
-export default class Code extends PureComponent<Props> {
+class Code extends React.PureComponent<LocalHighlightedCodeProps> {
   static defaultProps = {
     className: null,
     codeClassName: null,
@@ -54,9 +59,9 @@ export default class Code extends PureComponent<Props> {
   };
 
   render = () => {
-    const { children, className, codeClassName, isBlock, lang, showLabel, showLineNumbers, ...props } = this.props;
+    const { children, className, codeClassName, isBlock, lang, showLineNumbers, ...props } = this.props;
     return (
-      <Wrapper lang={lang} showLabel={showLabel} {...props}>
+      <Wrapper lang={lang} {...props}>
         <SyntaxHighlighter
           className={className}
           codeClassName={codeClassName}
@@ -72,3 +77,8 @@ export default class Code extends PureComponent<Props> {
     );
   };
 }
+
+export type HighlightedCodeProps = LocalHighlightedCodeProps & ReakitBoxProps;
+//@ts-ignore
+const C: React.SFC<HighlightedCodeProps> = Code;
+export default C;

@@ -1,9 +1,11 @@
-import Code from 'reakit/Code';
-import styled from 'reakit/styled';
+import { Code } from 'reakit';
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 
-export default styled(Code)`
+import { CodeProps } from './Code';
+import styled from '../styled';
+
+export default styled(Code)<CodeProps>`
   background-color: ${darken(0.05, 'white')};
   border-radius: 0.1rem;
   color: ${palette('text')};

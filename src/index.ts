@@ -18,7 +18,6 @@ export { Button } from './Button';
 export { Card, CardCard, CardContent, CardFooter, CardHeader, CardTitle } from './Card';
 // @ts-ignore
 export { Checkbox, CheckboxField } from './Checkbox';
-// @ts-ignore
 export { Code, HighlightedCode } from './Code';
 // @ts-ignore
 export { Column } from './Column';
