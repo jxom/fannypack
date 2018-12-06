@@ -1,12 +1,19 @@
 import { palette, theme } from 'styled-tools';
+
 import styled from '../styled';
 import { Box } from '../primitives';
-
-import Button from '../Button/Button.tsx';
+import Button from '../Button';
+// @ts-ignore
 import Heading from '../Heading';
 import Pane from '../Pane';
 
-export const DialogContent = styled(Box)`
+import { DialogContentProps } from './DialogContent';
+import { DialogCloseProps } from './DialogClose';
+import { DialogDialogProps } from './DialogDialog';
+import { DialogFooterProps } from './DialogFooter';
+import { DialogHeaderProps } from './DialogHeader';
+
+export const DialogContent = styled(Box)<DialogContentProps>`
   padding: ${theme('fannypack.layout.spacing.small')}rem;
   max-height: 50vh;
   overflow-y: scroll;
@@ -16,7 +23,7 @@ export const DialogContent = styled(Box)`
     ${theme('fannypack.Dialog.Content.base')};
   }
 `;
-export const DialogHeader = styled(Box)`
+export const DialogHeader = styled(Box)<DialogHeaderProps>`
   align-items: center;
   border-bottom: 1px solid ${palette('whiteDarkest')};
   display: flex;
@@ -28,7 +35,7 @@ export const DialogHeader = styled(Box)`
     ${theme('fannypack.Dialog.Header.base')};
   }
 `;
-export const DialogFooter = styled(Box)`
+export const DialogFooter = styled(Box)<DialogFooterProps>`
   display: flex;
   align-items: center;
   border-top: 1px solid ${palette('whiteDarkest')};
@@ -46,7 +53,7 @@ export const DialogTitle = styled(Heading)`
     ${theme('fannypack.Dialog.Title.base')};
   }
 `;
-export const DialogClose = styled(Button)`
+export const DialogClose = styled(Button)<DialogCloseProps>`
   height: 2em;
   width: 2em;
   padding: 0px;
@@ -63,7 +70,7 @@ export const DialogClose = styled(Button)`
   }
 `;
 
-export default styled(Pane)`
+export default styled(Pane)<DialogDialogProps>`
   border-radius: 5px;
 
   &:focus {

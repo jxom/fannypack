@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Dialog from '../Dialog';
+
 it('renders correctly for a default dialog', () => {
   const { container } = render(
     <Dialog.Dialog>

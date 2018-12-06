@@ -1,33 +1,41 @@
-// @flow
-import React, { type Element, type Node } from 'react';
+import * as React from 'react';
 
+// @ts-ignore
 import { getUniqueId } from '../uniqueId';
 import { Box } from '../primitives';
-import ActionButtons from '../Button/ActionButtons.tsx';
-import DialogDialog from './DialogDialog';
-import DialogContent from './DialogContent';
-import DialogHeader from './DialogHeader';
-import DialogFooter from './DialogFooter';
-import DialogTitle from './DialogTitle';
-import DialogClose from './DialogClose';
+import ActionButtons, { ActionButtonsProps } from '../Button/ActionButtons';
+import DialogDialog, { DialogDialogProps } from './DialogDialog';
+import DialogContent, { DialogContentProps } from './DialogContent';
+import DialogHeader, { DialogHeaderProps } from './DialogHeader';
+import DialogFooter, { DialogFooterProps } from './DialogFooter';
+import DialogTitle, { DialogTitleProps } from './DialogTitle';
+import DialogClose, { DialogCloseProps } from './DialogClose';
 
-type Props = {
-  actionButtonsProps?: Object,
-  a11yDescriptionId?: string,
-  a11yTitleId?: string,
-  border?: true | 'shadow',
-  children: Node,
-  className?: string,
-  closeButtonProps?: Object,
-  footer?: string | Element<any>,
-  onClickClose?: Function,
-  showActionButtons?: boolean,
-  showCloseButton?: boolean,
-  role?: ?('alertdialog' | 'dialog'),
-  title?: string | Element<any>
-};
+export interface LocalDialogProps {
+  actionButtonsProps?: ActionButtonsProps;
+  a11yDescriptionId?: string;
+  a11yTitleId?: string;
+  border?: true | 'shadow';
+  children: React.ReactNode;
+  className?: string;
+  closeButtonProps?: ActionButtonsProps;
+  footer?: string | React.ReactElement<any>;
+  onClickClose?: () => void;
+  showActionButtons?: boolean;
+  showCloseButton?: boolean;
+  role?: 'alertdialog' | 'dialog';
+  title?: string | React.ReactElement<any>;
+}
+export interface DialogComponents {
+  Dialog: React.SFC<DialogDialogProps>;
+  Content: React.SFC<DialogContentProps>;
+  Header: React.SFC<DialogHeaderProps>;
+  Footer: React.SFC<DialogFooterProps>;
+  Title: React.SFC<DialogTitleProps>;
+  Close: React.SFC<DialogCloseProps>;
+}
 
-const Dialog = ({
+export const Dialog: React.SFC<LocalDialogProps> & DialogComponents = ({
   actionButtonsProps,
   a11yDescriptionId,
   a11yTitleId,
@@ -41,7 +49,7 @@ const Dialog = ({
   role,
   title,
   ...props
-}: Props) => (
+}) => (
   <DialogDialog a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} role={role} border={border} {...props}>
     {title && (
       <DialogHeader>
@@ -85,4 +93,7 @@ Dialog.defaultProps = {
   title: undefined
 };
 
-export default Dialog;
+export type DialogProps = LocalDialogProps;
+//@ts-ignore
+const C: React.SFC<DialogProps> & DialogComponents = Dialog;
+export default C;

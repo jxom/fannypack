@@ -22,7 +22,6 @@ export { Code, HighlightedCode } from './Code';
 export { Column } from './Column';
 export { Columns } from './Columns';
 export { Container } from './Container';
-// @ts-ignore
 export { Dialog, DialogClose, DialogContent, DialogDialog, DialogFooter, DialogHeader, DialogTitle } from './Dialog';
 // @ts-ignore
 export { DialogModal } from './DialogModal';
