@@ -1,5 +1,4 @@
 import * as React from 'react';
-// @ts-ignore
 import render from '../../_utils/tests/render';
 import Backdrop from '../Backdrop';
 

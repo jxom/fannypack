@@ -1,10 +1,18 @@
 import { theme } from 'styled-tools';
+
 import styled, { css } from '../styled';
 import { Box } from '../primitives';
+import { CardCardProps } from './CardCard';
+import { CardContentProps } from './CardContent';
+import { CardFooterProps } from './CardFooter';
+import { CardHeaderProps } from './CardHeader';
+import { CardTitleProps } from './CardTitle';
+// @ts-ignore
 import Pane from '../Pane';
+// @ts-ignore
 import Heading from '../Heading';
 
-export default styled(Pane)`
+export default styled(Pane)<CardCardProps>`
   ${props =>
     props.isFullWidth &&
     css`
@@ -16,12 +24,12 @@ export default styled(Pane)`
     ${theme('fannypack.Card.base')};
   }
 `;
-export const CardContent = styled(Box)`
+export const CardContent = styled(Box)<CardContentProps>`
   & {
     ${theme('fannypack.Card.Content.base')};
   }
 `;
-export const CardHeader = styled(Box)`
+export const CardHeader = styled(Box)<CardHeaderProps>`
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -34,7 +42,7 @@ export const CardHeader = styled(Box)`
     ${theme('fannypack.Card.Header.base')};
   }
 `;
-export const CardFooter = styled(Box)`
+export const CardFooter = styled(Box)<CardFooterProps>`
   display: flex;
   padding-top: ${theme('fannypack.layout.spacing.small')}rem;
   width: 100%;
@@ -43,7 +51,7 @@ export const CardFooter = styled(Box)`
     ${theme('fannypack.Card.Footer.base')};
   }
 `;
-export const CardTitle = styled(Heading)`
+export const CardTitle = styled(Heading)<CardTitleProps>`
   margin-bottom: 0px;
   & {
     ${theme('fannypack.Card.Title.base')};

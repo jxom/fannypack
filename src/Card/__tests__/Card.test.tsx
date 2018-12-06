@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Card from '../Card';
+
 it('renders correctly for a default card', () => {
   const { container } = render(
     <Card.Card>

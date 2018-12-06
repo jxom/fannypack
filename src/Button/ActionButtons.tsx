@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 import Button, { ButtonProps } from './Button';
 // @ts-ignore
 import Set from '../Set';
+import { Omit } from '../types';
 
 export interface ActionButtonsProps {
   /** Custom button props for the cancel button */
-  cancelProps?: Pick<ButtonProps, Exclude<keyof ButtonProps, 'children'>>;
+  cancelProps?: Omit<ButtonProps, 'children'>;
   /** Custom text for the cancel button */
   cancelText?: string;
   className?: string;
@@ -19,7 +20,7 @@ export interface ActionButtonsProps {
   /** Changes the color of the submit button */
   palette?: string;
   /** Custom button props for the submit button */
-  submitProps?: Pick<ButtonProps, Exclude<keyof ButtonProps, 'children'>>;
+  submitProps?: Omit<ButtonProps, 'children'>;
   /** Custom text for the submit button */
   submitText?: string;
   /** Button type of the submit button */
