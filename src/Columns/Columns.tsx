@@ -1,6 +1,9 @@
 import * as React from 'react';
+// @ts-ignore
+import PropTypes from 'prop-types';
 import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
+import { breakpointPropType } from '../types';
 import ColumnsContext from './ColumnsContext';
 import _Columns from './styled';
 
@@ -12,7 +15,7 @@ export interface LocalColumnsProps {
   minBreakpoint?: 'tablet' | 'mobile';
 }
 
-const Columns: React.SFC<LocalColumnsProps> = ({
+export const Columns: React.SFC<LocalColumnsProps> = ({
   children,
   className,
   isGapless,
@@ -33,6 +36,13 @@ const Columns: React.SFC<LocalColumnsProps> = ({
   </ColumnsContext.Provider>
 );
 
+Columns.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  isGapless: PropTypes.bool,
+  isOneLine: PropTypes.bool,
+  minBreakpoint: breakpointPropType
+};
 Columns.defaultProps = {
   className: undefined,
   isGapless: false,

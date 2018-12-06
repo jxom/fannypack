@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 export type ButtonType = 'default' | 'outlined' | 'link';
 export const buttonTypePropType = PropTypes.oneOf(['default', 'outlined', 'link']);
 export type Breakpoint = 'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile';
+export const breakpointPropType = PropTypes.oneOf(['fullHD', 'widescreen', 'desktop', 'tablet', 'mobile']);
 export type ColumnSpread = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 export const columnSpreadPropType = PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
 export type ColumnSpreadOffset = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 'left' | 'both' | 'right';

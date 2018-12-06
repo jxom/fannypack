@@ -43,7 +43,7 @@ export interface LocalHighlightedCodeProps {
   showLineNumbers?: boolean;
 }
 
-class Code extends React.PureComponent<LocalHighlightedCodeProps> {
+export class HighlightedCode extends React.PureComponent<LocalHighlightedCodeProps> {
   static defaultProps = {
     className: null,
     codeClassName: null,
@@ -80,5 +80,5 @@ class Code extends React.PureComponent<LocalHighlightedCodeProps> {
 
 export type HighlightedCodeProps = LocalHighlightedCodeProps & ReakitBoxProps;
 //@ts-ignore
-const C: React.SFC<HighlightedCodeProps> = Code;
+const C: React.SFC<HighlightedCodeProps> = HighlightedCode;
 export default C;

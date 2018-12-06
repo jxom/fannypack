@@ -52,7 +52,6 @@ export { Modal, ModalContainer, ModalShow, ModalHide } from './Modal';
 export { Navigation } from './Navigation';
 // @ts-ignore
 export { Overlay, OverlayContainer, OverlayShow, OverlayHide, OverlayToggle } from './Overlay';
-// @ts-ignore
 export { Pane } from './Pane';
 // @ts-ignore
 export { Paragraph } from './Paragraph';

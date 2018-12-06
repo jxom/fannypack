@@ -13,7 +13,7 @@ export interface LocalContainerProps {
   isFluid?: boolean;
 }
 
-const Container: React.SFC<LocalContainerProps> = ({ align, children, className, ...props }) => (
+export const Container: React.SFC<LocalContainerProps> = ({ align, children, className, ...props }) => (
   <_Container className={className} align={align} {...props}>
     {children}
   </_Container>

@@ -1,7 +1,8 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts';
+
+import { PaneProps } from '../Pane/Pane';
 import Card from './styled';
 
 export interface LocalCardCardProps {
@@ -33,7 +34,7 @@ CardCard.defaultProps = {
   isFullWidth: false
 };
 
-export type CardCardProps = LocalCardCardProps & ReakitBoxProps;
+export type CardCardProps = LocalCardCardProps & PaneProps;
 //@ts-ignore
 const C: React.SFC<CardCardProps> = CardCard;
 export default C;

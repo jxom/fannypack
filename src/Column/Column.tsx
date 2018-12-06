@@ -24,7 +24,7 @@ export interface LocalColumnProps {
   spreadFullHDOffset?: ColumnSpreadOffset;
 }
 
-const Column: React.SFC<LocalColumnProps> = ({
+export const Column: React.SFC<LocalColumnProps> = ({
   children,
   className,
   spread,

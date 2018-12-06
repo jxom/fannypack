@@ -1,15 +1,17 @@
 import { palette, theme } from 'styled-tools';
+
 import styled, { css } from '../styled';
 import { Box } from '../primitives';
+import { PaneProps } from './Pane';
 
-const Pane = styled(Box)`
+const Pane = styled(Box)<PaneProps & { styledBorder?: boolean | 'shadow' }>`
   background-color: white;
   border-radius: 3px;
   display: inline-flex;
   flex-wrap: wrap;
 
   ${props =>
-    props.border === 'shadow' &&
+    props.styledBorder === 'shadow' &&
     css`
       box-shadow: 0px 2px 4px 0px ${palette('whiteDarkest')}, 0px 0px 0px 1px ${palette('whiteDarkest')};
 
@@ -18,7 +20,7 @@ const Pane = styled(Box)`
       }
     `};
   ${props =>
-    props.border === true &&
+    props.styledBorder === true &&
     css`
       border: 1px solid ${palette('whiteDarkest')};
 

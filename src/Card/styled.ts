@@ -7,7 +7,6 @@ import { CardContentProps } from './CardContent';
 import { CardFooterProps } from './CardFooter';
 import { CardHeaderProps } from './CardHeader';
 import { CardTitleProps } from './CardTitle';
-// @ts-ignore
 import Pane from '../Pane';
 // @ts-ignore
 import Heading from '../Heading';

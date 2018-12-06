@@ -12,7 +12,7 @@ export interface LocalCodeProps {
   isBlock?: boolean;
 }
 
-const Code: React.SFC<LocalCodeProps> = ({ children, className, codeClassName, isBlock, ...props }) => (
+export const Code: React.SFC<LocalCodeProps> = ({ children, className, codeClassName, isBlock, ...props }) => (
   <_Code block={isBlock} {...props}>
     {children}
   </_Code>
