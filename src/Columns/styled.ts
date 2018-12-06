@@ -1,9 +1,10 @@
-import { css } from 'reakit/styled';
-import styled from 'reakit/styled';
-import Box from 'reakit/Box';
 import { theme } from 'styled-tools';
 
-const getWrapProperties = props => {
+import { css, styled } from '../styled';
+import { Box } from '../primitives';
+import { ColumnsProps } from './Columns';
+
+const getWrapProperties = (props: any) => {
   const { isOneLine, minBreakpoint } = props;
   if (isOneLine) {
     if (minBreakpoint !== 'tablet' && minBreakpoint !== 'mobile') {
@@ -20,6 +21,7 @@ const getWrapProperties = props => {
         }
       `;
     }
+    return null;
   } else {
     return css`
       flex-wrap: wrap;
@@ -27,7 +29,7 @@ const getWrapProperties = props => {
   }
 };
 
-export default styled(Box)`
+export default styled(Box)<ColumnsProps>`
   display: flex;
 
   ${props =>

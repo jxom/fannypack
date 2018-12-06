@@ -19,11 +19,8 @@ export { Card, CardCard, CardContent, CardFooter, CardHeader, CardTitle } from '
 // @ts-ignore
 export { Checkbox, CheckboxField } from './Checkbox';
 export { Code, HighlightedCode } from './Code';
-// @ts-ignore
 export { Column } from './Column';
-// @ts-ignore
 export { Columns } from './Columns';
-// @ts-ignore
 export { Container } from './Container';
 // @ts-ignore
 export { Dialog, DialogClose, DialogContent, DialogDialog, DialogFooter, DialogHeader, DialogTitle } from './Dialog';

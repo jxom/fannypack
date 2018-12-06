@@ -1,6 +1,8 @@
-import styled, { css } from 'reakit/styled';
-import Box from 'reakit/Box';
 import { theme } from 'styled-tools';
+
+import { Box } from '../primitives';
+import { styled, css } from '../styled';
+import { ContainerProps } from './Container';
 
 const alignProperties = {
   left: css`
@@ -15,7 +17,7 @@ const alignProperties = {
   `
 };
 
-const getResponsiveProperties = props => {
+const getResponsiveProperties = (props: any) => {
   const { breakpoint, isFluid } = props;
   if (isFluid) return;
   if (breakpoint) {
@@ -40,7 +42,7 @@ const getResponsiveProperties = props => {
   `;
 };
 
-export default styled(Box)`
+export default styled(Box)<ContainerProps>`
   ${props =>
     !props.isFluid &&
     css`
@@ -58,7 +60,7 @@ export default styled(Box)`
   }
 
   ${getResponsiveProperties};
-  ${props => !props.isFluid && alignProperties[props.align]};
+  ${props => (props.align && !props.isFluid ? alignProperties[props.align] : null)};
 
   ${theme('fannypack.Container.base')};
 `;

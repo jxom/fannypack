@@ -1,7 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Column from '../Column';
+// @ts-ignore
 import Columns from '../../Columns';
+
 it('renders correctly for basic columns', () => {
   const { container } = render(
     <Columns>

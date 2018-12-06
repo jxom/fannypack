@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Container from '../Container';
+
 it('renders correctly for a basic container', () => {
   const { container } = render(<Container>test</Container>);
   expect(container.firstChild).toMatchSnapshot();

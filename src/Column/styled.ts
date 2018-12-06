@@ -1,9 +1,11 @@
-import { css } from 'reakit/styled';
-import styled from 'reakit/styled';
-import Box from 'reakit/Box';
 import { theme } from 'styled-tools';
 
-const marginAutoOffsets = {
+import { Box } from '../primitives';
+import { styled, css } from '../styled';
+import { ColumnSpread } from '../types';
+import { ColumnProps } from './Column';
+
+const marginAutoOffsets: { [key: string]: any } = {
   left: css`
     margin-left: auto;
   `,
@@ -16,9 +18,9 @@ const marginAutoOffsets = {
   `
 };
 
-const getWidth = spread => `${(spread / 12) * 100}%`;
+const getWidth = (spread: ColumnSpread) => `${(spread / 12) * 100}%`;
 
-const getSpreadProperties = props => {
+const getSpreadProperties = (props: any) => {
   const { minBreakpoint, spread, spreadMobile, spreadTablet, spreadDesktop, spreadWidescreen, spreadFullHD } = props;
   if (
     !minBreakpoint &&
@@ -37,7 +39,7 @@ const getSpreadProperties = props => {
     `;
   }
 
-  const getProperties = ({ breakpoint, spread }) => {
+  const getProperties = ({ breakpoint, spread }: any) => {
     const properties = css`
       flex: none;
       width: ${getWidth(spread)};
@@ -79,7 +81,7 @@ const getSpreadProperties = props => {
   `;
 };
 
-const getSpreadOffsetProperties = props => {
+const getSpreadOffsetProperties = (props: any) => {
   const {
     spreadOffset,
     spreadMobileOffset,
@@ -99,7 +101,7 @@ const getSpreadOffsetProperties = props => {
     return null;
   }
 
-  const getProperties = ({ breakpoint, spreadOffset }) => {
+  const getProperties = ({ breakpoint, spreadOffset }: any) => {
     const properties = css`
       margin-left: ${getWidth(spreadOffset)};
     `;
@@ -143,7 +145,7 @@ const getSpreadOffsetProperties = props => {
   return marginAutoOffsets[spreadOffset];
 };
 
-const Column = styled(Box)`
+const Column = styled(Box)<ColumnProps>`
   flex: 1;
   max-width: 100%;
   ${props =>
