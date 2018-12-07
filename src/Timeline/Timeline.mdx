@@ -1,0 +1,49 @@
+---
+name: Timeline
+route: /components/timeline
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Timeline from './index';
+
+
+# Timeline
+
+## Import
+
+`import { Timeline } from 'fannypack'`
+
+## Basic Usage
+
+The `<Timeline>` component is made up of a compound of components such as: `<Timeline.Step>` and `<Timeline.StepDetail>`
+
+<Playground>
+  <Timeline>
+    <Timeline.Step label="Step one">
+      <Timeline.StepDetail>Step Detail one</Timeline.StepDetail>
+    </Timeline.Step>
+    <Timeline.Step label="Step two">
+      <Timeline.StepDetail>Step Detail two</Timeline.StepDetail>
+    </Timeline.Step>
+    <Timeline.Step label="Step three">
+      <Timeline.StepDetail>Step Detail three</Timeline.StepDetail>
+    </Timeline.Step>
+  </Timeline>
+</Playground>
+
+## Props
+
+### `<Timeline>`
+<PropsTable of={Timeline} />
+
+### `<Timeline.Step>`
+<PropsTable of={Timeline.Step} />
+
+### `<Timeline.StepDetail>`
+<PropsTable of={Timeline.StepDetail} />
+
+
+## Theming
+
+### Schema
