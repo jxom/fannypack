@@ -14,21 +14,33 @@ import Alert from './ComponentButtons/Alert';
 import Avatar from './ComponentButtons/Avatar';
 import Button from './ComponentButtons/Button';
 import Card from './ComponentButtons/Card';
+import Checkbox from './ComponentButtons/Checkbox';
+import _Columns from './ComponentButtons/Columns';
+import Container from './ComponentButtons/Container';
 import Dialog from './ComponentButtons/Dialog';
 import DialogModal from './ComponentButtons/DialogModal';
 import Divider from './ComponentButtons/Divider';
+import FieldWrapper from './ComponentButtons/FieldWrapper';
 import Icon from './ComponentButtons/Icon';
+import Input from './ComponentButtons/Input';
 import Image from './ComponentButtons/Image';
+import Label from './ComponentButtons/Label';
 import Navigation from './ComponentButtons/Navigation';
 import Palette from './ComponentButtons/Palette';
+import Pane from './ComponentButtons/Pane';
 import Popover from './ComponentButtons/Popover';
 import Primitive from './ComponentButtons/Primitive';
+import Radio from './ComponentButtons/Radio';
 import Ratings from './ComponentButtons/Ratings';
+import Select from './ComponentButtons/Select';
 import Spinner from './ComponentButtons/Spinner';
+import Switch from './ComponentButtons/Switch';
 import Table from './ComponentButtons/Table';
 import Tabs from './ComponentButtons/Tabs';
 import Tag from './ComponentButtons/Tag';
+import Textarea from './ComponentButtons/Textarea';
 import Tooltip from './ComponentButtons/Tooltip';
+import Typography from './ComponentButtons/Typography';
 
 > Note: Fannypack is still work in progress, meaning that it's APIs will most likely change in the future until a stable release.
 
@@ -84,25 +96,23 @@ Using:
 If you are using **Webpack@>=4**, **Rollup** or **Parcel**, then you can use named imports without it effecting your bundle size. However, if you are using older versions of Webpack or a bundler that does not support tree shaking, it is recommended to use default imports.
 
 <div>
-  <Heading use="h4">Primitives</Heading>
+  <Heading use="h4">Styles & Primitives</Heading>
   <Columns>
     <Column>
       <ComponentButton title="Primitive">
         <Primitive />
       </ComponentButton>
     </Column>
-    <Column />
-    <Column />
-  </Columns>
-  <Heading use="h4">Palette</Heading>
-  <Columns>
     <Column>
       <ComponentButton title="Palette">
         <Palette />
       </ComponentButton>
     </Column>
-    <Column />
-    <Column />
+    <Column>
+      <ComponentButton title="Typography">
+        <Typography />
+      </ComponentButton>
+    </Column>
   </Columns>
   <Heading use="h4">Components</Heading>
   <Columns>
@@ -147,7 +157,7 @@ If you are using **Webpack@>=4**, **Rollup** or **Parcel**, then you can use nam
       </ComponentButton>
     </Column>
     <Column>
-    <ComponentButton title="Image">
+      <ComponentButton title="Image">
         <Image />
       </ComponentButton>
     </Column>
@@ -193,4 +203,66 @@ If you are using **Webpack@>=4**, **Rollup** or **Parcel**, then you can use nam
     </Column>
     <Column />
   </Columns>
+  <Heading use="h4">Form</Heading>
+    <Columns>
+      <Column>
+        <ComponentButton title="Checkbox">
+          <Checkbox />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="FieldWrapper">
+          <FieldWrapper />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="Input">
+          <Input />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="Label">
+          <Label />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="Radio">
+          <Radio />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="Select">
+          <Select />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="Switch">
+          <Switch />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="Textarea">
+          <Textarea />
+        </ComponentButton>
+      </Column>
+      <Column />
+    </Columns>
+    <Heading use="h4">Layout</Heading>
+      <Columns>
+        <Column>
+          <ComponentButton title="_Columns">
+            <_Columns />
+          </ComponentButton>
+        </Column>
+        <Column>
+          <ComponentButton title="Container">
+            <Container />
+          </ComponentButton>
+        </Column>
+        <Column>
+          <ComponentButton title="Pane">
+            <Pane />
+          </ComponentButton>
+        </Column>
+      </Columns>
 </div>
