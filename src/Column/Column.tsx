@@ -23,8 +23,9 @@ export interface LocalColumnProps {
   spreadWidescreenOffset?: ColumnSpreadOffset;
   spreadFullHDOffset?: ColumnSpreadOffset;
 }
+export type ColumnProps = LocalColumnProps & ColumnsContextProps & ReakitBoxProps;
 
-export const Column: React.SFC<LocalColumnProps> = ({
+export const Column: React.FunctionComponent<LocalColumnProps> = ({
   children,
   className,
   spread,
@@ -99,7 +100,4 @@ Column.defaultProps = {
   spreadFullHDOffset: undefined
 };
 
-export type ColumnProps = LocalColumnProps & ColumnsContextProps & ReakitBoxProps;
-//@ts-ignore
-const C: React.SFC<ColumnProps> = Column;
-export default C;
+export default Column as React.FunctionComponent<ColumnProps>;

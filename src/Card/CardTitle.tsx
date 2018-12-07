@@ -7,8 +7,9 @@ export interface LocalCardTitleProps {
   children: React.ReactNode;
   className?: string;
 }
+export type CardTitleProps = LocalCardTitleProps & ReakitHeadingProps;
 
-const CardTitle: React.SFC<LocalCardTitleProps> = ({ children, ...props }) => (
+const CardTitle: React.FunctionComponent<LocalCardTitleProps> = ({ children, ...props }) => (
   <_CardTitle use="h5" isSubHeading {...props}>
     {children}
   </_CardTitle>
@@ -18,7 +19,4 @@ CardTitle.defaultProps = {
   className: undefined
 };
 
-export type CardTitleProps = LocalCardTitleProps & ReakitHeadingProps;
-//@ts-ignore
-const C: React.SFC<CardTitleProps> = CardTitle;
-export default C;
+export default CardTitle as React.FunctionComponent<CardTitleProps>;

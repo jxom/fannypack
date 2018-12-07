@@ -9,8 +9,9 @@ export interface LocalDialogTitleProps {
   children: React.ReactNode;
   className?: string;
 }
+export type DialogTitleProps = LocalDialogTitleProps & ReakitBoxProps;
 
-export const DialogTitle: React.SFC<LocalDialogTitleProps> = ({ children, ...props }) => (
+export const DialogTitle: React.FunctionComponent<LocalDialogTitleProps> = ({ children, ...props }) => (
   <_DialogTitle use="h5" isSubHeading {...props}>
     {children}
   </_DialogTitle>
@@ -24,7 +25,4 @@ DialogTitle.defaultProps = {
   className: undefined
 };
 
-export type DialogTitleProps = LocalDialogTitleProps & ReakitBoxProps;
-//@ts-ignore
-const C: React.SFC<DialogTitleProps> = DialogTitle;
-export default C;
+export default DialogTitle as React.FunctionComponent<DialogTitleProps>;

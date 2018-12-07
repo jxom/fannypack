@@ -40,7 +40,7 @@ const defaultProps: Partial<ActionButtonsProps> = {
   type: undefined
 };
 
-export const ActionButtons: React.SFC<ActionButtonsProps> = ({
+export const ActionButtons: React.FunctionComponent<ActionButtonsProps> = ({
   cancelProps,
   cancelText,
   isLoading,

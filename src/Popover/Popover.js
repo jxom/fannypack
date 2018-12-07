@@ -4,7 +4,7 @@ import React, { Fragment, type Element } from 'react';
 import type { Placement } from '../typesold';
 import { InlineBlock } from '../primitives';
 import { getUniqueId } from '../uniqueId';
-import Pane from '../Pane';
+import Pane from '../Pane/Pane.tsx';
 import PopoverContainer from './PopoverContainer';
 import PopoverClose from './PopoverClose';
 import PopoverPopover from './PopoverPopover';

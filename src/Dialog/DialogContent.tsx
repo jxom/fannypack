@@ -9,8 +9,9 @@ export interface LocalDialogContentProps {
   children: React.ReactNode;
   className?: string;
 }
+export type DialogContentProps = LocalDialogContentProps & ReakitBoxProps;
 
-export const DialogContent: React.SFC<LocalDialogContentProps> = ({ children, ...props }) => (
+export const DialogContent: React.FunctionComponent<LocalDialogContentProps> = ({ children, ...props }) => (
   <_DialogContent {...props}>{children}</_DialogContent>
 );
 
@@ -22,7 +23,4 @@ DialogContent.defaultProps = {
   className: undefined
 };
 
-export type DialogContentProps = LocalDialogContentProps & ReakitBoxProps;
-//@ts-ignore
-const C: React.SFC<DialogContentProps> = DialogContent;
-export default C;
+export default DialogContent as React.FunctionComponent<DialogContentProps>;

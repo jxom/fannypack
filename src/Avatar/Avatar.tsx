@@ -19,6 +19,7 @@ export interface LocalAvatarProps {
   size?: number | 'default' | 'xsmall' | 'small' | 'medium' | 'large';
   src?: string;
 }
+export type AvatarProps = LocalAvatarProps & Omit<ReakitAvatarProps, 'size'>;
 
 const defaultProps: Partial<LocalAvatarProps> = {
   a11yLabel: undefined,
@@ -34,7 +35,14 @@ const defaultProps: Partial<LocalAvatarProps> = {
   src: undefined
 };
 
-export const Avatar: React.SFC<LocalAvatarProps> = ({ a11yLabel, className, initials, size, src, ...props }) => (
+export const Avatar: React.FunctionComponent<LocalAvatarProps> = ({
+  a11yLabel,
+  className,
+  initials,
+  size,
+  src,
+  ...props
+}) => (
   <React.Fragment>
     {src && (
       <_Avatar
@@ -76,6 +84,4 @@ Avatar.propTypes = {
 };
 Avatar.defaultProps = defaultProps;
 
-export type AvatarProps = LocalAvatarProps & Omit<ReakitAvatarProps, 'size'>;
-const C: React.SFC<AvatarProps> = Avatar;
-export default C;
+export default Avatar as React.FunctionComponent<AvatarProps>;

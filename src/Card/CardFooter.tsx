@@ -9,8 +9,9 @@ export interface LocalCardFooterProps {
   children: React.ReactNode;
   className?: string;
 }
+export type CardFooterProps = LocalCardFooterProps & ReakitBoxProps;
 
-const CardFooter: React.SFC<LocalCardFooterProps> = ({ children, ...props }) => (
+const CardFooter: React.FunctionComponent<LocalCardFooterProps> = ({ children, ...props }) => (
   <_CardFooter {...props}>{children}</_CardFooter>
 );
 
@@ -22,7 +23,4 @@ CardFooter.defaultProps = {
   className: undefined
 };
 
-export type CardFooterProps = LocalCardFooterProps & ReakitBoxProps;
-//@ts-ignore
-const C: React.SFC<CardFooterProps> = CardFooter;
-export default C;
+export default CardFooter as React.FunctionComponent<CardFooterProps>;

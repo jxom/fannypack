@@ -51,7 +51,7 @@ export const animatePropTypes = {
 };
 export const animateDefaultProps = {
   delay: undefined,
-  duration: '100ms',
+  duration: '250ms',
   expand: undefined,
   fade: false,
   slide: false,

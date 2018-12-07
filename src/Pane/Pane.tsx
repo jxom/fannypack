@@ -12,15 +12,16 @@ export interface LocalPaneProps {
   children?: React.ReactNode;
   isFullWidth?: boolean;
 }
+export type PaneProps = LocalPaneProps & Omit<ReakitBoxProps, 'border'>;
 
-export const Pane: React.SFC<LocalPaneProps> = ({ border, children, ...props }) => (
+export const Pane: React.FunctionComponent<LocalPaneProps> = ({ border, children, ...props }) => (
   <_Pane styledBorder={border} {...props}>
     {children}
   </_Pane>
 );
 
 Pane.propTypes = {
-  border: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(['shadow'])]),
+  border: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.oneOf(['shadow'])]),
   className: PropTypes.string,
   children: PropTypes.node,
   isFullWidth: PropTypes.bool
@@ -32,7 +33,4 @@ Pane.defaultProps = {
   isFullWidth: false
 };
 
-export type PaneProps = LocalPaneProps & Omit<ReakitBoxProps, 'border'>;
-//@ts-ignore
-const C: React.SFC<PaneProps> = Pane;
-export default C;
+export default Pane as React.FunctionComponent<PaneProps>;

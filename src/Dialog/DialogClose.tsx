@@ -13,8 +13,9 @@ import { DialogClose as _DialogClose } from './styled';
 export interface LocalDialogCloseProps {
   className?: string;
 }
+export type DialogCloseProps = LocalDialogCloseProps & Omit<ButtonProps, 'children'>;
 
-export const DialogClose: React.SFC<LocalDialogCloseProps> = ({ children, ...props }) => (
+export const DialogClose: React.FunctionComponent<LocalDialogCloseProps> = ({ children, ...props }) => (
   <_DialogClose kind="link" {...props}>
     <VisuallyHidden>Close</VisuallyHidden>
     <Icon aria-hidden="true" icon="cross" />
@@ -28,7 +29,4 @@ DialogClose.defaultProps = {
   className: undefined
 };
 
-export type DialogCloseProps = LocalDialogCloseProps & Omit<ButtonProps, 'children'>;
-//@ts-ignore
-const C: React.SFC<DialogCloseProps> = DialogClose;
-export default C;
+export default DialogClose as React.FunctionComponent<DialogCloseProps>;

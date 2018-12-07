@@ -43,6 +43,7 @@ export interface LocalButtonProps {
   size?: Size;
   type?: string;
 }
+export type ButtonProps = LocalButtonProps & Omit<ReakitButtonProps, 'size'>;
 
 const defaultProps: Partial<LocalButtonProps> = {
   use: undefined,
@@ -110,7 +111,4 @@ Button.propTypes = {
 };
 Button.defaultProps = defaultProps;
 
-export type ButtonProps = LocalButtonProps & Omit<ReakitButtonProps, 'size'>;
-//@ts-ignore
-const C: React.SFC<ButtonProps> = Button;
-export default C;
+export default Button as React.FunctionComponent<ButtonProps>;

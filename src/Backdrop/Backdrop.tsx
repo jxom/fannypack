@@ -23,8 +23,9 @@ export interface LocalBackdropProps {
   onClick?(): void;
 }
 type Props = LocalBackdropProps & AnimateProps & RestrictHideProps;
+export type BackdropProps = Props & ReakitBackdropProps;
 
-export const Backdrop: React.SFC<Props> = ({ children, isVisible, ...props }) => (
+export const Backdrop: React.FunctionComponent<Props> = ({ children, isVisible, ...props }) => (
   <_Backdrop visible={isVisible} {...props}>
     {children}
   </_Backdrop>
@@ -49,7 +50,4 @@ Backdrop.defaultProps = {
   ...restrictDefaultProps
 };
 
-export type BackdropProps = Props & ReakitBackdropProps;
-//@ts-ignore
-const C: React.SFC<BackdropProps> = Backdrop;
-export default C;
+export default Backdrop as React.FunctionComponent<BackdropProps>;

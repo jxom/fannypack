@@ -9,8 +9,9 @@ export interface LocalDialogHeaderProps {
   children: React.ReactNode;
   className?: string;
 }
+export type DialogHeaderProps = LocalDialogHeaderProps & ReakitBoxProps;
 
-export const DialogHeader: React.SFC<LocalDialogHeaderProps> = ({ children, ...props }) => (
+export const DialogHeader: React.FunctionComponent<LocalDialogHeaderProps> = ({ children, ...props }) => (
   <_DialogHeader {...props}>{children}</_DialogHeader>
 );
 
@@ -22,7 +23,4 @@ DialogHeader.defaultProps = {
   className: undefined
 };
 
-export type DialogHeaderProps = LocalDialogHeaderProps & ReakitBoxProps;
-//@ts-ignore
-const C: React.SFC<DialogHeaderProps> = DialogHeader;
-export default C;
+export default DialogHeader as React.FunctionComponent<DialogHeaderProps>;

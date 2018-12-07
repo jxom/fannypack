@@ -12,13 +12,14 @@ export interface LocalBlockquoteProps {
   className?: string;
   palette?: Palette;
 }
+export type BlockquoteProps = LocalBlockquoteProps & ReakitBlockquoteProps;
 
 const defaultProps: Partial<LocalBlockquoteProps> = {
   className: undefined,
   palette: undefined
 };
 
-const Blockquote: React.SFC<LocalBlockquoteProps> = ({ children, className, ...props }) => (
+const Blockquote: React.FunctionComponent<LocalBlockquoteProps> = ({ children, className, ...props }) => (
   <_Blockquote className={className} {...props}>
     {children}
   </_Blockquote>
@@ -31,6 +32,4 @@ Blockquote.propTypes = {
 };
 Blockquote.defaultProps = defaultProps;
 
-export type BlockquoteProps = LocalBlockquoteProps & ReakitBlockquoteProps;
-const C: React.SFC<BlockquoteProps> = Blockquote;
-export default C;
+export default Blockquote as React.FunctionComponent<BlockquoteProps>;

@@ -12,8 +12,9 @@ export interface LocalDialogDialogProps {
   children: React.ReactNode;
   className?: string;
 }
+export type DialogDialogProps = LocalDialogDialogProps & PaneProps;
 
-export const DialogDialog: React.SFC<LocalDialogDialogProps> = ({
+export const DialogDialog: React.FunctionComponent<LocalDialogDialogProps> = ({
   a11yDescriptionId,
   a11yTitleId,
   children,
@@ -38,7 +39,4 @@ DialogDialog.defaultProps = {
   className: undefined
 };
 
-export type DialogDialogProps = LocalDialogDialogProps & PaneProps;
-//@ts-ignore
-const C: React.SFC<DialogDialogProps> = DialogDialog;
-export default C;
+export default DialogDialog as React.FunctionComponent<DialogDialogProps>;

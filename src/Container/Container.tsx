@@ -12,8 +12,9 @@ export interface LocalContainerProps {
   className?: string;
   isFluid?: boolean;
 }
+export type ContainerProps = LocalContainerProps & ReakitBoxProps;
 
-export const Container: React.SFC<LocalContainerProps> = ({ align, children, className, ...props }) => (
+export const Container: React.FunctionComponent<LocalContainerProps> = ({ align, children, className, ...props }) => (
   <_Container className={className} align={align} {...props}>
     {children}
   </_Container>
@@ -27,7 +28,4 @@ Container.defaultProps = {
   isFluid: false
 };
 
-export type ContainerProps = LocalContainerProps & ReakitBoxProps;
-//@ts-ignore
-const C: React.SFC<ContainerProps> = Container;
-export default C;
+export default Container as React.FunctionComponent<ContainerProps>;

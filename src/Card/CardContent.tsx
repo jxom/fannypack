@@ -9,8 +9,9 @@ export interface LocalCardContentProps {
   children: React.ReactNode;
   className?: string;
 }
+export type CardContentProps = LocalCardContentProps & ReakitBoxProps;
 
-const CardContent: React.SFC<LocalCardContentProps> = ({ children, ...props }) => (
+const CardContent: React.FunctionComponent<LocalCardContentProps> = ({ children, ...props }) => (
   <_CardContent {...props}>{children}</_CardContent>
 );
 
@@ -22,7 +23,4 @@ CardContent.defaultProps = {
   className: undefined
 };
 
-export type CardContentProps = LocalCardContentProps & ReakitBoxProps;
-//@ts-ignore
-const C: React.SFC<CardContentProps> = CardContent;
-export default C;
+export default CardContent as React.FunctionComponent<CardContentProps>;

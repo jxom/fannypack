@@ -9,8 +9,9 @@ export interface LocalCardHeaderProps {
   children: React.ReactNode;
   className?: string;
 }
+export type CardHeaderProps = LocalCardHeaderProps & ReakitBoxProps;
 
-const CardHeader: React.SFC<LocalCardHeaderProps> = ({ children, ...props }) => (
+const CardHeader: React.FunctionComponent<LocalCardHeaderProps> = ({ children, ...props }) => (
   <_CardHeader {...props}>{children}</_CardHeader>
 );
 
@@ -22,7 +23,4 @@ CardHeader.defaultProps = {
   className: undefined
 };
 
-export type CardHeaderProps = LocalCardHeaderProps & ReakitBoxProps;
-//@ts-ignore
-const C: React.SFC<CardHeaderProps> = CardHeader;
-export default C;
+export default CardHeader as React.FunctionComponent<CardHeaderProps>;

@@ -9,8 +9,9 @@ export interface LocalDialogFooterProps {
   children: React.ReactNode;
   className?: string;
 }
+export type DialogFooterProps = LocalDialogFooterProps & ReakitBoxProps;
 
-export const DialogFooter: React.SFC<LocalDialogFooterProps> = ({ children, ...props }) => (
+export const DialogFooter: React.FunctionComponent<LocalDialogFooterProps> = ({ children, ...props }) => (
   <_DialogFooter {...props}>{children}</_DialogFooter>
 );
 
@@ -22,7 +23,4 @@ DialogFooter.defaultProps = {
   className: undefined
 };
 
-export type DialogFooterProps = LocalDialogFooterProps & ReakitBoxProps;
-//@ts-ignore
-const C: React.SFC<DialogFooterProps> = DialogFooter;
-export default C;
+export default DialogFooter as React.FunctionComponent<DialogFooterProps>;

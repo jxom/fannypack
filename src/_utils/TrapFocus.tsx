@@ -1,18 +1,26 @@
-// @flow
-import React from 'react';
+import * as React from 'react';
+// @ts-ignore
 import _get from 'lodash/get';
+// @ts-ignore
 import createFocusTrap from 'focus-trap';
 
-type Props = {
-  children: Function,
-  isActive?: boolean,
-  usesPortal?: boolean
-};
-type State = {
-  originalAriaHiddenValues: Array<?string>
-};
+export interface TrapFocusProps {
+  children: (
+    {
+      fallbackFocusRef,
+      initialFocusRef
+    }: { fallbackFocusRef: React.Ref<HTMLElement>; initialFocusRef: React.Ref<HTMLElement> }
+  ) => React.ReactNode;
+  isActive?: boolean;
+  usesPortal?: boolean;
+}
+export interface TrapFocusState {
+  originalAriaHiddenValues: Array<string | void>;
+}
 
-export default class TrapFocus extends React.Component<Props, State> {
+const noop = () => {};
+
+export default class TrapFocus extends React.Component<TrapFocusProps, TrapFocusState> {
   static defaultProps = {
     isActive: false,
     usesPortal: false
@@ -22,14 +30,18 @@ export default class TrapFocus extends React.Component<Props, State> {
     originalAriaHiddenValues: []
   };
 
-  fallbackFocus = React.createRef();
-  initialFocus = React.createRef();
-  wrapper = React.createRef();
-  trap = {};
+  fallbackFocus = React.createRef<HTMLElement>();
+  initialFocus = React.createRef<HTMLElement>();
+  wrapper = React.createRef<HTMLDivElement>();
+  trap: { activate(): void; deactivate(): void } = {
+    activate: noop,
+    deactivate: noop
+  };
 
   componentDidMount = () => {
     const { isActive, usesPortal } = this.props;
 
+    // @ts-ignore
     this.trap = createFocusTrap(this.wrapper.current, {
       initialFocus: this.initialFocus.current,
       fallbackFocus: this.fallbackFocus.current,
@@ -42,7 +54,7 @@ export default class TrapFocus extends React.Component<Props, State> {
     }
 
     if (usesPortal) {
-      Array.from(_get(document, 'body.children', [])).forEach(child => {
+      Array.from(_get(document, 'body.children', [])).forEach((child: any) => {
         if (child.contains(this.wrapper.current)) return;
         this.setState(prevState => ({
           originalAriaHiddenValues: [...(prevState.originalAriaHiddenValues || []), child.getAttribute('aria-hidden')]
@@ -51,7 +63,7 @@ export default class TrapFocus extends React.Component<Props, State> {
     }
   };
 
-  componentDidUpdate = (prevProps: Props) => {
+  componentDidUpdate = (prevProps: TrapFocusProps) => {
     const { isActive, usesPortal } = this.props;
     const { originalAriaHiddenValues } = this.state;
     if (isActive !== prevProps.isActive) {
@@ -62,7 +74,7 @@ export default class TrapFocus extends React.Component<Props, State> {
       }
 
       if (usesPortal) {
-        Array.from(_get(document, 'body.children', [])).forEach((child, i) => {
+        Array.from(_get(document, 'body.children', [])).forEach((child: any, i: number) => {
           if (child.contains(this.wrapper.current)) {
             return;
           }

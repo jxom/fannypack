@@ -1,15 +1,14 @@
-// @flow
-import React from 'react';
-import { withTheme } from 'reakit/styled';
+import * as React from 'react';
+import { withTheme } from '../styled';
 import { Box, Flex } from '../primitives';
 import Code from '../Code';
 
-type Props = {
-  palette: string,
-  theme: Object
-};
+export interface PaletteColorProps {
+  palette: string;
+  theme: { palette: any };
+}
 
-const PaletteColor = ({ palette, theme, ...props }: Props) => {
+const PaletteColor: React.FunctionComponent<PaletteColorProps> = ({ palette, theme, ...props }) => {
   return (
     <Flex column alignItems="center">
       <Box marginBottom="1rem">

@@ -15,6 +15,7 @@ export interface LocalAlertProps {
   palette?: string;
   title?: string;
 }
+export type AlertProps = LocalAlertProps & ReakitBoxProps;
 
 const defaultProps: Partial<LocalAlertProps> = {
   className: undefined,
@@ -24,7 +25,7 @@ const defaultProps: Partial<LocalAlertProps> = {
   title: undefined
 };
 
-export const Alert: React.SFC<LocalAlertProps> = ({ className, children, palette, title, ...props }) => (
+export const Alert: React.FunctionComponent<LocalAlertProps> = ({ className, children, palette, title, ...props }) => (
   <_Alert role="alert" className={className} palette={palette} {...props}>
     {title && <AlertTitle>{title}</AlertTitle>}
     {typeof children === 'string' ? <Text>{children}</Text> : children}
@@ -40,6 +41,4 @@ Alert.propTypes = {
 };
 Alert.defaultProps = defaultProps;
 
-export type AlertProps = LocalAlertProps & ReakitBoxProps;
-const C: React.SFC<AlertProps> = Alert;
-export default C;
+export default Alert as React.FunctionComponent<AlertProps>;

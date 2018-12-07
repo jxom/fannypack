@@ -26,16 +26,17 @@ export interface LocalDialogProps {
   role?: 'alertdialog' | 'dialog';
   title?: string | React.ReactElement<any>;
 }
+export type DialogProps = LocalDialogProps;
 export interface DialogComponents {
-  Dialog: React.SFC<DialogDialogProps>;
-  Content: React.SFC<DialogContentProps>;
-  Header: React.SFC<DialogHeaderProps>;
-  Footer: React.SFC<DialogFooterProps>;
-  Title: React.SFC<DialogTitleProps>;
-  Close: React.SFC<DialogCloseProps>;
+  Dialog: React.FunctionComponent<DialogDialogProps>;
+  Content: React.FunctionComponent<DialogContentProps>;
+  Header: React.FunctionComponent<DialogHeaderProps>;
+  Footer: React.FunctionComponent<DialogFooterProps>;
+  Title: React.FunctionComponent<DialogTitleProps>;
+  Close: React.FunctionComponent<DialogCloseProps>;
 }
 
-export const Dialog: React.SFC<LocalDialogProps> & DialogComponents = ({
+export const Dialog: React.FunctionComponent<LocalDialogProps> & DialogComponents = ({
   actionButtonsProps,
   a11yDescriptionId,
   a11yTitleId,
@@ -93,7 +94,4 @@ Dialog.defaultProps = {
   title: undefined
 };
 
-export type DialogProps = LocalDialogProps;
-//@ts-ignore
-const C: React.SFC<DialogProps> & DialogComponents = Dialog;
-export default C;
+export default Dialog as React.FunctionComponent<DialogProps>;

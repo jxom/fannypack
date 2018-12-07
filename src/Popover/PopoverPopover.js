@@ -1,7 +1,7 @@
 // @flow
 import React, { type Node } from 'react';
 
-import TrapFocus from '../_utils/TrapFocus';
+import TrapFocus from '../_utils/TrapFocus.tsx';
 import { Box } from '../primitives';
 import { getUniqueId } from '../uniqueId';
 import _Popover from './styled';

@@ -21,14 +21,14 @@ export interface LocalCardProps {
   title?: string | React.ReactElement<any>;
 }
 export interface CardComponents {
-  Card: React.SFC<CardCardProps>;
-  Header: React.SFC<CardHeaderProps>;
-  Content: React.SFC<CardContentProps>;
-  Footer: React.SFC<CardFooterProps>;
-  Title: React.SFC<CardTitleProps>;
+  Card: React.FunctionComponent<CardCardProps>;
+  Header: React.FunctionComponent<CardHeaderProps>;
+  Content: React.FunctionComponent<CardContentProps>;
+  Footer: React.FunctionComponent<CardFooterProps>;
+  Title: React.FunctionComponent<CardTitleProps>;
 }
 
-export const Card: React.SFC<LocalCardProps> & CardComponents = ({
+export const Card: React.FunctionComponent<LocalCardProps> & CardComponents = ({
   a11yDescriptionId,
   a11yTitleId,
   children,

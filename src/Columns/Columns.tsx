@@ -14,8 +14,9 @@ export interface LocalColumnsProps {
   isOneLine?: boolean;
   minBreakpoint?: 'tablet' | 'mobile';
 }
+export type ColumnsProps = LocalColumnsProps & ReakitBoxProps;
 
-export const Columns: React.SFC<LocalColumnsProps> = ({
+export const Columns: React.FunctionComponent<LocalColumnsProps> = ({
   children,
   className,
   isGapless,
@@ -50,7 +51,4 @@ Columns.defaultProps = {
   minBreakpoint: undefined
 };
 
-export type ColumnsProps = LocalColumnsProps & ReakitBoxProps;
-//@ts-ignore
-const C: React.SFC<ColumnsProps> = Columns;
-export default C;
+export default Columns as React.FunctionComponent<ColumnsProps>;

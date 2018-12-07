@@ -11,8 +11,15 @@ export interface LocalCodeProps {
   codeClassName?: string;
   isBlock?: boolean;
 }
+export type CodeProps = LocalCodeProps & ReakitCodeProps;
 
-export const Code: React.SFC<LocalCodeProps> = ({ children, className, codeClassName, isBlock, ...props }) => (
+export const Code: React.FunctionComponent<LocalCodeProps> = ({
+  children,
+  className,
+  codeClassName,
+  isBlock,
+  ...props
+}) => (
   <_Code block={isBlock} {...props}>
     {children}
   </_Code>
@@ -30,7 +37,4 @@ Code.defaultProps = {
   isBlock: false
 };
 
-export type CodeProps = LocalCodeProps & ReakitCodeProps;
-//@ts-ignore
-const C: React.SFC<CodeProps> = Code;
-export default C;
+export default Code as React.FunctionComponent<CodeProps>;

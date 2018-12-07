@@ -12,8 +12,14 @@ export interface LocalCardCardProps {
   className?: string;
   isFullWidth?: boolean;
 }
+export type CardCardProps = LocalCardCardProps & PaneProps;
 
-const CardCard: React.SFC<LocalCardCardProps> = ({ a11yDescriptionId, a11yTitleId, children, ...props }) => (
+const CardCard: React.FunctionComponent<LocalCardCardProps> = ({
+  a11yDescriptionId,
+  a11yTitleId,
+  children,
+  ...props
+}) => (
   <Card aria-describedby={a11yDescriptionId} aria-labelledby={a11yTitleId} border="shadow" padding="medium" {...props}>
     {children}
   </Card>
@@ -34,7 +40,4 @@ CardCard.defaultProps = {
   isFullWidth: false
 };
 
-export type CardCardProps = LocalCardCardProps & PaneProps;
-//@ts-ignore
-const C: React.SFC<CardCardProps> = CardCard;
-export default C;
+export default CardCard as React.FunctionComponent<CardCardProps>;
