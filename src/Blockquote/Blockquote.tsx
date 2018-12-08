@@ -32,4 +32,5 @@ Blockquote.propTypes = {
 };
 Blockquote.defaultProps = defaultProps;
 
-export default Blockquote as React.FunctionComponent<BlockquoteProps>;
+const C: React.FunctionComponent<BlockquoteProps> = Blockquote;
+export default C;

@@ -26,4 +26,5 @@ OverlayToggle.defaultProps = {
   onClick: undefined
 };
 
-export default OverlayToggle as React.FunctionComponent<OverlayToggleProps>;
+const C: React.FunctionComponent<OverlayToggleProps> = OverlayToggle;
+export default C;

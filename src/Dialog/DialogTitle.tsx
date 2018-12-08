@@ -25,4 +25,5 @@ DialogTitle.defaultProps = {
   className: undefined
 };
 
-export default DialogTitle as React.FunctionComponent<DialogTitleProps>;
+const C: React.FunctionComponent<DialogTitleProps> = DialogTitle;
+export default C;

@@ -84,4 +84,5 @@ Avatar.propTypes = {
 };
 Avatar.defaultProps = defaultProps;
 
-export default Avatar as React.FunctionComponent<AvatarProps>;
+const C: React.FunctionComponent<AvatarProps> = Avatar;
+export default C;

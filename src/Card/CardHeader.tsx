@@ -23,4 +23,5 @@ CardHeader.defaultProps = {
   className: undefined
 };
 
-export default CardHeader as React.FunctionComponent<CardHeaderProps>;
+const C: React.FunctionComponent<CardHeaderProps> = CardHeader;
+export default C;

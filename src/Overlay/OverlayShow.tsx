@@ -29,4 +29,6 @@ export const overlayShowDefaultProps = {
 };
 OverlayShow.defaultProps = overlayShowDefaultProps;
 
-export default OverlayShow as React.FunctionComponent<OverlayShowProps>;
+// @ts-ignore
+const C: React.FunctionComponent<OverlayShowProps> = OverlayShow;
+export default C;

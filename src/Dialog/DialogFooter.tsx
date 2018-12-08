@@ -23,4 +23,5 @@ DialogFooter.defaultProps = {
   className: undefined
 };
 
-export default DialogFooter as React.FunctionComponent<DialogFooterProps>;
+const C: React.FunctionComponent<DialogFooterProps> = DialogFooter;
+export default C;

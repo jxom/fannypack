@@ -23,4 +23,5 @@ CardFooter.defaultProps = {
   className: undefined
 };
 
-export default CardFooter as React.FunctionComponent<CardFooterProps>;
+const C: React.FunctionComponent<CardFooterProps> = CardFooter;
+export default C;

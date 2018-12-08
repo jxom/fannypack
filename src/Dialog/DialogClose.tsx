@@ -29,4 +29,5 @@ DialogClose.defaultProps = {
   className: undefined
 };
 
-export default DialogClose as React.FunctionComponent<DialogCloseProps>;
+const C: React.FunctionComponent<DialogCloseProps> = DialogClose;
+export default C;

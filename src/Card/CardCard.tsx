@@ -40,4 +40,5 @@ CardCard.defaultProps = {
   isFullWidth: false
 };
 
-export default CardCard as React.FunctionComponent<CardCardProps>;
+const C: React.FunctionComponent<CardCardProps> = CardCard;
+export default C;

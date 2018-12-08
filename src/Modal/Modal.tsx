@@ -121,4 +121,5 @@ Modal.Container = ModalContainer;
 Modal.Hide = ModalHide;
 Modal.Show = ModalShow;
 
-export default Modal as React.FunctionComponent<ModalProps> & ModalComponents;
+const C: React.FunctionComponent<ModalProps> & ModalComponents = Modal;
+export default C;

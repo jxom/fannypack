@@ -96,4 +96,6 @@ Dialog.defaultProps = {
   title: undefined
 };
 
-export default Dialog as React.FunctionComponent<DialogProps> & DialogComponents;
+// @ts-ignore
+const C: React.FunctionComponent<DialogProps> & DialogComponents = Dialog;
+export default C;

@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Divider from '../Divider';
-import Box from 'reakit/Box';
-import Flex from 'reakit/Flex';
+import { Box, Flex } from '../../primitives';
+
 it('renders correctly for a basic divider', () => {
   const { container } = render(<Divider />);
   expect(container.firstChild).toMatchSnapshot();

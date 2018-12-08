@@ -22,4 +22,6 @@ ModalHide.defaultProps = {
   ...overlayHideDefaultProps
 };
 
-export default ModalHide as React.FunctionComponent<ModalHideProps>;
+// @ts-ignore
+const C: React.FunctionComponent<ModalHideProps> = ModalHide;
+export default C;

@@ -100,4 +100,5 @@ Column.defaultProps = {
   spreadFullHDOffset: undefined
 };
 
-export default Column as React.FunctionComponent<ColumnProps>;
+const C: React.FunctionComponent<ColumnProps> = Column;
+export default C;

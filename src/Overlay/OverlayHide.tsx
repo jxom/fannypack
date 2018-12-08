@@ -29,4 +29,6 @@ export const overlayHideDefaultProps = {
 };
 OverlayHide.defaultProps = overlayHideDefaultProps;
 
-export default OverlayHide as React.FunctionComponent<OverlayHideProps>;
+// @ts-ignore
+const C: React.FunctionComponent<OverlayHideProps> = OverlayHide;
+export default C;

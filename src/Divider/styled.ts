@@ -1,6 +1,8 @@
-import Divider from 'reakit/Divider';
-import styled, { css } from 'reakit/styled';
+import { Divider } from 'reakit';
 import { theme } from 'styled-tools';
+
+import { styled, css } from '../styled';
+import { DividerProps } from './Divider';
 
 const contentProperties = css`
   display: flex;
@@ -10,7 +12,7 @@ const contentProperties = css`
   &::before {
     background: white;
     color: #c3c3c3;
-    content: '${props => props.content}';
+    content: '${(props: any) => props.content}';
     text-transform: uppercase;
     font-size: 0.7em;
     font-weight: ${theme('fannypack.fontWeights.bold')};
@@ -29,7 +31,7 @@ const verticalProperties = css`
   }
 `;
 
-export default styled(Divider)`
+export default styled(Divider)<DividerProps>`
   opacity: 1;
   border-color: #e7e9ed;
 

@@ -37,4 +37,5 @@ Code.defaultProps = {
   isBlock: false
 };
 
-export default Code as React.FunctionComponent<CodeProps>;
+const C: React.FunctionComponent<CodeProps> = Code;
+export default C;

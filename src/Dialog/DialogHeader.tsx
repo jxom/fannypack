@@ -23,4 +23,5 @@ DialogHeader.defaultProps = {
   className: undefined
 };
 
-export default DialogHeader as React.FunctionComponent<DialogHeaderProps>;
+const C: React.FunctionComponent<DialogHeaderProps> = DialogHeader;
+export default C;

@@ -22,4 +22,6 @@ ModalShow.defaultProps = {
   ...overlayShowDefaultProps
 };
 
-export default ModalShow as React.FunctionComponent<ModalShowProps>;
+// @ts-ignore
+const C: React.FunctionComponent<ModalShowProps> = ModalShow;
+export default C;

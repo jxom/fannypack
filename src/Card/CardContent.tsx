@@ -23,4 +23,5 @@ CardContent.defaultProps = {
   className: undefined
 };
 
-export default CardContent as React.FunctionComponent<CardContentProps>;
+const C: React.FunctionComponent<CardContentProps> = CardContent;
+export default C;

@@ -50,4 +50,5 @@ Backdrop.defaultProps = {
   ...restrictDefaultProps
 };
 
-export default Backdrop as React.FunctionComponent<BackdropProps>;
+const C: React.FunctionComponent<BackdropProps> = Backdrop;
+export default C;

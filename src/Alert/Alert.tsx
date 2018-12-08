@@ -41,4 +41,5 @@ Alert.propTypes = {
 };
 Alert.defaultProps = defaultProps;
 
-export default Alert as React.FunctionComponent<AlertProps>;
+const C: React.FunctionComponent<AlertProps> = Alert;
+export default C;

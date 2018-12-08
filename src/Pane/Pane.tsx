@@ -33,4 +33,5 @@ Pane.defaultProps = {
   isFullWidth: false
 };
 
-export default Pane as React.FunctionComponent<PaneProps>;
+const C: React.FunctionComponent<PaneProps> = Pane;
+export default C;

@@ -23,4 +23,5 @@ DialogContent.defaultProps = {
   className: undefined
 };
 
-export default DialogContent as React.FunctionComponent<DialogContentProps>;
+const C: React.FunctionComponent<DialogContentProps> = DialogContent;
+export default C;

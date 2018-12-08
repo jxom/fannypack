@@ -51,4 +51,5 @@ Columns.defaultProps = {
   minBreakpoint: undefined
 };
 
-export default Columns as React.FunctionComponent<ColumnsProps>;
+const C: React.FunctionComponent<ColumnsProps> = Columns;
+export default C;

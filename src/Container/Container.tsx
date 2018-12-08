@@ -28,4 +28,5 @@ Container.defaultProps = {
   isFluid: false
 };
 
-export default Container as React.FunctionComponent<ContainerProps>;
+const C: React.FunctionComponent<ContainerProps> = Container;
+export default C;

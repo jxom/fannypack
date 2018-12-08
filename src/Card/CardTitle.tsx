@@ -19,4 +19,5 @@ CardTitle.defaultProps = {
   className: undefined
 };
 
-export default CardTitle as React.FunctionComponent<CardTitleProps>;
+const C: React.FunctionComponent<CardTitleProps> = CardTitle;
+export default C;

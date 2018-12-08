@@ -111,4 +111,6 @@ Button.propTypes = {
 };
 Button.defaultProps = defaultProps;
 
-export default Button as React.FunctionComponent<ButtonProps>;
+// @ts-ignore
+const C: React.FunctionComponent<ButtonProps> = Button;
+export default C;

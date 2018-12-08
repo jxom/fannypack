@@ -61,4 +61,5 @@ Overlay.defaultProps = {
   hideOnEsc: true
 };
 
-export default Overlay as React.FunctionComponent<OverlayProps> & OverlayComponents;
+const C: React.FunctionComponent<OverlayProps> & OverlayComponents = Overlay;
+export default C;
