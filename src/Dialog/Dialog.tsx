@@ -3,7 +3,9 @@ import * as React from 'react';
 // @ts-ignore
 import { getUniqueId } from '../uniqueId';
 import { Box } from '../primitives';
+import { Omit } from '../types';
 import ActionButtons, { ActionButtonsProps } from '../Button/ActionButtons';
+import { ButtonProps } from '../Button/Button';
 import DialogDialog, { DialogDialogProps } from './DialogDialog';
 import DialogContent, { DialogContentProps } from './DialogContent';
 import DialogHeader, { DialogHeaderProps } from './DialogHeader';
@@ -18,7 +20,7 @@ export interface LocalDialogProps {
   border?: true | 'shadow';
   children: React.ReactNode;
   className?: string;
-  closeButtonProps?: ActionButtonsProps;
+  closeButtonProps?: Omit<ButtonProps, 'children'>;
   footer?: string | React.ReactElement<any>;
   onClickClose?: () => void;
   showActionButtons?: boolean;
@@ -26,7 +28,7 @@ export interface LocalDialogProps {
   role?: 'alertdialog' | 'dialog';
   title?: string | React.ReactElement<any>;
 }
-export type DialogProps = LocalDialogProps;
+export type DialogProps = LocalDialogProps & DialogDialogProps;
 export interface DialogComponents {
   Dialog: React.FunctionComponent<DialogDialogProps>;
   Content: React.FunctionComponent<DialogContentProps>;

@@ -21,12 +21,14 @@ import {
 } from '../types';
 
 export interface Props {
-  children: (
-    {
-      fallbackFocusRef,
-      initialFocusRef
-    }: { fallbackFocusRef: React.RefObject<HTMLElement>; initialFocusRef: React.RefObject<HTMLElement> }
-  ) => React.ReactNode | React.ReactNode;
+  children:
+    | React.ReactNode
+    | ((
+        {
+          fallbackFocusRef,
+          initialFocusRef
+        }: { fallbackFocusRef: React.RefObject<HTMLElement>; initialFocusRef: React.RefObject<HTMLElement> }
+      ) => React.ReactNode);
   className?: string;
   /** Whether or not to show the modal component */
   isVisible?: boolean;
@@ -43,7 +45,7 @@ export interface ModalComponents {
   Show: React.FunctionComponent<ModalShowProps>;
 }
 
-const Modal: React.FunctionComponent<LocalModalProps> & ModalComponents = ({
+export const Modal: React.FunctionComponent<LocalModalProps> & ModalComponents = ({
   children,
   delay,
   duration,
@@ -72,8 +74,6 @@ const Modal: React.FunctionComponent<LocalModalProps> & ModalComponents = ({
             slide={undefined}
             use={hideOnClickOutside && type !== 'alert' ? ModalHide : undefined}
           />
-          {/*
-            // @ts-ignore */}
           <_Modal
             aria-modal="true"
             delay={delay}
@@ -84,6 +84,8 @@ const Modal: React.FunctionComponent<LocalModalProps> & ModalComponents = ({
             isVisible={isVisible}
             {...props}
           >
+            {/*
+              // @ts-ignore */}
             {typeof children === 'function' ? children({ fallbackFocusRef, initialFocusRef }) : children}
           </_Modal>
         </React.Fragment>

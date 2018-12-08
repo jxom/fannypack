@@ -23,7 +23,6 @@ export { Column } from './Column';
 export { Columns } from './Columns';
 export { Container } from './Container';
 export { Dialog, DialogClose, DialogContent, DialogDialog, DialogFooter, DialogHeader, DialogTitle } from './Dialog';
-// @ts-ignore
 export { DialogModal } from './DialogModal';
 // @ts-ignore
 export { Divider } from './Divider';
@@ -45,7 +44,6 @@ export { Label } from './Label';
 export { Link } from './Link';
 // @ts-ignore
 export { List, ListItem } from './List';
-// @ts-ignore
 export { Modal, ModalContainer, ModalShow, ModalHide } from './Modal';
 // @ts-ignore
 export { Navigation } from './Navigation';

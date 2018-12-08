@@ -1,13 +1,12 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import Button, { ButtonProps } from './Button';
 // @ts-ignore
 import Set from '../Set';
 import { Omit } from '../types';
 
-export interface ActionButtonsProps {
+export interface LocalActionButtonsProps {
   /** Custom button props for the cancel button */
   cancelProps?: Omit<ButtonProps, 'children'>;
   /** Custom text for the cancel button */
@@ -26,8 +25,9 @@ export interface ActionButtonsProps {
   /** Button type of the submit button */
   type?: string;
 }
+export type ActionButtonsProps = LocalActionButtonsProps & ReakitBoxProps;
 
-const defaultProps: Partial<ActionButtonsProps> = {
+const defaultProps: Partial<LocalActionButtonsProps> = {
   cancelProps: {},
   cancelText: 'Cancel',
   className: undefined,
@@ -40,7 +40,7 @@ const defaultProps: Partial<ActionButtonsProps> = {
   type: undefined
 };
 
-export const ActionButtons: React.FunctionComponent<ActionButtonsProps> = ({
+export const ActionButtons: React.FunctionComponent<LocalActionButtonsProps> = ({
   cancelProps,
   cancelText,
   isLoading,
