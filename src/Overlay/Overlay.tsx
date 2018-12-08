@@ -57,7 +57,8 @@ Overlay.defaultProps = {
   className: undefined,
   isVisible: false,
   ...animateDefaultProps,
-  ...restrictDefaultProps
+  ...restrictDefaultProps,
+  hideOnEsc: true
 };
 
 export default Overlay as React.FunctionComponent<OverlayProps> & OverlayComponents;

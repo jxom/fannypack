@@ -9,7 +9,7 @@ export interface TrapFocusProps {
     {
       fallbackFocusRef,
       initialFocusRef
-    }: { fallbackFocusRef: React.Ref<HTMLElement>; initialFocusRef: React.Ref<HTMLElement> }
+    }: { fallbackFocusRef: React.RefObject<HTMLElement>; initialFocusRef: React.RefObject<HTMLElement> }
   ) => React.ReactNode;
   isActive?: boolean;
   usesPortal?: boolean;

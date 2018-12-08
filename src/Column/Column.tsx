@@ -69,7 +69,7 @@ export const Column: React.FunctionComponent<LocalColumnProps> = ({
 );
 
 Column.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
   spread: columnSpreadPropType,
   spreadMobile: columnSpreadPropType,

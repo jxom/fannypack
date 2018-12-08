@@ -16,14 +16,17 @@ export const OverlayShow: React.FunctionComponent<LocalOverlayShowProps> = ({ ch
   <_OverlayShow {...props}>{children}</_OverlayShow>
 );
 
-OverlayShow.propTypes = {
+export const overlayShowPropTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func,
   show: PropTypes.func.isRequired
 };
-OverlayShow.defaultProps = {
+OverlayShow.propTypes = overlayShowPropTypes;
+
+export const overlayShowDefaultProps = {
   children: null,
   onClick: undefined
 };
+OverlayShow.defaultProps = overlayShowDefaultProps;
 
 export default OverlayShow as React.FunctionComponent<OverlayShowProps>;

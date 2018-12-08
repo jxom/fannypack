@@ -16,14 +16,17 @@ export const OverlayHide: React.FunctionComponent<LocalOverlayHideProps> = ({ ch
   <_OverlayHide {...props}>{children}</_OverlayHide>
 );
 
-OverlayHide.propTypes = {
+export const overlayHidePropTypes = {
   children: PropTypes.node,
   hide: PropTypes.func.isRequired,
   onClick: PropTypes.func
 };
-OverlayHide.defaultProps = {
+OverlayHide.propTypes = overlayHidePropTypes;
+
+export const overlayHideDefaultProps = {
   children: null,
   onClick: undefined
 };
+OverlayHide.defaultProps = overlayHideDefaultProps;
 
 export default OverlayHide as React.FunctionComponent<OverlayHideProps>;

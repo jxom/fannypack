@@ -14,7 +14,7 @@ import {
   restrictDefaultProps
 } from '../types';
 
-export interface LocalBackdropProps {
+export interface Props {
   use?: any;
   children?: React.ReactNode;
   className?: string;
@@ -22,10 +22,10 @@ export interface LocalBackdropProps {
   isVisible?: boolean;
   onClick?(): void;
 }
-type Props = LocalBackdropProps & AnimateProps & RestrictHideProps;
-export type BackdropProps = Props & ReakitBackdropProps;
+type LocalBackdropProps = Props & AnimateProps & RestrictHideProps;
+export type BackdropProps = ReakitBackdropProps & Props;
 
-export const Backdrop: React.FunctionComponent<Props> = ({ children, isVisible, ...props }) => (
+export const Backdrop: React.FunctionComponent<LocalBackdropProps> = ({ children, isVisible, ...props }) => (
   <_Backdrop visible={isVisible} {...props}>
     {children}
   </_Backdrop>

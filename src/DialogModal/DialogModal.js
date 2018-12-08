@@ -3,7 +3,7 @@ import React, { type Node, type Element } from 'react';
 
 import { getUniqueId } from '../uniqueId';
 import Dialog from '../Dialog/Dialog.tsx';
-import Modal from '../Modal';
+import Modal from '../Modal/Modal.tsx';
 
 type Props = {
   a11yDescriptionId?: string,

@@ -20,14 +20,17 @@ export const OverlayContainer: React.FunctionComponent<OverlayContainerProps> = 
   </ReakitOverlay.Container>
 );
 
-OverlayContainer.propTypes = {
+export const overlayContainerPropTypes = {
   children: PropTypes.func.isRequired,
   defaultVisible: PropTypes.bool,
   initialState: PropTypes.object
 };
-OverlayContainer.defaultProps = {
+OverlayContainer.propTypes = overlayContainerPropTypes;
+
+export const overlayContainerDefaultProps = {
   defaultVisible: false,
   initialState: {}
 };
+OverlayContainer.defaultProps = overlayContainerDefaultProps;
 
 export default OverlayContainer;

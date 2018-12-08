@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import { Box } from '../../primitives';
 import Modal from '../Modal';
