@@ -1,7 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import FieldWrapper from '../FieldWrapper';
+// @ts-ignore
 import Input from '../../Input';
+
 it('renders correctly for a basic field', () => {
   const { container } = render(
     <FieldWrapper a11yId="username" label="Username">

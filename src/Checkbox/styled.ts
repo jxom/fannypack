@@ -1,12 +1,13 @@
 // @flow
-import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
-import Label from 'reakit/Label';
+import { Label } from 'reakit';
 
 import { Box } from '../primitives';
+import { styled, css } from '../styled';
+// @ts-ignore
 import HiddenInput from '../_utils/HiddenInput';
 
-export const CheckboxIcon = styled(Box)`
+export const CheckboxIcon = styled(Box)<{ state?: string }>`
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -30,7 +31,7 @@ export const CheckboxIcon = styled(Box)`
 
 export const HiddenCheckbox = HiddenInput({
   Icon: CheckboxIcon,
-  checkedIconCss: css`
+  checkedIconCss: css<{ indeterminate?: boolean }>`
     background-clip: padding-box;
     content: '';
     left: calc(50% - 3px);

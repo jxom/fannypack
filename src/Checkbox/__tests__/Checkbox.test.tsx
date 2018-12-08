@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Checkbox from '../Checkbox';
+
 it('renders correctly for a basic checkbox', () => {
   const { container } = render(<Checkbox />);
   expect(container.firstChild).toMatchSnapshot();

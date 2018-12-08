@@ -42,19 +42,19 @@ exports[`renders correctly for a basic field 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c4 {
   display: inline-block;
 }
 
 .c3 {
   display: block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .c2 {
@@ -194,19 +194,19 @@ exports[`renders correctly for a field with a description 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c4 {
   display: inline-block;
 }
 
 .c3 {
   display: block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 abbr.c7 {
@@ -413,19 +413,19 @@ exports[`renders correctly for a field with a hint 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c4 {
   display: inline-block;
 }
 
 .c3 {
   display: block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 abbr.c10 {
@@ -633,19 +633,19 @@ exports[`renders correctly for a full width field 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c5 {
   display: inline-block;
 }
 
 .c4 {
   display: block;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .c3 {
@@ -794,19 +794,19 @@ exports[`renders correctly for a required field 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c4 {
   display: inline-block;
 }
 
 .c3 {
   display: block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .c2 {
@@ -946,19 +946,19 @@ exports[`renders correctly for an optional field 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c4 {
   display: inline-block;
 }
 
 .c3 {
   display: block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 abbr.c7 {
@@ -1181,19 +1181,19 @@ exports[`states renders correctly for an input with state danger 1`] = `
   color: #d60027 !important;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c4 {
   display: inline-block;
 }
 
 .c3 {
   display: block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 abbr.c10 {
@@ -1422,19 +1422,19 @@ exports[`states renders correctly for an input with state primary 1`] = `
   color: #3926a5 !important;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c4 {
   display: inline-block;
 }
 
 .c3 {
   display: block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 abbr.c10 {
@@ -1663,19 +1663,19 @@ exports[`states renders correctly for an input with state success 1`] = `
   color: #007b2e !important;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c4 {
   display: inline-block;
 }
 
 .c3 {
   display: block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 abbr.c10 {
@@ -1904,19 +1904,19 @@ exports[`states renders correctly for an input with state warning 1`] = `
   color: #ffb300 !important;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c4 {
   display: inline-block;
 }
 
 .c3 {
   display: block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 abbr.c10 {

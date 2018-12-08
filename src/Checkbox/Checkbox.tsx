@@ -1,39 +1,43 @@
-// @flow
-import React from 'react';
+import * as React from 'react';
+// @ts-ignore
+import PropTypes from 'prop-types';
+import { LabelProps as ReakitLabelProps } from 'reakit/ts';
 
+// @ts-ignore
 import Text from '../Text';
 import _Checkbox, { CheckboxIcon, HiddenCheckbox } from './styled';
 
-type Props = {
+export interface LocalCheckboxProps {
   /** Automatically focus on the checkbox */
-  autoFocus?: boolean,
-  checked?: boolean,
-  className?: string,
+  autoFocus?: boolean;
+  checked?: boolean;
+  className?: string;
   /** Is the checkbox checked by default? */
-  defaultChecked?: boolean,
+  defaultChecked?: boolean;
   /** Disables the checkbox */
-  disabled?: boolean,
+  disabled?: boolean;
   /** ID for the checkbox */
-  id?: string,
-  indeterminate?: boolean,
+  id?: string;
+  indeterminate?: boolean;
   /** Makes the checkbox required and sets aria-invalid to true */
-  isRequired?: boolean,
+  isRequired?: boolean;
   /** Checkbox label */
-  label: string,
-  name?: string,
+  label?: string;
+  name?: string;
   /** State of the checkbox. Can be any color in the palette. */
-  state?: string,
+  state?: string;
   /** Initial value of the checkbox */
-  value?: string,
+  value?: string;
   /** Function to invoke when focus is lost */
-  onBlur?: Function,
+  onBlur?(e: React.FocusEvent<HTMLInputElement>): void;
   /** Function to invoke when checkbox has changed */
-  onChange?: Function,
+  onChange?(e: React.FormEvent<HTMLInputElement>): void;
   /** Function to invoke when checkbox is focused */
-  onFocus?: Function
-};
+  onFocus?(e: React.FocusEvent<HTMLInputElement>): void;
+}
+export type CheckboxProps = LocalCheckboxProps & ReakitLabelProps;
 
-const Checkbox = ({
+export const Checkbox: React.FunctionComponent<LocalCheckboxProps> = ({
   autoFocus,
   checked,
   className,
@@ -50,7 +54,7 @@ const Checkbox = ({
   state,
   value,
   ...props
-}: Props) => (
+}) => (
   <_Checkbox
     aria-describedby="label"
     aria-invalid={state === 'danger'}
@@ -80,7 +84,26 @@ const Checkbox = ({
   </_Checkbox>
 );
 
-Checkbox.defaultProps = {
+export const checkboxPropTypes = {
+  autoFocus: PropTypes.bool,
+  checked: PropTypes.bool,
+  className: PropTypes.string,
+  defaultChecked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  id: PropTypes.string,
+  indeterminate: PropTypes.bool,
+  isRequired: PropTypes.bool,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  state: PropTypes.string,
+  value: PropTypes.string,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func
+};
+Checkbox.propTypes = checkboxPropTypes;
+
+export const checkboxDefaultProps = {
   autoFocus: false,
   checked: undefined,
   className: undefined,
@@ -89,6 +112,7 @@ Checkbox.defaultProps = {
   id: undefined,
   indeterminate: false,
   isRequired: false,
+  label: undefined,
   onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
@@ -96,5 +120,6 @@ Checkbox.defaultProps = {
   state: undefined,
   value: undefined
 };
+Checkbox.defaultProps = checkboxDefaultProps;
 
 export default Checkbox;

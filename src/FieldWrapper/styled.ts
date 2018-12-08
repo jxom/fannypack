@@ -1,10 +1,13 @@
-// @flow
-import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
-import Field from 'reakit/Field';
+import { Field } from 'reakit';
 
+import { css, styled } from '../styled';
+import { Omit } from '../types';
+// @ts-ignore
 import _Label from '../Label';
+// @ts-ignore
 import _Text from '../Text';
+import { FieldWrapperProps } from './FieldWrapper';
 
 export const Label = styled(_Label)`
   margin-bottom: 0 !important;
@@ -53,7 +56,7 @@ export const ValidationText = styled(_Text)`
   }
 `;
 
-export default styled(Field)`
+export default styled(Field)<Omit<FieldWrapperProps, 'children'>>`
   & {
     ${props =>
       props.isFullWidth &&
