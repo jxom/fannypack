@@ -1,7 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Input from '../Input';
 import InputField from '../InputField';
+import { Size } from '../../types';
+
 it('renders correctly for a basic input field', () => {
   const { container } = render(<InputField />);
   expect(container.firstChild).toMatchSnapshot();
@@ -39,7 +41,7 @@ describe('types', () => {
 describe('sizes', () => {
   ['small', 'medium', 'large'].forEach(size => {
     it(`renders correctly for an input field with size ${size}`, () => {
-      const { container } = render(<InputField size={size} />);
+      const { container } = render(<InputField size={size as Size} />);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -94,11 +96,11 @@ it('renders correctly for addon component (vertical)', () => {
 });
 
 it('renders correctly for an input with a before component', () => {
-  const { container } = render(<InputField before={<Input.Icon icon="search" />} />);
+  const { container } = render(<InputField before={<Input.Icon a11yLabel="Search" icon="search" />} />);
   expect(container.firstChild).toMatchSnapshot();
 });
 
 it('renders correctly for an input with a after component', () => {
-  const { container } = render(<InputField after={<Input.Icon icon="search" />} />);
+  const { container } = render(<InputField after={<Input.Icon a11yLabel="Search" icon="search" />} />);
   expect(container.firstChild).toMatchSnapshot();
 });

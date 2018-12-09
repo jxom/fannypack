@@ -1,14 +1,15 @@
-// @flow
-import styled, { css } from 'reakit/styled';
 import { theme } from 'styled-tools';
-import Image from 'reakit/Image';
+import { Image } from 'reakit';
 
-const fitProperties = props => {
+import styled, { css } from '../styled';
+import { ImageProps } from './Image';
+
+const fitProperties = (props: ImageProps) => {
   if (!props.fit) return;
   if (props.fit === 'contain') {
     return css`
       object-fit: contain;
-      ${props =>
+      ${(props: ImageProps) =>
         props.fitPosition
           ? css`
               object-position: ${props.fitPosition};
@@ -22,7 +23,7 @@ const fitProperties = props => {
   if (props.fit === 'cover') {
     return css`
       object-fit: cover;
-      ${props =>
+      ${(props: ImageProps) =>
         props.fitPosition
           ? css`
               object-position: ${props.fitPosition};
@@ -33,8 +34,9 @@ const fitProperties = props => {
       ${theme('fannypack.Image.fit.cover')};
     `;
   }
+  return null;
 };
-const fixedProperties = props => {
+const fixedProperties = (props: ImageProps) => {
   if (!props.isFixed) return;
   return css`
     max-width: unset;
@@ -43,7 +45,7 @@ const fixedProperties = props => {
   `;
 };
 
-export default styled(Image)`
+export default styled(Image)<ImageProps>`
   max-width: 100%;
 
   & {

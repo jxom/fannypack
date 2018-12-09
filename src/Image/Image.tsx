@@ -1,22 +1,23 @@
-// @flow
-import React, { type Node } from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
+import { ImageProps as ReakitImageProps } from 'reakit/ts';
 
 import _Image from './styled';
 
-type Props = {
-  use?: any,
-  children: Node,
-  className?: string,
+export interface LocalImageProps {
+  use?: any;
+  children?: React.ReactNode;
+  className?: string;
   /** How the image fits its bounds */
-  fit?: 'cover' | 'contain',
+  fit?: 'cover' | 'contain';
   /** Positioning of the fitted image. Value can be "top", "left", "center", "right", "bottom" or an "x y" coordinate */
-  fitPosition?: string,
+  fitPosition?: string;
   /** Fix the width of the image. It will not be responsive. */
-  isFixed?: boolean
-};
+  isFixed?: boolean;
+}
+export type ImageProps = LocalImageProps & ReakitImageProps;
 
-const Image = ({ children, className, isFixed, ...props }: Props) => (
+export const Image: React.FunctionComponent<LocalImageProps> = ({ children, className, isFixed, ...props }) => (
   <_Image
     className={classNames({
       [className || '']: Boolean(className)
@@ -36,4 +37,5 @@ Image.defaultProps = {
   isFixed: false
 };
 
-export default Image;
+const C: React.FunctionComponent<ImageProps> = Image;
+export default C;

@@ -7,7 +7,7 @@ import { IconSvgPaths16, IconSvgPaths20 } from '@blueprintjs/icons';
 import _get from 'lodash/get';
 
 import { withTheme } from '../styled';
-import { Size, sizePropType } from '../types';
+import { Omit, Size, sizePropType } from '../types';
 import _Icon from './styled';
 
 export interface LocalIconProps {
@@ -23,7 +23,7 @@ export interface LocalIconProps {
   size?: Size;
   theme?: Object;
 }
-export type IconProps = LocalIconProps & ReakitBoxProps;
+export type IconProps = LocalIconProps & Omit<ReakitBoxProps, 'size'>;
 
 const DEFAULT_VIEW_BOX_SIZE = 16;
 const LARGE_VIEW_BOX_SIZE = 20;
@@ -69,4 +69,6 @@ Icon.defaultProps = {
   theme: {}
 };
 
-export default withTheme(Icon);
+// @ts-ignore
+const C: React.FunctionComponent<IconProps> = withTheme(Icon);
+export default C;

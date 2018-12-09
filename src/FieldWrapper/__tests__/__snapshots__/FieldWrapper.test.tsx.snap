@@ -136,14 +136,12 @@ exports[`renders correctly for a basic field 1`] = `
   <div />
   <div
     class="c6 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c7 c8"
       id="username"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -355,14 +353,12 @@ samp.c7 {
   </span>
   <div
     class="c8 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c9 c10"
       id="username"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -571,14 +567,12 @@ samp.c10 {
   <div />
   <div
     class="c6 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c7 c8"
       id="username"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -736,14 +730,12 @@ exports[`renders correctly for a full width field 1`] = `
   <div />
   <div
     class="c7 c1"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c8 c9"
       id="username"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -888,14 +880,12 @@ exports[`renders correctly for a required field 1`] = `
   <div />
   <div
     class="c6 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="true"
       class="c7 c8"
       id="username"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -1109,14 +1099,12 @@ samp.c7 {
   <div />
   <div
     class="c8 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c9 c10"
       id="username"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -1344,14 +1332,12 @@ samp.c10 {
   <div />
   <div
     class="c6 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="true"
       aria-required="false"
       class="c7 c8"
       id="username"
-      style="size: default;"
       type="text"
       value="Jake"
     />
@@ -1585,14 +1571,12 @@ samp.c10 {
   <div />
   <div
     class="c6 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c7 c8"
       id="username"
-      style="size: default;"
       type="text"
       value="Jake"
     />
@@ -1826,14 +1810,12 @@ samp.c10 {
   <div />
   <div
     class="c6 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c7 c8"
       id="username"
-      style="size: default;"
       type="text"
       value="Jake"
     />
@@ -2067,14 +2049,12 @@ samp.c10 {
   <div />
   <div
     class="c6 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c7 c8"
       id="username"
-      style="size: default;"
       type="text"
       value="Jake"
     />

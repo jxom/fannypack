@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Image from '../Image';
+
 it('renders correctly for a basic image', () => {
   const { container } = render(
     <Image src="https://raw.githubusercontent.com/fannypackui/fannypack/master/src/_docs/bean.jpg" alt="Bean" />

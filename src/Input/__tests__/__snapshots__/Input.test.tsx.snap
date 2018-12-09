@@ -83,13 +83,11 @@ exports[`renders correctly for a basic input 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="text"
     value=""
   />
@@ -179,14 +177,12 @@ exports[`renders correctly for a disabled input 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
     disabled=""
-    style="size: default;"
     type="text"
     value=""
   />
@@ -281,13 +277,11 @@ exports[`renders correctly for a full width input 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="text"
     value=""
   />
@@ -423,7 +417,6 @@ exports[`renders correctly for an input with a after component 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <div
     class="c2 c3"
@@ -436,6 +429,9 @@ exports[`renders correctly for an input with a after component 1`] = `
       style="size: 1px;"
       viewBox="0 0 16 16"
     >
+      <title>
+        Search
+      </title>
       <path
         d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
         fill-rule="evenodd"
@@ -446,7 +442,6 @@ exports[`renders correctly for an input with a after component 1`] = `
     aria-invalid="false"
     aria-required="false"
     class="c6 c7"
-    style="size: default;"
     type="text"
     value=""
   />
@@ -582,7 +577,6 @@ exports[`renders correctly for an input with a before component 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <div
     class="c2 c3"
@@ -595,6 +589,9 @@ exports[`renders correctly for an input with a before component 1`] = `
       style="size: 1px;"
       viewBox="0 0 16 16"
     >
+      <title>
+        Search
+      </title>
       <path
         d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
         fill-rule="evenodd"
@@ -605,7 +602,6 @@ exports[`renders correctly for an input with a before component 1`] = `
     aria-invalid="false"
     aria-required="false"
     class="c6 c7"
-    style="size: default;"
     type="text"
     value=""
   />
@@ -695,13 +691,11 @@ exports[`renders correctly for an input with a default value 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="text"
     value="Awesome value"
   />
@@ -791,14 +785,12 @@ exports[`renders correctly for an input with a placeholder 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
     placeholder="Awesome placeholder"
-    style="size: default;"
     type="text"
     value=""
   />
@@ -899,13 +891,11 @@ exports[`sizes renders correctly for an input with size large 1`] = `
 
 <div
   class="c0 c1"
-  style="size: large;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: large;"
     type="text"
     value=""
   />
@@ -1006,13 +996,11 @@ exports[`sizes renders correctly for an input with size medium 1`] = `
 
 <div
   class="c0 c1"
-  style="size: medium;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: medium;"
     type="text"
     value=""
   />
@@ -1112,13 +1100,11 @@ exports[`sizes renders correctly for an input with size small 1`] = `
 
 <div
   class="c0 c1"
-  style="size: small;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: small;"
     type="text"
     value=""
   />
@@ -1213,13 +1199,11 @@ exports[`states renders correctly for an input with state danger 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="true"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="text"
     value=""
   />
@@ -1314,13 +1298,11 @@ exports[`states renders correctly for an input with state primary 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="text"
     value=""
   />
@@ -1415,13 +1397,11 @@ exports[`states renders correctly for an input with state success 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="text"
     value=""
   />
@@ -1516,13 +1496,11 @@ exports[`states renders correctly for an input with state warning 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="text"
     value=""
   />
@@ -1612,13 +1590,11 @@ exports[`types renders correctly for an input with type date 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="date"
     value=""
   />
@@ -1708,13 +1684,11 @@ exports[`types renders correctly for an input with type email 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="email"
     value=""
   />
@@ -1804,13 +1778,11 @@ exports[`types renders correctly for an input with type number 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="number"
     value=""
   />
@@ -1900,13 +1872,11 @@ exports[`types renders correctly for an input with type password 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="password"
     value=""
   />
@@ -1996,13 +1966,11 @@ exports[`types renders correctly for an input with type search 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="search"
     value=""
   />
@@ -2092,13 +2060,11 @@ exports[`types renders correctly for an input with type tel 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="tel"
     value=""
   />
@@ -2188,13 +2154,11 @@ exports[`types renders correctly for an input with type time 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="time"
     value=""
   />
@@ -2284,13 +2248,11 @@ exports[`types renders correctly for an input with type url 1`] = `
 
 <div
   class="c0 c1"
-  style="size: default;"
 >
   <input
     aria-invalid="false"
     aria-required="false"
     class="c2 c3"
-    style="size: default;"
     type="url"
     value=""
   />

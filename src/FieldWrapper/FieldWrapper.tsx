@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { FieldProps as ReakitFieldProps } from 'reakit/ts/Field/Field';
 
 import { Flex } from '../primitives';
+import { Omit } from '../types';
 import _FieldWrapper, { Label, DescriptionText, HintText, OptionalText, ValidationText } from './styled';
 
 export interface LocalFieldWrapperProps {
@@ -19,7 +20,7 @@ export interface LocalFieldWrapperProps {
   state?: string;
   validationText?: string;
 }
-export type FieldWrapperProps = LocalFieldWrapperProps & ReakitFieldProps;
+export type FieldWrapperProps = Omit<ReakitFieldProps, 'label'> & LocalFieldWrapperProps;
 export interface FieldElementProps {
   a11yId?: LocalFieldWrapperProps['a11yId'];
   isFullWidth?: LocalFieldWrapperProps['isFullWidth'];

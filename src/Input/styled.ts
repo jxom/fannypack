@@ -1,11 +1,13 @@
-// @flow
-import styled, { css } from 'reakit/styled';
+import * as React from 'react';
 import { palette, theme } from 'styled-tools';
-import Input from 'reakit/Input';
+import { Input } from 'reakit';
 
+import styled, { css } from '../styled';
 import { InlineFlex } from '../primitives';
-import _Icon from '../Icon';
+import _Icon, { IconProps } from '../Icon/Icon';
+// @ts-ignore
 import Spinner from '../Spinner';
+import { InputProps } from './Input';
 
 export const LoadingSpinner = styled(Spinner)`
   position: absolute;
@@ -16,7 +18,7 @@ export const LoadingSpinner = styled(Spinner)`
   z-index: 1;
 `;
 
-const sizeProperties = {
+const sizeProperties: { [key: string]: any } = {
   small: css`
     & + ${LoadingSpinner} {
       width: 10px;
@@ -54,7 +56,7 @@ const sizeProperties = {
   `
 };
 
-const wrapperSizeProperties = {
+const wrapperSizeProperties: { [key: string]: any } = {
   small: css`
     font-size: 0.8rem;
 
@@ -79,11 +81,12 @@ const wrapperSizeProperties = {
 };
 
 const stateProperties = css`
-  border-color: ${props => palette(`${props.state}Lighter`)(props)};
-  box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
+  border-color: ${(props: any) => palette(`${props.state}Lighter`)(props)};
+  box-shadow: ${(props: any) => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export const Icon = styled(_Icon)`
+// @ts-ignore
+export const Icon: React.FunctionComponent<IconProps> = styled(_Icon)<IconProps>`
   fill: ${palette('textLightest')};
   height: 2.5em;
   margin: 0 0.75em;
@@ -92,19 +95,19 @@ export const Icon = styled(_Icon)`
   ${theme('fannypack.Input.Icon.base')};
 `;
 
-export const InputWrapper = styled(InlineFlex)`
+export const InputWrapper = styled(InlineFlex)<{ isFullWidth?: boolean; styledSize?: string }>`
   align-items: center;
   position: relative;
-  width: ${props => (props.isFullWidth ? '100%' : undefined)};
+  width: ${(props: { isFullWidth?: boolean }) => (props.isFullWidth ? '100%' : undefined)};
 
   & {
-    ${props => props.size && wrapperSizeProperties[props.size]};
+    ${(props: { styledSize?: string }) => props.styledSize && wrapperSizeProperties[props.styledSize]};
   }
 
   ${theme('fannypack.Input.Wrapper.base')};
 `;
 
-export default styled(Input)`
+export default styled(Input)<InputProps & { styledSize?: string }>`
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -125,8 +128,8 @@ export default styled(Input)`
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${props => palette('primaryLighter')(props)};
-    box-shadow: ${props => palette('primaryLighter')(props)} 0px 0px 0px 1px !important;
+    border-color: ${(props: any) => palette('primaryLighter')(props)};
+    box-shadow: ${(props: any) => palette('primaryLighter')(props)} 0px 0px 0px 1px !important;
 
     & {
       ${theme('fannypack.Input.focus')};
@@ -142,31 +145,31 @@ export default styled(Input)`
   }
 
   & {
-    ${props =>
+    ${(props: any) =>
       props.after &&
       css`
         padding-right: 2.3em;
       `};
   }
   & {
-    ${props =>
+    ${(props: any) =>
       props.before &&
       css`
         padding-left: 2.3em;
       `};
   }
   & {
-    ${props =>
+    ${(props: any) =>
       props.isFullWidth &&
       css`
         width: 100%;
       `};
   }
   & {
-    ${props => props.size && sizeProperties[props.size]};
+    ${(props: any) => props.styledSize && sizeProperties[props.styledSize]};
   }
   & {
-    ${props => props.state && stateProperties};
+    ${(props: any) => props.state && stateProperties};
   }
 
   ${theme('fannypack.Input.base')};

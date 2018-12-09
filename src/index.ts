@@ -24,15 +24,10 @@ export { Columns } from './Columns';
 export { Container } from './Container';
 export { Dialog, DialogClose, DialogContent, DialogDialog, DialogFooter, DialogHeader, DialogTitle } from './Dialog';
 export { DialogModal } from './DialogModal';
-// @ts-ignore
 export { Divider } from './Divider';
-// @ts-ignore
 export { FieldWrapper } from './FieldWrapper';
-// @ts-ignore
 export { Group } from './Group';
-// @ts-ignore
 export { Heading } from './Heading';
-// @ts-ignore
 export { Icon } from './Icon';
 // @ts-ignore
 export { Image } from './Image';

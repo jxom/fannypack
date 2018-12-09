@@ -90,13 +90,11 @@ exports[`renders correctly for a basic input field 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -195,14 +193,12 @@ exports[`renders correctly for a disabled input field 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
       disabled=""
-      style="size: default;"
       type="text"
       value=""
     />
@@ -310,13 +306,11 @@ exports[`renders correctly for a full width input field 1`] = `
   <div />
   <div
     class="c2 c1"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c3 c4"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -374,6 +368,10 @@ exports[`renders correctly for a required field 1`] = `
   display: flex;
 }
 
+.c4 {
+  display: inline-block;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -428,10 +426,6 @@ exports[`renders correctly for a required field 1`] = `
   opacity: 0.6;
 }
 
-.c4 {
-  display: inline-block;
-}
-
 .c3 {
   display: block;
 }
@@ -461,14 +455,12 @@ exports[`renders correctly for a required field 1`] = `
   <div />
   <div
     class="c6 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="true"
       class="c7 c8"
       id="username"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -526,6 +518,10 @@ exports[`renders correctly for addon component (after) 1`] = `
   display: flex;
 }
 
+.c4 {
+  display: inline-block;
+}
+
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -578,10 +574,6 @@ exports[`renders correctly for addon component (after) 1`] = `
 
 .c8::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c6 {
@@ -673,14 +665,12 @@ exports[`renders correctly for addon component (after) 1`] = `
   >
     <div
       class="c7 c0"
-      style="size: default;"
     >
       <input
         aria-invalid="false"
         aria-required="false"
         class="c8 c9"
         id="username"
-        style="size: default;"
         type="text"
         value=""
       />
@@ -742,6 +732,10 @@ exports[`renders correctly for addon component (before) 1`] = `
   display: flex;
 }
 
+.c4 {
+  display: inline-block;
+}
+
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -794,10 +788,6 @@ exports[`renders correctly for addon component (before) 1`] = `
 
 .c8::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c6 {
@@ -892,14 +882,12 @@ exports[`renders correctly for addon component (before) 1`] = `
     </div>
     <div
       class="c7 c0"
-      style="size: default;"
     >
       <input
         aria-invalid="false"
         aria-required="false"
         class="c8 c9"
         id="username"
-        style="size: default;"
         type="text"
         value=""
       />
@@ -958,6 +946,10 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   display: flex;
 }
 
+.c4 {
+  display: inline-block;
+}
+
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1010,10 +1002,6 @@ exports[`renders correctly for addon component (vertical) 1`] = `
 
 .c8::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c6 {
@@ -1105,14 +1093,12 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   >
     <div
       class="c7 c0"
-      style="size: default;"
     >
       <input
         aria-invalid="false"
         aria-required="false"
         class="c8 c9"
         id="username"
-        style="size: default;"
         type="text"
         value=""
       />
@@ -1215,13 +1201,11 @@ exports[`renders correctly for an input field with a default value 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="text"
       value="Awesome value"
     />
@@ -1279,6 +1263,10 @@ exports[`renders correctly for an input field with a description 1`] = `
   display: flex;
 }
 
+.c4 {
+  display: inline-block;
+}
+
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1331,10 +1319,6 @@ exports[`renders correctly for an input field with a description 1`] = `
 
 .c9::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c3 {
@@ -1433,14 +1417,12 @@ samp.c7 {
   </span>
   <div
     class="c8 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c9 c10"
       id="username"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -1498,6 +1480,10 @@ exports[`renders correctly for an input field with a hint 1`] = `
   display: flex;
 }
 
+.c4 {
+  display: inline-block;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1550,10 +1536,6 @@ exports[`renders correctly for an input field with a hint 1`] = `
 
 .c7::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c3 {
@@ -1649,14 +1631,12 @@ samp.c10 {
   <div />
   <div
     class="c6 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c7 c8"
       id="username"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -1759,14 +1739,12 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
       placeholder="Awesome placeholder"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -1915,7 +1893,6 @@ exports[`renders correctly for an input with a after component 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <div
       class="c2 c3"
@@ -1928,6 +1905,9 @@ exports[`renders correctly for an input with a after component 1`] = `
         style="size: 1px;"
         viewBox="0 0 16 16"
       >
+        <title>
+          Search
+        </title>
         <path
           d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
           fill-rule="evenodd"
@@ -1938,7 +1918,6 @@ exports[`renders correctly for an input with a after component 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c7 c8"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -2087,7 +2066,6 @@ exports[`renders correctly for an input with a before component 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <div
       class="c2 c3"
@@ -2100,6 +2078,9 @@ exports[`renders correctly for an input with a before component 1`] = `
         style="size: 1px;"
         viewBox="0 0 16 16"
       >
+        <title>
+          Search
+        </title>
         <path
           d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
           fill-rule="evenodd"
@@ -2110,7 +2091,6 @@ exports[`renders correctly for an input with a before component 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c7 c8"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -2168,6 +2148,10 @@ exports[`renders correctly for an optional input field 1`] = `
   display: flex;
 }
 
+.c4 {
+  display: inline-block;
+}
+
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2220,10 +2204,6 @@ exports[`renders correctly for an optional input field 1`] = `
 
 .c9::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c3 {
@@ -2324,14 +2304,12 @@ samp.c7 {
   <div />
   <div
     class="c8 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c9 c10"
       id="username"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -2441,13 +2419,11 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: large;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: large;"
       type="text"
       value=""
     />
@@ -2557,13 +2533,11 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: medium;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: medium;"
       type="text"
       value=""
     />
@@ -2672,13 +2646,11 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: small;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: small;"
       type="text"
       value=""
     />
@@ -2782,13 +2754,11 @@ exports[`states renders correctly for an input field with state danger 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="true"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -2892,13 +2862,11 @@ exports[`states renders correctly for an input field with state primary 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -3002,13 +2970,11 @@ exports[`states renders correctly for an input field with state success 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -3112,13 +3078,11 @@ exports[`states renders correctly for an input field with state warning 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="text"
       value=""
     />
@@ -3217,13 +3181,11 @@ exports[`types renders correctly for an input field with type date 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="date"
       value=""
     />
@@ -3322,13 +3284,11 @@ exports[`types renders correctly for an input field with type email 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="email"
       value=""
     />
@@ -3427,13 +3387,11 @@ exports[`types renders correctly for an input field with type number 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="number"
       value=""
     />
@@ -3532,13 +3490,11 @@ exports[`types renders correctly for an input field with type password 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="password"
       value=""
     />
@@ -3637,13 +3593,11 @@ exports[`types renders correctly for an input field with type search 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="search"
       value=""
     />
@@ -3742,13 +3696,11 @@ exports[`types renders correctly for an input field with type tel 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="tel"
       value=""
     />
@@ -3847,13 +3799,11 @@ exports[`types renders correctly for an input field with type time 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="time"
       value=""
     />
@@ -3952,13 +3902,11 @@ exports[`types renders correctly for an input field with type url 1`] = `
   <div />
   <div
     class="c1 c0"
-    style="size: default;"
   >
     <input
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      style="size: default;"
       type="url"
       value=""
     />

@@ -7,7 +7,6 @@ import { HeadingProps as ReakitHeadingProps } from 'reakit/ts/Heading/Heading';
 import _Heading from './styled';
 
 export interface LocalHeadingProps {
-  use?: any;
   children: React.ReactNode;
   className?: string;
   isSubHeading?: boolean;
@@ -34,15 +33,15 @@ export const Heading: React.FunctionComponent<LocalHeadingProps> = ({
 );
 
 Heading.propTypes = {
-  use: PropTypes.any,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isSubHeading: PropTypes.bool
 };
 Heading.defaultProps = {
-  use: undefined,
   className: undefined,
   isSubHeading: false
 };
 
-export default Heading;
+// @ts-ignore
+const C: React.FunctionComponent<HeadingProps> = Heading;
+export default C;
