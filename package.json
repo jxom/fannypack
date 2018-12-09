@@ -7,7 +7,7 @@
   "unpkg": "dist/fannypack.min.js",
   "types": "ts/index.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn build:lib && yarn build:types && yarn build:proxies && yarn build:docs",
+    "build": "yarn clean && yarn build:lib && yarn build:types && yarn build:proxies",
     "build:lib": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly",
     "build:docs": "node --max_old_space_size=4096 node_modules/.bin/docz build",
