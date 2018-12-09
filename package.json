@@ -10,7 +10,7 @@
     "build": "yarn clean && yarn build:lib && yarn build:types && yarn build:proxies && yarn build:docs",
     "build:lib": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:docs": "docz build",
+    "build:docs": "node --max_old_space_size=4096 node_modules/.bin/docz build",
     "build:proxies": "node ./scripts/create-proxies",
     "clean": "rimraf es/ lib/ dist/ ts/ && yarn remove-proxies",
     "remove-proxies": "node ./scripts/remove-proxies",

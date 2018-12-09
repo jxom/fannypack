@@ -2,6 +2,7 @@ import { css } from './src/styled';
 
 export default {
   dest: '/docs',
+  files: '**/src/**/*.mdx',
   menu: ['Getting Started', 'Primitives', 'Palette', 'Typography', 'Layout', 'Components', 'Form', 'Utilities'],
   themeConfig: {
     colors: {
