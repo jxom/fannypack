@@ -1,10 +1,12 @@
-import Link from 'reakit/Link';
-import styled from 'reakit/styled';
+import { Link } from 'reakit';
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
-import Icon from '../Icon/styled';
 
-export default styled(Link)`
+import styled from '../styled';
+import Icon from '../Icon/styled';
+import { LinkProps } from './Link';
+
+export default styled(Link)<LinkProps>`
   color: ${palette('primary')};
   fill: ${palette('primary')};
   cursor: pointer;
