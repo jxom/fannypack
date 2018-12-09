@@ -24,8 +24,8 @@ export type Placement =
   | 'right-end'
   | 'bottom-end'
   | 'left-end';
-export type Size = 'default' | 'small' | 'medium' | 'large';
-export const sizePropType = PropTypes.oneOf(['default', 'small', 'medium', 'large']);
+export type Size = 'default' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'xxxlarge';
+export const sizePropType = PropTypes.oneOf(['default', 'small', 'medium', 'large', 'xlarge', 'xxlarge', 'xxxlarge']);
 
 export interface AnimateProps {
   /** Delay of the animation if one is specified. */

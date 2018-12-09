@@ -1,8 +1,10 @@
-import { Box } from '../primitives';
-import styled from '../styled';
 import { palette, theme } from 'styled-tools';
 
-export default styled(Box)`
+import { Box } from '../primitives';
+import styled from '../styled';
+import { IconProps } from './Icon';
+
+export default styled(Box)<IconProps>`
   fill: ${props => (props.color ? palette(props.color)(props) : 'inherit')};
   position: relative;
   height: ${props => props.size}em;

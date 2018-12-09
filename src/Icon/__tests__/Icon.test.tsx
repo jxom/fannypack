@@ -1,6 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Icon from '../Icon';
+import { Size } from '../../types';
+
 it('renders correctly for a basic icon', () => {
   const { container } = render(<Icon a11yLabel="Settings" icon="cog" />);
   expect(container.firstChild).toMatchSnapshot();
@@ -18,7 +20,7 @@ describe('colors', () => {
 describe('sizes', () => {
   ['small', 'medium', 'large', 'xlarge', 'xxlarge', 'xxxlarge'].forEach(size => {
     it(`renders correctly for an icon with size ${size}`, () => {
-      const { container } = render(<Icon a11yLabel="Settings" size={size} icon="cog" />);
+      const { container } = render(<Icon a11yLabel="Settings" size={size as Size} icon="cog" />);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
