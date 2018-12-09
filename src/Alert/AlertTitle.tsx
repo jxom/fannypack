@@ -8,7 +8,7 @@ export interface AlertTitleProps {
 }
 
 const AlertTitle = ({ children, ...props }: AlertTitleProps) => (
-  <_AlertTitle use="h6" isSemiBold {...props}>
+  <_AlertTitle use="h6" {...props}>
     {children}
   </_AlertTitle>
 );

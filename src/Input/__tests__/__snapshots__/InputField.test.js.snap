@@ -580,6 +580,10 @@ exports[`renders correctly for addon component (after) 1`] = `
   opacity: 0.6;
 }
 
+.c4 {
+  display: inline-block;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -634,10 +638,6 @@ exports[`renders correctly for addon component (after) 1`] = `
 .c6 > *:not(:first-child):not(:last-child) > input,
 .c6 > *:not(:first-child):not(:last-child) > select {
   border-radius: 0;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c3 {
@@ -796,6 +796,10 @@ exports[`renders correctly for addon component (before) 1`] = `
   opacity: 0.6;
 }
 
+.c4 {
+  display: inline-block;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -850,10 +854,6 @@ exports[`renders correctly for addon component (before) 1`] = `
 .c6 > *:not(:first-child):not(:last-child) > input,
 .c6 > *:not(:first-child):not(:last-child) > select {
   border-radius: 0;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c3 {
@@ -1012,6 +1012,10 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   opacity: 0.6;
 }
 
+.c4 {
+  display: inline-block;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1066,10 +1070,6 @@ exports[`renders correctly for addon component (vertical) 1`] = `
 .c6 > *:not(:first-child):not(:last-child) > input,
 .c6 > *:not(:first-child):not(:last-child) > select {
   border-radius: 0;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c3 {

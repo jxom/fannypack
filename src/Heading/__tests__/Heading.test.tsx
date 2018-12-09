@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Heading from '../Heading';
+
 it('renders correctly for a basic heading', () => {
   const { container } = render(<Heading>test</Heading>);
   expect(container.firstChild).toMatchSnapshot();

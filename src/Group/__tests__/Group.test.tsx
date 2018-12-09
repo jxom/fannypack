@@ -1,8 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
-import Button from '../../Button/Button.tsx';
+import Button from '../../Button';
+import { Box } from '../../primitives';
 import Group from '../Group';
-import Box from 'reakit/Box';
+
 it('renders correctly for a basic group', () => {
   const { container } = render(
     <Group>

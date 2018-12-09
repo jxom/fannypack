@@ -1,8 +1,10 @@
-import Group from 'reakit/Group';
-import styled, { css } from 'reakit/styled';
+import { Group } from 'reakit';
 import { theme } from 'styled-tools';
 
-export default styled(Group)`
+import styled, { css } from '../styled';
+import { GroupProps } from './Group';
+
+export default styled(Group)<GroupProps>`
   & > * {
     border-radius: 4px;
   }
