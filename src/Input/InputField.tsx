@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 // @ts-ignore
 import ConditionalWrap from 'conditional-wrap';
 
-import { Omit, Size } from '../types';
+import { Omit } from '../types';
 import Group from '../Group';
-import Input, { LocalInputProps, inputDefaultProps, inputPropTypes } from './Input';
+import Input, { LocalInputProps, InputProps, inputDefaultProps, inputPropTypes } from './Input';
 import FieldWrapper, {
   LocalFieldWrapperProps,
   fieldWrapperDefaultProps,
@@ -22,6 +22,7 @@ export interface Props {
   isVertical?: boolean;
 }
 export type LocalInputFieldProps = Omit<LocalFieldWrapperProps, 'children'> & LocalInputProps & Props;
+export type InputFieldProps = LocalInputFieldProps & InputProps;
 
 export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
   addonBefore,
@@ -77,4 +78,6 @@ InputField.defaultProps = {
   ...inputDefaultProps
 };
 
-export default InputField;
+// @ts-ignore
+const C: React.FunctionComponent<InputFieldProps> = InputField;
+export default C;

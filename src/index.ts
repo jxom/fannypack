@@ -29,9 +29,7 @@ export { FieldWrapper } from './FieldWrapper';
 export { Group } from './Group';
 export { Heading } from './Heading';
 export { Icon } from './Icon';
-// @ts-ignore
 export { Image } from './Image';
-// @ts-ignore
 export { Input, InputField } from './Input';
 // @ts-ignore
 export { Label } from './Label';
