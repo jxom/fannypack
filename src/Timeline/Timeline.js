@@ -1,6 +1,6 @@
 // @flow
 import React, { Component, type Node } from 'react';
-import Box from 'reakit/Box';
+import { Box } from '../primitives';
 
 import TimelineStep from './TimelineStep';
 import TimelineStepDetail from './TimelineStepDetail';
