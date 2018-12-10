@@ -32,6 +32,8 @@ export const StepBullet = styled.span`
   width: 0.625rem;
   margin-top: 1rem;
   margin-right: 0.5rem;
+  
+  ${theme('fannypack.Step.bullet.base')}
 `;
 
 export const StepLabel = styled(Box)`
