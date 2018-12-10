@@ -3,14 +3,17 @@ import React from 'react';
 const SvgComponent = props => (
   <svg width={93} height={50} fill="none" {...props}>
     <g clipPath="url(#prefix__clip0)">
-      <path fill="#fff" d="M0 0h92.308v50H0z" />
-      <path d="M.385 14.583h91.538M.385 37.083h91.538" stroke="#08175D" strokeLinecap="square" />
+      <path d="M.385 14.583h91.538z" fill="#fff" />
+      <path d="M.385 14.583h91.538" stroke="#08175D" strokeLinecap="square" />
+      <path d="M.385 37.083h91.538z" fill="#fff" />
+      <path d="M.385 37.083h91.538" stroke="#08175D" strokeLinecap="square" />
       <path
         d="M88.846.417H3.462C1.762.417.385 1.909.385 3.75v42.5c0 1.841 1.377 3.333 3.077 3.333h85.384c1.7 0 3.077-1.492 3.077-3.333V3.75c0-1.84-1.377-3.333-3.077-3.333z"
+        fill="#fff"
         stroke="#08175D"
       />
       <path
-        d="M67.126 7H9v2.807h58.126V7zM84.564 19.855H9v3.65h75.564v-3.65zM46.782 27.518H9v3.649h37.782v-3.65z"
+        d="M67.126 7H9v3.65h58.126V7zM84.564 17H9v3.649h75.564V17zM46.782 24.663H9v3.648h37.782v-3.648z"
         fill="#3926A5"
         fillOpacity={0.12}
       />
