@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { withTheme } from '../styled';
 import { Box, Flex } from '../primitives';
-import Code from '../Code';
+import Code from '../../Code';
 
 export interface PaletteColorProps {
   palette: string;
