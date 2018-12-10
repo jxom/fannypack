@@ -11,10 +11,12 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px 0;
 `;
 
 const BorderedButton = styled(Button)`
-  border: 1px solid ${palette.primary};
+  border: 1px solid ${palette('primaryLighter')};
+  border-radius: 2px;
 `;
 
 type Props = {
@@ -27,7 +29,7 @@ const ComponentButton = ({ children, title, ...props }: Props) => (
     <BorderedButton backgroundColor="primaryTint" height={100} width={200} {...props}>
       {children}
     </BorderedButton>
-    <Heading use="h6" marginTop="12px">
+    <Heading use="h6" marginTop="xxsmall" isSubHeading>
       {title}
     </Heading>
   </Wrapper>

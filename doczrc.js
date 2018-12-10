@@ -24,6 +24,10 @@ export default {
           font-size: 16px !important;
         }
 
+        & nav > div:first-child {
+          display: none;
+        }
+
         & > div > div > div {
           font-size: 16px !important;
         }
