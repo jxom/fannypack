@@ -56,5 +56,12 @@ export default {
   },
   wrapper: 'src/_docs/wrapper',
   codeSandbox: false,
-  typescript: true
+  typescript: true,
+  modifyBundlerConfig: (config, dev) => {
+    if (!dev) {
+      delete config.devtool;
+      config.optimization.minimizer[0].options.sourceMap = false;
+    }
+    return config;
+  }
 };

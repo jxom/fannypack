@@ -111,6 +111,17 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/helper-replace-supers" "^7.1.0"
 
+"@babel/helper-create-class-features-plugin@^7.2.1":
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.2.1.tgz#f6e8027291669ef64433220dc8327531233f1161"
+  integrity sha512-EsEP7XLFmcJHjcuFYBxYD1FkP0irC8C9fsrt2tX/jrAi/eTnFI6DOPgVFb+WREeg1GboF+Ib+nCHbGBodyAXSg==
+  dependencies:
+    "@babel/helper-function-name" "^7.1.0"
+    "@babel/helper-member-expression-to-functions" "^7.0.0"
+    "@babel/helper-optimise-call-expression" "^7.0.0"
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/helper-replace-supers" "^7.1.0"
+
 "@babel/helper-define-map@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/helper-define-map/-/helper-define-map-7.1.0.tgz#3b74caec329b3c80c116290887c0dd9ae468c20c"
@@ -285,6 +296,14 @@
   integrity sha512-pdBj4Hvyt/L1LA0Vvm/Tkp9gNDGLIkSbX8IrYfWcoA5xUZIg8qjSOTChUSaCjYdvoMcB9y2bXVGNVZ5DH62CZg==
   dependencies:
     "@babel/helper-create-class-features-plugin" "^7.2.0"
+    "@babel/helper-plugin-utils" "^7.0.0"
+
+"@babel/plugin-proposal-class-properties@7.2.1":
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.2.1.tgz#c734a53e0a1ec40fe5c22ee5069d26da3b187d05"
+  integrity sha512-/4FKFChkQ2Jgb8lBDsvFX496YTi7UWTetVgS8oJUpX1e/DlaoeEK57At27ug8Hu2zI2g8bzkJ+8k9qrHZRPGPA==
+  dependencies:
+    "@babel/helper-create-class-features-plugin" "^7.2.1"
     "@babel/helper-plugin-utils" "^7.0.0"
 
 "@babel/plugin-proposal-json-strings@^7.2.0":
@@ -1967,6 +1986,27 @@ babel-preset-docz@^0.12.14:
     babel-plugin-transform-dynamic-import "^2.0.0"
     babel-plugin-transform-react-remove-prop-types "^0.4.21"
 
+babel-preset-docz@^0.12.15:
+  version "0.12.15"
+  resolved "https://registry.yarnpkg.com/babel-preset-docz/-/babel-preset-docz-0.12.15.tgz#dfdc473a78234b83f4d4d649dc7f0fd1e83c423d"
+  integrity sha512-QVYgAw02JX9xKEFY3K4hvDJi+TENa6rxCCboLFwkwLzIgOcsPaF4c1EsP6AD2aQaTxOw6umwP5UQTFifKQBQBg==
+  dependencies:
+    "@babel/core" "7.2.0"
+    "@babel/plugin-proposal-class-properties" "7.2.1"
+    "@babel/plugin-proposal-object-rest-spread" "7.2.0"
+    "@babel/plugin-syntax-dynamic-import" "7.2.0"
+    "@babel/plugin-transform-destructuring" "7.2.0"
+    "@babel/plugin-transform-regenerator" "7.0.0"
+    "@babel/plugin-transform-runtime" "7.2.0"
+    "@babel/preset-env" "7.2.0"
+    "@babel/preset-flow" "7.0.0"
+    "@babel/preset-react" "7.0.0"
+    "@babel/preset-typescript" "7.1.0"
+    babel-plugin-macros "^2.4.0"
+    babel-plugin-react-docgen "^2.0.0"
+    babel-plugin-transform-dynamic-import "^2.0.0"
+    babel-plugin-transform-react-remove-prop-types "^0.4.21"
+
 babel-preset-jest@^23.2.0:
   version "23.2.0"
   resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-23.2.0.tgz#8ec7a03a138f001a1a8fb1e8113652bf1a55da46"
@@ -3634,6 +3674,78 @@ docz-core@^0.12.14:
     ws "^6.1.2"
     yargs "^12.0.5"
 
+docz-core@^0.12.15:
+  version "0.12.15"
+  resolved "https://registry.yarnpkg.com/docz-core/-/docz-core-0.12.15.tgz#b5f1ff13b44341a5c73237036a3e1f39057c96be"
+  integrity sha512-grXBl/90EmMTE9gKiOi/iKiRzAscB3jR5T/TOaC9XsaFMnYFZfoNUl2U7cbdTZdtPnWcFi5OwuPLXsb4e7eATg==
+  dependencies:
+    "@babel/core" "7.2.0"
+    "@babel/polyfill" "7.0.0"
+    "@babel/runtime" "^7.2.0"
+    "@mdx-js/loader" "^0.16.5"
+    "@mdx-js/mdx" "^0.16.5"
+    "@mdx-js/mdxast" "^0.16.1"
+    "@sindresorhus/slugify" "^0.6.0"
+    "@svgr/webpack" "^4.1.0"
+    art-template "^4.13.2"
+    babel-loader "^8.0.2"
+    babel-preset-docz "^0.12.15"
+    babylon "^6.18.0"
+    cache-loader "^1.2.5"
+    chalk "^2.4.1"
+    chokidar "^2.0.4"
+    common-tags "^1.8.0"
+    connect-history-api-fallback "^1.5.0"
+    cpy "^7.0.1"
+    deepmerge "^2.2.1"
+    detect-port "^1.3.0"
+    docz-utils "^0.12.15"
+    dotenv "^6.1.0"
+    env-dot-prop "^1.1.0"
+    fast-deep-equal "^2.0.1"
+    fast-glob "^2.2.4"
+    file-loader "^2.0.0"
+    find-up "^3.0.0"
+    friendly-errors-webpack-plugin "^1.7.0"
+    fs-extra "^7.0.1"
+    get-pkg-repo "^4.0.2"
+    happypack "^5.0.0"
+    html-minifier "^3.5.21"
+    humanize-string "^1.0.2"
+    koa "^2.6.2"
+    koa-connect "^2.0.1"
+    koa-mount "^4.0.0"
+    koa-range "^0.3.0"
+    koa-static "^5.0.0"
+    load-cfg "^0.12.15"
+    lodash.get "^4.4.2"
+    mini-html-webpack-plugin "^0.2.3"
+    p-reduce "^1.0.0"
+    react-dev-utils "^6.1.1"
+    react-docgen-typescript-loader "^3.0.0-rc.0"
+    react-hot-loader "^4.5.1"
+    rehype-docz "^0.12.15"
+    rehype-slug "^2.0.2"
+    remark-docz "^0.12.15"
+    remark-frontmatter "^1.3.1"
+    remark-parse "^6.0.2"
+    resolve "^1.8.1"
+    signale "^1.3.0"
+    source-map-loader "^0.2.4"
+    terser-webpack-plugin "^1.1.0"
+    titleize "^1.0.1"
+    url-loader "^1.1.2"
+    webpack "^4.27.0"
+    webpack-bundle-analyzer "^3.0.3"
+    webpack-chain "^5.0.1"
+    webpack-hot-client "^4.1.1"
+    webpack-manifest-plugin "^2.0.4"
+    webpack-serve "^2.0.3"
+    webpack-serve-overlay "^0.3.0"
+    webpackbar "^3.1.2"
+    ws "^6.1.2"
+    yargs "^12.0.5"
+
 docz-theme-default@0.12.14, docz-theme-default@^0.12.14:
   version "0.12.14"
   resolved "https://registry.yarnpkg.com/docz-theme-default/-/docz-theme-default-0.12.14.tgz#9a14e0ad64e470e6faa9c3f4508de1c43bcd086f"
@@ -3642,6 +3754,36 @@ docz-theme-default@0.12.14, docz-theme-default@^0.12.14:
     codemirror "^5.42.0"
     copy-text-to-clipboard "^1.0.4"
     docz "^0.12.14"
+    emotion "^9.2.12"
+    emotion-theming "^9.2.9"
+    facepaint "^1.2.1"
+    hotkeys-js "^3.4.1"
+    lodash.flattendepth "^4.7.0"
+    lodash.get "^4.4.2"
+    match-sorter "^2.3.0"
+    polished "^2.3.1"
+    prop-types "15.6.2"
+    rc-tooltip "^3.7.3"
+    re-resizable "^4.10.0"
+    react "^16.6.3"
+    react-codemirror2 "^5.1.0"
+    react-dom "^16.6.3"
+    react-emotion "^9.2.12"
+    react-feather "^1.1.4"
+    react-live "^1.12.0"
+    react-perfect-scrollbar "^1.4.2"
+    react-powerplug "^1.0.0"
+    react-sizes "^1.0.4"
+    webfontloader "^1.6.28"
+
+docz-theme-default@^0.12.15:
+  version "0.12.15"
+  resolved "https://registry.yarnpkg.com/docz-theme-default/-/docz-theme-default-0.12.15.tgz#e40ebbd04ed5cd0583bb7afdd9cb149203378f1d"
+  integrity sha512-THBxyIYmduvLAWkjCkIRIBlcU5SJKSHLeKi5x9EJrvzN5amNZXJ2HYry07vGNebDEHQNtx+7E8OVY3EzMTKY0Q==
+  dependencies:
+    codemirror "^5.42.0"
+    copy-text-to-clipboard "^1.0.4"
+    docz "^0.12.15"
     emotion "^9.2.12"
     emotion-theming "^9.2.9"
     facepaint "^1.2.1"
@@ -3692,7 +3834,61 @@ docz-utils@^0.12.14:
     unist-util-is "^2.1.2"
     unist-util-visit "^1.4.0"
 
-docz@0.12.14, docz@^0.12.14:
+docz-utils@^0.12.15:
+  version "0.12.15"
+  resolved "https://registry.yarnpkg.com/docz-utils/-/docz-utils-0.12.15.tgz#0c4d91c13afbc89ad2569774ea1daf7faccead23"
+  integrity sha512-iPv4+CneQlaupUBWf3MC7VJ2jbXaZ7MLY6etSczzBJJ6RrtFYJ7BTJLB2W62zMX53U+7iQT4arc7rk6Ce/CpnA==
+  dependencies:
+    "@babel/generator" "^7.2.0"
+    "@babel/parser" "^7.2.0"
+    "@babel/traverse" "^7.1.6"
+    codesandboxer-fs "^0.4.7"
+    fs-extra "^7.0.1"
+    humanize-string "^1.0.2"
+    jsx-ast-utils "^2.0.1"
+    lodash.flatten "^4.4.0"
+    lodash.get "^4.4.2"
+    prettier "^1.15.3"
+    remark-frontmatter "^1.3.1"
+    remark-parse "^6.0.2"
+    remark-parse-yaml "^0.0.1"
+    remark-slug "^5.1.1"
+    signale "^1.3.0"
+    strip-indent "^2.0.0"
+    to-vfile "^5.0.2"
+    unescape-js "^1.1.1"
+    unified "^7.0.1"
+    unist-util-find "^1.0.1"
+    unist-util-is "^2.1.2"
+    unist-util-visit "^1.4.0"
+
+docz@0.12.15, docz@^0.12.15:
+  version "0.12.15"
+  resolved "https://registry.yarnpkg.com/docz/-/docz-0.12.15.tgz#cf92f7d8ed30ac64a0f6a11bf36708ae369d84f5"
+  integrity sha512-cXNW/76Yu/G/cuO8LyG0VFLlyBMUmGLm2bmTyVPPHtmITGRbk79c6WUial4+vq5aEY1HwDHIZ1CSJ+u2tBvkqg==
+  dependencies:
+    "@mdx-js/tag" "^0.16.1"
+    "@sindresorhus/slugify" "^0.6.0"
+    array-sort "^1.0.0"
+    callbag-observe "^1.0.0"
+    callbag-subject "^1.0.2"
+    capitalize "^2.0.0"
+    deepmerge "^2.2.1"
+    docz-core "^0.12.15"
+    docz-theme-default "^0.12.15"
+    fast-deep-equal "^2.0.1"
+    lodash "^4.17.11"
+    prop-types "^15.6.2"
+    react "^16.6.3"
+    react-dom "^16.6.3"
+    react-imported-component "^5.2.3"
+    react-router "^4.3.1"
+    react-router-dom "^4.3.1"
+    react-router-hash-link "^1.2.1"
+    ulid "^2.3.0"
+    yargs "^12.0.5"
+
+docz@^0.12.14:
   version "0.12.14"
   resolved "https://registry.yarnpkg.com/docz/-/docz-0.12.14.tgz#36c9a99c24125b4759a7ba82ae6460ca2346885e"
   integrity sha512-+jHBGv4hqwFo+PolP8DFDLuiVdKfDppqTTuOvVzEDXu9aAZacisEu86B9zoY1D37gspUgWitD1XxHJ1QK0/vfw==
@@ -6686,6 +6882,16 @@ load-cfg@^0.12.14:
     find-up "^3.0.0"
     fs-extra "^7.0.1"
 
+load-cfg@^0.12.15:
+  version "0.12.15"
+  resolved "https://registry.yarnpkg.com/load-cfg/-/load-cfg-0.12.15.tgz#8db1caf9416618e82dbb4ee6214a121e9b717220"
+  integrity sha512-lufeXloizePDHFttyddQGY6mG4AfO/+qAUumVOs55zJRGXK7fD0QHO81Ti7qx+JY3D1lU4qihSJVjq0hAzG4CQ==
+  dependencies:
+    deepmerge "^2.2.1"
+    esm "^3.0.84"
+    find-up "^3.0.0"
+    fs-extra "^7.0.1"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -6800,6 +7006,11 @@ lodash.keys@^3.1.2:
     lodash._getnative "^3.0.0"
     lodash.isarguments "^3.0.0"
     lodash.isarray "^3.0.0"
+
+lodash.merge@^4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
+  integrity sha512-AOYza4+Hf5z1/0Hztxpm2/xiPZgi/cjMqdnKTUWTBSKchJlxXXuUSxCCl8rJlf4g6yww/j6mA8nC8Hw/EZWxKQ==
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
@@ -8672,6 +8883,21 @@ react-hot-loader@4.3.12:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.0.2"
 
+react-hot-loader@^4.5.1:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.5.3.tgz#d7e5cd04fd6ae7c482404202d5f162e4eaefb268"
+  integrity sha512-3meh550Cagzdqaci2R0wdCYDNy5hZFF4/ej2iiOXjRX5BRI30kTNJtzDFdXXIqipIjLhEPUpPLSsdR16ExDzfA==
+  dependencies:
+    fast-levenshtein "^2.0.6"
+    global "^4.3.0"
+    hoist-non-react-statics "^2.5.0"
+    loader-utils "^1.1.0"
+    lodash.merge "^4.6.1"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
+    shallowequal "^1.0.2"
+    source-map "^0.7.3"
+
 react-imported-component@^5.2.3:
   version "5.2.3"
   resolved "https://registry.yarnpkg.com/react-imported-component/-/react-imported-component-5.2.3.tgz#7771b72d2814c5ba2839489e2cdc5d033637c045"
@@ -9028,6 +9254,17 @@ rehype-docz@^0.12.14:
     lodash.flatten "^4.4.0"
     unist-util-is "^2.1.2"
 
+rehype-docz@^0.12.15:
+  version "0.12.15"
+  resolved "https://registry.yarnpkg.com/rehype-docz/-/rehype-docz-0.12.15.tgz#027022d4a0995b64449c343129f43585fc0d49ed"
+  integrity sha512-P2siVCX5cHgF/mPADuVjlvNADBODeMcqi3n+tvUG/agdE7BnYA7h5wtxFGvucApZ0AywJ6bkjYQmntSdd0I2zw==
+  dependencies:
+    docz-utils "^0.12.15"
+    hast-util-to-string "^1.0.1"
+    jsx-ast-utils "^2.0.1"
+    lodash.flatten "^4.4.0"
+    unist-util-is "^2.1.2"
+
 rehype-parse@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/rehype-parse/-/rehype-parse-6.0.0.tgz#f681555f2598165bee2c778b39f9073d17b16bca"
@@ -9057,6 +9294,14 @@ remark-docz@^0.12.14:
   version "0.12.14"
   resolved "https://registry.yarnpkg.com/remark-docz/-/remark-docz-0.12.14.tgz#e92ff3001f5c283076b55887513f362cfc2b8ed0"
   integrity sha512-fM7KM3YM6529Cmdvj2PEPoAUVm30uRKn5hORgg9PfZ3/IuJLalMYb7bBVmx+6KS0+zuzShb0I/VUa586leKTDA==
+  dependencies:
+    unist-util-remove "^1.0.1"
+    unist-util-visit "^1.4.0"
+
+remark-docz@^0.12.15:
+  version "0.12.15"
+  resolved "https://registry.yarnpkg.com/remark-docz/-/remark-docz-0.12.15.tgz#804d802b11c00d941bffd32431317e7e62fa2f4b"
+  integrity sha512-M8uh1lnKJdPr9Ps/8+1ztbCnTOO1/HrU9XG9CarsXRqVJBdSuNYypxmz7hXMT3R0nPRm5aGkpXbSC2CUW+8f+g==
   dependencies:
     unist-util-remove "^1.0.1"
     unist-util-visit "^1.4.0"
@@ -9811,7 +10056,7 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-source-map@^0.7.2:
+source-map@^0.7.2, source-map@^0.7.3:
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
   integrity sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
@@ -11131,6 +11376,36 @@ webpack@^4.26.1:
   version "4.27.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.27.0.tgz#1db66f03f0239bf797827f0580f53a41abd4067c"
   integrity sha512-y77EQNIlsB9fUGgpLv/ZzmH+Yd9DgyIF9omX9RFavR5ZFM6HxFm6sqkbBXYxpjbKej9K6hD+Y8qEVg2rWdI2gg==
+  dependencies:
+    "@webassemblyjs/ast" "1.7.11"
+    "@webassemblyjs/helper-module-context" "1.7.11"
+    "@webassemblyjs/wasm-edit" "1.7.11"
+    "@webassemblyjs/wasm-parser" "1.7.11"
+    acorn "^5.6.2"
+    acorn-dynamic-import "^3.0.0"
+    ajv "^6.1.0"
+    ajv-keywords "^3.1.0"
+    chrome-trace-event "^1.0.0"
+    enhanced-resolve "^4.1.0"
+    eslint-scope "^4.0.0"
+    json-parse-better-errors "^1.0.2"
+    loader-runner "^2.3.0"
+    loader-utils "^1.1.0"
+    memory-fs "~0.4.1"
+    micromatch "^3.1.8"
+    mkdirp "~0.5.0"
+    neo-async "^2.5.0"
+    node-libs-browser "^2.0.0"
+    schema-utils "^0.4.4"
+    tapable "^1.1.0"
+    terser-webpack-plugin "^1.1.0"
+    watchpack "^1.5.0"
+    webpack-sources "^1.3.0"
+
+webpack@^4.27.0:
+  version "4.27.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.27.1.tgz#5f2e2db446d2266376fa15d7d2277a1a9c2e12bb"
+  integrity sha512-WArHiLvHrlfyRM8i7f+2SFbr/XbQ0bXqTkPF8JpHOzub5482Y3wx7rEO8stuLGOKOgZJcqcisLhD7LrM/+fVMw==
   dependencies:
     "@webassemblyjs/ast" "1.7.11"
     "@webassemblyjs/helper-module-context" "1.7.11"
