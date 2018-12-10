@@ -7,7 +7,7 @@ const SvgComponent = props => (
       fill="#fff"
       stroke="#08175D"
     />
-    <path fill="#3926A5" d="M17 16h28v4H17zM17 24h60v4H17zM17 32h60v4H17z" />
+    <path fill="#E7E5F4" d="M17 16h28v3.65H17zM17 24h60v3.65H17zM17 32h60v3.65H17z" />
   </svg>
 );
 

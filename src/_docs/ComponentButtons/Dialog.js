@@ -13,7 +13,7 @@ const SvgComponent = props => (
         stroke="#08175D"
       />
       <path
-        d="M67.126 7H9v3.65h58.126V7zM84.564 17H9v3.649h75.564V17zM46.782 24.663H9v3.648h37.782v-3.648z"
+        d="M67.126 12H9v3.65h58.126V12zM84.564 22H9v3.649h75.564V22zM46.782 29.663H9v3.649h37.782v-3.65z"
         fill="#3926A5"
         fillOpacity={0.12}
       />
