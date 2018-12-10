@@ -3,20 +3,27 @@
 import React, { type Node } from 'react';
 import styled from 'reakit/styled';
 import { palette } from 'styled-tools';
-import Button from '../../Button';
-import Heading from '../../Heading';
 
-const Wrapper = styled.div`
+import Heading from '../../Heading';
+import { Pane } from '../../Pane';
+
+const Wrapper = styled(Pane)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 15px 0;
+  text-decoration: none;
+
+  &:hover {
+    background-color: ${palette('whiteDarker')};
+  }
 `;
 
-const BorderedButton = styled(Button)`
+const Icon = styled(Pane)`
   border: 1px solid ${palette('primaryLighter')};
-  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
 `;
 
 type Props = {
@@ -25,10 +32,10 @@ type Props = {
 };
 
 const ComponentButton = ({ children, title, ...props }: Props) => (
-  <Wrapper>
-    <BorderedButton backgroundColor="primaryTint" height={100} width={200} {...props}>
+  <Wrapper use="a" {...props}>
+    <Icon backgroundColor="primaryTint" height={100} width={180}>
       {children}
-    </BorderedButton>
+    </Icon>
     <Heading use="h6" marginTop="xxsmall" isSubHeading>
       {title}
     </Heading>
