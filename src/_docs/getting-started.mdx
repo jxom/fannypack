@@ -12,32 +12,39 @@ import Heading from '../Heading';
 import ComponentButton from './ComponentButtons/ComponentButton';
 import Alert from './ComponentButtons/Alert';
 import Avatar from './ComponentButtons/Avatar';
+import Blockquote from './ComponentButtons/Blockquote';
 import Button from './ComponentButtons/Button';
 import Card from './ComponentButtons/Card';
 import Checkbox from './ComponentButtons/Checkbox';
+import Code from './ComponentButtons/Code';
 import _Columns from './ComponentButtons/Columns';
 import Container from './ComponentButtons/Container';
 import Dialog from './ComponentButtons/Dialog';
 import DialogModal from './ComponentButtons/DialogModal';
 import Divider from './ComponentButtons/Divider';
 import FieldWrapper from './ComponentButtons/FieldWrapper';
+import _Heading from './ComponentButtons/Heading';
 import Icon from './ComponentButtons/Icon';
 import Input from './ComponentButtons/Input';
 import Image from './ComponentButtons/Image';
 import Label from './ComponentButtons/Label';
+import Link from './ComponentButtons/Link';
+import List from './ComponentButtons/List';
 import Navigation from './ComponentButtons/Navigation';
 import Palette from './ComponentButtons/Palette';
 import Pane from './ComponentButtons/Pane';
+import Paragraph from './ComponentButtons/Paragraph';
 import Popover from './ComponentButtons/Popover';
 import Primitive from './ComponentButtons/Primitive';
 import Radio from './ComponentButtons/Radio';
-import Ratings from './ComponentButtons/Ratings';
+import Rating from './ComponentButtons/Rating';
 import Select from './ComponentButtons/Select';
 import Spinner from './ComponentButtons/Spinner';
 import Switch from './ComponentButtons/Switch';
 import Table from './ComponentButtons/Table';
 import Tabs from './ComponentButtons/Tabs';
 import Tag from './ComponentButtons/Tag';
+import Text from './ComponentButtons/Text';
 import Textarea from './ComponentButtons/Textarea';
 import Tooltip from './ComponentButtons/Tooltip';
 import Typography from './ComponentButtons/Typography';
@@ -96,173 +103,209 @@ Using:
 If you are using **Webpack@>=4**, **Rollup** or **Parcel**, then you can use named imports without it effecting your bundle size. However, if you are using older versions of Webpack or a bundler that does not support tree shaking, it is recommended to use default imports.
 
 <div>
-  <Heading use="h4">Styles & Primitives</Heading>
+  <Heading use="h4" marginTop="20px">Styles & Primitives</Heading>
   <Columns>
     <Column>
-      <ComponentButton title="Primitive">
+      <ComponentButton title="Primitive" use="a" href="/primitives">
         <Primitive />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Palette">
+      <ComponentButton title="Palette" use="a" href="/palette">
         <Palette />
       </ComponentButton>
     </Column>
+    <Column />
+    </Columns>
+    <Heading use="h4" marginTop="20px">Typography</Heading>
+    <Columns>
+      <Column>
+        <ComponentButton title="Blockquote" use="a" href="/typography/blockquote">
+          <Blockquote />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="Code" use="a" href="/code">
+          <Code />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="Heading" use="a" href="/typography/heading">
+          <_Heading />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="Link" use="a" href="/typography/link">
+          <Link />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="List" use="a" href="/typography/list">
+          <List />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="Paragraph" use="a" href="/typography/paragraph">
+          <Paragraph />
+        </ComponentButton>
+      </Column>
+      <Column>
+        <ComponentButton title="Text" use="a" href="/typography/text">
+          <Text />
+        </ComponentButton>
+      </Column>
+      <Column />
+      <Column />
+  </Columns>
+  <Heading use="h4" marginTop="20px">Layout</Heading>
+  <Columns>
     <Column>
-      <ComponentButton title="Typography">
-        <Typography />
+      <ComponentButton title="Columns" use="a" href="/layout/columns">
+        <_Columns />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Container" use="a" href="/layout/container">
+        <Container />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Pane" use="a" href="/layout/pane">
+        <Pane />
       </ComponentButton>
     </Column>
   </Columns>
-  <Heading use="h4">Components</Heading>
+  <Heading use="h4" marginTop="20px">Components</Heading>
   <Columns>
     <Column>
-      <ComponentButton title="Alert">
+      <ComponentButton title="Alert" use="a" href="/components/alerts">
         <Alert />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Avatar">
+      <ComponentButton title="Avatar" use="a" href="/components/avatar">
         <Avatar />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Button">
+      <ComponentButton title="Button" use="a" href="/components/button">
         <Button />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Card">
+      <ComponentButton title="Card" use="a" href="/components/card">
         <Card />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Dialog">
+      <ComponentButton title="Dialog" use="a" href="/components/dialog">
         <Dialog />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="DialogModal">
+      <ComponentButton title="DialogModal" use="a" href="/components/Dialogmodal">
         <DialogModal />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Divider">
+      <ComponentButton title="Divider" use="a" href="/components/divider">
         <Divider />
       </ComponentButton>
     </Column>
     <Column>
-    <ComponentButton title="Icon">
+    <ComponentButton title="Icon" use="a" href="/components/icon">
         <Icon />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Image">
+      <ComponentButton title="Image" use="a" href="/components/image">
         <Image />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Navigation">
+      <ComponentButton title="Navigation" use="a" href="/components/navigation">
         <Navigation />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Popover">
+      <ComponentButton title="Popover" use="a" href="/components/popover">
         <Popover />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Ratings">
-        <Ratings />
+      <ComponentButton title="Rating" use="a" href="/components/rating">
+        <Rating />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Spinner">
+      <ComponentButton title="Spinner" use="a" href="/components/spinner">
         <Spinner />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Table">
+      <ComponentButton title="Table" use="a" href="/components/table">
         <Table />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Tabs">
+      <ComponentButton title="Tabs" use="a" href="/components/title">
         <Tabs />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Tag">
+      <ComponentButton title="Tag" use="a" href="/components/tag">
         <Tag />
       </ComponentButton>
     </Column>
     <Column>
-      <ComponentButton title="Tooltip">
+      <ComponentButton title="Tooltip" use="a" href="/components/tooltip">
         <Tooltip />
       </ComponentButton>
     </Column>
     <Column />
   </Columns>
-  <Heading use="h4">Form</Heading>
-    <Columns>
-      <Column>
-        <ComponentButton title="Checkbox">
-          <Checkbox />
-        </ComponentButton>
-      </Column>
-      <Column>
-        <ComponentButton title="FieldWrapper">
-          <FieldWrapper />
-        </ComponentButton>
-      </Column>
-      <Column>
-        <ComponentButton title="Input">
-          <Input />
-        </ComponentButton>
-      </Column>
-      <Column>
-        <ComponentButton title="Label">
-          <Label />
-        </ComponentButton>
-      </Column>
-      <Column>
-        <ComponentButton title="Radio">
-          <Radio />
-        </ComponentButton>
-      </Column>
-      <Column>
-        <ComponentButton title="Select">
-          <Select />
-        </ComponentButton>
-      </Column>
-      <Column>
-        <ComponentButton title="Switch">
-          <Switch />
-        </ComponentButton>
-      </Column>
-      <Column>
-        <ComponentButton title="Textarea">
-          <Textarea />
-        </ComponentButton>
-      </Column>
-      <Column />
-    </Columns>
-    <Heading use="h4">Layout</Heading>
-      <Columns>
-        <Column>
-          <ComponentButton title="_Columns">
-            <_Columns />
-          </ComponentButton>
-        </Column>
-        <Column>
-          <ComponentButton title="Container">
-            <Container />
-          </ComponentButton>
-        </Column>
-        <Column>
-          <ComponentButton title="Pane">
-            <Pane />
-          </ComponentButton>
-        </Column>
-      </Columns>
+  <Heading use="h4" marginTop="20px">Form</Heading>
+  <Columns>
+    <Column>
+      <ComponentButton title="Checkbox" use="a" href="/form/checkbox">
+        <Checkbox />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="FieldWrapper" use="a" href="/form/fieldwrapper">
+        <FieldWrapper />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Input" use="a" href="/form/input">
+        <Input />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Label" use="a" href="/form/label">
+        <Label />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Radio" use="a" href="/form/radio">
+        <Radio />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Select" use="a" href="/form/select">
+        <Select />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Switch" use="a" href="/form/switch">
+        <Switch />
+      </ComponentButton>
+    </Column>
+    <Column>
+      <ComponentButton title="Textarea" use="a" href="/form/textarea">
+        <Textarea />
+      </ComponentButton>
+    </Column>
+    <Column />
+  </Columns>
 </div>
