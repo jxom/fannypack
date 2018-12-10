@@ -13,8 +13,13 @@ export interface LocalNavigationProps {
 }
 export type NavigationProps = ReakitNavigationProps & LocalNavigationProps;
 
-const Navigation: React.FunctionComponent<LocalNavigationProps> = ({ a11yTitle, children, className, ...props }) => (
-  <_Navigation aria-label={a11yTitle} {...props} role={props.use ? 'navigation' : null}>
+export const Navigation: React.FunctionComponent<LocalNavigationProps> = ({
+  a11yTitle,
+  children,
+  className,
+  ...props
+}) => (
+  <_Navigation aria-label={a11yTitle} {...props} role={props.use ? 'navigation' : undefined}>
     {children}
   </_Navigation>
 );

@@ -1,9 +1,11 @@
-import styled from 'reakit/styled';
-import Paragraph from 'reakit/Paragraph';
+import { Paragraph } from 'reakit';
 import { theme } from 'styled-tools';
-import Icon from '../Icon/styled';
 
-export default styled(Paragraph)`
+import styled from '../styled';
+import Icon from '../Icon/styled';
+import { ParagraphProps } from './Paragraph';
+
+export default styled(Paragraph)<ParagraphProps>`
   &:not(:last-child) {
     margin: 0 0 1rem;
   }
