@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import List from '../List';
+
 it('renders correctly for a basic list', () => {
   const { container } = render(
     <List>

@@ -1,7 +1,10 @@
-import styled, { css } from 'reakit/styled';
-import Box from 'reakit/Box';
-import List from 'reakit/List';
+import { List } from 'reakit';
 import { theme } from 'styled-tools';
+
+import { Box } from '../primitives';
+import { styled, css } from '../styled';
+import { ListItemProps } from './ListItem';
+import { ListProps } from './List';
 
 const orderedProperties = css`
   list-style-type: decimal;
@@ -31,7 +34,7 @@ const horizontalProperties = css`
   }
 `;
 
-export const ListItem = styled(Box)`
+export const ListItem = styled(Box)<ListItemProps>`
   margin-bottom: 0.2rem;
 
   & {
@@ -39,7 +42,7 @@ export const ListItem = styled(Box)`
   }
 `;
 
-export default styled(List)`
+export default styled(List)<ListProps>`
   list-style: unset;
   list-style-type: none;
 

@@ -6,46 +6,87 @@ import Column from '../../Column';
 import Heading from '../../Heading';
 
 import ComponentButton from './ComponentButton';
+// @ts-ignore
 import AlertIcon from './ComponentIcons/Alert';
+// @ts-ignore
 import AvatarIcon from './ComponentIcons/Avatar';
+// @ts-ignore
 import BackdropIcon from './ComponentIcons/Backdrop';
+// @ts-ignore
 import BlockquoteIcon from './ComponentIcons/Blockquote';
+// @ts-ignore
 import ButtonIcon from './ComponentIcons/Button';
+// @ts-ignore
 import CardIcon from './ComponentIcons/Card';
+// @ts-ignore
 import CheckboxIcon from './ComponentIcons/Checkbox';
+// @ts-ignore
 import CodeIcon from './ComponentIcons/Code';
+// @ts-ignore
 import ColumnsIcon from './ComponentIcons/Columns';
+// @ts-ignore
 import ContainerIcon from './ComponentIcons/Container';
+// @ts-ignore
 import DialogIcon from './ComponentIcons/Dialog';
+// @ts-ignore
 import DialogModalIcon from './ComponentIcons/DialogModal';
+// @ts-ignore
 import DividerIcon from './ComponentIcons/Divider';
+// @ts-ignore
 import FieldWrapperIcon from './ComponentIcons/FieldWrapper';
+// @ts-ignore
 import GroupIcon from './ComponentIcons/Group';
+// @ts-ignore
 import HeadingIcon from './ComponentIcons/Heading';
+// @ts-ignore
 import IconIcon from './ComponentIcons/Icon';
+// @ts-ignore
 import InputIcon from './ComponentIcons/Input';
+// @ts-ignore
 import ImageIcon from './ComponentIcons/Image';
+// @ts-ignore
 import LabelIcon from './ComponentIcons/Label';
+// @ts-ignore
 import LinkIcon from './ComponentIcons/Link';
+// @ts-ignore
 import ListIcon from './ComponentIcons/List';
+// @ts-ignore
 import NavigationIcon from './ComponentIcons/Navigation';
+// @ts-ignore
 import OverlayIcon from './ComponentIcons/Overlay';
+// @ts-ignore
 import PaletteIcon from './ComponentIcons/Palette';
+// @ts-ignore
 import PaneIcon from './ComponentIcons/Pane';
+// @ts-ignore
 import ParagraphIcon from './ComponentIcons/Paragraph';
+// @ts-ignore
 import PopoverIcon from './ComponentIcons/Popover';
+// @ts-ignore
 import PrimitiveIcon from './ComponentIcons/Primitive';
+// @ts-ignore
 import RadioIcon from './ComponentIcons/Radio';
+// @ts-ignore
 import RatingIcon from './ComponentIcons/Rating';
+// @ts-ignore
 import SelectIcon from './ComponentIcons/Select';
+// @ts-ignore
 import SetIcon from './ComponentIcons/Set';
+// @ts-ignore
 import SpinnerIcon from './ComponentIcons/Spinner';
+// @ts-ignore
 import SwitchIcon from './ComponentIcons/Switch';
+// @ts-ignore
 import TableIcon from './ComponentIcons/Table';
+// @ts-ignore
 import TabsIcon from './ComponentIcons/Tabs';
+// @ts-ignore
 import TagIcon from './ComponentIcons/Tag';
+// @ts-ignore
 import TextIcon from './ComponentIcons/Text';
+// @ts-ignore
 import TextareaIcon from './ComponentIcons/Textarea';
+// @ts-ignore
 import TooltipIcon from './ComponentIcons/Tooltip';
 
 export default () => (
