@@ -1,11 +1,9 @@
-// @flow
-
-import React, { type Node } from 'react';
-import styled from 'reakit/styled';
+import * as React from 'react';
 import { palette } from 'styled-tools';
 
-import Heading from '../../Heading/Heading.tsx';
-import { Pane } from '../../Pane/Pane.tsx';
+import styled from '../../styled';
+import Heading from '../../Heading';
+import Pane from '../../Pane';
 
 const Wrapper = styled(Pane)`
   display: flex;
@@ -27,8 +25,9 @@ const Icon = styled(Pane)`
 `;
 
 type Props = {
-  children: Node,
-  title: string
+  children: React.ReactNode;
+  href: string;
+  title: string;
 };
 
 const ComponentButton = ({ children, title, ...props }: Props) => (

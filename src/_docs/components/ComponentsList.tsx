@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { Box } from '../../primitives/index';
 import Columns from '../../Columns';
@@ -47,7 +47,6 @@ import TagIcon from './ComponentIcons/Tag';
 import TextIcon from './ComponentIcons/Text';
 import TextareaIcon from './ComponentIcons/Textarea';
 import TooltipIcon from './ComponentIcons/Tooltip';
-import TypographyIcon from './ComponentIcons/Typography';
 
 export default () => (
   <Box>
