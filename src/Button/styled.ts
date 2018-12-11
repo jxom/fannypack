@@ -64,6 +64,7 @@ const outlinedProperties = css`
     fill: ${palette()};
 
     &:hover {
+      background-color: ${palette()};
       color: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
       fill: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
     }
@@ -125,8 +126,6 @@ const loadingProperties = css`
 const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
   align-items: center;
   background-color: ${palette()};
-  border: 1px solid ${(props: any) =>
-    darken(0.2, palette(props.palette === 'default' ? 'whiteDarker' : props.palette || '')(props))};
   border-radius: 4px;
   color: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
   fill: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
@@ -141,26 +140,32 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
   &:focus {
     outline: unset;
     z-index: 2;
-    box-shadow: ${(props: any) =>
-      palette(props.palette === 'default' ? 'primaryLighter' : `${props.palette}Lighter`)(props)} 0px 0px 0px 2px;
-  };
+    box-shadow: ${props => palette(props.palette === 'default' ? 'primaryLighter' : `${props.palette}Lighter`)(props)}
+      0px 0px 0px 2px;
+  }
 
   &[disabled] {
-    ${disabledProperties}
-  };
+    ${disabledProperties};
+  }
 
-  ${(props: any) => (props.styledSize ? sizeProperties[props.styledSize] : null)}
+  ${props =>
+    props.palette === 'default' &&
+    css`
+      border: 1px solid ${palette('grayLightest')};
+    `};
 
-  ${(props: any) => props.kind === 'outlined' && outlinedProperties}
-  ${(props: any) => props.kind === 'link' && linkProperties}
+  ${props => props.size && sizeProperties[props.size || '']};
 
-  ${(props: any) => props.isLoading && loadingProperties};
-  ${(props: any) => props.isStatic && staticProperties};
-  ${(props: any) =>
+  ${props => props.isLoading && loadingProperties};
+  ${props => props.isStatic && staticProperties};
+  ${props =>
     !props.isStatic && !props.isLoading && !props.disabled && props.kind !== 'link' ? interactiveProperties : ''};
 
+  ${props => props.kind === 'outlined' && outlinedProperties};
+  ${props => props.kind === 'link' && linkProperties};
+
   & {
-    ${theme('fannypack.Button.base')}
+    ${theme('fannypack.Button.base')};
   }
 `;
 

@@ -6,7 +6,7 @@ export default {
   menu: ['Home', 'Getting Started', 'Primitives', 'Palette', 'Typography', 'Layout', 'Components', 'Form', 'Utilities'],
   themeConfig: {
     colors: {
-      primary: '#3926a5',
+      primary: '#444bc9',
       text: '#435a6f'
     },
     logo: {
@@ -26,7 +26,7 @@ export default {
         }
 
         & #get-started a {
-          color: #3926a5;
+          color: #444bc9;
         }
 
         & nav > div:first-child {

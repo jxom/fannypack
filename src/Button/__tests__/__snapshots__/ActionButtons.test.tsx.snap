@@ -36,7 +36,7 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #3926a5;
+  background-color: #444bc9;
   color: inherit;
 }
 
@@ -74,7 +74,6 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #fcfcfc;
-  border: 1px solid #bfbfbf;
   border-radius: 4px;
   color: #435a6f;
   fill: #435a6f;
@@ -92,12 +91,13 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   padding: 0 0.8rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  border: 1px solid #b3b3b3;
 }
 
 .c2:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
 }
 
 .c2[disabled] {
@@ -120,8 +120,7 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #3926a5;
-  border: 1px solid #1c1352;
+  background-color: #444bc9;
   border-radius: 4px;
   color: #fff;
   fill: #fff;
@@ -144,7 +143,7 @@ exports[`renders correctly for action buttons that is loading 1`] = `
 .c4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
 }
 
 .c4[disabled] {
@@ -293,7 +292,7 @@ exports[`renders correctly for action buttons with a type 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #3926a5;
+  background-color: #444bc9;
   color: inherit;
 }
 
@@ -303,7 +302,6 @@ exports[`renders correctly for action buttons with a type 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #fcfcfc;
-  border: 1px solid #bfbfbf;
   border-radius: 4px;
   color: #435a6f;
   fill: #435a6f;
@@ -321,12 +319,13 @@ exports[`renders correctly for action buttons with a type 1`] = `
   padding: 0 0.8rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  border: 1px solid #b3b3b3;
 }
 
 .c2:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
 }
 
 .c2[disabled] {
@@ -349,8 +348,7 @@ exports[`renders correctly for action buttons with a type 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #3926a5;
-  border: 1px solid #1c1352;
+  background-color: #444bc9;
   border-radius: 4px;
   color: #fff;
   fill: #fff;
@@ -373,7 +371,7 @@ exports[`renders correctly for action buttons with a type 1`] = `
 .c4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
 }
 
 .c4[disabled] {
@@ -384,11 +382,11 @@ exports[`renders correctly for action buttons with a type 1`] = `
 }
 
 .c4:hover {
-  background-color: #322190;
+  background-color: #373ebd;
 }
 
 .c4:hover:active {
-  background-color: #2b1c7c;
+  background-color: #3137a9;
 }
 
 .c0 {
@@ -464,7 +462,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #3926a5;
+  background-color: #444bc9;
   color: inherit;
 }
 
@@ -477,7 +475,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #d60027;
+  background-color: #c9444d;
   color: inherit;
 }
 
@@ -486,8 +484,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #d60027;
-  border: 1px solid #700014;
+  background-color: #c9444d;
   border-radius: 4px;
   color: #fff;
   fill: #fff;
@@ -510,7 +507,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #e24c67 0px 0px 0px 2px;
+  box-shadow: #d97c82 0px 0px 0px 2px;
 }
 
 .c2[disabled] {
@@ -521,11 +518,11 @@ exports[`renders correctly for action buttons with custom props 1`] = `
 }
 
 .c2:hover {
-  background-color: #bd0022;
+  background-color: #bd3740;
 }
 
 .c2:hover:active {
-  background-color: #a3001e;
+  background-color: #a93139;
 }
 
 .c4 {
@@ -533,8 +530,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #3926a5;
-  border: 1px solid #1c1352;
+  background-color: #444bc9;
   border-radius: 4px;
   color: #fff;
   fill: #fff;
@@ -557,7 +553,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
 .c4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
 }
 
 .c4[disabled] {
@@ -654,7 +650,7 @@ exports[`renders correctly for action buttons with custom text 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #3926a5;
+  background-color: #444bc9;
   color: inherit;
 }
 
@@ -664,7 +660,6 @@ exports[`renders correctly for action buttons with custom text 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #fcfcfc;
-  border: 1px solid #bfbfbf;
   border-radius: 4px;
   color: #435a6f;
   fill: #435a6f;
@@ -682,12 +677,13 @@ exports[`renders correctly for action buttons with custom text 1`] = `
   padding: 0 0.8rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  border: 1px solid #b3b3b3;
 }
 
 .c2:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
 }
 
 .c2[disabled] {
@@ -710,8 +706,7 @@ exports[`renders correctly for action buttons with custom text 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #3926a5;
-  border: 1px solid #1c1352;
+  background-color: #444bc9;
   border-radius: 4px;
   color: #fff;
   fill: #fff;
@@ -734,7 +729,7 @@ exports[`renders correctly for action buttons with custom text 1`] = `
 .c4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
 }
 
 .c4[disabled] {
@@ -745,11 +740,11 @@ exports[`renders correctly for action buttons with custom text 1`] = `
 }
 
 .c4:hover {
-  background-color: #322190;
+  background-color: #373ebd;
 }
 
 .c4:hover:active {
-  background-color: #2b1c7c;
+  background-color: #3137a9;
 }
 
 .c0 {
@@ -838,7 +833,7 @@ exports[`renders correctly for default action buttons 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #3926a5;
+  background-color: #444bc9;
   color: inherit;
 }
 
@@ -848,7 +843,6 @@ exports[`renders correctly for default action buttons 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #fcfcfc;
-  border: 1px solid #bfbfbf;
   border-radius: 4px;
   color: #435a6f;
   fill: #435a6f;
@@ -866,12 +860,13 @@ exports[`renders correctly for default action buttons 1`] = `
   padding: 0 0.8rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  border: 1px solid #b3b3b3;
 }
 
 .c2:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
 }
 
 .c2[disabled] {
@@ -894,8 +889,7 @@ exports[`renders correctly for default action buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #3926a5;
-  border: 1px solid #1c1352;
+  background-color: #444bc9;
   border-radius: 4px;
   color: #fff;
   fill: #fff;
@@ -918,7 +912,7 @@ exports[`renders correctly for default action buttons 1`] = `
 .c4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
 }
 
 .c4[disabled] {
@@ -929,11 +923,11 @@ exports[`renders correctly for default action buttons 1`] = `
 }
 
 .c4:hover {
-  background-color: #322190;
+  background-color: #373ebd;
 }
 
 .c4:hover:active {
-  background-color: #2b1c7c;
+  background-color: #3137a9;
 }
 
 .c0 {
@@ -1032,7 +1026,6 @@ exports[`renders correctly when a palette prop is set 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #fcfcfc;
-  border: 1px solid #bfbfbf;
   border-radius: 4px;
   color: #435a6f;
   fill: #435a6f;
@@ -1050,12 +1043,13 @@ exports[`renders correctly when a palette prop is set 1`] = `
   padding: 0 0.8rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  border: 1px solid #b3b3b3;
 }
 
 .c2:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
 }
 
 .c2[disabled] {
@@ -1079,7 +1073,6 @@ exports[`renders correctly when a palette prop is set 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #435a6f;
-  border: 1px solid #1d262f;
   border-radius: 4px;
   color: #fff;
   fill: #fff;

@@ -62,8 +62,8 @@ exports[`renders correctly for a basic input field 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -165,8 +165,8 @@ exports[`renders correctly for a disabled input field 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -270,8 +270,8 @@ exports[`renders correctly for a full width input field 1`] = `
 .c3:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c3::-webkit-input-placeholder {
@@ -406,8 +406,8 @@ exports[`renders correctly for a required field 1`] = `
 .c7:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c7::-webkit-input-placeholder {
@@ -556,8 +556,8 @@ exports[`renders correctly for addon component (after) 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c8::-webkit-input-placeholder {
@@ -770,8 +770,8 @@ exports[`renders correctly for addon component (before) 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c8::-webkit-input-placeholder {
@@ -984,8 +984,8 @@ exports[`renders correctly for addon component (vertical) 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c8::-webkit-input-placeholder {
@@ -1173,8 +1173,8 @@ exports[`renders correctly for an input field with a default value 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -1301,8 +1301,8 @@ exports[`renders correctly for an input field with a description 1`] = `
 .c9:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c9::-webkit-input-placeholder {
@@ -1518,8 +1518,8 @@ exports[`renders correctly for an input field with a hint 1`] = `
 .c7:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c7::-webkit-input-placeholder {
@@ -1711,8 +1711,8 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -1857,8 +1857,8 @@ exports[`renders correctly for an input with a after component 1`] = `
 .c7:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c7::-webkit-input-placeholder {
@@ -2030,8 +2030,8 @@ exports[`renders correctly for an input with a before component 1`] = `
 .c7:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c7::-webkit-input-placeholder {
@@ -2186,8 +2186,8 @@ exports[`renders correctly for an optional input field 1`] = `
 .c9:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c9::-webkit-input-placeholder {
@@ -2384,8 +2384,8 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -2498,8 +2498,8 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -2612,8 +2612,8 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -2721,8 +2721,8 @@ exports[`states renders correctly for an input field with state danger 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -2742,8 +2742,8 @@ exports[`states renders correctly for an input field with state danger 1`] = `
 }
 
 .c2 {
-  border-color: #e24c67;
-  box-shadow: #e24c67 0px 0px 0px 1px !important;
+  border-color: #d97c82;
+  box-shadow: #d97c82 0px 0px 0px 1px !important;
 }
 
 <div
@@ -2829,8 +2829,8 @@ exports[`states renders correctly for an input field with state primary 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -2850,8 +2850,8 @@ exports[`states renders correctly for an input field with state primary 1`] = `
 }
 
 .c2 {
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 <div
@@ -2937,8 +2937,8 @@ exports[`states renders correctly for an input field with state success 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -2958,8 +2958,8 @@ exports[`states renders correctly for an input field with state success 1`] = `
 }
 
 .c2 {
-  border-color: #4ca26c;
-  box-shadow: #4ca26c 0px 0px 0px 1px !important;
+  border-color: #6ba886;
+  box-shadow: #6ba886 0px 0px 0px 1px !important;
 }
 
 <div
@@ -3045,8 +3045,8 @@ exports[`states renders correctly for an input field with state warning 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -3066,8 +3066,8 @@ exports[`states renders correctly for an input field with state warning 1`] = `
 }
 
 .c2 {
-  border-color: #ffc94c;
-  box-shadow: #ffc94c 0px 0px 0px 1px !important;
+  border-color: #f5bd4c;
+  box-shadow: #f5bd4c 0px 0px 0px 1px !important;
 }
 
 <div
@@ -3153,8 +3153,8 @@ exports[`types renders correctly for an input field with type date 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -3256,8 +3256,8 @@ exports[`types renders correctly for an input field with type email 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -3359,8 +3359,8 @@ exports[`types renders correctly for an input field with type number 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -3462,8 +3462,8 @@ exports[`types renders correctly for an input field with type password 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -3565,8 +3565,8 @@ exports[`types renders correctly for an input field with type search 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -3668,8 +3668,8 @@ exports[`types renders correctly for an input field with type tel 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -3771,8 +3771,8 @@ exports[`types renders correctly for an input field with type time 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {
@@ -3874,8 +3874,8 @@ exports[`types renders correctly for an input field with type url 1`] = `
 .c2:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c2::-webkit-input-placeholder {

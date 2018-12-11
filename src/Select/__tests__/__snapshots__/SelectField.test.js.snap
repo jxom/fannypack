@@ -113,8 +113,8 @@ exports[`renders correctly for a basic select 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c3 {
@@ -300,8 +300,8 @@ exports[`renders correctly for a disabled select 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c12[disabled] + .c10 {
@@ -495,8 +495,8 @@ exports[`renders correctly for a full width select 1`] = `
 .c9:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c13[disabled] + .c11 {
@@ -692,8 +692,8 @@ exports[`renders correctly for a required field 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c12[disabled] + .c10 {
@@ -926,8 +926,8 @@ exports[`renders correctly for a select with a default value 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c12[disabled] + .c10 {
@@ -1122,8 +1122,8 @@ exports[`renders correctly for a select with a placeholder 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c3 {
@@ -1371,8 +1371,8 @@ exports[`renders correctly for addon component (after) 1`] = `
 .c9:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c13[disabled] + .c11 {
@@ -1669,8 +1669,8 @@ exports[`renders correctly for addon component (before) 1`] = `
 .c9:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c13[disabled] + .c11 {
@@ -1967,8 +1967,8 @@ exports[`renders correctly for addon component (vertical) 1`] = `
 .c9:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c13[disabled] + .c11 {
@@ -2209,8 +2209,8 @@ exports[`renders correctly for an input field with a description 1`] = `
 .c10:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c14[disabled] + .c12 {
@@ -2510,8 +2510,8 @@ exports[`renders correctly for an input field with a hint 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c14[disabled] + .c10 {
@@ -2812,8 +2812,8 @@ exports[`renders correctly for an optional input field 1`] = `
 .c10:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c14[disabled] + .c12 {
@@ -3141,8 +3141,8 @@ exports[`sizes renders correctly for a select with size large 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c8 {
@@ -3361,8 +3361,8 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c8 {
@@ -3572,8 +3572,8 @@ exports[`sizes renders correctly for a select with size small 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c8 {
@@ -3809,13 +3809,13 @@ exports[`states renders correctly for a select with state danger 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c8 {
-  border-color: #e24c67;
-  box-shadow: #e24c67 0px 0px 0px 1px !important;
+  border-color: #d97c82;
+  box-shadow: #d97c82 0px 0px 0px 1px !important;
 }
 
 .c3 {
@@ -4048,13 +4048,13 @@ exports[`states renders correctly for a select with state primary 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c8 {
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c3 {
@@ -4279,13 +4279,13 @@ exports[`states renders correctly for a select with state success 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c8 {
-  border-color: #4ca26c;
-  box-shadow: #4ca26c 0px 0px 0px 1px !important;
+  border-color: #6ba886;
+  box-shadow: #6ba886 0px 0px 0px 1px !important;
 }
 
 .c3 {
@@ -4514,13 +4514,13 @@ exports[`states renders correctly for a select with state warning 1`] = `
 .c8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
+  border-color: #7c81d9;
+  box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 .c8 {
-  border-color: #ffc94c;
-  box-shadow: #ffc94c 0px 0px 0px 1px !important;
+  border-color: #f5bd4c;
+  box-shadow: #f5bd4c 0px 0px 0px 1px !important;
 }
 
 .c3 {
