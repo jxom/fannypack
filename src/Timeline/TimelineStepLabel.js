@@ -8,7 +8,7 @@ type Props = {
   color?: string
 };
 
-const TimelineStepLabel = ({ a11yTitleId, children, color}: Props) => {
+const TimelineStepLabel = ({ a11yTitleId, children, color }: Props) => {
   return (
     <_TimelineStepLabel id={a11yTitleId} color={color}>
       {children}

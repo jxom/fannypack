@@ -9,7 +9,11 @@ type Props = {
 };
 
 const TimelineStepDetail = ({ a11yDescriptionId, children, color }: Props) => {
-  return <_TimelineStepDetail id={a11yDescriptionId} color={color}>{children}</_TimelineStepDetail>;
+  return (
+    <_TimelineStepDetail id={a11yDescriptionId} color={color}>
+      {children}
+    </_TimelineStepDetail>
+  );
 };
 
 TimelineStepDetail.defaultProps = {

@@ -56,7 +56,11 @@ exports[`renders Timeline correctly 1`] = `
 .c3 {
   margin-top: 0.6rem;
   line-height: 1.5rem;
-  color: #d9dee2;
+  color: #435a6f;
+}
+
+.c4 {
+  color: #435a6f;
 }
 
 <div>
@@ -81,7 +85,7 @@ exports[`renders Timeline correctly 1`] = `
           Step one title
         </div>
         <div
-          class="c0"
+          class="c4 c0"
           id="StepDescription1"
         >
           Step one details goes here
@@ -106,7 +110,7 @@ exports[`renders Timeline correctly 1`] = `
           Step two title
         </div>
         <div
-          class="c0"
+          class="c4 c0"
           id="StepDescription2"
         >
           Step two details goes here
@@ -131,7 +135,7 @@ exports[`renders Timeline correctly 1`] = `
           Step three title
         </div>
         <div
-          class="c0"
+          class="c4 c0"
           id="StepDescription3"
         >
           Step three details goes here
