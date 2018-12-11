@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 // @ts-ignore
 import Portal from 'reakit/Portal';
 
+import { isFunction } from '../_utils/assert';
+import TrapFocus from '../_utils/TrapFocus';
 import Backdrop from '../Backdrop';
 import { OverlayProps } from '../Overlay/Overlay';
-import TrapFocus from '../_utils/TrapFocus';
 import ModalContainer, { ModalContainerProps } from './ModalContainer';
 import ModalHide, { ModalHideProps } from './ModalHide';
 import ModalShow, { ModalShowProps } from './ModalShow';
@@ -84,9 +85,7 @@ export const Modal: React.FunctionComponent<LocalModalProps> & ModalComponents =
             isVisible={isVisible}
             {...props}
           >
-            {/*
-              // @ts-ignore */}
-            {typeof children === 'function' ? children({ fallbackFocusRef, initialFocusRef }) : children}
+            {isFunction(children) ? children({ fallbackFocusRef, initialFocusRef }) : children}
           </_Modal>
         </React.Fragment>
       )}

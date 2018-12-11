@@ -17,5 +17,7 @@ exports[`renders correctly 1`] = `
 <button
   aria-haspopup="true"
   class="c0"
-/>
+>
+  Hide
+</button>
 `;
