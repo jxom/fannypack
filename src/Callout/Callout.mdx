@@ -1,0 +1,120 @@
+
+---
+name: Callout
+route: /components/callout
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Callout from '../Callout';
+import Button, { ActionButtons } from '../Button';
+import Set from '../Set';
+
+# Callout
+
+## Import
+
+`import { Callout } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Callout>Hello world</Callout>
+</Playground>
+
+## Header
+
+You can render a header for the callout using the `title` prop.
+
+<Playground>
+  <Callout title="This is a title">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout>
+</Playground>
+
+## Intents
+
+You can render different intents for the callout using the `palette` prop.
+
+<Playground>
+  <Callout palette="primary" title="This is a title" marginBottom="20px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout>
+  <Callout palette="success" title="This is a title" marginBottom="20px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout>
+  <Callout palette="danger" title="This is a title" marginBottom="20px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout>
+  <Callout palette="warning" title="This is a title" marginBottom="20px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout>
+</Playground>
+
+## Tints
+
+You can add a tint using the `hasTint` prop.
+
+<Playground>
+  <Callout hasTint palette="primary" title="This is a title" marginBottom="20px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout>
+  <Callout hasTint palette="success" title="This is a title" marginBottom="20px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout>
+  <Callout hasTint palette="danger" title="This is a title" marginBottom="20px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout>
+  <Callout hasTint palette="warning" title="This is a title" marginBottom="20px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout>
+</Playground>
+
+## Icon
+
+You can use your own Icon using the `icon` prop.
+
+<Playground>
+  <Callout palette="primary" icon="flame" title="This is a title">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout>
+</Playground>
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  Header: {
+    base: string | Object
+  },
+  Content: {
+    base: string | Object
+  },
+  Title: {
+    base: string | Object
+  }
+}
+```
