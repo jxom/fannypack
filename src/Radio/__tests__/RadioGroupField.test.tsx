@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import RadioGroupField from '../RadioGroupField';
+
 it('renders correctly for a basic RadioGroupField', () => {
   const { container } = render(
     <RadioGroupField

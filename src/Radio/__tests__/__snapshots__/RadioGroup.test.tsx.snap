@@ -191,7 +191,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"sunny\\""
+      value="sunny"
     />
     <div
       class="c7 c8 c1"
@@ -214,7 +214,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"windy\\""
+      value="windy"
     />
     <div
       class="c7 c8 c1"
@@ -237,7 +237,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"overcast\\""
+      value="overcast"
     />
     <div
       class="c7 c8 c1"
@@ -444,7 +444,7 @@ samp.c9 {
       disabled=""
       name="weather"
       type="radio"
-      value="\\"sunny\\""
+      value="sunny"
     />
     <div
       class="c7 c8 c1"
@@ -468,7 +468,7 @@ samp.c9 {
       disabled=""
       name="weather"
       type="radio"
-      value="\\"windy\\""
+      value="windy"
     />
     <div
       class="c7 c8 c1"
@@ -492,7 +492,7 @@ samp.c9 {
       disabled=""
       name="weather"
       type="radio"
-      value="\\"overcast\\""
+      value="overcast"
     />
     <div
       class="c7 c8 c1"
@@ -699,7 +699,7 @@ samp.c9 {
       disabled=""
       name="weather"
       type="radio"
-      value="\\"sunny\\""
+      value="sunny"
     />
     <div
       class="c7 c8 c1"
@@ -722,7 +722,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"windy\\""
+      value="windy"
     />
     <div
       class="c7 c8 c1"
@@ -745,7 +745,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"overcast\\""
+      value="overcast"
     />
     <div
       class="c7 c8 c1"
@@ -997,7 +997,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"sunny\\""
+      value="sunny"
     />
     <div
       class="c7 c8 c1"
@@ -1020,7 +1020,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"windy\\""
+      value="windy"
     />
     <div
       class="c7 c8 c1"
@@ -1043,7 +1043,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"overcast\\""
+      value="overcast"
     />
     <div
       class="c7 c8 c1"
@@ -1295,7 +1295,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"sunny\\""
+      value="sunny"
     />
     <div
       class="c7 c8 c1"
@@ -1318,7 +1318,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"windy\\""
+      value="windy"
     />
     <div
       class="c7 c8 c1"
@@ -1341,7 +1341,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"overcast\\""
+      value="overcast"
     />
     <div
       class="c7 c8 c1"
@@ -1593,7 +1593,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"sunny\\""
+      value="sunny"
     />
     <div
       class="c7 c8 c1"
@@ -1616,7 +1616,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"windy\\""
+      value="windy"
     />
     <div
       class="c7 c8 c1"
@@ -1639,7 +1639,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"overcast\\""
+      value="overcast"
     />
     <div
       class="c7 c8 c1"
@@ -1891,7 +1891,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"sunny\\""
+      value="sunny"
     />
     <div
       class="c7 c8 c1"
@@ -1914,7 +1914,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"windy\\""
+      value="windy"
     />
     <div
       class="c7 c8 c1"
@@ -1937,7 +1937,7 @@ samp.c9 {
       class="c5 c6"
       name="weather"
       type="radio"
-      value="\\"overcast\\""
+      value="overcast"
     />
     <div
       class="c7 c8 c1"

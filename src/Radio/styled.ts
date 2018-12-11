@@ -1,12 +1,16 @@
 // @flow
-import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
-import Label from 'reakit/Label';
+import { Label } from 'reakit';
 
 import { Box } from '../primitives';
+import styled, { css } from '../styled';
+// @ts-ignore
 import HiddenInput from '../_utils/HiddenInput';
+import { Omit } from '../types';
+import { RadioProps } from './Radio';
+import { RadioGroupProps } from './RadioGroup';
 
-export const RadioIcon = styled(Box)`
+export const RadioIcon = styled(Box)<{ state?: string }>`
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -47,7 +51,7 @@ export const HiddenRadio = HiddenInput({
   themePrefix: 'Radio'
 });
 
-export const Radio = styled(Label)`
+export const Radio = styled(Label)<Omit<RadioProps, 'label'>>`
   display: flex;
   align-items: center;
 
@@ -69,7 +73,7 @@ const horizontalProperties = css`
   }
 `;
 
-export const RadioGroup = styled(Box)`
+export const RadioGroup = styled(Box)<{ isHorizontal?: boolean }>`
   & ${Radio}:not(:last-child) {
     margin-bottom: 0.5rem;
   }

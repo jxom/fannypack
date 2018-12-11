@@ -1,38 +1,42 @@
-// @flow
-import React from 'react';
+import * as React from 'react';
+// @ts-ignore
+import PropTypes from 'prop-types';
+import { LabelProps as ReakitLabelProps } from 'reakit/ts';
 
+// @ts-ignore
 import Text from '../Text';
 import _Radio, { RadioIcon, HiddenRadio } from './styled';
 
-type Props = {
+export interface LocalRadioProps {
   /** An accessible id for the radio */
-  a11yId?: string,
+  a11yId?: string;
   /** Automatically focus on the radio */
-  autoFocus?: boolean,
-  checked?: boolean | string,
-  className?: string,
+  autoFocus?: boolean;
+  checked?: boolean | string;
+  className?: string;
   /** Is the radio checked by default */
-  defaultChecked?: boolean,
+  defaultChecked?: boolean;
   /** Disables the radio */
-  disabled?: boolean,
+  disabled?: boolean;
   /** Makes the radio required and sets aria-invalid to true */
-  isRequired?: boolean,
+  isRequired?: boolean;
   /** radio label */
-  label: string,
-  name?: string,
+  label: string;
+  name?: string;
   /** State of the radio. Can be any color in the palette. */
-  state?: string,
+  state?: string;
   /** Controlled value of the radio */
-  value?: string | boolean | Object,
+  value?: string;
   /** Function to invoke when focus is lost */
-  onBlur?: Function,
-  /** Function to invoke when radio has changed */
-  onChange?: Function,
-  /** Function to invoke when radio is focused */
-  onFocus?: Function
-};
+  onBlur?(e: React.FocusEvent<HTMLInputElement>): void;
+  /** Function to invoke when input has changed */
+  onChange?(e: React.FormEvent<HTMLInputElement>): void;
+  /** Function to invoke when input is focused */
+  onFocus?(e: React.FocusEvent<HTMLInputElement>): void;
+}
+export type RadioProps = ReakitLabelProps & LocalRadioProps;
 
-const Radio = ({
+export const Radio: React.FunctionComponent<LocalRadioProps> = ({
   a11yId,
   autoFocus,
   checked,
@@ -48,7 +52,7 @@ const Radio = ({
   state,
   value,
   ...props
-}: Props) => (
+}) => (
   <_Radio
     aria-describedby="label"
     aria-invalid={state === 'danger'}
@@ -63,12 +67,12 @@ const Radio = ({
       disabled={disabled}
       id={a11yId}
       onBlur={onBlur}
-      onChange={onChange ? e => onChange({ target: { value: JSON.parse(e.target.value) } }) : undefined}
+      onChange={onChange}
       onFocus={onFocus}
       name={name}
       state={state}
       type="radio"
-      value={JSON.stringify(value)}
+      value={value}
     />
     <RadioIcon state={state} />
     <Text id="label" htmlFor={a11yId} marginLeft="xxsmall">
@@ -77,6 +81,22 @@ const Radio = ({
   </_Radio>
 );
 
+Radio.propTypes = {
+  a11yId: PropTypes.string,
+  autoFocus: PropTypes.bool,
+  checked: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  className: PropTypes.string,
+  defaultChecked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  isRequired: PropTypes.bool,
+  label: PropTypes.string.isRequired,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  name: PropTypes.string,
+  state: PropTypes.string,
+  value: PropTypes.string
+};
 Radio.defaultProps = {
   a11yId: undefined,
   autoFocus: false,
@@ -93,4 +113,6 @@ Radio.defaultProps = {
   value: undefined
 };
 
-export default Radio;
+// @ts-ignore
+const C: React.FunctionComponent<RadioProps> = Radio;
+export default C;

@@ -35,7 +35,7 @@ export const PopoverContainer: React.FunctionComponent<LocalPopoverContainerProp
 );
 
 PopoverContainer.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.func.isRequired,
   defaultVisible: PropTypes.bool,
   initialState: PropTypes.object
 };

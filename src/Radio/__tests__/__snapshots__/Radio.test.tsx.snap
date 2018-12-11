@@ -173,6 +173,7 @@ samp.c7 {
 <label
   aria-describedby="label"
   aria-invalid="false"
+  aria-label="Test label"
   aria-required="false"
   class="c0 c1 c2"
 >
@@ -187,7 +188,9 @@ samp.c7 {
   <span
     class="c7 c8"
     id="label"
-  />
+  >
+    Test label
+  </span>
 </label>
 `;
 
@@ -364,6 +367,7 @@ samp.c7 {
 <label
   aria-describedby="label"
   aria-invalid="false"
+  aria-label="Test label"
   aria-required="false"
   class="c0 c1 c2"
 >
@@ -379,7 +383,9 @@ samp.c7 {
   <span
     class="c7 c8"
     id="label"
-  />
+  >
+    Test label
+  </span>
 </label>
 `;
 
@@ -602,6 +608,7 @@ samp.c7 {
 <label
   aria-describedby="label"
   aria-invalid="true"
+  aria-label="Test label"
   aria-required="false"
   class="c0 c1 c2"
 >
@@ -616,7 +623,9 @@ samp.c7 {
   <span
     class="c7 c8"
     id="label"
-  />
+  >
+    Test label
+  </span>
 </label>
 `;
 
@@ -839,6 +848,7 @@ samp.c7 {
 <label
   aria-describedby="label"
   aria-invalid="false"
+  aria-label="Test label"
   aria-required="false"
   class="c0 c1 c2"
 >
@@ -853,7 +863,9 @@ samp.c7 {
   <span
     class="c7 c8"
     id="label"
-  />
+  >
+    Test label
+  </span>
 </label>
 `;
 
@@ -1076,6 +1088,7 @@ samp.c7 {
 <label
   aria-describedby="label"
   aria-invalid="false"
+  aria-label="Test label"
   aria-required="false"
   class="c0 c1 c2"
 >
@@ -1090,7 +1103,9 @@ samp.c7 {
   <span
     class="c7 c8"
     id="label"
-  />
+  >
+    Test label
+  </span>
 </label>
 `;
 
@@ -1313,6 +1328,7 @@ samp.c7 {
 <label
   aria-describedby="label"
   aria-invalid="false"
+  aria-label="Test label"
   aria-required="false"
   class="c0 c1 c2"
 >
@@ -1327,6 +1343,8 @@ samp.c7 {
   <span
     class="c7 c8"
     id="label"
-  />
+  >
+    Test label
+  </span>
 </label>
 `;

@@ -29,6 +29,7 @@ export interface Props {
   showCloseButton?: boolean;
 }
 export type LocalPopoverProps = LocalPopoverPopoverProps & Props;
+export type PopoverProps = LocalPopoverProps;
 export interface PopoverComponents {
   Popover: React.FunctionComponent<PopoverPopoverProps>;
   Container: React.FunctionComponent<PopoverContainerProps>;
