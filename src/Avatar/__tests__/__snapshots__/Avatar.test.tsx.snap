@@ -112,7 +112,7 @@ exports[`renders correctly for an avatar with a palette prop set 1`] = `
   font-size: 100%;
   box-sizing: border-box;
   background-color: unset;
-  color: #3926a5;
+  color: #444bc9;
 }
 
 .c0 {
