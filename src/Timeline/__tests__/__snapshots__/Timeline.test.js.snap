@@ -50,11 +50,13 @@ exports[`renders Timeline correctly 1`] = `
   width: 0.625rem;
   margin-top: 1rem;
   margin-right: 0.5rem;
+  z-index: 1;
 }
 
 .c3 {
   margin-top: 0.6rem;
   line-height: 1.5rem;
+  color: #d9dee2;
 }
 
 <div>
@@ -62,6 +64,8 @@ exports[`renders Timeline correctly 1`] = `
     class="c0"
   >
     <div
+      aria-describedby="StepDescription1"
+      aria-labelledby="StepTitle1"
       class="c1 c0"
     >
       <span
@@ -72,17 +76,21 @@ exports[`renders Timeline correctly 1`] = `
       >
         <div
           class="c3 c0"
+          id="StepTitle1"
         >
-          Step one
+          Step one title
         </div>
         <div
           class="c0"
+          id="StepDescription1"
         >
-          Step Detail one
+          Step one details goes here
         </div>
       </div>
     </div>
     <div
+      aria-describedby="StepDescription2"
+      aria-labelledby="StepTitle2"
       class="c1 c0"
     >
       <span
@@ -93,17 +101,21 @@ exports[`renders Timeline correctly 1`] = `
       >
         <div
           class="c3 c0"
+          id="StepTitle2"
         >
-          Step two
+          Step two title
         </div>
         <div
           class="c0"
+          id="StepDescription2"
         >
-          Step Detail two
+          Step two details goes here
         </div>
       </div>
     </div>
     <div
+      aria-describedby="StepDescription3"
+      aria-labelledby="StepTitle3"
       class="c1 c0"
     >
       <span
@@ -114,13 +126,15 @@ exports[`renders Timeline correctly 1`] = `
       >
         <div
           class="c3 c0"
+          id="StepTitle3"
         >
-          Step three
+          Step three title
         </div>
         <div
           class="c0"
+          id="StepDescription3"
         >
-          Step Detail three
+          Step three details goes here
         </div>
       </div>
     </div>

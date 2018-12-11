@@ -1,26 +1,31 @@
 // @flow
 import React, { type Node } from 'react';
-import Box from 'reakit/Box';
 
-import { StepLabel } from './styled';
+import { TimelineStep as _TimelineStep, TimelineRow, TimelineStepBullet } from './styled';
 
 type Props = {
-  label: string,
-  color?: string,
+  a11yDescriptionId?: string,
+  a11yTitleId?: string,
+  lineColor?: string,
+  progressColor?: string,
   children: Node
 };
 
-const TimelineStep = ({ label, color, children }: Props) => {
+const TimelineStep = ({ a11yDescriptionId, a11yTitleId, children, lineColor, progressColor }: Props) => {
   return (
-    <Box>
-      <StepLabel color={color}>{label}</StepLabel>
-      {children}
-    </Box>
+    <TimelineRow lineColor={lineColor} aria-labelledby={a11yTitleId} aria-describedby={a11yDescriptionId}>
+      <TimelineStepBullet progressColor={progressColor} />
+      <_TimelineStep>{children}</_TimelineStep>
+    </TimelineRow>
   );
 };
 
 TimelineStep.defaultProps = {
-  color: undefined
+  a11yDescriptionId: undefined,
+  a11yTitleId: undefined,
+  children: undefined,
+  lineColor: undefined,
+  progressColor: undefined
 };
 
 export default TimelineStep;

@@ -16,18 +16,21 @@ import Timeline from './index';
 
 ## Basic Usage
 
-The `<Timeline>` component is made up of a compound of components such as: `<Timeline.Step>` and `<Timeline.StepDetail>`
+The `<Timeline>` component is made up of a compound of components such as: `<Timeline.Step>`,  `<Timeline.StepLabel>` and `<Timeline.StepDetail>`
 
 <Playground>
   <Timeline>
-    <Timeline.Step label="Step one">
-      <Timeline.StepDetail>Step Detail one</Timeline.StepDetail>
+    <Timeline.Step a11yTitleId="StepTitle1" a11yDescriptionId="StepDescription1">
+      <Timeline.StepLabel a11yTitleId="StepTitle1">Step one title</Timeline.StepLabel>
+      <Timeline.StepDetail a11yDescriptionId="StepDescription1">Step one details goes here</Timeline.StepDetail>
     </Timeline.Step>
-    <Timeline.Step label="Step two">
-      <Timeline.StepDetail>Step Detail two</Timeline.StepDetail>
+    <Timeline.Step a11yTitleId="StepTitle2" a11yDescriptionId="StepDescription2">
+      <Timeline.StepLabel a11yTitleId="StepTitle2">Step two title</Timeline.StepLabel>
+      <Timeline.StepDetail a11yDescriptionId="StepDescription2">Step two details goes here</Timeline.StepDetail>
     </Timeline.Step>
-    <Timeline.Step label="Step three">
-      <Timeline.StepDetail>Step Detail three</Timeline.StepDetail>
+    <Timeline.Step a11yTitleId="StepTitle3" a11yDescriptionId="StepDescription3">
+      <Timeline.StepLabel a11yTitleId="StepTitle3">Step three title</Timeline.StepLabel>
+      <Timeline.StepDetail a11yDescriptionId="StepDescription3">Step three details goes here</Timeline.StepDetail>
     </Timeline.Step>
   </Timeline>
 </Playground>
@@ -40,6 +43,9 @@ The `<Timeline>` component is made up of a compound of components such as: `<Tim
 ### `<Timeline.Step>`
 <PropsTable of={Timeline.Step} />
 
+### `<Timeline.StepLabel>`
+<PropsTable of={Timeline.StepLabel} />
+
 ### `<Timeline.StepDetail>`
 <PropsTable of={Timeline.StepDetail} />
 
@@ -47,3 +53,18 @@ The `<Timeline>` component is made up of a compound of components such as: `<Tim
 ## Theming
 
 ### Schema
+
+```jsx
+{
+  base: string | Object,
+  StepBullet: {
+    base: string | Object
+  },
+  StepLabel: {
+    base: string | Object
+  },
+  StepDetail: {
+    base: string | Object
+  }
+}
+```

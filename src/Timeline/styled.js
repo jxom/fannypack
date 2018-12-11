@@ -1,8 +1,14 @@
 import styled from 'reakit/styled';
-import { palette } from 'styled-tools';
+import { theme, palette } from 'styled-tools';
 import Box from 'reakit/Box';
 
-export const Row = styled(Box)`
+export const Timeline = styled(Box)`
+  & {
+    ${theme('fannypack.Timeline.base')};
+  }
+`;
+
+export const TimelineRow = styled(Box)`
   display: flex;
   position: relative;
 
@@ -24,21 +30,41 @@ export const Row = styled(Box)`
   }
 `;
 
-export const StepBullet = styled.span`
-  background-color: ${props => props.color || palette('textTint')};
+export const TimelineStep = styled(Box)`
+  & {
+    ${theme('fannypack.Timeline.Step.base')};
+  }
+`;
+
+export const TimelineStepBullet = styled.span`
+  background-color: ${props => props.progressColor || palette('textTint')};
   border-radius: 50%;
   display: inline-flex;
   height: 0.625rem;
   width: 0.625rem;
   margin-top: 1rem;
   margin-right: 0.5rem;
-  
-  ${theme('fannypack.Step.bullet.base')}
+  z-index: 1;
+
+  & {
+    ${theme('fannypack.Timeline.StepBullet.base')};
+  }
 `;
 
-export const StepLabel = styled(Box)`
+export const TimelineStepLabel = styled(Box)`
   margin-top: 0.6rem;
   line-height: 1.5rem;
-  
-  ${theme('fannypack.Step.Label.base')}
+  color: ${props => props.color || palette('text')};
+
+  & {
+    ${theme('fannypack.Timeline.StepLabel.base')};
+  }
+`;
+
+export const TimelineStepDetail = styled(Box)`
+  color: ${props => props.color || palette('text')};
+
+  & {
+    ${theme('fannypack.Timeline.StepDetail.base')};
+  }
 `;
