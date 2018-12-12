@@ -20,7 +20,7 @@ const getTintAttributes = props => {
     background-color: ${type && palette(`${type}Tint`)(props)};
     color: ${type && palette(`${type}TintInverted`)(props)};
     fill: ${type && palette(`${type}TintInverted`)(props)};
-    ${theme('fannypack.Callout.Tint')};
+    ${theme('fannypack.Callout.tint')};
   `;
 };
 
