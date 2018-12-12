@@ -7,6 +7,7 @@ import CardHeader from '../Card/CardHeader';
 import CardContent from '../Card/CardContent';
 import CardTitle from '../Card/CardTitle';
 import CardFooter from '../Card/CardFooter';
+import Button from '../Button';
 import Icon from '../Icon';
 
 const getTintAttributes = props => {
@@ -26,11 +27,32 @@ const getTintAttributes = props => {
 
 export default styled(CardCard)`
   border: none;
+  position: relative;
+
   ${getTintAttributes};
 
   & {
     ${theme('fannypack.Callout.base')};
   }
+`;
+
+export const CalloutClose = styled(Button)`
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  text-align: right;
+
+  &:hover {
+    background-color: ${palette('whiteDarker')};
+    & {
+      ${theme('fannypack.Callout.Close.hover')};
+    }
+  }
+
+  ${theme('fannypack.Callout.Close.base')};
 `;
 
 export const CalloutHeader = styled(CardHeader)`
