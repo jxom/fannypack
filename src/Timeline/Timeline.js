@@ -3,7 +3,7 @@ import React, { Component, type Node } from 'react';
 
 import TimelineStep from './TimelineStep';
 import TimelineStepDetail from './TimelineStepDetail';
-import TimelineStepLabel from './TimelineStepLabel';
+import TimelineStepHeading from './TimelineStepHeading';
 import { Timeline as _Timeline } from './styled';
 
 type TimelineProps = {
@@ -12,7 +12,7 @@ type TimelineProps = {
 
 class Timeline extends Component<TimelineProps> {
   static Step = TimelineStep;
-  static StepLabel = TimelineStepLabel;
+  static StepHeading = TimelineStepHeading;
   static StepDetail = TimelineStepDetail;
 
   render() {

@@ -1,6 +1,7 @@
 import styled from 'reakit/styled';
 import { theme, palette } from 'styled-tools';
 import Box from 'reakit/Box';
+import Heading from '../Heading';
 
 export const Timeline = styled(Box)`
   & {
@@ -51,13 +52,13 @@ export const TimelineStepBullet = styled.span`
   }
 `;
 
-export const TimelineStepLabel = styled(Box)`
+export const TimelineStepHeading = styled(Heading)`
   margin-top: 0.6rem;
   line-height: 1.5rem;
   color: ${props => props.color || palette('text')};
 
   & {
-    ${theme('fannypack.Timeline.StepLabel.base')};
+    ${theme('fannypack.Timeline.StepHeading.base')};
   }
 `;
 
