@@ -29,8 +29,13 @@ export type AvatarThemeConfig = {
 };
 export type AlertThemeConfig = {
   base?: Stylesheet,
+  tint?: Stylesheet,
   Title?: {
     base?: Stylesheet
+  },
+  Close?: {
+    base?: Stylesheet,
+    hover?: Stylesheet
   }
 };
 export type BackdropThemeConfig = {
@@ -53,12 +58,29 @@ export type ButtonThemeConfig = {
 };
 export type CalloutThemeConfig = {
   base?: Stylesheet,
-  Content?: Stylesheet,
-  Header?: Stylesheet,
-  Footer?: Stylesheet,
-  Title?: Stylesheet,
-  Tint?: Stylesheet,
-  Icon?: Stylesheet
+  tint?: Stylesheet,
+  Content?: {
+    base: Stylesheet
+  },
+  Header?: {
+    base: Stylesheet
+  },
+  Footer?: {
+    base: Stylesheet
+  },
+  Title?: {
+    base: Stylesheet
+  },
+  Tint?: {
+    base: Stylesheet
+  },
+  Icon?: {
+    base: Stylesheet
+  },
+  Close?: {
+    base?: Stylesheet,
+    hover?: Stylesheet
+  }
 };
 export type CardThemeConfig = {
   base?: Stylesheet,
