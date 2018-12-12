@@ -18,43 +18,27 @@ import Set from '../Set';
 
 ## Basic Usage
 
-<Playground>
-  <Callout>Hello world</Callout>
-</Playground>
+The `<Callout>` component uses `<Card>` internally, and is used to highlight important content to users. It is recommended to try use the [`<Alert>` component](/components/alert) for displaying content that is of shorter length.
 
-## Header
-
-You can render a header for the callout using the `title` prop.
+You can render different intents for the callout using the `type` prop. A Callout can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Playground>
-  <Callout title="This is a title">
+  <Callout type="info" title="This is a title" marginBottom="20px">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
   </Callout>
-</Playground>
-
-## Intents
-
-You can render different intents for the callout using the `palette` prop.
-
-<Playground>
-  <Callout palette="primary" title="This is a title" marginBottom="20px">
+  <Callout type="success" title="This is a title" marginBottom="20px">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
   </Callout>
-  <Callout palette="success" title="This is a title" marginBottom="20px">
+  <Callout type="danger" title="This is a title" marginBottom="20px">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
   </Callout>
-  <Callout palette="danger" title="This is a title" marginBottom="20px">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
-  </Callout>
-  <Callout palette="warning" title="This is a title" marginBottom="20px">
+  <Callout type="warning" title="This is a title" marginBottom="20px">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
@@ -66,22 +50,22 @@ You can render different intents for the callout using the `palette` prop.
 You can add a tint using the `hasTint` prop.
 
 <Playground>
-  <Callout hasTint palette="primary" title="This is a title" marginBottom="20px">
+  <Callout hasTint type="info" title="This is a title" marginBottom="20px">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
   </Callout>
-  <Callout hasTint palette="success" title="This is a title" marginBottom="20px">
+  <Callout hasTint type="success" title="This is a title" marginBottom="20px">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
   </Callout>
-  <Callout hasTint palette="danger" title="This is a title" marginBottom="20px">
+  <Callout hasTint type="danger" title="This is a title" marginBottom="20px">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
   </Callout>
-  <Callout hasTint palette="warning" title="This is a title" marginBottom="20px">
+  <Callout hasTint type="warning" title="This is a title" marginBottom="20px">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
@@ -90,10 +74,22 @@ You can add a tint using the `hasTint` prop.
 
 ## Icon
 
-You can use your own Icon using the `icon` prop.
+You can also specify your own [`<Icon>` component](/components/icon) using the `icon` prop.
 
 <Playground>
-  <Callout palette="primary" icon="flame" title="This is a title">
+  <Callout icon="flame" title="This is a title">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout>
+</Playground>
+
+## Footer
+
+You can render a footer for the callout using the `footer` prop.
+
+<Playground>
+  <Callout type="info" hasTint title="This is a title" footer={<ActionButtons justifyContent="flex-end" width="100%" />}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
@@ -111,6 +107,9 @@ You can use your own Icon using the `icon` prop.
     base: string | Object
   },
   Content: {
+    base: string | Object
+  },
+   Footer: {
     base: string | Object
   },
   Title: {

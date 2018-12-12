@@ -6,24 +6,21 @@ import CardCard from '../Card/CardCard';
 import CardHeader from '../Card/CardHeader';
 
 const getTintAttributes = props => {
-  const { palette: _palette, hasTint } = props;
+  const { type, hasTint } = props;
 
-  if (!hasTint || !_palette) {
+  if (!hasTint || !type) {
     return;
   }
 
   return css`
-    background-color: ${_palette === 'default' ? palette('textTint')(props) : palette(`${_palette}Tint`)(props)};
-    border-top-width: 0;
-    border-right-width: 0;
-    border-bottom-width: 0;
-    color: ${_palette === 'default' ? palette('textTintInverted')(props) : palette(`${_palette}TintInverted`)(props)};
-    fill: ${_palette === 'default' ? palette('textTintInverted')(props) : palette(`${_palette}TintInverted`)(props)};
+    background-color: ${type && palette(`${type}Tint`)(props)};
+    color: ${type && palette(`${type}TintInverted`)(props)};
+    fill: ${type && palette(`${type}TintInverted`)(props)};
   `;
 };
 
 export default styled(CardCard)`
-  color: black;
+  border: none;
   ${getTintAttributes};
 `;
 
