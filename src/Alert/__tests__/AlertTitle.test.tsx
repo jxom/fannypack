@@ -1,7 +1,6 @@
 import * as React from 'react';
 import render from '../../_utils/tests/render';
-// @ts-ignore
-import AlertTitle from '../AlertTitle.tsx';
+import AlertTitle from '../AlertTitle';
 
 it('renders correctly', () => {
   const { container } = render(<AlertTitle>AlertTitle</AlertTitle>);

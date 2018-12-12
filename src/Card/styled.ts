@@ -33,7 +33,7 @@ export const CardHeader = styled(Box)<CardHeaderProps>`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: ${theme('fannypack.layout.spacing.small')}rem;
+  padding-bottom: ${theme('fannypack.layout.spacing.xsmall')}rem;
   position: relative;
   width: 100%;
 
@@ -43,7 +43,7 @@ export const CardHeader = styled(Box)<CardHeaderProps>`
 `;
 export const CardFooter = styled(Box)<CardFooterProps>`
   display: flex;
-  padding-top: ${theme('fannypack.layout.spacing.small')}rem;
+  padding-top: ${theme('fannypack.layout.spacing.xsmall')}rem;
   width: 100%;
 
   & {

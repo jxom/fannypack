@@ -8,7 +8,7 @@ import { ButtonProps as ReakitButtonProps } from 'reakit/ts/Button/Button';
 import { Omit, ButtonType, buttonTypePropType, Size, sizePropType } from '../types';
 // @ts-ignore
 import Spinner from '../Spinner';
-import _Button from './styled';
+import _Button, { ButtonIcon } from './styled';
 
 const Text = styled.span`
   align-items: center;
@@ -34,6 +34,10 @@ export interface LocalButtonProps {
   /** Makes the button disabled. The user is unable to interact with the button. */
   disabled?: boolean;
   id?: string;
+  /** Icon that appears on the right side of the button. */
+  iconAfter?: string;
+  /** Icon that appears on the left side of the button. */
+  iconBefore?: string;
   /** Adds a loading indicator to the button. */
   isLoading?: boolean;
   /** Makes the button not interactable. */
@@ -51,6 +55,8 @@ const defaultProps: Partial<LocalButtonProps> = {
   className: undefined,
   disabled: false,
   id: undefined,
+  iconAfter: undefined,
+  iconBefore: undefined,
   isLoading: false,
   isStatic: false,
   kind: 'default',
@@ -63,6 +69,8 @@ export const Button = ({
   children,
   className,
   disabled,
+  iconAfter,
+  iconBefore,
   isLoading,
   isStatic,
   kind,
@@ -70,6 +78,17 @@ export const Button = ({
   size,
   ...props
 }: LocalButtonProps) => {
+  const child = (
+    <React.Fragment>
+      {/*
+        // @ts-ignore */}
+      {iconBefore && <ButtonIcon a11yHidden icon={iconBefore} isBefore />}
+      {children}
+      {/*
+        // @ts-ignore */}
+      {iconAfter && <ButtonIcon a11yHidden icon={iconAfter} isAfter />}
+    </React.Fragment>
+  );
   return (
     <_Button
       className={className}
@@ -86,10 +105,10 @@ export const Button = ({
           <SpinnerWrapper>
             <Spinner color={kind === 'default' ? `${palette || ''}Inverted` : palette} />
           </SpinnerWrapper>
-          <Text>{children}</Text>
+          <Text>{child}</Text>
         </React.Fragment>
       ) : (
-        children
+        child
       )}
     </_Button>
   );
@@ -102,6 +121,8 @@ Button.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
+  iconAfter: PropTypes.string,
+  iconBefore: PropTypes.string,
   isLoading: PropTypes.bool,
   isStatic: PropTypes.bool,
   kind: buttonTypePropType,

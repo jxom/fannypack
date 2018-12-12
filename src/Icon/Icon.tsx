@@ -10,9 +10,7 @@ import { withTheme } from '../styled';
 import { Omit, Size, sizePropType } from '../types';
 import _Icon from './styled';
 
-export interface LocalIconProps {
-  /** A label for the icon which can be read by screen readers. This is required! */
-  a11yLabel: string;
+export interface Props {
   children?: React.ReactNode;
   /** Color of the icon. Can be a color from the palette, or any other color. */
   color?: string;
@@ -23,12 +21,24 @@ export interface LocalIconProps {
   size?: Size;
   theme?: Object;
 }
-export type IconProps = LocalIconProps & Omit<ReakitBoxProps, 'size'>;
+export interface PropsWithA11yHidden extends Props {
+  /** Indicates that this element should be skipped by assistive technologies. */
+  a11yHidden: boolean;
+}
+export interface PropsWithA11yLabel extends Props {
+  /** A label for the icon which can be read by screen readers. This is required if a11yHidden is false. */
+  a11yLabel: string;
+}
+export type LocalIconProps = PropsWithA11yHidden | PropsWithA11yLabel;
+export type IconProps = Omit<ReakitBoxProps, 'size'> & LocalIconProps;
 
 const DEFAULT_VIEW_BOX_SIZE = 16;
 const LARGE_VIEW_BOX_SIZE = 20;
 
 export const Icon: React.FunctionComponent<LocalIconProps> = ({
+  // @ts-ignore
+  a11yHidden,
+  // @ts-ignore
   a11yLabel,
   children,
   icon,
@@ -39,10 +49,18 @@ export const Icon: React.FunctionComponent<LocalIconProps> = ({
   const size = _get(theme, `fannypack.fontSizes[${_size || ''}]`, 1);
   const svgPaths: { [key: string]: Array<string> } = size >= LARGE_VIEW_BOX_SIZE ? IconSvgPaths20 : IconSvgPaths16;
   const viewBoxSize = size >= LARGE_VIEW_BOX_SIZE ? LARGE_VIEW_BOX_SIZE : DEFAULT_VIEW_BOX_SIZE;
-  const paths = svgPaths[icon];
+  const newIcon = _get(theme, `fannypack.Icon.iconNames[${icon}]`) || icon;
+  const paths = svgPaths[newIcon];
   return (
     // @ts-ignore
-    <_Icon use="svg" role="img" size={size} viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`} {...props}>
+    <_Icon
+      use="svg"
+      ariaHidden={a11yHidden}
+      role="img"
+      size={size}
+      viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`}
+      {...props}
+    >
       {a11yLabel && <title>{a11yLabel}</title>}
       {paths.map(path => (
         <path key={path} d={path} fillRule="evenodd" />
@@ -52,7 +70,8 @@ export const Icon: React.FunctionComponent<LocalIconProps> = ({
 };
 
 Icon.propTypes = {
-  a11yLabel: PropTypes.string.isRequired,
+  a11yHidden: PropTypes.bool,
+  a11yLabel: PropTypes.string,
   children: PropTypes.node,
   color: PropTypes.string,
   className: PropTypes.string,
@@ -61,6 +80,8 @@ Icon.propTypes = {
   theme: PropTypes.object
 };
 Icon.defaultProps = {
+  a11yHidden: false,
+  a11yLabel: undefined,
   children: null,
   className: undefined,
   color: undefined,

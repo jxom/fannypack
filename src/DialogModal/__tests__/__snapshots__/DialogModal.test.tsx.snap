@@ -188,6 +188,13 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
   width: 100%;
 }
 
+.c14 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
 .c10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -239,13 +246,6 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
 .c10:hover {
   color: #000;
   fill: #000;
-}
-
-.c14 {
-  fill: inherit;
-  position: relative;
-  height: 1em;
-  width: 1em;
 }
 
 .c8 {
@@ -319,7 +319,7 @@ h6.c8 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 1px solid #e6e6e6;
+  background-color: #f2f2f2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -595,7 +595,7 @@ h6.c8 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 1px solid #e6e6e6;
+  background-color: #f2f2f2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -617,7 +617,7 @@ h6.c8 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-top: 1px solid #e6e6e6;
+  background-color: #f2f2f2;
   padding: 1rem 1rem;
   width: 100%;
 }
@@ -846,7 +846,7 @@ h6.c8 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 1px solid #e6e6e6;
+  background-color: #f2f2f2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1221,7 +1221,7 @@ h6.c8 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 1px solid #e6e6e6;
+  background-color: #f2f2f2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1243,7 +1243,7 @@ h6.c8 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-top: 1px solid #e6e6e6;
+  background-color: #f2f2f2;
   padding: 1rem 1rem;
   width: 100%;
 }

@@ -3,6 +3,7 @@ import { darken } from 'polished';
 import { Button as _Button } from 'reakit';
 
 import { styled, css } from '../styled';
+import Icon, { IconProps } from '../Icon/Icon';
 import { ButtonProps } from './Button';
 
 const sizeProperties: any = {
@@ -120,6 +121,26 @@ const loadingProperties = css`
   }
   & {
     ${theme('fannypack.Button.loading')};
+  }
+`;
+
+export const ButtonIcon = styled(Icon)<IconProps & { isAfter: boolean; isBefore: boolean }>`
+  ${props =>
+    props.isBefore &&
+    css`
+      margin-left: -0.2em;
+      margin-right: 0.4em;
+    `};
+
+  ${props =>
+    props.isAfter &&
+    css`
+      margin-left: 0.4em;
+      margin-right: -0.2em;
+    `};
+
+  & {
+    ${theme('fannypack.Button.Icon.base')};
   }
 `;
 

@@ -539,6 +539,13 @@ exports[`renders correctly when showCloseButton is truthy 1`] = `
   display: none !important;
 }
 
+.c13 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
 .c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -637,13 +644,6 @@ exports[`renders correctly when showCloseButton is truthy 1`] = `
 .c9:hover {
   color: #000;
   fill: #000;
-}
-
-.c13 {
-  fill: inherit;
-  position: relative;
-  height: 1em;
-  width: 1em;
 }
 
 abbr.c14 {
