@@ -14,6 +14,28 @@ exports[`renders Timeline correctly 1`] = `
   color: inherit;
 }
 
+.c5 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  font-weight: 600 !important;
+}
+
+.c4:not(:last-child) {
+  margin: 0 0 1rem;
+}
+
+.c4 .c7 {
+  top: 0.1em;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -55,11 +77,17 @@ exports[`renders Timeline correctly 1`] = `
 
 .c3 {
   margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
   line-height: 1.5rem;
   color: #435a6f;
 }
 
-.c4 {
+.c3:not(:last-child) {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.c6 {
   color: #435a6f;
 }
 
@@ -68,78 +96,90 @@ exports[`renders Timeline correctly 1`] = `
     class="c0"
   >
     <div
-      aria-describedby="StepDescription1"
-      aria-labelledby="StepTitle1"
+      aria-describedby="StepDetail1"
+      aria-labelledby="StepHeading1"
       class="c1 c0"
     >
       <span
         class="c2"
       />
       <div
+        aria-describedby="StepDetail1"
+        aria-labelledby="StepHeading1"
         class="c0"
       >
-        <div
-          class="c3 c0"
-          id="StepTitle1"
+        <p
+          class="c3 c4 c5"
+          font-weight="semibold"
+          id="StepHeading1"
+          style="font-weight: semibold;"
         >
-          Step one title
-        </div>
-        <div
-          class="c4 c0"
-          id="StepDescription1"
+          Step one Heading
+        </p>
+        <p
+          class="c6 c4 c0"
+          id="StepDetail1"
         >
           Step one details goes here
-        </div>
+        </p>
       </div>
     </div>
     <div
-      aria-describedby="StepDescription2"
-      aria-labelledby="StepTitle2"
+      aria-describedby="StepDetail2"
+      aria-labelledby="StepHeading2"
       class="c1 c0"
     >
       <span
         class="c2"
       />
       <div
+        aria-describedby="StepDetail2"
+        aria-labelledby="StepHeading2"
         class="c0"
       >
-        <div
-          class="c3 c0"
-          id="StepTitle2"
+        <p
+          class="c3 c4 c5"
+          font-weight="semibold"
+          id="StepHeading2"
+          style="font-weight: semibold;"
         >
-          Step two title
-        </div>
-        <div
-          class="c4 c0"
-          id="StepDescription2"
+          Step two Heading
+        </p>
+        <p
+          class="c6 c4 c0"
+          id="StepDetail2"
         >
           Step two details goes here
-        </div>
+        </p>
       </div>
     </div>
     <div
-      aria-describedby="StepDescription3"
-      aria-labelledby="StepTitle3"
+      aria-describedby="StepDetail3"
+      aria-labelledby="StepHeading3"
       class="c1 c0"
     >
       <span
         class="c2"
       />
       <div
+        aria-describedby="StepDetail3"
+        aria-labelledby="StepHeading3"
         class="c0"
       >
-        <div
-          class="c3 c0"
-          id="StepTitle3"
+        <p
+          class="c3 c4 c5"
+          font-weight="semibold"
+          id="StepHeading3"
+          style="font-weight: semibold;"
         >
-          Step three title
-        </div>
-        <div
-          class="c4 c0"
-          id="StepDescription3"
+          Step three Heading
+        </p>
+        <p
+          class="c6 c4 c0"
+          id="StepDetail3"
         >
           Step three details goes here
-        </div>
+        </p>
       </div>
     </div>
   </div>

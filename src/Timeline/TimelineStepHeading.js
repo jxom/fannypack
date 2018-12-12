@@ -10,7 +10,7 @@ type Props = {
 
 const TimelineStepHeading = ({ a11yTitleId, children, color }: Props) => {
   return (
-    <_TimelineStepHeading id={a11yTitleId} color={color} use="h6" fontWeight="semibold">
+    <_TimelineStepHeading id={a11yTitleId} color={color} fontWeight="semibold">
       {children}
     </_TimelineStepHeading>
   );

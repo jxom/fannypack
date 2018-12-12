@@ -1,7 +1,7 @@
 // @flow
 import React, { type Node } from 'react';
 
-import { TimelineStep as _TimelineStep, TimelineRow, TimelineStepBullet } from './styled';
+import { TimelineStep as _TimelineStep, TimelineRow, TimelineBullet } from './styled';
 
 type Props = {
   a11yDescriptionId?: string,
@@ -14,8 +14,10 @@ type Props = {
 const TimelineStep = ({ a11yDescriptionId, a11yTitleId, children, lineColor, progressColor }: Props) => {
   return (
     <TimelineRow lineColor={lineColor} aria-labelledby={a11yTitleId} aria-describedby={a11yDescriptionId}>
-      <TimelineStepBullet progressColor={progressColor} />
-      <_TimelineStep>{children}</_TimelineStep>
+      <TimelineBullet progressColor={progressColor} />
+      <_TimelineStep aria-labelledby={a11yTitleId} aria-describedby={a11yDescriptionId}>
+        {children}
+      </_TimelineStep>
     </TimelineRow>
   );
 };

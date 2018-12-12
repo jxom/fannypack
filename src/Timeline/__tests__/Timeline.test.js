@@ -5,17 +5,17 @@ import Timeline from '../Timeline';
 it('renders Timeline correctly', () => {
   const { container } = render(
     <Timeline>
-      <Timeline.Step a11yTitleId="StepTitle1" a11yDescriptionId="StepDescription1">
-        <Timeline.StepLabel a11yTitleId="StepTitle1">Step one title</Timeline.StepLabel>
-        <Timeline.StepDetail a11yDescriptionId="StepDescription1">Step one details goes here</Timeline.StepDetail>
+      <Timeline.Step a11yTitleId="StepHeading1" a11yDescriptionId="StepDetail1">
+        <Timeline.StepHeading a11yTitleId="StepHeading1">Step one Heading</Timeline.StepHeading>
+        <Timeline.StepDetail a11yDescriptionId="StepDetail1">Step one details goes here</Timeline.StepDetail>
       </Timeline.Step>
-      <Timeline.Step a11yTitleId="StepTitle2" a11yDescriptionId="StepDescription2">
-        <Timeline.StepLabel a11yTitleId="StepTitle2">Step two title</Timeline.StepLabel>
-        <Timeline.StepDetail a11yDescriptionId="StepDescription2">Step two details goes here</Timeline.StepDetail>
+      <Timeline.Step a11yTitleId="StepHeading2" a11yDescriptionId="StepDetail2">
+        <Timeline.StepHeading a11yTitleId="StepHeading2">Step two Heading</Timeline.StepHeading>
+        <Timeline.StepDetail a11yDescriptionId="StepDetail2">Step two details goes here</Timeline.StepDetail>
       </Timeline.Step>
-      <Timeline.Step a11yTitleId="StepTitle3" a11yDescriptionId="StepDescription3">
-        <Timeline.StepLabel a11yTitleId="StepTitle3">Step three title</Timeline.StepLabel>
-        <Timeline.StepDetail a11yDescriptionId="StepDescription3">Step three details goes here</Timeline.StepDetail>
+      <Timeline.Step a11yTitleId="StepHeading3" a11yDescriptionId="StepDetail3">
+        <Timeline.StepHeading a11yTitleId="StepHeading3">Step three Heading</Timeline.StepHeading>
+        <Timeline.StepDetail a11yDescriptionId="StepDetail3">Step three details goes here</Timeline.StepDetail>
       </Timeline.Step>
     </Timeline>
   );

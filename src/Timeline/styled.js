@@ -1,7 +1,7 @@
 import styled from 'reakit/styled';
 import { theme, palette } from 'styled-tools';
 import Box from 'reakit/Box';
-import Heading from '../Heading';
+import Paragraph from '../Paragraph';
 
 export const Timeline = styled(Box)`
   & {
@@ -37,7 +37,7 @@ export const TimelineStep = styled(Box)`
   }
 `;
 
-export const TimelineStepBullet = styled.span`
+export const TimelineBullet = styled.span`
   background-color: ${props => props.progressColor || palette('textTint')};
   border-radius: 50%;
   display: inline-flex;
@@ -48,21 +48,27 @@ export const TimelineStepBullet = styled.span`
   z-index: 1;
 
   & {
-    ${theme('fannypack.Timeline.StepBullet.base')};
+    ${theme('fannypack.Timeline.Bullet.base')};
   }
 `;
 
-export const TimelineStepHeading = styled(Heading)`
+export const TimelineStepHeading = styled(Paragraph)`
   margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
   line-height: 1.5rem;
   color: ${props => props.color || palette('text')};
+
+  &:not(:last-child) {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
 
   & {
     ${theme('fannypack.Timeline.StepHeading.base')};
   }
 `;
 
-export const TimelineStepDetail = styled(Box)`
+export const TimelineStepDetail = styled(Paragraph)`
   color: ${props => props.color || palette('text')};
 
   & {
