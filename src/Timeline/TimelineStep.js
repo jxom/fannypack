@@ -14,7 +14,7 @@ type Props = {
 const TimelineStep = ({ a11yDescriptionId, a11yTitleId, children, lineColor, progressColor }: Props) => {
   return (
     <TimelineRow lineColor={lineColor} aria-labelledby={a11yTitleId} aria-describedby={a11yDescriptionId}>
-      <TimelineBullet progressColor={progressColor} />
+      <TimelineBullet backgroundColor={progressColor} />
       <_TimelineStep aria-labelledby={a11yTitleId} aria-describedby={a11yDescriptionId}>
         {children}
       </_TimelineStep>
@@ -27,7 +27,7 @@ TimelineStep.defaultProps = {
   a11yTitleId: undefined,
   children: undefined,
   lineColor: undefined,
-  progressColor: undefined
+  progressColor: 'textTint'
 };
 
 export default TimelineStep;

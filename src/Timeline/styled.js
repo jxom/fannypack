@@ -37,8 +37,7 @@ export const TimelineStep = styled(Box)`
   }
 `;
 
-export const TimelineBullet = styled.span`
-  background-color: ${props => props.progressColor || palette('textTint')};
+export const TimelineBullet = styled(Box)`
   border-radius: 50%;
   display: inline-flex;
   height: 0.625rem;
