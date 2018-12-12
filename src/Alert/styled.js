@@ -30,6 +30,7 @@ const tintAttributes = css`
   border-bottom-width: 0;
   color: ${props => props.type && palette(`${props.type}TintInverted`)(props)};
   fill: ${props => props.type && palette(`${props.type}TintInverted`)(props)};
+  ${theme('fannypack.Alert.tint')};
 `;
 
 export default styled(Box)`

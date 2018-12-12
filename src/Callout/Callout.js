@@ -1,13 +1,8 @@
 // @flow
 import React, { type Element, type Node } from 'react';
-import { Flex } from '../primitives';
-import _Callout, { CalloutHeader } from './styled';
+import { Box, Flex } from '../primitives';
+import _Callout, { CalloutContent, CalloutFooter, CalloutHeader, CalloutIcon, CalloutTitle } from './styled';
 import { getUniqueId } from '../uniqueId';
-
-import CalloutContent from '../Card/CardContent';
-import CalloutTitle from '../Card/CardTitle';
-import CalloutFooter from '../Card/CardFooter';
-import Icon from '../Icon';
 
 type Props = {
   a11yDescriptionId?: string,
@@ -27,10 +22,10 @@ const Callout = ({ a11yDescriptionId, a11yTitleId, children, footer, hasTint, ic
       <Flex>
         {(type || icon) && (
           <CalloutTitle>
-            <Icon icon={type || icon} color={type} marginRight="12px" />
+            <CalloutIcon icon={type || icon} color={type} />
           </CalloutTitle>
         )}
-        <div>
+        <Box>
           {title && (
             <CalloutHeader>
               {typeof title === 'string' ? <CalloutTitle id={a11yTitleId}>{title}</CalloutTitle> : title}
@@ -38,7 +33,7 @@ const Callout = ({ a11yDescriptionId, a11yTitleId, children, footer, hasTint, ic
           )}
           <CalloutContent id={a11yDescriptionId}>{children}</CalloutContent>
           {footer && <CalloutFooter>{footer}</CalloutFooter>}
-        </div>
+        </Box>
       </Flex>
     </_Callout>
   );

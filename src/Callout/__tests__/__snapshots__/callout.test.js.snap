@@ -60,7 +60,9 @@ exports[`renders correctly 1`] = `
   <div
     class="c3 c4"
   >
-    <div>
+    <div
+      class="c4"
+    >
       <div
         class="c4"
         id="Callout-1"
@@ -141,7 +143,9 @@ exports[`renders correctly when a footer prop is set 1`] = `
   <div
     class="c3 c4"
   >
-    <div>
+    <div
+      class="c4"
+    >
       <div
         class="c4"
         id="Callout-1"
@@ -220,7 +224,9 @@ exports[`renders correctly when a hasTint prop is set 1`] = `
   <div
     class="c3 c4"
   >
-    <div>
+    <div
+      class="c4"
+    >
       <div
         class="c4"
         id="Callout-1"
@@ -404,7 +410,9 @@ h6.c8 {
   <div
     class="c3 c4"
   >
-    <div>
+    <div
+      class="c4"
+    >
       <div
         class="c5 c6 c4"
       >
@@ -454,7 +462,7 @@ exports[`renders correctly when a type prop is set 1`] = `
   color: inherit;
 }
 
-.c9 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -488,7 +496,7 @@ exports[`renders correctly when a type prop is set 1`] = `
   box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
 }
 
-.c8 {
+.c9 {
   fill: #35709e;
   position: relative;
   height: 1em;
@@ -533,7 +541,7 @@ h6.c6 {
   font-size: 1rem;
 }
 
-.c6 .c7 {
+.c6 .c8 {
   top: 0.1em;
 }
 
@@ -547,6 +555,10 @@ h6.c6 {
 
 .c0 {
   border: none;
+}
+
+.c7 {
+  margin-right: 1rem;
 }
 
 @media (max-width:480px) {
@@ -592,11 +604,11 @@ h6.c6 {
       class="c5 sub-heading c6 c4"
     >
       <svg
-        class="c7 c8 c9"
+        class="c7 c8 c9 c10"
         color="info"
         role="img"
         size="1"
-        style="size: 1px; margin-right: 12px;"
+        style="size: 1px;"
         viewBox="0 0 16 16"
       >
         <path
@@ -605,7 +617,9 @@ h6.c6 {
         />
       </svg>
     </h5>
-    <div>
+    <div
+      class="c4"
+    >
       <div
         class="c4"
         id="Callout-1"
@@ -677,7 +691,9 @@ exports[`renders correctly with a custom element 1`] = `
   <div
     class="c3 c4"
   >
-    <div>
+    <div
+      class="c4"
+    >
       <div
         class="c4"
         id="Callout-1"

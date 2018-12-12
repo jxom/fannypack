@@ -52,7 +52,13 @@ export type ButtonThemeConfig = {
   }
 };
 export type CalloutThemeConfig = {
-  base?: Stylesheet
+  base?: Stylesheet,
+  Content?: Stylesheet,
+  Header?: Stylesheet,
+  Footer?: Stylesheet,
+  Title?: Stylesheet,
+  Tint?: Stylesheet,
+  Icon?: Stylesheet
 };
 export type CardThemeConfig = {
   base?: Stylesheet,
@@ -388,7 +394,7 @@ export type ThemeConfig = {
   Blockquote?: BlockquoteThemeConfig,
   Button?: ButtonThemeConfig,
   Checkbox?: CheckboxThemeConfig,
-  Callout?: CardThemeConfig,
+  Callout?: CalloutThemeConfig,
   Card?: CardThemeConfig,
   Code?: CodeThemeConfig,
   Column?: ColumnThemeConfig,
