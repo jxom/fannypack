@@ -1,16 +1,17 @@
-// @flow
+import { palette, theme } from 'styled-tools';
 
 import styled, { css } from '../styled';
-import { palette, theme } from 'styled-tools';
 import CardCard from '../Card/CardCard';
 import CardHeader from '../Card/CardHeader';
 import CardContent from '../Card/CardContent';
 import CardTitle from '../Card/CardTitle';
 import CardFooter from '../Card/CardFooter';
 import Button from '../Button';
-import Icon from '../Icon';
+import { CalloutProps } from './Callout';
+import { CalloutCloseProps } from './CalloutClose';
+import Icon, { IconProps } from '../Icon/Icon';
 
-const getTintAttributes = props => {
+const getTintAttributes = (props: any) => {
   const { type, hasTint } = props;
 
   if (!hasTint || !type) {
@@ -26,7 +27,7 @@ const getTintAttributes = props => {
   `;
 };
 
-export default styled(CardCard)`
+export default styled(CardCard)<CalloutProps>`
   border: none;
   position: relative;
 
@@ -37,7 +38,7 @@ export default styled(CardCard)`
   }
 `;
 
-export const CalloutClose = styled(Button)`
+export const CalloutClose = styled(Button)<CalloutCloseProps>`
   position: absolute;
   right: 0.8rem;
   top: 0.8rem;
@@ -83,7 +84,7 @@ export const CalloutFooter = styled(CardFooter)`
   }
 `;
 
-export const CalloutIcon = styled(Icon)`
+export const CalloutIcon = styled(Icon)<IconProps>`
   margin-right: ${theme('fannypack.layout.spacing.xsmall')}rem;
 
   & {

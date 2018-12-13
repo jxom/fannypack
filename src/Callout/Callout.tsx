@@ -1,26 +1,29 @@
-// @flow
-import React, { type Element, type Node } from 'react';
+import * as React from 'react';
+
+import { CardCardProps } from '../Card/CardCard';
 import { Box, Flex } from '../primitives';
-import _Callout, { CalloutContent, CalloutFooter, CalloutHeader, CalloutIcon, CalloutTitle } from './styled';
-import CalloutClose from './CalloutClose';
+// @ts-ignore
 import { getUniqueId } from '../uniqueId';
+import _Callout, { CalloutContent, CalloutFooter, CalloutHeader, CalloutIcon, CalloutTitle } from './styled';
+import CalloutClose, { CalloutCloseProps } from './CalloutClose';
 
-type Props = {
-  a11yDescriptionId?: string,
-  a11yTitleId?: string,
-  children: Node,
-  className?: string,
-  closeButtonProps?: Object,
-  footer?: string | Element<any>,
-  hasTint?: boolean,
-  icon?: string,
-  onClickClose?: Function,
-  showCloseButton?: boolean,
-  title?: string | Element<any>,
-  type?: 'info' | 'success' | 'danger' | 'warning'
-};
+export interface LocalCalloutProps {
+  a11yDescriptionId?: string;
+  a11yTitleId?: string;
+  children: React.ReactNode;
+  className?: string;
+  closeButtonProps?: CalloutCloseProps;
+  footer?: string | React.ReactElement<any>;
+  hasTint?: boolean;
+  icon?: string;
+  onClickClose?: CalloutCloseProps['onClickClose'];
+  showCloseButton?: boolean;
+  title?: string | React.ReactElement<any>;
+  type?: string;
+}
+export type CalloutProps = CardCardProps & LocalCalloutProps;
 
-const Callout = ({
+const Callout: React.FunctionComponent<LocalCalloutProps> = ({
   a11yDescriptionId,
   a11yTitleId,
   children,
@@ -33,13 +36,15 @@ const Callout = ({
   title,
   type,
   ...props
-}: Props) => {
+}) => {
   return (
     <_Callout a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} hasTint={hasTint} type={type} {...props}>
       <Flex>
         {(type || icon) && (
           <CalloutTitle>
-            <CalloutIcon icon={type || icon} color={type} />
+            {/*
+              // @ts-ignore */}
+            <CalloutIcon icon={(type || icon) as string} color={type} />
           </CalloutTitle>
         )}
         <Box>

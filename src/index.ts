@@ -18,7 +18,6 @@ export { Button } from './Button';
 // @ts-ignore
 export { Callout } from './Callout';
 export { Card, CardCard, CardContent, CardFooter, CardHeader, CardTitle } from './Card';
-// @ts-ignore
 export { Checkbox, CheckboxField } from './Checkbox';
 export { Code, HighlightedCode } from './Code';
 export { Column } from './Column';
@@ -33,23 +32,15 @@ export { Heading } from './Heading';
 export { Icon } from './Icon';
 export { Image } from './Image';
 export { Input, InputField } from './Input';
-// @ts-ignore
 export { Label } from './Label';
-// @ts-ignore
 export { Link } from './Link';
-// @ts-ignore
 export { List, ListItem } from './List';
 export { Modal, ModalContainer, ModalShow, ModalHide } from './Modal';
-// @ts-ignore
 export { Navigation } from './Navigation';
-// @ts-ignore
 export { Overlay, OverlayContainer, OverlayShow, OverlayHide, OverlayToggle } from './Overlay';
 export { Pane } from './Pane';
-// @ts-ignore
 export { Paragraph } from './Paragraph';
-// @ts-ignore
 export { Popover, PopoverContainer, PopoverShow, PopoverHide, PopoverToggle, PopoverClose } from './Popover';
-// @ts-ignore
 export { Radio, RadioGroup, RadioGroupField } from './Radio';
 // @ts-ignore
 export { Rating, RatingStar } from './Rating';
