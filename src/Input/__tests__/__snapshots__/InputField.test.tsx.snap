@@ -14,6 +14,10 @@ exports[`renders correctly for a basic input field 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -26,6 +30,10 @@ exports[`renders correctly for a basic input field 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -117,6 +125,10 @@ exports[`renders correctly for a disabled input field 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -129,6 +141,10 @@ exports[`renders correctly for a disabled input field 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -221,6 +237,10 @@ exports[`renders correctly for a full width input field 1`] = `
   color: inherit;
 }
 
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c4 {
   margin: unset;
   padding: unset;
@@ -233,6 +253,10 @@ exports[`renders correctly for a full width input field 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c4:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c2 {
@@ -333,6 +357,10 @@ exports[`renders correctly for a required field 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c8 {
   margin: unset;
   padding: unset;
@@ -347,6 +375,10 @@ exports[`renders correctly for a required field 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -359,6 +391,10 @@ exports[`renders correctly for a required field 1`] = `
   background-color: unset;
   color: inherit;
   margin-bottom: 0.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -483,6 +519,10 @@ exports[`renders correctly for addon component (after) 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c9 {
   margin: unset;
   padding: unset;
@@ -497,6 +537,10 @@ exports[`renders correctly for addon component (after) 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c9:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -509,6 +553,10 @@ exports[`renders correctly for addon component (after) 1`] = `
   background-color: unset;
   color: inherit;
   margin-bottom: 0.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -697,6 +745,10 @@ exports[`renders correctly for addon component (before) 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c9 {
   margin: unset;
   padding: unset;
@@ -711,6 +763,10 @@ exports[`renders correctly for addon component (before) 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c9:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -723,6 +779,10 @@ exports[`renders correctly for addon component (before) 1`] = `
   background-color: unset;
   color: inherit;
   margin-bottom: 0.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -911,6 +971,10 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c9 {
   margin: unset;
   padding: unset;
@@ -925,6 +989,10 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c9:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -937,6 +1005,10 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   background-color: unset;
   color: inherit;
   margin-bottom: 0.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -1125,6 +1197,10 @@ exports[`renders correctly for an input field with a default value 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -1137,6 +1213,10 @@ exports[`renders correctly for an input field with a default value 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -1228,6 +1308,10 @@ exports[`renders correctly for an input field with a description 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c10 {
   margin: unset;
   padding: unset;
@@ -1242,6 +1326,10 @@ exports[`renders correctly for an input field with a description 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c10:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -1254,6 +1342,10 @@ exports[`renders correctly for an input field with a description 1`] = `
   background-color: unset;
   color: inherit;
   margin-bottom: 0.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -1445,6 +1537,10 @@ exports[`renders correctly for an input field with a hint 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c8 {
   margin: unset;
   padding: unset;
@@ -1459,6 +1555,10 @@ exports[`renders correctly for an input field with a hint 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -1471,6 +1571,10 @@ exports[`renders correctly for an input field with a hint 1`] = `
   background-color: unset;
   color: inherit;
   margin-bottom: 0.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -1663,6 +1767,10 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -1675,6 +1783,10 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -1767,6 +1879,10 @@ exports[`renders correctly for an input with a after component 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c8 {
   margin: unset;
   padding: unset;
@@ -1781,6 +1897,10 @@ exports[`renders correctly for an input with a after component 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -1792,6 +1912,10 @@ exports[`renders correctly for an input with a after component 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c3.c3.c3 {
@@ -1940,6 +2064,10 @@ exports[`renders correctly for an input with a before component 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c8 {
   margin: unset;
   padding: unset;
@@ -1954,6 +2082,10 @@ exports[`renders correctly for an input with a before component 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -1965,6 +2097,10 @@ exports[`renders correctly for an input with a before component 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c3.c3.c3 {
@@ -2113,6 +2249,10 @@ exports[`renders correctly for an optional input field 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c10 {
   margin: unset;
   padding: unset;
@@ -2127,6 +2267,10 @@ exports[`renders correctly for an optional input field 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c10:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -2139,6 +2283,10 @@ exports[`renders correctly for an optional input field 1`] = `
   background-color: unset;
   color: inherit;
   margin-bottom: 0.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -2332,6 +2480,10 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -2344,6 +2496,10 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -2446,6 +2602,10 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -2458,6 +2618,10 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -2560,6 +2724,10 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -2572,6 +2740,10 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -2673,6 +2845,10 @@ exports[`states renders correctly for an input field with state danger 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -2685,6 +2861,10 @@ exports[`states renders correctly for an input field with state danger 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -2781,6 +2961,10 @@ exports[`states renders correctly for an input field with state primary 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -2793,6 +2977,10 @@ exports[`states renders correctly for an input field with state primary 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -2889,6 +3077,10 @@ exports[`states renders correctly for an input field with state success 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -2901,6 +3093,10 @@ exports[`states renders correctly for an input field with state success 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -2997,6 +3193,10 @@ exports[`states renders correctly for an input field with state warning 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -3009,6 +3209,10 @@ exports[`states renders correctly for an input field with state warning 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -3105,6 +3309,10 @@ exports[`types renders correctly for an input field with type date 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -3117,6 +3325,10 @@ exports[`types renders correctly for an input field with type date 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -3208,6 +3420,10 @@ exports[`types renders correctly for an input field with type email 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -3220,6 +3436,10 @@ exports[`types renders correctly for an input field with type email 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -3311,6 +3531,10 @@ exports[`types renders correctly for an input field with type number 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -3323,6 +3547,10 @@ exports[`types renders correctly for an input field with type number 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -3414,6 +3642,10 @@ exports[`types renders correctly for an input field with type password 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -3426,6 +3658,10 @@ exports[`types renders correctly for an input field with type password 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -3517,6 +3753,10 @@ exports[`types renders correctly for an input field with type search 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -3529,6 +3769,10 @@ exports[`types renders correctly for an input field with type search 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -3620,6 +3864,10 @@ exports[`types renders correctly for an input field with type tel 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -3632,6 +3880,10 @@ exports[`types renders correctly for an input field with type tel 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -3723,6 +3975,10 @@ exports[`types renders correctly for an input field with type time 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -3735,6 +3991,10 @@ exports[`types renders correctly for an input field with type time 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -3826,6 +4086,10 @@ exports[`types renders correctly for an input field with type url 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c3 {
   margin: unset;
   padding: unset;
@@ -3838,6 +4102,10 @@ exports[`types renders correctly for an input field with type url 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {

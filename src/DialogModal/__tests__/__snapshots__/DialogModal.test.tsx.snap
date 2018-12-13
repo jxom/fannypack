@@ -14,6 +14,10 @@ exports[`renders correctly for a default dialog modal 1`] = `
   color: inherit;
 }
 
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c0 {
   -webkit-transform: translate3d(0px,0px,0px);
   -ms-transform: translate3d(0px,0px,0px);
@@ -133,6 +137,10 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
   color: inherit;
 }
 
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c11 {
   margin: unset;
   padding: unset;
@@ -144,6 +152,10 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
   box-sizing: border-box;
   background-color: #fcfcfc;
   color: inherit;
+}
+
+.c11:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c0 {
@@ -263,27 +275,27 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
 }
 
 h1.c8 {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 h2.c8 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 
 h3.c8 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 h4.c8 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 h5.c8 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 h6.c8 {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .c8 .c13 {
@@ -368,31 +380,31 @@ h6.c8 {
 
 @media (max-width:480px) {
   h1.c8 {
-    font-size: 2rem;
+    font-size: 2em;
   }
 }
 
 @media (max-width:480px) {
   h2.c8 {
-    font-size: 1.8rem;
+    font-size: 1.8em;
   }
 }
 
 @media (max-width:480px) {
   h3.c8 {
-    font-size: 1.6rem;
+    font-size: 1.6em;
   }
 }
 
 @media (max-width:480px) {
   h4.c8 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 }
 
 @media (max-width:480px) {
   h5.c8 {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 }
 
@@ -482,6 +494,10 @@ exports[`renders correctly for a dialog modal with a footer 1`] = `
   color: inherit;
 }
 
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c0 {
   -webkit-transform: translate3d(0px,0px,0px);
   -ms-transform: translate3d(0px,0px,0px);
@@ -539,27 +555,27 @@ exports[`renders correctly for a dialog modal with a footer 1`] = `
 }
 
 h1.c8 {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 h2.c8 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 
 h3.c8 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 h4.c8 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 h5.c8 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 h6.c8 {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .c8 .c11 {
@@ -636,31 +652,31 @@ h6.c8 {
 
 @media (max-width:480px) {
   h1.c8 {
-    font-size: 2rem;
+    font-size: 2em;
   }
 }
 
 @media (max-width:480px) {
   h2.c8 {
-    font-size: 1.8rem;
+    font-size: 1.8em;
   }
 }
 
 @media (max-width:480px) {
   h3.c8 {
-    font-size: 1.6rem;
+    font-size: 1.6em;
   }
 }
 
 @media (max-width:480px) {
   h4.c8 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 }
 
 @media (max-width:480px) {
   h5.c8 {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 }
 
@@ -733,6 +749,10 @@ exports[`renders correctly for a dialog modal with a title 1`] = `
   color: inherit;
 }
 
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c0 {
   -webkit-transform: translate3d(0px,0px,0px);
   -ms-transform: translate3d(0px,0px,0px);
@@ -790,27 +810,27 @@ exports[`renders correctly for a dialog modal with a title 1`] = `
 }
 
 h1.c8 {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 h2.c8 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 
 h3.c8 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 h4.c8 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 h5.c8 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 h6.c8 {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .c8 .c10 {
@@ -873,31 +893,31 @@ h6.c8 {
 
 @media (max-width:480px) {
   h1.c8 {
-    font-size: 2rem;
+    font-size: 2em;
   }
 }
 
 @media (max-width:480px) {
   h2.c8 {
-    font-size: 1.8rem;
+    font-size: 1.8em;
   }
 }
 
 @media (max-width:480px) {
   h3.c8 {
-    font-size: 1.6rem;
+    font-size: 1.6em;
   }
 }
 
 @media (max-width:480px) {
   h4.c8 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 }
 
 @media (max-width:480px) {
   h5.c8 {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 }
 
@@ -960,6 +980,10 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   color: inherit;
 }
 
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c13 {
   margin: unset;
   padding: unset;
@@ -973,6 +997,10 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   color: inherit;
 }
 
+.c13:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c15 {
   margin: unset;
   padding: unset;
@@ -984,6 +1012,10 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   box-sizing: border-box;
   background-color: #444bc9;
   color: inherit;
+}
+
+.c15:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c0 {
@@ -1165,27 +1197,27 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
 }
 
 h1.c8 {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 h2.c8 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 
 h3.c8 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 h4.c8 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 h5.c8 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 h6.c8 {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .c8 .c16 {
@@ -1262,31 +1294,31 @@ h6.c8 {
 
 @media (max-width:480px) {
   h1.c8 {
-    font-size: 2rem;
+    font-size: 2em;
   }
 }
 
 @media (max-width:480px) {
   h2.c8 {
-    font-size: 1.8rem;
+    font-size: 1.8em;
   }
 }
 
 @media (max-width:480px) {
   h3.c8 {
-    font-size: 1.6rem;
+    font-size: 1.6em;
   }
 }
 
 @media (max-width:480px) {
   h4.c8 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 }
 
 @media (max-width:480px) {
   h5.c8 {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 }
 
@@ -1375,6 +1407,10 @@ exports[`renders correctly for a dialog modal with type alert 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c0 {

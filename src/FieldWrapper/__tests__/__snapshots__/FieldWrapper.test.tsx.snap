@@ -14,6 +14,10 @@ exports[`renders correctly for a basic field 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -28,6 +32,10 @@ exports[`renders correctly for a basic field 1`] = `
   margin-bottom: 0.25rem !important;
 }
 
+.c5:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c8 {
   margin: unset;
   padding: unset;
@@ -40,6 +48,10 @@ exports[`renders correctly for a basic field 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -164,6 +176,10 @@ exports[`renders correctly for a field with a description 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -178,6 +194,10 @@ exports[`renders correctly for a field with a description 1`] = `
   margin-bottom: 0.25rem !important;
 }
 
+.c5:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c10 {
   margin: unset;
   padding: unset;
@@ -190,6 +210,10 @@ exports[`renders correctly for a field with a description 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c10:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -381,6 +405,10 @@ exports[`renders correctly for a field with a hint 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -395,6 +423,10 @@ exports[`renders correctly for a field with a hint 1`] = `
   margin-bottom: 0.25rem !important;
 }
 
+.c5:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c8 {
   margin: unset;
   padding: unset;
@@ -407,6 +439,10 @@ exports[`renders correctly for a field with a hint 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -599,6 +635,10 @@ exports[`renders correctly for a full width field 1`] = `
   color: inherit;
 }
 
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c6 {
   margin: unset;
   padding: unset;
@@ -613,6 +653,10 @@ exports[`renders correctly for a full width field 1`] = `
   margin-bottom: 0.25rem !important;
 }
 
+.c6:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c9 {
   margin: unset;
   padding: unset;
@@ -625,6 +669,10 @@ exports[`renders correctly for a full width field 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c9:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c2 {
@@ -758,6 +806,10 @@ exports[`renders correctly for a required field 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -772,6 +824,10 @@ exports[`renders correctly for a required field 1`] = `
   margin-bottom: 0.25rem !important;
 }
 
+.c5:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c8 {
   margin: unset;
   padding: unset;
@@ -784,6 +840,10 @@ exports[`renders correctly for a required field 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -908,6 +968,10 @@ exports[`renders correctly for an optional field 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -922,6 +986,10 @@ exports[`renders correctly for an optional field 1`] = `
   margin-bottom: 0.25rem !important;
 }
 
+.c5:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c10 {
   margin: unset;
   padding: unset;
@@ -934,6 +1002,10 @@ exports[`renders correctly for an optional field 1`] = `
   background-color: white;
   color: inherit;
   margin-top: 0.5rem !important;
+}
+
+.c10:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -1127,6 +1199,10 @@ exports[`states renders correctly for an input with state danger 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -1139,6 +1215,10 @@ exports[`states renders correctly for an input with state danger 1`] = `
   background-color: unset;
   color: inherit;
   margin-bottom: 0.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c8 {
@@ -1155,6 +1235,10 @@ exports[`states renders correctly for an input with state danger 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c11 {
   margin: unset;
   padding: unset;
@@ -1167,6 +1251,10 @@ exports[`states renders correctly for an input with state danger 1`] = `
   background-color: unset;
   color: inherit;
   color: #c9444d !important;
+}
+
+.c11:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -1366,6 +1454,10 @@ exports[`states renders correctly for an input with state primary 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -1378,6 +1470,10 @@ exports[`states renders correctly for an input with state primary 1`] = `
   background-color: unset;
   color: inherit;
   margin-bottom: 0.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c8 {
@@ -1394,6 +1490,10 @@ exports[`states renders correctly for an input with state primary 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c11 {
   margin: unset;
   padding: unset;
@@ -1406,6 +1506,10 @@ exports[`states renders correctly for an input with state primary 1`] = `
   background-color: unset;
   color: inherit;
   color: #444bc9 !important;
+}
+
+.c11:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -1605,6 +1709,10 @@ exports[`states renders correctly for an input with state success 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -1617,6 +1725,10 @@ exports[`states renders correctly for an input with state success 1`] = `
   background-color: unset;
   color: inherit;
   margin-bottom: 0.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c8 {
@@ -1633,6 +1745,10 @@ exports[`states renders correctly for an input with state success 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c11 {
   margin: unset;
   padding: unset;
@@ -1645,6 +1761,10 @@ exports[`states renders correctly for an input with state success 1`] = `
   background-color: unset;
   color: inherit;
   color: #2c8453 !important;
+}
+
+.c11:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {
@@ -1844,6 +1964,10 @@ exports[`states renders correctly for an input with state warning 1`] = `
   color: inherit;
 }
 
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c5 {
   margin: unset;
   padding: unset;
@@ -1856,6 +1980,10 @@ exports[`states renders correctly for an input with state warning 1`] = `
   background-color: unset;
   color: inherit;
   margin-bottom: 0.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c8 {
@@ -1872,6 +2000,10 @@ exports[`states renders correctly for an input with state warning 1`] = `
   margin-top: 0.5rem !important;
 }
 
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c11 {
   margin: unset;
   padding: unset;
@@ -1884,6 +2016,10 @@ exports[`states renders correctly for an input with state warning 1`] = `
   background-color: unset;
   color: inherit;
   color: #f2a100 !important;
+}
+
+.c11:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c1 {

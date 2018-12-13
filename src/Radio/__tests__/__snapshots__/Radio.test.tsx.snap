@@ -14,6 +14,10 @@ exports[`renders correctly for a basic radio 1`] = `
   color: inherit;
 }
 
+.c2:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c4 {
   margin: unset;
   padding: unset;
@@ -25,6 +29,10 @@ exports[`renders correctly for a basic radio 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
+}
+
+.c4:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c8 {
@@ -39,6 +47,10 @@ exports[`renders correctly for a basic radio 1`] = `
   background-color: unset;
   color: inherit;
   margin-left: 0.5rem !important;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
 }
 
 abbr.c7 {
@@ -208,6 +220,10 @@ exports[`renders correctly for a disabled radio 1`] = `
   color: inherit;
 }
 
+.c2:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c4 {
   margin: unset;
   padding: unset;
@@ -219,6 +235,10 @@ exports[`renders correctly for a disabled radio 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
+}
+
+.c4:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c8 {
@@ -233,6 +253,10 @@ exports[`renders correctly for a disabled radio 1`] = `
   background-color: unset;
   color: inherit;
   margin-left: 0.5rem !important;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
 }
 
 abbr.c7 {
@@ -403,6 +427,10 @@ exports[`states renders correctly for an radio with state danger 1`] = `
   color: inherit;
 }
 
+.c2:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c4 {
   margin: unset;
   padding: unset;
@@ -414,6 +442,10 @@ exports[`states renders correctly for an radio with state danger 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
+}
+
+.c4:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c8 {
@@ -428,6 +460,10 @@ exports[`states renders correctly for an radio with state danger 1`] = `
   background-color: unset;
   color: inherit;
   margin-left: 0.5rem !important;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
 }
 
 abbr.c7 {
@@ -643,6 +679,10 @@ exports[`states renders correctly for an radio with state primary 1`] = `
   color: inherit;
 }
 
+.c2:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c4 {
   margin: unset;
   padding: unset;
@@ -654,6 +694,10 @@ exports[`states renders correctly for an radio with state primary 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
+}
+
+.c4:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c8 {
@@ -668,6 +712,10 @@ exports[`states renders correctly for an radio with state primary 1`] = `
   background-color: unset;
   color: inherit;
   margin-left: 0.5rem !important;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
 }
 
 abbr.c7 {
@@ -883,6 +931,10 @@ exports[`states renders correctly for an radio with state success 1`] = `
   color: inherit;
 }
 
+.c2:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c4 {
   margin: unset;
   padding: unset;
@@ -894,6 +946,10 @@ exports[`states renders correctly for an radio with state success 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
+}
+
+.c4:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c8 {
@@ -908,6 +964,10 @@ exports[`states renders correctly for an radio with state success 1`] = `
   background-color: unset;
   color: inherit;
   margin-left: 0.5rem !important;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
 }
 
 abbr.c7 {
@@ -1123,6 +1183,10 @@ exports[`states renders correctly for an radio with state warning 1`] = `
   color: inherit;
 }
 
+.c2:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c4 {
   margin: unset;
   padding: unset;
@@ -1134,6 +1198,10 @@ exports[`states renders correctly for an radio with state warning 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
+}
+
+.c4:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c8 {
@@ -1148,6 +1216,10 @@ exports[`states renders correctly for an radio with state warning 1`] = `
   background-color: unset;
   color: inherit;
   margin-left: 0.5rem !important;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
 }
 
 abbr.c7 {
