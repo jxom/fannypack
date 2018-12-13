@@ -1,14 +1,17 @@
-import styled from 'reakit/styled';
-import { css } from 'reakit/styled';
 import { theme, palette } from 'styled-tools';
 
-export const Rating = styled.div`
+import { Box } from '../primitives';
+import { styled, css } from '../styled';
+import { RatingProps } from './Rating';
+import { RatingStarProps } from './RatingStar';
+
+export const Rating = styled(Box)`
   & {
     ${theme('fannypack.Rating.base')};
   }
 `;
 
-const starSizes = {
+const starSizes: any = {
   small: css`
     & {
       width: 1rem;
@@ -38,7 +41,7 @@ const starSizes = {
   `
 };
 
-export const RatingStar = styled.svg`
+export const RatingStar = styled(Box)<RatingStarProps>`
   width: 1.5rem;
   height: 1.5rem;
 
@@ -46,7 +49,7 @@ export const RatingStar = styled.svg`
     ${theme('fannypack.Rating.Star.base')};
   }
 
-  ${props => starSizes[props.size]} /* Extend size styles */;
+  ${props => (props.size ? starSizes[props.size || ''] : null)};
 
   & path {
     fill: ${props => (props.active ? theme('fannypack.Rating.Star.color')(props) || 'gold' : palette('whiteDarkest'))};

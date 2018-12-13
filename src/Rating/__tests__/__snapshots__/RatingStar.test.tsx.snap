@@ -1,6 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly in basic form 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c0 {
   width: 1.5rem;
   height: 1.5rem;
@@ -12,9 +29,9 @@ exports[`renders correctly in basic form 1`] = `
 
 <div>
   <svg
-    class="c0"
+    class="c0 c1"
+    style="size: default;"
     viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
@@ -24,6 +41,23 @@ exports[`renders correctly in basic form 1`] = `
 `;
 
 exports[`renders correctly when active 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c0 {
   width: 1.5rem;
   height: 1.5rem;
@@ -35,9 +69,9 @@ exports[`renders correctly when active 1`] = `
 
 <div>
   <svg
-    class="c0"
+    class="c0 c1"
+    style="size: default;"
     viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
@@ -47,6 +81,23 @@ exports[`renders correctly when active 1`] = `
 `;
 
 exports[`sizes renders correctly for a select with size large 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c0 {
   width: 1.5rem;
   height: 1.5rem;
@@ -63,9 +114,9 @@ exports[`sizes renders correctly for a select with size large 1`] = `
 
 <div>
   <svg
-    class="c0"
+    class="c0 c1"
+    style="size: large;"
     viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
@@ -75,6 +126,23 @@ exports[`sizes renders correctly for a select with size large 1`] = `
 `;
 
 exports[`sizes renders correctly for a select with size medium 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c0 {
   width: 1.5rem;
   height: 1.5rem;
@@ -91,9 +159,9 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
 
 <div>
   <svg
-    class="c0"
+    class="c0 c1"
+    style="size: medium;"
     viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
@@ -103,6 +171,23 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
 `;
 
 exports[`sizes renders correctly for a select with size small 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c0 {
   width: 1.5rem;
   height: 1.5rem;
@@ -119,9 +204,9 @@ exports[`sizes renders correctly for a select with size small 1`] = `
 
 <div>
   <svg
-    class="c0"
+    class="c0 c1"
+    style="size: small;"
     viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"

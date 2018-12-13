@@ -1,7 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import { fireEvent } from 'react-testing-library';
 import Rating from '../Rating';
+import { Size } from '../../types';
 
 it('renders correctly for a basic rating', () => {
   const { container } = render(<Rating />);
@@ -21,7 +22,7 @@ it('renders correctly with a different max rating', () => {
 describe('sizes', () => {
   ['small', 'medium', 'large'].forEach(size => {
     it(`renders correctly for a select with size ${size}`, () => {
-      const { container } = render(<Rating size={size} />);
+      const { container } = render(<Rating size={size as Size} />);
       expect(container).toMatchSnapshot();
     });
   });

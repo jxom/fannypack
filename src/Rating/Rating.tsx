@@ -1,30 +1,32 @@
-// @flow
-import React, { Component } from 'react';
+import * as React from 'react';
+import { BoxProps as ReakitBoxProps } from 'reakit/ts';
+// @ts-ignore
 import times from 'lodash/times';
 
-import type { Size } from '../typesold';
+import { Omit, Size } from '../types';
 import RatingStar from './RatingStar';
 import { Rating as _Rating } from './styled';
 
-type Props = {
-  className?: string,
-  size: Size,
-  defaultRating?: number,
-  maxRating?: string,
-  onRate?: Function,
-  disabled?: boolean
-};
+export interface LocalRatingProps {
+  className?: string;
+  size?: Size;
+  defaultRating?: number;
+  maxRating?: number;
+  onRate?: ({ rating, maxRating }: { rating: number; maxRating?: number }) => void;
+  disabled?: boolean;
+}
+export type RatingProps = LocalRatingProps & Omit<ReakitBoxProps, 'size'>;
 
-type State = {
-  rating: ?number,
-  isSelecting: boolean,
-  selectedIndex: ?number
-};
+export interface RatingState {
+  rating: number | undefined;
+  isSelecting: boolean;
+  selectedIndex: number | undefined;
+}
 
-class Rating extends Component<Props, State> {
+export class Rating extends React.Component<LocalRatingProps, RatingState> {
   static defaultProps = {
     className: undefined,
-    size: 'regular',
+    size: 'default',
     defaultRating: 0,
     maxRating: 5,
     onRate: undefined,
@@ -32,9 +34,9 @@ class Rating extends Component<Props, State> {
   };
 
   state = {
-    rating: this.props.defaultRating,
+    rating: this.props.defaultRating || 0,
     isSelecting: false,
-    selectedIndex: null
+    selectedIndex: 0
   };
 
   handleStarClick = (index: number) => {
@@ -62,14 +64,14 @@ class Rating extends Component<Props, State> {
 
     return (
       <_Rating className={className} onMouseLeave={this.handleMouseLeave}>
-        {times(maxRating, index => (
+        {times(maxRating, (index: number) => (
           <RatingStar
             key={index}
-            aria-label={index + 1}
-            size={size}
             active={isSelecting ? selectedIndex >= index : rating >= index + 1}
+            aria-label={`${index + 1}`}
             onClick={() => this.handleStarClick(index)}
             onMouseEnter={() => this.handleStarMouseOver(index)}
+            size={size}
           />
         ))}
       </_Rating>
@@ -77,4 +79,6 @@ class Rating extends Component<Props, State> {
   }
 }
 
-export default Rating;
+// @ts-ignore
+const C: React.FunctionComponent<RatingProps> = Rating;
+export default C;
