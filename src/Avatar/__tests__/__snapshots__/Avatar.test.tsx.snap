@@ -46,6 +46,10 @@ exports[`renders correctly for an avatar with a custom size prop set 1`] = `
   color: inherit;
 }
 
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -123,6 +127,10 @@ exports[`renders correctly for an avatar with a palette prop set 1`] = `
   color: #444bc9;
 }
 
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -164,6 +172,10 @@ exports[`renders correctly for an avatar with a size prop set 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c0 {
@@ -211,6 +223,10 @@ exports[`renders correctly for an avatar with an initials prop set 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .c0 {
