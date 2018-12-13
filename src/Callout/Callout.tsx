@@ -23,7 +23,7 @@ export interface LocalCalloutProps {
 }
 export type CalloutProps = CardCardProps & LocalCalloutProps;
 
-const Callout: React.FunctionComponent<LocalCalloutProps> = ({
+export const Callout: React.FunctionComponent<LocalCalloutProps> = ({
   a11yDescriptionId,
   a11yTitleId,
   children,

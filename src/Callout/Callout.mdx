@@ -6,9 +6,10 @@ menu: Components
 ---
 
 import { Playground, PropsTable } from 'docz';
-import Callout from '../Callout';
 import Button, { ActionButtons } from '../Button';
 import Set from '../Set';
+import Callout from './Callout';
+import CalloutClose from './CalloutClose';
 
 # Callout
 
@@ -111,6 +112,16 @@ You can also specify your own [`<Icon>` component](/components/icon) using the `
     augue sit amet justo.
   </Callout>
 </Playground>
+
+## `<Callout>` Props
+
+<PropsTable of={Callout} />
+
+## `<Callout.Close>` Props
+
+This component is used internally in `<Callout>`, but you may find it helpful for specifying the props in the `closeButtonProps` prop.
+
+<PropsTable of={CalloutClose} />
 
 ## Theming
 
