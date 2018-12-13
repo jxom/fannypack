@@ -17,7 +17,7 @@ export type CalloutCloseProps = Omit<ReakitButtonProps, 'children'> & LocalCallo
 export const CalloutClose: React.FunctionComponent<LocalCalloutCloseProps> = ({ onClickClose, ...props }) => (
   <_CalloutClose kind="link" onClick={onClickClose} {...props}>
     <VisuallyHidden>Close</VisuallyHidden>
-    <Icon a11yHidden icon="cross" />
+    <Icon a11yHidden icon="times" />
   </_CalloutClose>
 );
 

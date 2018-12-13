@@ -32,10 +32,11 @@ export interface Props {
   hide?(): void;
   /** Whether or not to show the modal component */
   isVisible?: boolean;
+  kind?: 'alert';
   showActionButtons?: boolean;
   showCloseButton?: boolean;
   title?: string | React.ReactElement<any>;
-  type?: 'alert';
+  type?: string;
 }
 export type LocalDialogModalProps = AnimateProps & RestrictHideProps & Omit<LocalModalProps, 'children'> & Props;
 
@@ -46,13 +47,14 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
   children,
   footer,
   hide,
+  kind,
   showActionButtons,
   showCloseButton,
   title,
   type,
   ...props
 }) => (
-  <Modal hide={hide} type={type} {...props}>
+  <Modal hide={hide} kind={kind} {...props}>
     {({ fallbackFocusRef, initialFocusRef }) => (
       <Dialog
         a11yDescriptionId={a11yDescriptionId}
@@ -63,6 +65,7 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
             use: Modal.Hide,
             // @ts-ignore
             hide,
+            palette: type,
             ...(actionButtonsProps || {}).cancelProps
           },
           ...actionButtonsProps
@@ -72,12 +75,13 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
         // @ts-ignore
         footer={typeof footer === 'function' ? footer({ initialFocusRef }) : footer}
         onClickClose={hide}
-        role={type === 'alert' ? 'alertdialog' : 'dialog'}
-        showActionButtons={showActionButtons}
-        showCloseButton={showCloseButton}
+        role={kind === 'alert' ? 'alertdialog' : 'dialog'}
+        showActionButtons={showActionButtons || kind === 'alert'}
+        showCloseButton={showCloseButton && kind !== 'alert'}
         tabIndex={-1}
         // @ts-ignore
         title={title}
+        type={type}
         width="100%"
       >
         {/*
@@ -97,10 +101,11 @@ DialogModal.propTypes = {
   footer: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element]),
   hide: PropTypes.func,
   isVisible: PropTypes.bool,
+  kind: PropTypes.oneOf(['alert']),
   showActionButtons: PropTypes.bool,
   showCloseButton: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  type: PropTypes.oneOf(['alert']),
+  type: PropTypes.string,
   ...animatePropTypes,
   ...restrictHidePropTypes
 };
@@ -111,6 +116,7 @@ DialogModal.defaultProps = {
   className: undefined,
   footer: undefined,
   isVisible: false,
+  kind: undefined,
   showActionButtons: false,
   showCloseButton: false,
   title: undefined,

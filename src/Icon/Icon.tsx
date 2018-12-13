@@ -2,9 +2,13 @@ import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
 import { BoxProps as ReakitBoxProps } from 'reakit/ts';
-import { IconSvgPaths16, IconSvgPaths20 } from '@blueprintjs/icons';
+import * as icons from '@fortawesome/free-solid-svg-icons';
 // @ts-ignore
 import _get from 'lodash/get';
+// @ts-ignore
+import _upperFirst from 'lodash/upperFirst';
+// @ts-ignore
+import _camelCase from 'lodash/camelCase';
 
 import { withTheme } from '../styled';
 import { Omit, Size, sizePropType } from '../types';
@@ -15,7 +19,7 @@ export interface Props {
   /** Color of the icon. Can be a color from the palette, or any other color. */
   color?: string;
   className?: string;
-  /** The name of your icon from the Blueprint set (https://blueprintjs.com/docs/#icons). */
+  /** The name of your icon from the free Font Awesome Icon Set (https://fontawesome.com/icons?d=gallery&m=free). */
   icon: string;
   /** Size of the icon. Available values: "small", "medium", "large" */
   size?: Size;
@@ -32,9 +36,6 @@ export interface PropsWithA11yLabel extends Props {
 export type LocalIconProps = PropsWithA11yHidden | PropsWithA11yLabel;
 export type IconProps = Omit<ReakitBoxProps, 'size'> & LocalIconProps;
 
-const DEFAULT_VIEW_BOX_SIZE = 16;
-const LARGE_VIEW_BOX_SIZE = 20;
-
 export const Icon: React.FunctionComponent<LocalIconProps> = ({
   // @ts-ignore
   a11yHidden,
@@ -47,10 +48,10 @@ export const Icon: React.FunctionComponent<LocalIconProps> = ({
   ...props
 }) => {
   const size = _get(theme, `fannypack.fontSizes[${_size || ''}]`, 1);
-  const svgPaths: { [key: string]: Array<string> } = size >= LARGE_VIEW_BOX_SIZE ? IconSvgPaths20 : IconSvgPaths16;
-  const viewBoxSize = size >= LARGE_VIEW_BOX_SIZE ? LARGE_VIEW_BOX_SIZE : DEFAULT_VIEW_BOX_SIZE;
   const newIcon = _get(theme, `fannypack.Icon.iconNames[${icon}]`) || icon;
-  const paths = svgPaths[newIcon];
+  // @ts-ignore
+  const iconInfo = icons[`fa${_upperFirst(_camelCase(newIcon))}`];
+  const [viewBoxWidth, viewBoxHeight, , , iconPath] = iconInfo.icon;
   return (
     // @ts-ignore
     <_Icon
@@ -58,13 +59,11 @@ export const Icon: React.FunctionComponent<LocalIconProps> = ({
       ariaHidden={a11yHidden}
       role="img"
       size={size}
-      viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`}
+      viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
       {...props}
     >
       {a11yLabel && <title>{a11yLabel}</title>}
-      {paths.map(path => (
-        <path key={path} d={path} fillRule="evenodd" />
-      ))}
+      <path d={iconPath} fill="currentColor" />
     </_Icon>
   );
 };

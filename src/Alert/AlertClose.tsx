@@ -16,7 +16,7 @@ export type AlertCloseProps = Omit<ButtonProps, 'children'> & LocalAlertClosePro
 export const AlertClose: React.FunctionComponent<LocalAlertCloseProps> = ({ onClickClose, ...props }) => (
   <_AlertClose kind="link" onClick={onClickClose} {...props}>
     <VisuallyHidden>Close</VisuallyHidden>
-    <Icon a11yHidden icon="cross" />
+    <Icon a11yHidden icon="times" />
   </_AlertClose>
 );
 

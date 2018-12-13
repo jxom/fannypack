@@ -19,7 +19,7 @@ export default styled(Link)<LinkProps>`
   }
 
   & ${Icon} {
-    top: 0.1em;
+    top: 0.15em;
   }
 
   & {

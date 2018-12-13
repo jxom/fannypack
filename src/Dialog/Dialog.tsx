@@ -12,6 +12,7 @@ import DialogHeader, { DialogHeaderProps } from './DialogHeader';
 import DialogFooter, { DialogFooterProps } from './DialogFooter';
 import DialogTitle, { DialogTitleProps } from './DialogTitle';
 import DialogClose, { DialogCloseProps } from './DialogClose';
+import DialogIcon, { DialogIconProps } from './DialogIcon';
 
 export interface LocalDialogProps {
   actionButtonsProps?: ActionButtonsProps;
@@ -22,11 +23,12 @@ export interface LocalDialogProps {
   className?: string;
   closeButtonProps?: Omit<ButtonProps, 'children'>;
   footer?: string | React.ReactElement<any>;
+  kind?: 'alert' | undefined;
   onClickClose?: () => void;
   showActionButtons?: boolean;
   showCloseButton?: boolean;
-  role?: 'alertdialog' | 'dialog';
   title?: string | React.ReactElement<any>;
+  type?: string;
 }
 export type DialogProps = LocalDialogProps & DialogDialogProps;
 export interface DialogComponents {
@@ -36,6 +38,7 @@ export interface DialogComponents {
   Footer: React.FunctionComponent<DialogFooterProps>;
   Title: React.FunctionComponent<DialogTitleProps>;
   Close: React.FunctionComponent<DialogCloseProps>;
+  Icon: React.FunctionComponent<DialogIconProps>;
 }
 
 export const Dialog: React.FunctionComponent<LocalDialogProps> & DialogComponents = ({
@@ -46,17 +49,25 @@ export const Dialog: React.FunctionComponent<LocalDialogProps> & DialogComponent
   children,
   closeButtonProps,
   footer,
+  kind,
   onClickClose,
   showActionButtons,
   showCloseButton,
-  role,
   title,
+  type,
   ...props
 }) => (
-  <DialogDialog a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} role={role} border={border} {...props}>
+  <DialogDialog a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} kind={kind} border={border} {...props}>
     {title && (
       <DialogHeader>
-        {typeof title === 'string' ? <DialogTitle id={a11yTitleId}>{title}</DialogTitle> : title}
+        {typeof title === 'string' ? (
+          <DialogTitle id={a11yTitleId}>
+            {type && <DialogIcon a11yHidden color={type} icon={type} />}
+            {title}
+          </DialogTitle>
+        ) : (
+          title
+        )}
         {showCloseButton && <DialogClose onClick={onClickClose} {...closeButtonProps} />}
       </DialogHeader>
     )}
@@ -80,6 +91,7 @@ Dialog.Content = DialogContent;
 Dialog.Footer = DialogFooter;
 Dialog.Title = DialogTitle;
 Dialog.Close = DialogClose;
+Dialog.Icon = DialogIcon;
 
 Dialog.defaultProps = {
   actionButtonsProps: {},
@@ -89,11 +101,12 @@ Dialog.defaultProps = {
   className: undefined,
   closeButtonProps: {},
   footer: undefined,
+  kind: undefined,
   onClickClose: undefined,
   showActionButtons: false,
   showCloseButton: false,
-  role: 'dialog',
-  title: undefined
+  title: undefined,
+  type: undefined
 };
 
 // @ts-ignore

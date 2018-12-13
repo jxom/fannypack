@@ -34,9 +34,9 @@ export interface Props {
   /** Whether or not to show the modal component */
   isVisible?: boolean;
   hide?(): void;
+  kind?: 'alert' | void;
   showActionButtons?: boolean;
   showCloseButton?: boolean;
-  type?: 'alert' | void;
 }
 export type LocalModalProps = Props & RestrictHideProps & AnimateProps;
 export type ModalProps = OverlayProps & LocalModalProps;
@@ -55,9 +55,9 @@ export const Modal: React.FunctionComponent<LocalModalProps> & ModalComponents =
   hideOnEsc,
   hideOnClickOutside,
   isVisible,
+  kind,
   showActionButtons,
   showCloseButton,
-  type,
   ...props
 }) => (
   <Portal>
@@ -68,20 +68,20 @@ export const Modal: React.FunctionComponent<LocalModalProps> & ModalComponents =
             delay={delay}
             duration={duration}
             expand={undefined}
-            hide={hideOnClickOutside && type !== 'alert' ? hide : undefined}
+            hide={hideOnClickOutside && kind !== 'alert' ? hide : undefined}
             fade={fade}
-            hideOnEsc={type === 'alert' ? false : hideOnEsc}
+            hideOnEsc={kind === 'alert' ? false : hideOnEsc}
             isVisible={isVisible}
             slide={undefined}
-            use={hideOnClickOutside && type !== 'alert' ? ModalHide : undefined}
+            use={hideOnClickOutside && kind !== 'alert' ? ModalHide : undefined}
           />
           <_Modal
             aria-modal="true"
             delay={delay}
             duration={duration}
             fade={fade}
-            hideOnEsc={type === 'alert' ? false : hideOnEsc}
-            hideOnClickOutside={type === 'alert' ? false : hideOnClickOutside}
+            hideOnEsc={kind === 'alert' ? false : hideOnEsc}
+            hideOnClickOutside={kind === 'alert' ? false : hideOnClickOutside}
             isVisible={isVisible}
             {...props}
           >
@@ -98,18 +98,18 @@ Modal.propTypes = {
   className: PropTypes.string,
   isVisible: PropTypes.bool,
   hide: PropTypes.func,
+  kind: PropTypes.oneOf(['alert']),
   showActionButtons: PropTypes.bool,
   showCloseButton: PropTypes.bool,
-  type: PropTypes.oneOf(['alert']),
   ...animatePropTypes,
   ...restrictHidePropTypes
 };
 Modal.defaultProps = {
   className: undefined,
   isVisible: false,
+  kind: undefined,
   showActionButtons: false,
   showCloseButton: false,
-  type: undefined,
   ...animateDefaultProps,
   ...restrictDefaultProps,
   hideOnClickOutside: true,

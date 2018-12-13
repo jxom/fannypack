@@ -5,6 +5,7 @@ import { Box } from '../primitives';
 import Button from '../Button';
 // @ts-ignore
 import Heading from '../Heading';
+import Icon from '../Icon/Icon';
 import Pane from '../Pane';
 
 import { DialogContentProps } from './DialogContent';
@@ -12,6 +13,7 @@ import { DialogCloseProps } from './DialogClose';
 import { DialogDialogProps } from './DialogDialog';
 import { DialogFooterProps } from './DialogFooter';
 import { DialogHeaderProps } from './DialogHeader';
+import { DialogIconProps } from './DialogIcon';
 
 export const DialogContent = styled(Box)<DialogContentProps>`
   padding: ${theme('fannypack.layout.spacing.small')}rem;
@@ -67,6 +69,14 @@ export const DialogClose = styled(Button)<DialogCloseProps>`
 
   & {
     ${theme('fannypack.Dialog.Close.base')};
+  }
+`;
+
+export const DialogIcon = styled(Icon)<DialogIconProps>`
+  margin-right: ${theme('fannypack.layout.spacing.xxsmall')}rem;
+
+  & {
+    ${theme('fannypack.Dialog.Icon.base')};
   }
 `;
 

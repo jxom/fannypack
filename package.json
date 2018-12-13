@@ -1,6 +1,6 @@
 {
   "name": "fannypack",
-  "version": "2.29.1",
+  "version": "2.30.0",
   "description": "An accessible, composable, and friendly React UI Kit",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -25,7 +25,7 @@
     "docs": "docz dev"
   },
   "dependencies": {
-    "@blueprintjs/icons": "3.3.0",
+    "@fortawesome/free-solid-svg-icons": "5.6.1",
     "classnames": "2.2.6",
     "conditional-wrap": "1.0.0",
     "focus-trap": "3.0.0",
