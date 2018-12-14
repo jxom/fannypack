@@ -47,6 +47,7 @@ export const Icon: React.FunctionComponent<LocalIconProps> = ({
   theme,
   ...props
 }) => {
+  console.log(theme);
   const size = _get(theme, `fannypack.fontSizes[${_size || ''}]`, 1);
   const newIcon = _get(theme, `fannypack.Icon.iconNames[${icon}]`) || icon;
   // @ts-ignore
@@ -76,7 +77,7 @@ Icon.propTypes = {
   className: PropTypes.string,
   icon: PropTypes.string,
   size: sizePropType,
-  theme: PropTypes.object
+  theme: PropTypes.object // eslint-disable-line
 };
 Icon.defaultProps = {
   a11yHidden: false,
@@ -85,8 +86,7 @@ Icon.defaultProps = {
   className: undefined,
   color: undefined,
   icon: undefined,
-  size: 'default',
-  theme: {}
+  size: 'default'
 };
 
 // @ts-ignore
