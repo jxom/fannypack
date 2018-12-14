@@ -1,8 +1,10 @@
 import { theme } from 'styled-tools';
+
 import styled, { css } from '../styled';
 import { InlineFlex } from '../primitives';
+import { LocalSetProps } from './Set';
 
-export default styled(InlineFlex)`
+export default styled(InlineFlex)<LocalSetProps>`
   flex-wrap: wrap;
 
   ${props =>

@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Set from '../Set';
+
 it('renders correctly for a basic set', () => {
   const { container } = render(
     <Set>

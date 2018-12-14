@@ -42,9 +42,7 @@ export { Pane } from './Pane';
 export { Paragraph } from './Paragraph';
 export { Popover, PopoverContainer, PopoverShow, PopoverHide, PopoverToggle, PopoverClose } from './Popover';
 export { Radio, RadioGroup, RadioGroupField } from './Radio';
-// @ts-ignore
 export { Rating, RatingStar } from './Rating';
-// @ts-ignore
 export { Select, SelectField } from './Select';
 // @ts-ignore
 export { Set } from './Set';
