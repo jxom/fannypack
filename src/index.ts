@@ -51,7 +51,6 @@ export { Tabs } from './Tabs';
 export { Tag } from './Tag';
 export { Text } from './Text';
 export { Textarea, TextareaField } from './Textarea';
-// @ts-ignore
 export { Tooltip } from './Tooltip';
 // @ts-ignore
 export { VisuallyHidden } from './VisuallyHidden';

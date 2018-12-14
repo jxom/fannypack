@@ -1,9 +1,11 @@
-// @flow
-import styled from 'reakit/styled';
-import _Tooltip from 'reakit/Tooltip';
 import { theme } from 'styled-tools';
+// @ts-ignore
+import _Tooltip from 'reakit/Tooltip';
 
-const Tooltip = styled(_Tooltip)`
+import styled from '../styled';
+import { LocalTooltipProps } from './Tooltip';
+
+const Tooltip = styled(_Tooltip)<LocalTooltipProps>`
   background: black;
   border-radius: 2px;
   color: white;
