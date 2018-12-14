@@ -44,11 +44,8 @@ export { Popover, PopoverContainer, PopoverShow, PopoverHide, PopoverToggle, Pop
 export { Radio, RadioGroup, RadioGroupField } from './Radio';
 export { Rating, RatingStar } from './Rating';
 export { Select, SelectField } from './Select';
-// @ts-ignore
 export { Set } from './Set';
-// @ts-ignore
 export { Spinner } from './Spinner';
-// @ts-ignore
 export { Switch, SwitchField } from './Switch';
 // @ts-ignore
 export { Table, TableBody, TableCaption, TableCell, TableFoot, TableHead, TableHeadCell, TableRow } from './Table';
