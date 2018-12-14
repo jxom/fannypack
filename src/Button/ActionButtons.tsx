@@ -2,7 +2,6 @@ import * as React from 'react';
 import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import Button, { ButtonProps } from './Button';
-// @ts-ignore
 import Set from '../Set';
 import { Omit } from '../types';
 

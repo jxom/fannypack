@@ -1,7 +1,6 @@
 import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Button from '../Button';
-// @ts-ignore
 import Set from '../../Set';
 // @ts-ignore
 import Group from '../../Group';
