@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import SelectField from '../SelectField';
+
 it('renders correctly for a basic select', () => {
   const { container } = render(
     <SelectField

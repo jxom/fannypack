@@ -1,82 +1,109 @@
-// @flow
-import React, { PureComponent, type Node } from 'react';
+import * as React from 'react';
+// @ts-ignore
+import PropTypes from 'prop-types';
+import { InlineBlockProps as ReakitInlineBlockProps } from 'reakit/ts/InlineBlock/InlineBlock';
 
-import type { Size } from '../typesold';
 import { InlineBlock } from '../primitives';
+import { Omit } from '../types';
 
 import _Select, { LoadingSpinner } from './styled';
 import Icon from './Icon';
 
-type Props = {
+export interface LocalSelectProps {
   /** ID for the select field */
-  a11yId?: string,
+  a11yId?: string;
   /** An accessible label for the select field */
-  a11yLabel?: string,
-  autoComplete?: string,
+  a11yLabel?: string;
+  autoComplete?: string;
   /** Automatically focus the select field */
-  autoFocus?: boolean,
-  children: Node,
-  className?: string,
+  autoFocus?: boolean;
+  className?: string;
   /** Default value of the select field */
-  defaultValue?: string,
+  defaultValue?: string;
   /** Disables the select field */
-  disabled?: boolean,
+  disabled?: boolean;
   /** Makes the select field span full width */
-  isFullWidth?: boolean,
+  isFullWidth?: boolean;
   /** Adds a cute loading indicator to the select field */
-  isLoading?: boolean,
+  isLoading?: boolean;
   /** Makes the select field required and sets aria-invalid to true */
-  isRequired?: boolean,
+  isRequired?: boolean;
   /** Name of the select field */
-  name?: string,
+  name?: string;
   /** Select field options */
-  options: Array<{ label: string, value: string | boolean | Object, disabled: boolean }>,
+  options: Array<{ label: string; value: string; disabled?: boolean }>;
   /** Hint text to display */
-  placeholder?: string,
+  placeholder?: string;
   /** Alters the size of the select field. Can be "small", "medium" or "large" */
-  size?: Size,
+  size?: string;
   /** State of the select field. Can be any color in the palette. */
-  state?: string,
+  state?: string;
   /** Value of the select field */
-  value?: string,
+  value?: string;
   /** Function to invoke when focus is lost */
-  onBlur?: Function,
+  onBlur?(e: React.FocusEvent<HTMLSelectElement>): void;
   /** Function to invoke when the select field has changed */
-  onChange?: Function,
+  onChange?(value: string): void;
   /** Function to invoke when the select field is focused */
-  onFocus?: Function
+  onFocus?(e: React.FocusEvent<HTMLSelectElement>): void;
+}
+export type SelectProps = Omit<ReakitInlineBlockProps, 'children'> & LocalSelectProps;
+
+export interface SelectState {
+  isPlaceholderSelected: boolean;
+}
+
+export const selectDefaultProps = {
+  a11yId: undefined,
+  a11yLabel: undefined,
+  autoComplete: undefined,
+  autoFocus: false,
+  className: undefined,
+  defaultValue: undefined,
+  disabled: false,
+  isFullWidth: false,
+  isLoading: false,
+  isRequired: false,
+  name: undefined,
+  onBlur: undefined,
+  onChange: undefined,
+  onFocus: undefined,
+  placeholder: undefined,
+  size: 'default',
+  state: undefined,
+  value: undefined
 };
-type State = {
-  isPlaceholderSelected: boolean
+export const selectPropTypes = {
+  a11yId: PropTypes.string,
+  a11yLabel: PropTypes.string,
+  autoComplete: PropTypes.string,
+  autoFocus: PropTypes.bool,
+  className: PropTypes.string,
+  defaultValue: PropTypes.string,
+  disabled: PropTypes.bool,
+  isFullWidth: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  isRequired: PropTypes.bool,
+  name: PropTypes.string,
+  options: PropTypes.array.isRequired,
+  placeholder: PropTypes.string,
+  size: PropTypes.string,
+  state: PropTypes.string,
+  value: PropTypes.string,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func
 };
 
-class Select extends PureComponent<Props, State> {
-  static defaultProps = {
-    a11yId: undefined,
-    a11yLabel: undefined,
-    autoComplete: undefined,
-    autoFocus: false,
-    className: undefined,
-    defaultValue: undefined,
-    disabled: false,
-    isFullWidth: false,
-    isLoading: false,
-    isRequired: false,
-    name: undefined,
-    onBlur: undefined,
-    onChange: undefined,
-    onFocus: undefined,
-    placeholder: undefined,
-    size: 'default',
-    state: undefined,
-    value: undefined
-  };
+export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
+  static defaultProps = selectDefaultProps;
+  static propTypes = selectPropTypes;
 
   state = {
     isPlaceholderSelected: Boolean(this.props.placeholder)
   };
 
-  handleChange = (e: Object) => {
+  handleChange = (e: any) => {
     const { onChange } = this.props;
     this.setState({ isPlaceholderSelected: false });
     onChange && onChange(e.target.value);
@@ -145,4 +172,6 @@ class Select extends PureComponent<Props, State> {
   };
 }
 
+// @ts-ignore
+const C: React.PureComponent<SelectProps, SelectState> = Select;
 export default Select;

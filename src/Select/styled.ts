@@ -1,10 +1,12 @@
-// @flow
-import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
 import { tint } from 'polished';
+// @ts-ignore
 import Input from 'reakit/Input';
 
+import styled, { css } from '../styled';
+// @ts-ignore
 import Spinner from '../Spinner';
+import { SelectProps } from './Select';
 
 export const Icon = styled.svg`
   position: absolute;
@@ -25,7 +27,7 @@ export const LoadingSpinner = styled(Spinner)`
   z-index: 1;
 `;
 
-const sizeProperties = {
+const sizeProperties: any = {
   small: css`
     font-size: 0.8rem;
 
@@ -81,12 +83,16 @@ const sizeProperties = {
   `
 };
 
-const stateProperties = css`
+const stateProperties = css<{ state: SelectProps['state'] }>`
   border-color: ${props => palette(`${props.state}Lighter`)(props)};
   box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export default styled(Input)`
+export default styled(Input)<{
+  isPlaceholderSelected: boolean;
+  size: SelectProps['size'];
+  state: SelectProps['state'];
+}>`
   appearance: none;
   background: linear-gradient(rgb(255, 255, 255), rgb(249, 250, 251));
   border: 1px solid #bdbdbd;
@@ -123,7 +129,7 @@ export default styled(Input)`
   }
 
   & {
-    ${props => props.size && sizeProperties[props.size]};
+    ${props => props.size && sizeProperties[props.size || '']};
   }
   & {
     ${props => props.state && stateProperties};

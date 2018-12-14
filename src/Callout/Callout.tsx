@@ -77,4 +77,6 @@ Callout.defaultProps = {
   type: undefined
 };
 
-export default Callout;
+// @ts-ignore
+const C: React.FunctionComponent<CalloutProps> = Callout;
+export default C;
