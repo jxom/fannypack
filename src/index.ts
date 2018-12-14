@@ -3,11 +3,8 @@
 export * from './primitives';
 export * from './styled';
 
-// @ts-ignore
 export { defaultTheme } from './themes';
-// @ts-ignore
 export { ThemeProvider } from './ThemeProvider';
-// @ts-ignore
 export { getUniqueId } from './uniqueId';
 
 export { Alert } from './Alert';
@@ -52,5 +49,4 @@ export { Tag } from './Tag';
 export { Text } from './Text';
 export { Textarea, TextareaField } from './Textarea';
 export { Tooltip } from './Tooltip';
-// @ts-ignore
 export { VisuallyHidden } from './VisuallyHidden';

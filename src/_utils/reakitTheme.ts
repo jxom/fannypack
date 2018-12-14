@@ -1,7 +1,11 @@
-import { css } from 'reakit/styled';
+// @ts-ignore
 import _camelCase from 'lodash/camelCase';
 
-const buildColorFromPalette = (property, { theme, ...props }) => {
+import { css } from '../styled';
+import { ThemeConfig } from '../types';
+
+const buildColorFromPalette = (property: string, { theme, ...props }: { theme: ThemeConfig }) => {
+  // @ts-ignore
   let color = theme.palette[props[_camelCase(property)]];
   if (typeof color === 'function') {
     color = color(props);
@@ -10,19 +14,22 @@ const buildColorFromPalette = (property, { theme, ...props }) => {
   return `${property}: ${color} !important;`;
 };
 
-const buildSpacingFromTheme = (property, { theme, ...props }) => {
+const buildSpacingFromTheme = (property: string, { theme, ...props }: { theme: { fannypack: ThemeConfig } }) => {
+  // @ts-ignore
   let spacing = theme.fannypack.layout.spacing[props[_camelCase(property)]];
   if (!spacing) return;
   return `${property}: ${spacing}rem !important;`;
 };
 
-const buildFontSizeFromTheme = (property, { theme, ...props }) => {
+const buildFontSizeFromTheme = (property: string, { theme, ...props }: { theme: { fannypack: ThemeConfig } }) => {
+  // @ts-ignore
   let size = theme.fannypack.fontSizes[props[_camelCase(property)]];
   if (!size) return;
   return `${property}: ${size}em !important;`;
 };
 
-const buildFontWeightFromTheme = (property, { theme, ...props }) => {
+const buildFontWeightFromTheme = (property: string, { theme, ...props }: { theme: { fannypack: ThemeConfig } }) => {
+  // @ts-ignore
   let weight = theme.fannypack.fontWeights[props[_camelCase(property)]];
   if (!weight) return;
   return `${property}: ${weight} !important;`;

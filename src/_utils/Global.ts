@@ -1,6 +1,6 @@
-// @flow
-import { createGlobalStyle } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
+
+import { createGlobalStyle } from '../styled';
 
 export default createGlobalStyle`
   html, body {

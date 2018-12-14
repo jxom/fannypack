@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { ButtonProps } from '../Button/Button';
 import Icon from '../Icon';
-// @ts-ignore
 import VisuallyHidden from '../VisuallyHidden';
 import { Omit } from '../types';
 import { AlertClose as _AlertClose } from './styled';

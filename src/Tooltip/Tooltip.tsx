@@ -22,7 +22,7 @@ export interface LocalTooltipProps {
 }
 export type TooltipProps = ReakitTooltipProps & LocalTooltipProps;
 
-const Tooltip: React.FunctionComponent<LocalTooltipProps> = ({ children, ...props }) => (
+export const Tooltip: React.FunctionComponent<LocalTooltipProps> = ({ children, ...props }) => (
   <_Tooltip {...props}>{children}</_Tooltip>
 );
 

@@ -6,7 +6,6 @@ import { ButtonProps } from '../Button/Button';
 import { PopoverClose as _PopoverClose } from './styled';
 import PopoverHide from './PopoverHide';
 import Icon from '../Icon';
-// @ts-ignore
 import VisuallyHidden from '../VisuallyHidden';
 import { Omit } from '../types';
 

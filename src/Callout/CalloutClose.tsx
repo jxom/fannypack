@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { ButtonProps as ReakitButtonProps } from 'reakit/ts/Button/Button';
 
 import Icon from '../Icon';
-// @ts-ignore
 import VisuallyHidden from '../VisuallyHidden';
 import { Omit } from '../types';
 import { CalloutClose as _CalloutClose } from './styled';

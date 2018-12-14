@@ -5,7 +5,6 @@ import Label from 'reakit/Label';
 
 import { Box } from '../primitives';
 import styled, { css } from '../styled';
-// @ts-ignore
 import HiddenInput from '../_utils/HiddenInput';
 import { LocalSwitchProps } from './Switch';
 

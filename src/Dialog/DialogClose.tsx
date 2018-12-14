@@ -3,10 +3,8 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 import { ButtonProps } from '../Button/Button';
-// @ts-ignore
 import Icon from '../Icon';
 import { Omit } from '../types';
-// @ts-ignore
 import VisuallyHidden from '../VisuallyHidden';
 import { DialogClose as _DialogClose } from './styled';
 

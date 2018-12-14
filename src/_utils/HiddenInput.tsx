@@ -1,6 +1,8 @@
-import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
+// @ts-ignore
 import Input from 'reakit/Input';
+
+import styled, { css } from '../styled';
 
 export default ({
   Icon,
@@ -11,7 +13,7 @@ export default ({
   checkedIconCss,
   uncheckedIconCss,
   themePrefix
-}) => styled(Input)`
+}: any) => styled(Input)`
   clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;
@@ -44,8 +46,8 @@ export default ({
     }
   }
   &:checked:focus + ${Icon} {
-    border-color: ${props => palette(`${props.palette || 'primary'}Lighter`)};
-    box-shadow: ${props => palette(`${props.palette || 'primary'}Lighter`)} 0px 0px 0px 1px !important;
+    border-color: ${(props: any) => palette(`${props.palette || 'primary'}Lighter`)};
+    box-shadow: ${(props: any) => palette(`${props.palette || 'primary'}Lighter`)} 0px 0px 0px 1px !important;
 
     & {
       ${theme(`fannypack.${themePrefix}.focusChecked`)};
@@ -60,14 +62,14 @@ export default ({
     }
   }
   &:not([disabled]):checked + ${Icon} {
-    border-color: ${props => palette(`${props.palette || 'primary'}Lighter`)};
+    border-color: ${(props: any) => palette(`${props.palette || 'primary'}Lighter`)};
     ${checkedCss};
   }
   &:checked + ${Icon} {
     ${disabledCheckedCss};
 
     & {
-      ${props =>
+      ${(props: any) =>
         props.state &&
         css`
           box-shadow: ${palette('primaryLighter')} 0px 0px 0px 1px !important;

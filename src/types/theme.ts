@@ -98,8 +98,8 @@ export type ColumnsThemeConfig = {
 };
 export type ContainerThemeConfig = {
   base?: Stylesheet;
-  fluidMargin?: string;
-  tabletMargin?: string;
+  fluidMargin: string;
+  tabletMargin: string;
 };
 export type DialogThemeConfig = {
   base?: Stylesheet;
@@ -127,12 +127,17 @@ export type FieldWrapperThemeConfig = {
   validation?: Stylesheet;
 };
 export type FontSizeThemeConfig = {
-  small: number;
-  medium: number;
-  large: number;
-  xlarge: number;
-  xxlarge: number;
-  xxxlarge: number;
+  small?: number;
+  medium?: number;
+  large?: number;
+  xlarge?: number;
+  xxlarge?: number;
+  xxxlarge?: number;
+};
+export type FontWeightsThemeConfig = {
+  normal?: number;
+  semibold?: number;
+  bold?: number;
 };
 export type GlobalThemeConfig = {
   base?: Stylesheet;
@@ -152,6 +157,12 @@ export type HeadingThemeConfig = {
 };
 export type IconThemeConfig = {
   base?: Stylesheet;
+  iconNames?: {
+    info?: string;
+    warning?: string;
+    success?: string;
+    danger?: string;
+  };
 };
 export type ImageThemeConfig = {
   base?: Stylesheet;
@@ -177,20 +188,20 @@ export type LabelThemeConfig = {
   base?: Stylesheet;
 };
 export type LayoutThemeConfig = {
-  mobileBreakpoint: number;
-  tabletBreakpoint: number;
-  desktopBreakpoint: number;
-  widescreenBreakpoint: number;
-  fullHDBreakpoint: number;
-  gapFactor: number;
-  spacing: {
-    xxsmall: number;
-    xsmall: number;
-    small: number;
-    medium: number;
-    large: number;
-    xlarge: number;
-    xxlarge: number;
+  mobileBreakpoint?: number;
+  tabletBreakpoint?: number;
+  desktopBreakpoint?: number;
+  widescreenBreakpoint?: number;
+  fullHDBreakpoint?: number;
+  gapFactor?: number;
+  spacing?: {
+    xxsmall?: number;
+    xsmall?: number;
+    small?: number;
+    medium?: number;
+    large?: number;
+    xlarge?: number;
+    xxlarge?: number;
   };
 };
 export type LinkThemeConfig = {
@@ -216,6 +227,88 @@ export type OverlayThemeConfig = {
   Toggle?: {
     base?: Stylesheet;
   };
+};
+export type PaletteThemeConfig = {
+  text?: string;
+  textLight?: string;
+  textLighter?: string;
+  textLightest?: string;
+  textTint?: string;
+  textInverted?: string;
+  textTintInverted?: string;
+
+  black?: string;
+
+  white?: string;
+  whiteDark?: string;
+  whiteDarker?: string;
+  whiteDarkest?: string;
+
+  grayLightest?: string;
+  grayLighter?: string;
+  grayLight?: string;
+  gray?: string;
+  grayDark?: string;
+  grayDarker?: string;
+  grayDarkest?: string;
+
+  default?: string;
+  defaultInverted?: string;
+
+  primary?: string;
+  primaryLight?: string;
+  primaryLighter?: string;
+  primaryLightest?: string;
+  primaryDark?: string;
+  primaryDarker?: string;
+  primaryDarkest?: string;
+  primaryTint?: string;
+  primaryInverted?: string;
+  primaryTintInverted?: string;
+
+  info?: string;
+  infoLight?: string;
+  infoLighter?: string;
+  infoLightest?: string;
+  infoDark?: string;
+  infoDarker?: string;
+  infoDarkest?: string;
+  infoTint?: string;
+  infoInverted?: string;
+  infoTintInverted?: string;
+
+  success?: string;
+  successLight?: string;
+  successLighter?: string;
+  successLightest?: string;
+  successDark?: string;
+  successDarker?: string;
+  successDarkest?: string;
+  successTint?: string;
+  successInverted?: string;
+  successTintInverted?: string;
+
+  danger?: string;
+  dangerLight?: string;
+  dangerLighter?: string;
+  dangerLightest?: string;
+  dangerDark?: string;
+  dangerDarker?: string;
+  dangerDarkest?: string;
+  dangerTint?: string;
+  dangerInverted?: string;
+  dangerTintInverted?: string;
+
+  warning?: string;
+  warningLight?: string;
+  warningLighter?: string;
+  warningLightest?: string;
+  warningDark?: string;
+  warningDarker?: string;
+  warningDarkest?: string;
+  warningTint?: string;
+  warningInverted?: string;
+  warningTintInverted?: string;
 };
 export type PaneThemeConfig = {
   base?: Stylesheet;
@@ -309,11 +402,12 @@ export type SwitchThemeConfig = {
 export type TableThemeConfig = {
   base?: Stylesheet;
   borderColor?: string;
-  hover: {
-    backgroundColor?: string;
+  spacing?: number;
+  hover?: {
+    backgroundColor: string;
   };
-  striped: {
-    backgroundColor?: string;
+  striped?: {
+    backgroundColor: string;
   };
   Body?: {
     base?: Stylesheet;
@@ -379,11 +473,12 @@ export type TextareaThemeConfig = {
   };
 };
 export type ThemeConfig = {
-  palette?: Object;
+  palette?: PaletteThemeConfig;
 
   global?: GlobalThemeConfig;
   layout?: LayoutThemeConfig;
   fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
 
   Alert?: AlertThemeConfig;
   Avatar?: AvatarThemeConfig;
@@ -425,4 +520,6 @@ export type ThemeConfig = {
   Tag?: TagThemeConfig;
   Text?: TextThemeConfig;
   Textarea?: TextareaThemeConfig;
+
+  reakit?: any;
 };
