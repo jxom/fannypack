@@ -15,7 +15,6 @@ export { Avatar } from './Avatar';
 export { Backdrop } from './Backdrop';
 export { Blockquote } from './Blockquote';
 export { Button } from './Button';
-// @ts-ignore
 export { Callout } from './Callout';
 export { Card, CardCard, CardContent, CardFooter, CardHeader, CardTitle } from './Card';
 export { Checkbox, CheckboxField } from './Checkbox';

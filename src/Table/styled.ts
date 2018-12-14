@@ -1,9 +1,18 @@
-// @flow
-import styled, { css } from 'reakit/styled';
 import { theme } from 'styled-tools';
-import Box from 'reakit/Box';
 
-export const Caption = styled(Box)`
+import styled, { css } from '../styled';
+import { Box } from '../primitives';
+
+import { LocalTableProps } from './Table';
+import { LocalTableCaptionProps } from './TableCaption';
+import { LocalTableCellProps } from './TableCell';
+import { LocalTableFootProps } from './TableFoot';
+import { LocalTableHeadProps } from './TableHead';
+import { LocalTableHeadCellProps } from './TableHeadCell';
+import { LocalTableRowProps } from './TableRow';
+import { LocalTableBodyProps } from './TableBody';
+
+export const Caption = styled(Box)<LocalTableCaptionProps>`
   caption-side: ${props => props.position};
 
   & {
@@ -11,7 +20,7 @@ export const Caption = styled(Box)`
   }
 `;
 
-export const TableCell = styled(Box)`
+export const TableCell = styled(Box)<LocalTableCellProps>`
   padding: ${theme('fannypack.Table.spacing')}rem;
 
   & {
@@ -19,7 +28,7 @@ export const TableCell = styled(Box)`
   }
 `;
 
-export const TableFoot = styled(Box)`
+export const TableFoot = styled(Box)<LocalTableFootProps>`
   font-weight: bold;
 
   & {
@@ -35,7 +44,7 @@ export const TableFoot = styled(Box)`
   }
 `;
 
-export const TableHead = styled(Box)`
+export const TableHead = styled(Box)<LocalTableHeadProps>`
   border: unset;
 
   & {
@@ -51,7 +60,7 @@ export const TableHead = styled(Box)`
   }
 `;
 
-export const TableHeadCell = styled(Box)`
+export const TableHeadCell = styled(Box)<LocalTableHeadCellProps>`
   font-weight: bold;
   padding: ${theme('fannypack.Table.spacing')}rem;
 
@@ -60,13 +69,13 @@ export const TableHeadCell = styled(Box)`
   }
 `;
 
-export const TableRow = styled(Box)`
+export const TableRow = styled(Box)<LocalTableRowProps>`
   & {
     ${theme('fannypack.Table.Row.base')};
   }
 `;
 
-export const TableBody = styled(Box)`
+export const TableBody = styled(Box)<LocalTableBodyProps>`
   ${props =>
     props.hasBorders &&
     css`
@@ -94,7 +103,7 @@ const stripedProperties = css`
   }
 `;
 
-export default styled(Box)`
+export default styled(Box)<LocalTableProps>`
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
