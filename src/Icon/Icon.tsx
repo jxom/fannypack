@@ -47,7 +47,6 @@ export const Icon: React.FunctionComponent<LocalIconProps> = ({
   theme,
   ...props
 }) => {
-  console.log(theme);
   const size = _get(theme, `fannypack.fontSizes[${_size || ''}]`, 1);
   const newIcon = _get(theme, `fannypack.Icon.iconNames[${icon}]`) || icon;
   // @ts-ignore
