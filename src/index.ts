@@ -48,9 +48,7 @@ export { Spinner } from './Spinner';
 export { Switch, SwitchField } from './Switch';
 export { Table, TableBody, TableCaption, TableCell, TableFoot, TableHead, TableHeadCell, TableRow } from './Table';
 export { Tabs } from './Tabs';
-// @ts-ignore
 export { Tag } from './Tag';
-// @ts-ignore
 export { Text } from './Text';
 // @ts-ignore
 export { Textarea, TextareaField } from './Textarea';

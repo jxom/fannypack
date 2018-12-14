@@ -3,7 +3,6 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { LabelProps as ReakitLabelProps } from 'reakit/ts';
 
-// @ts-ignore
 import Text from '../Text';
 import _Radio, { RadioIcon, HiddenRadio } from './styled';
 

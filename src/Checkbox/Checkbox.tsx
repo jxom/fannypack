@@ -3,7 +3,6 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { LabelProps as ReakitLabelProps } from 'reakit/ts';
 
-// @ts-ignore
 import Text from '../Text';
 import _Checkbox, { CheckboxIcon, HiddenCheckbox } from './styled';
 
@@ -78,9 +77,11 @@ export const Checkbox: React.FunctionComponent<LocalCheckboxProps> = ({
       value={value}
     />
     <CheckboxIcon state={state} />
-    <Text id="label" htmlFor={id} marginLeft="xxsmall">
-      {label}
-    </Text>
+    {label && (
+      <Text id="label" htmlFor={id} marginLeft="xxsmall">
+        {label}
+      </Text>
+    )}
   </_Checkbox>
 );
 

@@ -1,9 +1,11 @@
-import styled from 'reakit/styled';
-import Box from 'reakit/Box';
 import { theme } from 'styled-tools';
-import Icon from '../Icon/styled';
 
-export default styled(Box)`
+import { Box } from '../primitives';
+import styled from '../styled';
+import Icon from '../Icon/styled';
+import { LocalTextProps } from './Text';
+
+export default styled(Box)<LocalTextProps>`
   abbr& {
     border-bottom: 1px dotted;
     cursor: help;

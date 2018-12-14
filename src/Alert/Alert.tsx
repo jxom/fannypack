@@ -8,7 +8,6 @@ import styled, { css } from '../styled';
 import { Omit } from '../types';
 import { ButtonProps } from '../Button/Button';
 import Icon from '../Icon';
-// @ts-ignore
 import Text from '../Text';
 import _Alert from './styled';
 import AlertClose, { AlertCloseProps } from './AlertClose';
