@@ -31,7 +31,9 @@ exports[`colors renders correctly for a tag with color danger 1`] = `
 
 <div
   class="c0 c1"
-/>
+>
+  Test
+</div>
 `;
 
 exports[`colors renders correctly for a tag with color primary 1`] = `
@@ -65,7 +67,9 @@ exports[`colors renders correctly for a tag with color primary 1`] = `
 
 <div
   class="c0 c1"
-/>
+>
+  Test
+</div>
 `;
 
 exports[`colors renders correctly for a tag with color success 1`] = `
@@ -99,7 +103,9 @@ exports[`colors renders correctly for a tag with color success 1`] = `
 
 <div
   class="c0 c1"
-/>
+>
+  Test
+</div>
 `;
 
 exports[`colors renders correctly for a tag with color warning 1`] = `
@@ -133,7 +139,9 @@ exports[`colors renders correctly for a tag with color warning 1`] = `
 
 <div
   class="c0 c1"
-/>
+>
+  Test
+</div>
 `;
 
 exports[`renders correctly 1`] = `
@@ -349,7 +357,9 @@ exports[`sizes renders correctly for a tag with size large 1`] = `
 <div
   class="c0 c1"
   style="size: large;"
-/>
+>
+  Test
+</div>
 `;
 
 exports[`sizes renders correctly for a tag with size medium 1`] = `
@@ -388,5 +398,7 @@ exports[`sizes renders correctly for a tag with size medium 1`] = `
 <div
   class="c0 c1"
   style="size: medium;"
-/>
+>
+  Test
+</div>
 `;

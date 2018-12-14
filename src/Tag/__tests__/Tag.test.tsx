@@ -1,7 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Tag from '../Tag';
 import Set from '../../Set';
+
 it('renders correctly', () => {
   const { container } = render(<Tag>Tag</Tag>);
   expect(container.firstChild).toMatchSnapshot();
@@ -10,7 +11,7 @@ it('renders correctly', () => {
 describe('colors', () => {
   ['danger', 'success', 'warning', 'primary'].forEach(color => {
     it(`renders correctly for a tag with color ${color}`, () => {
-      const { container } = render(<Tag palette={color} />);
+      const { container } = render(<Tag palette={color}>Test</Tag>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -19,7 +20,7 @@ describe('colors', () => {
 describe('sizes', () => {
   ['medium', 'large'].forEach(size => {
     it(`renders correctly for a tag with size ${size}`, () => {
-      const { container } = render(<Tag size={size} />);
+      const { container } = render(<Tag size={size}>Test</Tag>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
