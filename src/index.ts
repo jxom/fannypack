@@ -1,5 +1,3 @@
-// NOTE: All modules with '@ts-ignores' are modules pending TypeScript conversion.
-
 export * from './primitives';
 export * from './styled';
 
