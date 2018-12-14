@@ -1,40 +1,44 @@
-// @flow
-import React from 'react';
+import * as React from 'react';
+// @ts-ignore
+import PropTypes from 'prop-types';
+import { LabelProps as ReakitLabelProps } from 'reakit/ts';
 
-import { type Palette } from '../typesold';
+// @ts-ignore
 import Text from '../Text';
+import { Omit } from '../types';
 import _Switch, { HiddenSwitch, SwitchIcon } from './styled';
 
-type Props = {
+export interface LocalSwitchProps {
   /** Automatically focus on the switch */
-  autoFocus?: boolean,
-  checked?: boolean,
-  className?: string,
+  autoFocus?: boolean;
+  checked?: boolean;
+  className?: string;
   /** Is the switch checked by default? */
-  defaultChecked?: boolean,
+  defaultChecked?: boolean;
   /** Disables the switch */
-  disabled?: boolean,
+  disabled?: boolean;
   /** ID for the switch */
-  id?: string,
+  id?: string;
   /** Makes the switch required and sets aria-invalid to true */
-  isRequired?: boolean,
+  isRequired?: boolean;
   /** Switch label */
-  label?: string,
-  name?: string,
-  palette?: Palette,
+  label?: string;
+  name?: string;
+  palette?: string;
   /** State of the switch. Can be any color in the palette. */
-  state?: string,
+  state?: string;
   /** Initial value of the switch */
-  value?: string,
+  value?: string;
   /** Function to invoke when focus is lost */
-  onBlur?: Function,
+  onBlur?(e: React.FocusEvent<HTMLInputElement>): void;
   /** Function to invoke when switch has changed */
-  onChange?: Function,
+  onChange?(e: React.FormEvent<HTMLInputElement>): void;
   /** Function to invoke when switch is focused */
-  onFocus?: Function
-};
+  onFocus?(e: React.FocusEvent<HTMLInputElement>): void;
+}
+export type SwitchProps = LocalSwitchProps & Omit<ReakitLabelProps, 'children'>;
 
-const Switch = ({
+export const Switch: React.FunctionComponent<LocalSwitchProps> = ({
   autoFocus,
   checked,
   className,
@@ -51,7 +55,7 @@ const Switch = ({
   state,
   value,
   ...props
-}: Props) => (
+}) => (
   <_Switch
     aria-describedby="label"
     aria-invalid={state === 'danger'}
@@ -84,7 +88,26 @@ const Switch = ({
   </_Switch>
 );
 
-Switch.defaultProps = {
+export const switchPropTypes = {
+  autoFocus: PropTypes.bool,
+  checked: PropTypes.bool,
+  className: PropTypes.string,
+  defaultChecked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  id: PropTypes.string,
+  isRequired: PropTypes.bool,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  palette: PropTypes.string,
+  state: PropTypes.string,
+  value: PropTypes.string,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func
+};
+Switch.propTypes = switchPropTypes;
+
+export const switchDefaultProps = {
   autoFocus: false,
   checked: undefined,
   className: undefined,
@@ -101,5 +124,7 @@ Switch.defaultProps = {
   state: undefined,
   value: undefined
 };
+Switch.defaultProps = switchDefaultProps;
 
-export default Switch;
+const C: React.FunctionComponent<SwitchProps> = Switch;
+export default C;

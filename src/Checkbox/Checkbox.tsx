@@ -122,4 +122,5 @@ export const checkboxDefaultProps = {
 };
 Checkbox.defaultProps = checkboxDefaultProps;
 
-export default Checkbox;
+const C: React.FunctionComponent<CheckboxProps> = Checkbox;
+export default C;

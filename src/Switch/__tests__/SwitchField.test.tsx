@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import SwitchField from '../SwitchField';
+
 it('renders correctly for a basic switch field', () => {
   const { container } = render(<SwitchField />);
   expect(container.firstChild).toMatchSnapshot();

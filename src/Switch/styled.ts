@@ -1,13 +1,15 @@
-// @flow
-import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
 import { tint } from 'polished';
+// @ts-ignore
 import Label from 'reakit/Label';
 
 import { Box } from '../primitives';
+import styled, { css } from '../styled';
+// @ts-ignore
 import HiddenInput from '../_utils/HiddenInput';
+import { LocalSwitchProps } from './Switch';
 
-export const SwitchIcon = styled(Box)`
+export const SwitchIcon = styled(Box)<{ state?: string }>`
   background-color: ${palette('whiteDarker')};
   border: 1px solid #bdbdbd;
   border-radius: 1em;
@@ -32,22 +34,22 @@ export const SwitchIcon = styled(Box)`
 export const HiddenSwitch = HiddenInput({
   Icon: SwitchIcon,
   checkedCss: css`
-    background-color: ${props => palette(props.palette || 'primary')};
+    background-color: ${(props: any) => palette(props.palette || 'primary')};
     transition: all ease 0.2s;
   `,
   disabledCheckedCss: css`
-    background-color: ${props => tint(0.5, palette(props.palette || 'primary')(props))};
-    border-color: ${props => tint(0.5, palette(props.palette || 'primary')(props))};
+    background-color: ${(props: any) => tint(0.5, palette(props.palette || 'primary')(props))};
+    border-color: ${(props: any) => tint(0.5, palette(props.palette || 'primary')(props))};
   `,
   disabledUncheckedIconCss: css`
     background: ${palette('whiteDarker')};
   `,
   checkedIconCss: css`
-    border-color: ${props => palette(props.palette || 'primary')};
+    border-color: ${(props: any) => palette(props.palette || 'primary')};
     left: 1.7em;
   `,
   disabledCheckedIconCss: css`
-    border-color: ${props => tint(0.5, palette(props.palette || 'primary')(props))};
+    border-color: ${(props: any) => tint(0.5, palette(props.palette || 'primary')(props))};
   `,
   uncheckedIconCss: css`
     background: white;
@@ -64,7 +66,7 @@ export const HiddenSwitch = HiddenInput({
   themePrefix: 'Switch'
 });
 
-export default styled(Label)`
+export default styled(Label)<LocalSwitchProps>`
   align-items: center;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   display: flex;

@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Switch from '../Switch';
+
 it('renders correctly for a basic switch', () => {
   const { container } = render(<Switch label="Test" />);
   expect(container.firstChild).toMatchSnapshot();
