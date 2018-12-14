@@ -1,4 +1,4 @@
-import { css } from './src/styled';
+import { css } from 'reakit/styled';
 
 export default {
   dest: '/docs',
