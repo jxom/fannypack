@@ -446,15 +446,19 @@ exports[`renders correctly for a required field 1`] = `
   outline: none;
 }
 
-.c6 {
-  display: inline-block;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c6 {
+  display: inline-block;
+}
+
+.c4 {
+  display: inline-block;
 }
 
 .c8 {
@@ -492,10 +496,6 @@ exports[`renders correctly for a required field 1`] = `
 
 .c8::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c3 {
@@ -739,15 +739,19 @@ exports[`renders correctly for an input field with a description 1`] = `
   outline: none;
 }
 
-.c8 {
-  display: inline-block;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c8 {
+  display: inline-block;
+}
+
+.c4 {
+  display: inline-block;
 }
 
 .c10 {
@@ -785,10 +789,6 @@ exports[`renders correctly for an input field with a description 1`] = `
 
 .c10::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c3 {
@@ -977,15 +977,19 @@ exports[`renders correctly for an input field with a hint 1`] = `
   outline: none;
 }
 
-.c6 {
-  display: inline-block;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c6 {
+  display: inline-block;
+}
+
+.c4 {
+  display: inline-block;
 }
 
 .c8 {
@@ -1023,10 +1027,6 @@ exports[`renders correctly for an input field with a hint 1`] = `
 
 .c8::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c3 {
@@ -1337,15 +1337,19 @@ exports[`renders correctly for an optional input field 1`] = `
   outline: none;
 }
 
-.c8 {
-  display: inline-block;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c8 {
+  display: inline-block;
+}
+
+.c4 {
+  display: inline-block;
 }
 
 .c10 {
@@ -1383,10 +1387,6 @@ exports[`renders correctly for an optional input field 1`] = `
 
 .c10::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c3 {
