@@ -90,7 +90,7 @@ exports[`renders correctly when a palette prop is set 1`] = `
   font-size: 100%;
   box-sizing: border-box;
   background-color: unset;
-  color: #444bc9;
+  color: inherit;
   color: #444bc9 !important;
 }
 

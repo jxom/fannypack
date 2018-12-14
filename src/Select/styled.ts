@@ -88,7 +88,7 @@ const stateProperties = css<{ state: SelectProps['state'] }>`
   box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export default styled(Input)<{
+export default styled(Input)<{ // eslint-disable-line
   isPlaceholderSelected: boolean;
   size: SelectProps['size'];
   state: SelectProps['state'];

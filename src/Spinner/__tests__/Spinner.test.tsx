@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Spinner from '../Spinner';
+
 it('renders correctly', () => {
   const { container } = render(<Spinner />);
   expect(container.firstChild).toMatchSnapshot();
@@ -17,6 +18,6 @@ it('renders correctly when a size prop is set', () => {
 });
 
 it('renders correctly when a palette prop is set', () => {
-  const { container } = render(<Spinner palette="primary" />);
+  const { container } = render(<Spinner color="primary" />);
   expect(container.firstChild).toMatchSnapshot();
 });

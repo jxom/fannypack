@@ -1,8 +1,10 @@
-import styled, { css, keyframes } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
-import { Box } from '../primitives';
 
-const sizes = {
+import { Box } from '../primitives';
+import styled, { css, keyframes } from '../styled';
+import { LocalSpinnerProps } from './Spinner';
+
+const sizes: any = {
   small: css`
     & {
       font-size: 14px;
@@ -41,7 +43,8 @@ const rotate = keyframes`
 `;
 export const spinnerProperties = css`
   animation: ${rotate} 0.6s infinite linear;
-  border: 0.1em solid ${props => palette(props.color)(props)};
+  border: 0.1em solid
+    ${(props: LocalSpinnerProps & { theme: any }) => (props.color ? palette(props.color)(props) : null)};
   border-radius: 100%;
   border-right-color: transparent;
   border-top-color: transparent;
@@ -51,7 +54,7 @@ export const spinnerProperties = css`
   position: relative;
 `;
 
-export default styled(Box)`
+export default styled(Box)<LocalSpinnerProps>`
   font-size: 20px;
   ${spinnerProperties};
 
@@ -59,5 +62,5 @@ export default styled(Box)`
     ${theme('fannypack.Spinner.base')};
   }
 
-  ${props => sizes[props.size]} /* Extend size styles */;
+  ${(props: LocalSpinnerProps) => props.size && sizes[props.size || '']};
 `;
