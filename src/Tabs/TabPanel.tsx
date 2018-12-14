@@ -13,7 +13,7 @@ export interface LocalTabPanelProps {
 }
 export type TabPanelProps = ReakitTabPanelProps & LocalTabPanelProps;
 
-const TabPanel: React.FunctionComponent<LocalTabPanelProps> = ({ children, ...props }) => (
+export const TabPanel: React.FunctionComponent<LocalTabPanelProps> = ({ children, ...props }) => (
   <_TabPanel {...props}>{children}</_TabPanel>
 );
 

@@ -46,9 +46,7 @@ export { Select, SelectField } from './Select';
 export { Set } from './Set';
 export { Spinner } from './Spinner';
 export { Switch, SwitchField } from './Switch';
-// @ts-ignore
 export { Table, TableBody, TableCaption, TableCell, TableFoot, TableHead, TableHeadCell, TableRow } from './Table';
-// @ts-ignore
 export { Tabs } from './Tabs';
 // @ts-ignore
 export { Tag } from './Tag';
