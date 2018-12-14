@@ -19,7 +19,7 @@ const defaultProps: Partial<LocalBlockquoteProps> = {
   palette: undefined
 };
 
-const Blockquote: React.FunctionComponent<LocalBlockquoteProps> = ({ children, className, ...props }) => (
+export const Blockquote: React.FunctionComponent<LocalBlockquoteProps> = ({ children, className, ...props }) => (
   <_Blockquote className={className} {...props}>
     {children}
   </_Blockquote>
