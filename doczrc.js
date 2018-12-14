@@ -60,6 +60,7 @@ export default {
   modifyBundlerConfig: (config, dev) => {
     if (!dev) {
       delete config.devtool;
+      config.module.rules.shift();
       config.optimization.minimizer[0].options.sourceMap = false;
     }
     return config;
