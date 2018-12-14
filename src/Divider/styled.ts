@@ -1,4 +1,5 @@
-import { Divider } from 'reakit';
+// @ts-ignore
+import Divider from 'reakit/Divider';
 import { theme } from 'styled-tools';
 
 import { styled, css } from '../styled';

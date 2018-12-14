@@ -1,4 +1,5 @@
-import { Paragraph } from 'reakit';
+// @ts-ignore
+import Paragraph from 'reakit/Paragraph';
 import { theme } from 'styled-tools';
 
 import styled from '../styled';

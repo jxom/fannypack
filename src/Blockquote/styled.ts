@@ -1,4 +1,5 @@
-import { Blockquote } from 'reakit';
+// @ts-ignore
+import Blockquote from 'reakit/Blockquote';
 import { darken } from 'polished';
 import { theme } from 'styled-tools';
 import styled from '../styled';

@@ -1,5 +1,6 @@
 import { theme } from 'styled-tools';
-import { Image } from 'reakit';
+// @ts-ignore
+import Image from 'reakit/Image';
 
 import styled, { css } from '../styled';
 import { ImageProps } from './Image';

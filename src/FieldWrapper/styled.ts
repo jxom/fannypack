@@ -1,5 +1,6 @@
 import { palette, theme } from 'styled-tools';
-import { Field } from 'reakit';
+// @ts-ignore
+import Field from 'reakit/Field';
 
 import { css, styled } from '../styled';
 import { Omit } from '../types';

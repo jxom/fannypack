@@ -1,4 +1,5 @@
-import { Group } from 'reakit';
+// @ts-ignore
+import Group from 'reakit/Group';
 import { theme } from 'styled-tools';
 
 import styled, { css } from '../styled';

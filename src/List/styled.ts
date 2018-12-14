@@ -1,4 +1,5 @@
-import { List } from 'reakit';
+// @ts-ignore
+import List from 'reakit/List';
 import { theme } from 'styled-tools';
 
 import { Box } from '../primitives';

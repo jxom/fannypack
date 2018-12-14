@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { palette, theme } from 'styled-tools';
-import { Input } from 'reakit';
+// @ts-ignore
+import Input from 'reakit/Input';
 
 import styled, { css } from '../styled';
 import { InlineFlex } from '../primitives';

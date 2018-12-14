@@ -1,5 +1,6 @@
 import { theme } from 'styled-tools';
-import { Navigation } from 'reakit';
+// @ts-ignore
+import Navigation from 'reakit/Navigation';
 
 import styled from '../styled';
 import { NavigationProps } from './Navigation';

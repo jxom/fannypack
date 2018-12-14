@@ -1,4 +1,5 @@
-import { Link } from 'reakit';
+// @ts-ignore
+import Link from 'reakit/Link';
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 

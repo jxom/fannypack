@@ -7,7 +7,8 @@ import defaultTheme from 'react-syntax-highlighter/styles/prism/atom-dark';
 import javascript from 'react-syntax-highlighter/languages/prism/javascript';
 // @ts-ignore
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import { Code as _Code } from 'reakit';
+// @ts-ignore
+import _Code from 'reakit/Code';
 import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import { Box } from '../primitives';

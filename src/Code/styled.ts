@@ -1,4 +1,5 @@
-import { Code } from 'reakit';
+// @ts-ignore
+import Code from 'reakit/Code';
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 

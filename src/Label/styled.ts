@@ -1,4 +1,5 @@
-import { Label } from 'reakit';
+// @ts-ignore
+import Label from 'reakit/Label';
 import { theme } from 'styled-tools';
 
 import styled from '../styled';
