@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Textarea from '../Textarea';
+
 it('renders correctly for a basic textarea', () => {
   const { container } = render(<Textarea />);
   expect(container.firstChild).toMatchSnapshot();

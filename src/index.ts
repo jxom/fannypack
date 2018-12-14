@@ -50,7 +50,8 @@ export { Table, TableBody, TableCaption, TableCell, TableFoot, TableHead, TableH
 export { Tabs } from './Tabs';
 export { Tag } from './Tag';
 export { Text } from './Text';
-// @ts-ignore
 export { Textarea, TextareaField } from './Textarea';
+// @ts-ignore
+export { Tooltip } from './Tooltip';
 // @ts-ignore
 export { VisuallyHidden } from './VisuallyHidden';

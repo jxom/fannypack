@@ -1,10 +1,12 @@
-// @flow
-import use from 'reakit/use';
-import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
+// @ts-ignore
+import use from 'reakit/use';
+// @ts-ignore
 import Input from 'reakit/Input';
 
+import styled, { css } from '../styled';
 import Spinner from '../Spinner';
+import { LocalTextareaProps } from './Textarea';
 
 export const LoadingSpinner = styled(Spinner)`
   position: absolute;
@@ -15,7 +17,7 @@ export const LoadingSpinner = styled(Spinner)`
   z-index: 1;
 `;
 
-const sizeProperties = {
+const sizeProperties: any = {
   small: css`
     font-size: 0.8rem;
 
@@ -60,11 +62,11 @@ const sizeProperties = {
 };
 
 const stateProperties = css`
-  border-color: ${props => palette(`${props.state}Lighter`)(props)};
-  box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
+  border-color: ${(props: any) => palette(`${props.state}Lighter`)(props)};
+  box-shadow: ${(props: any) => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export default styled(use(Input, 'textarea'))`
+export default styled(use(Input, 'textarea'))<LocalTextareaProps>`
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -84,8 +86,8 @@ export default styled(use(Input, 'textarea'))`
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${props => palette('primaryLighter')(props)};
-    box-shadow: ${props => palette('primaryLighter')(props)} 0px 0px 0px 1px !important;
+    border-color: ${palette('primaryLighter')};
+    box-shadow: ${palette('primaryLighter')} 0px 0px 0px 1px !important;
 
     & {
       ${theme('fannypack.Textarea.focus')};
@@ -101,17 +103,17 @@ export default styled(use(Input, 'textarea'))`
   }
 
   & {
-    ${props =>
+    ${(props: LocalTextareaProps) =>
       props.isFullWidth &&
       css`
         width: 100%;
       `};
   }
   & {
-    ${props => props.size && sizeProperties[props.size]};
+    ${(props: LocalTextareaProps) => props.size && sizeProperties[props.size]};
   }
   & {
-    ${props => props.state && stateProperties};
+    ${(props: LocalTextareaProps) => props.state && stateProperties};
   }
 
   ${theme('fannypack.Textarea.base')};
