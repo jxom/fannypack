@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Tabs from '../Tabs';
+
 it('renders correctly for basic tabs', () => {
   const { container } = render(
     <Tabs.Container>

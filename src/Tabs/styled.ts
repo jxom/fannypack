@@ -1,14 +1,19 @@
+// @ts-ignore
 import Tabs from 'reakit/Tabs';
 import { palette, theme } from 'styled-tools';
-import styled, { css } from '../styled';
 
-export const TabPanel = styled(Tabs.Panel)`
+import styled, { css } from '../styled';
+import { LocalTabsProps } from './Tabs';
+import { LocalTabProps } from './Tab';
+import { LocalTabPanelProps } from './TabPanel';
+
+export const TabPanel = styled(Tabs.Panel)<LocalTabPanelProps>`
   & {
     ${theme('fannypack.Tabs.Panel.base')};
   }
 `;
 
-export const Tab = styled(Tabs.Tab)`
+export const Tab = styled(Tabs.Tab)<LocalTabProps>`
   align-items: center;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -37,18 +42,13 @@ export const Tab = styled(Tabs.Tab)`
   &:not(:last-child) {
     margin-right: 0.5rem;
   }
-  ${props =>
-    props.type === 'boxed' &&
-    css`
-      border: 1px solid black;
-    `};
 
   & {
     ${theme('fannypack.Tabs.Tab.base')};
   }
 `;
 
-const alignPropeties = {
+const alignPropeties: any = {
   center: css`
     justify-content: center;
   `,
@@ -57,7 +57,7 @@ const alignPropeties = {
   `
 };
 
-export default styled(Tabs)`
+export default styled(Tabs)<LocalTabsProps>`
   align-items: center;
   border-bottom: 1px solid ${palette('textTint')};
   display: flex;
@@ -111,7 +111,7 @@ export default styled(Tabs)`
   }
 
   & {
-    ${props => props.align && alignPropeties[props.align]};
+    ${props => props.align && alignPropeties[props.align || '']};
   }
 
   & {

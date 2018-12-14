@@ -102,7 +102,6 @@ exports[`renders correctly for an active tab 1`] = `
     role="tab"
     step="dogs"
     tabindex="0"
-    type="default"
   >
     Dogs
   </li>
@@ -116,7 +115,6 @@ exports[`renders correctly for an active tab 1`] = `
     role="tab"
     step="cats"
     tabindex="-1"
-    type="default"
   >
     Cats
   </li>
@@ -130,7 +128,6 @@ exports[`renders correctly for an active tab 1`] = `
     role="tab"
     step="parrots"
     tabindex="-1"
-    type="default"
   >
     Parrots
   </li>
@@ -239,7 +236,6 @@ exports[`renders correctly for basic tabs 1`] = `
     role="tab"
     step="dogs"
     tabindex="0"
-    type="default"
   >
     Dogs
   </li>
@@ -253,7 +249,6 @@ exports[`renders correctly for basic tabs 1`] = `
     role="tab"
     step="cats"
     tabindex="-1"
-    type="default"
   >
     Cats
   </li>
@@ -267,7 +262,6 @@ exports[`renders correctly for basic tabs 1`] = `
     role="tab"
     step="parrots"
     tabindex="-1"
-    type="default"
   >
     Parrots
   </li>
@@ -404,7 +398,6 @@ exports[`renders correctly for boxed tabs 1`] = `
       role="tab"
       step="dogs"
       tabindex="0"
-      type="default"
     >
       Dogs
     </li>
@@ -418,7 +411,6 @@ exports[`renders correctly for boxed tabs 1`] = `
       role="tab"
       step="cats"
       tabindex="-1"
-      type="default"
     >
       Cats
     </li>
@@ -550,7 +542,6 @@ exports[`renders correctly for center aligned tabs 1`] = `
       role="tab"
       step="dogs"
       tabindex="0"
-      type="default"
     >
       Dogs
     </li>
@@ -564,7 +555,6 @@ exports[`renders correctly for center aligned tabs 1`] = `
       role="tab"
       step="cats"
       tabindex="-1"
-      type="default"
     >
       Cats
     </li>
@@ -685,7 +675,6 @@ exports[`renders correctly for fitted tabs 1`] = `
       role="tab"
       step="dogs"
       tabindex="0"
-      type="default"
     >
       Dogs
     </li>
@@ -699,7 +688,6 @@ exports[`renders correctly for fitted tabs 1`] = `
       role="tab"
       step="cats"
       tabindex="-1"
-      type="default"
     >
       Cats
     </li>
@@ -835,7 +823,6 @@ exports[`renders correctly for right aligned tabs 1`] = `
       role="tab"
       step="dogs"
       tabindex="0"
-      type="default"
     >
       Dogs
     </li>
@@ -849,7 +836,6 @@ exports[`renders correctly for right aligned tabs 1`] = `
       role="tab"
       step="cats"
       tabindex="-1"
-      type="default"
     >
       Cats
     </li>
@@ -978,7 +964,6 @@ exports[`renders correctly for tabs with content 1`] = `
       role="tab"
       step="dogs"
       tabindex="0"
-      type="default"
     >
       Dogs
     </li>
@@ -992,7 +977,6 @@ exports[`renders correctly for tabs with content 1`] = `
       role="tab"
       step="cats"
       tabindex="-1"
-      type="default"
     >
       Cats
     </li>
