@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import render from '../../_utils/tests/render';
 import Timeline from '../Timeline';
 
@@ -19,5 +19,5 @@ it('renders Timeline correctly', () => {
       </Timeline.Step>
     </Timeline>
   );
-  expect(container).toMatchSnapshot();
+  expect(container.firstChild).toMatchSnapshot();
 });

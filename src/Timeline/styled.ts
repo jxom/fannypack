@@ -1,6 +1,11 @@
-import styled from 'reakit/styled';
 import { theme, palette } from 'styled-tools';
-import Box from 'reakit/Box';
+
+import styled from '../styled';
+import { Box } from '../primitives';
+import { TimelineStepProps, TimelineRowProps } from './TimelineStep';
+import { TimelineStepDetailProps } from './TimelineStepDetail';
+import { TimelineStepHeadingProps } from './TimelineStepHeading';
+// @ts-ignore
 import Paragraph from '../Paragraph';
 
 export const Timeline = styled(Box)`
@@ -9,7 +14,7 @@ export const Timeline = styled(Box)`
   }
 `;
 
-export const TimelineRow = styled(Box)`
+export const TimelineRow = styled(Box)<TimelineRowProps>`
   display: flex;
   position: relative;
 
@@ -31,7 +36,7 @@ export const TimelineRow = styled(Box)`
   }
 `;
 
-export const TimelineStep = styled(Box)`
+export const TimelineStep = styled(Box)<TimelineStepProps>`
   & {
     ${theme('fannypack.Timeline.Step.base')};
   }
@@ -51,7 +56,7 @@ export const TimelineBullet = styled(Box)`
   }
 `;
 
-export const TimelineStepHeading = styled(Paragraph)`
+export const TimelineStepHeading = styled(Paragraph)<TimelineStepHeadingProps>`
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
   line-height: 1.5rem;
@@ -67,7 +72,7 @@ export const TimelineStepHeading = styled(Paragraph)`
   }
 `;
 
-export const TimelineStepDetail = styled(Paragraph)`
+export const TimelineStepDetail = styled(Paragraph)<TimelineStepDetailProps>`
   color: ${props => props.color || palette('text')};
 
   & {
