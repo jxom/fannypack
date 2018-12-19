@@ -7,7 +7,10 @@ import TimelineStepHeading, { TimelineStepHeadingProps } from './TimelineStepHea
 import { Timeline as _Timeline } from './styled';
 
 export type LocalTimelineProps = {
+  activeStep?: string;
   children?: React.ReactNode;
+  lineColor?: string;
+  progressColor?: string;
 };
 export type TimelineProps = LocalTimelineProps;
 export type TimelineComponents = {
@@ -16,18 +19,44 @@ export type TimelineComponents = {
   StepDetail: React.FunctionComponent<TimelineStepDetailProps>;
 };
 
-export const Timeline: React.FunctionComponent<LocalTimelineProps> & TimelineComponents = ({ children }) => (
-  <_Timeline>{React.Children.map(children, child => child)}</_Timeline>
-);
+export const Timeline: React.FunctionComponent<LocalTimelineProps> & TimelineComponents = ({
+  activeStep,
+  children,
+  lineColor,
+  progressColor
+}) => {
+  const activeIndexStep = children.findIndex(child => child.props.a11yTitleId === activeStep);
+  return (
+    <_Timeline>
+      {React.Children.map(children, (child, index) => {
+        const barColor = lineColor ? lineColor : child.props.lineColor;
+        const dotColor = progressColor ? progressColor : child.props.progressColor;
+        return index <= activeIndexStep
+          ? React.cloneElement(child, {
+              lineColor: index < activeIndexStep ? barColor : undefined,
+              progressColor: dotColor || undefined
+            })
+          : child;
+      })}
+    </_Timeline>
+  );
+};
 
 Timeline.Step = TimelineStep;
 Timeline.StepHeading = TimelineStepHeading;
 Timeline.StepDetail = TimelineStepDetail;
 
 Timeline.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node.isRequired,
+  activeStep: PropTypes.string,
+  progressColor: PropTypes.string,
+  lineColor: PropTypes.string
 };
-Timeline.defaultProps = {};
+Timeline.defaultProps = {
+  activeStep: undefined,
+  progressColor: undefined,
+  lineColor: undefined
+};
 
 // @ts-ignore
 const C: React.FunctionComponent<TimelineProps> & TimelineComponents = Timeline;

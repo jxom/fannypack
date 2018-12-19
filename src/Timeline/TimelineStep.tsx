@@ -23,16 +23,14 @@ const TimelineStep: React.FunctionComponent<LocalTimelineStepProps> = ({
   children,
   lineColor,
   progressColor
-}) => {
-  return (
-    <TimelineRow lineColor={lineColor} aria-labelledby={a11yTitleId} aria-describedby={a11yDescriptionId}>
-      <TimelineBullet backgroundColor={progressColor} />
-      <_TimelineStep aria-labelledby={a11yTitleId} aria-describedby={a11yDescriptionId}>
-        {children}
-      </_TimelineStep>
-    </TimelineRow>
-  );
-};
+}) => (
+  <TimelineRow lineColor={lineColor} aria-labelledby={a11yTitleId} aria-describedby={a11yDescriptionId}>
+    <TimelineBullet backgroundColor={progressColor} />
+    <_TimelineStep aria-labelledby={a11yTitleId} aria-describedby={a11yDescriptionId}>
+      {children}
+    </_TimelineStep>
+  </TimelineRow>
+);
 
 TimelineStep.propTypes = {
   a11yDescriptionId: PropTypes.string,

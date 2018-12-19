@@ -14,13 +14,11 @@ const TimelineStepDetail: React.FunctionComponent<LocalTimelineStepDetailProps> 
   a11yDescriptionId,
   children,
   color
-}) => {
-  return (
-    <_TimelineStepDetail id={a11yDescriptionId} color={color}>
-      {children}
-    </_TimelineStepDetail>
-  );
-};
+}) => (
+  <_TimelineStepDetail id={a11yDescriptionId} color={color}>
+    {children}
+  </_TimelineStepDetail>
+);
 
 TimelineStepDetail.propTypes = {
   a11yDescriptionId: PropTypes.string,
