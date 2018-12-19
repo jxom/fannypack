@@ -548,3 +548,15 @@ export type ThemeConfig = {
 
   reakit?: any;
 };
+export type TimelineThemeConfig = {
+  base?: Stylesheet;
+  Bullet?: {
+    base?: Stylesheet;
+  };
+  StepHeading?: {
+    base?: Stylesheet;
+  };
+  StepDetail?: {
+    base?: Stylesheet;
+  };
+};
