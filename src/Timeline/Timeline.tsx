@@ -30,14 +30,15 @@ export const Timeline: React.FunctionComponent<LocalTimelineProps> & TimelineCom
   if (!_isArrayLikeObject(children)) {
     return null;
   }
-  const activeIndexStep = children.findIndex((child: any) => child.props.a11yTitleId === activeStep);
+  const activeIndexStep = React.Children.toArray(children).findIndex((child: any) => child.props.a11yTitleId === activeStep);
   return (
     <_Timeline>
       {React.Children.map(children, (child, index) => {
-        const barColor = lineColor ? lineColor : child.props.lineColor;
-        const dotColor = progressColor ? progressColor : child.props.progressColor;
+        const _child = child as React.ReactElement<any>;
+        const barColor = lineColor ? lineColor : _child.props.lineColor;
+        const dotColor = progressColor ? progressColor : _child.props.progressColor;
         return index <= activeIndexStep
-          ? React.cloneElement(child, {
+          ? React.cloneElement(_child, {
               lineColor: index < activeIndexStep ? barColor : undefined,
               progressColor: dotColor || undefined
             })
