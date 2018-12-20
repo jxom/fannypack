@@ -30,7 +30,9 @@ export const Timeline: React.FunctionComponent<LocalTimelineProps> & TimelineCom
   if (!_isArrayLikeObject(children)) {
     return null;
   }
-  const activeIndexStep = React.Children.toArray(children).findIndex((child: any) => child.props.a11yTitleId === activeStep);
+  const activeIndexStep = React.Children.toArray(children).findIndex(
+    (child: any) => child.props.a11yTitleId === activeStep
+  );
   return (
     <_Timeline>
       {React.Children.map(children, (child, index) => {
