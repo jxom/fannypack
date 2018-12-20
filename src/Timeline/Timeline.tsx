@@ -1,5 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
+// @ts-ignore
+import _isArrayLikeObject from 'lodash/isArrayLikeObject';
 
 import TimelineStep, { TimelineStepProps } from './TimelineStep';
 import TimelineStepDetail, { TimelineStepDetailProps } from './TimelineStepDetail';
@@ -8,7 +10,7 @@ import { Timeline as _Timeline } from './styled';
 
 export type LocalTimelineProps = {
   activeStep?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
   lineColor?: string;
   progressColor?: string;
 };
@@ -25,7 +27,10 @@ export const Timeline: React.FunctionComponent<LocalTimelineProps> & TimelineCom
   lineColor,
   progressColor
 }) => {
-  const activeIndexStep = children.findIndex(child => child.props.a11yTitleId === activeStep);
+  if (!_isArrayLikeObject(children)) {
+    return null;
+  }
+  const activeIndexStep = children.findIndex((child: any) => child.props.a11yTitleId === activeStep);
   return (
     <_Timeline>
       {React.Children.map(children, (child, index) => {
@@ -47,15 +52,15 @@ Timeline.StepHeading = TimelineStepHeading;
 Timeline.StepDetail = TimelineStepDetail;
 
 Timeline.propTypes = {
-  children: PropTypes.node.isRequired,
   activeStep: PropTypes.string,
-  progressColor: PropTypes.string,
-  lineColor: PropTypes.string
+  children: PropTypes.node.isRequired,
+  lineColor: PropTypes.string,
+  progressColor: PropTypes.string
 };
 Timeline.defaultProps = {
   activeStep: undefined,
-  progressColor: undefined,
-  lineColor: undefined
+  lineColor: undefined,
+  progressColor: undefined
 };
 
 // @ts-ignore
