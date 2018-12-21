@@ -1,6 +1,11 @@
 import * as React from 'react';
 import 'parse-prop-types';
+// @ts-ignore
+import queryString from 'query-string';
 import ThemeProvider from '../ThemeProvider';
+// @ts-ignore
+import _get from 'lodash/get';
+
 import {
   faIgloo,
   faSearch,
@@ -46,8 +51,30 @@ const theme = {
   }
 };
 
-const Wrapper = ({ children }: { children: React.ReactNode }) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
-);
+type Props = {
+  children: Node
+}
+
+class Wrapper extends React.PureComponent<Props> {
+  state =  { Theme: null };
+
+  componentDidMount() {
+    const theme = _get(queryString.parse(location.search), 'theme')
+
+    import(`../themes/${theme}`)
+      .then(theme => this.setState({ Theme: theme.default }))
+      .catch(() => {})
+  }
+
+  render = () => {
+    const { children } = this.props;
+    const { Theme } = this.state;
+
+    return (
+      <ThemeProvider theme={Theme || theme}>{children}</ThemeProvider>
+    )
+
+  }
+}
 
 export default Wrapper;
