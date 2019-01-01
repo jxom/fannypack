@@ -101,15 +101,15 @@ exports[`Timeline renders correctly 1`] = `
 }
 
 .c4 {
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
   line-height: 1.5rem;
   color: #435a6f;
 }
 
 .c4:not(:last-child) {
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .c7 {
@@ -140,12 +140,12 @@ exports[`Timeline renders correctly 1`] = `
       >
         Step one Heading
       </p>
-      <p
-        class="c7 c5 c0"
+      <div
+        class="c7 c0"
         id="StepDetail1"
       >
         Step one details goes here
-      </p>
+      </div>
     </div>
   </div>
   <div
@@ -169,12 +169,12 @@ exports[`Timeline renders correctly 1`] = `
       >
         Step two Heading
       </p>
-      <p
-        class="c7 c5 c0"
+      <div
+        class="c7 c0"
         id="StepDetail2"
       >
         Step two details goes here
-      </p>
+      </div>
     </div>
   </div>
   <div
@@ -198,12 +198,12 @@ exports[`Timeline renders correctly 1`] = `
       >
         Step three Heading
       </p>
-      <p
-        class="c7 c5 c0"
+      <div
+        class="c7 c0"
         id="StepDetail3"
       >
         Step three details goes here
-      </p>
+      </div>
     </div>
   </div>
 </div>
@@ -335,15 +335,15 @@ exports[`Timeline with activeStep renders correctly 1`] = `
 }
 
 .c3 {
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
   line-height: 1.5rem;
   color: #435a6f;
 }
 
 .c3:not(:last-child) {
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .c6 {
@@ -375,12 +375,12 @@ exports[`Timeline with activeStep renders correctly 1`] = `
       >
         Step one Heading
       </p>
-      <p
-        class="c6 c4 c0"
+      <div
+        class="c6 c0"
         id="StepDetail1"
       >
         Step one details goes here
-      </p>
+      </div>
     </div>
   </div>
   <div
@@ -405,12 +405,12 @@ exports[`Timeline with activeStep renders correctly 1`] = `
       >
         Step two Heading
       </p>
-      <p
-        class="c6 c4 c0"
+      <div
+        class="c6 c0"
         id="StepDetail2"
       >
         Step two details goes here
-      </p>
+      </div>
     </div>
   </div>
   <div
@@ -434,12 +434,12 @@ exports[`Timeline with activeStep renders correctly 1`] = `
       >
         Step three Heading
       </p>
-      <p
-        class="c6 c4 c0"
+      <div
+        class="c6 c0"
         id="StepDetail3"
       >
         Step three details goes here
-      </p>
+      </div>
     </div>
   </div>
 </div>
@@ -571,15 +571,15 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
 }
 
 .c4 {
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
   line-height: 1.5rem;
   color: #435a6f;
 }
 
 .c4:not(:last-child) {
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .c7 {
@@ -610,12 +610,12 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
       >
         Step one Heading
       </p>
-      <p
-        class="c7 c5 c0"
+      <div
+        class="c7 c0"
         id="StepDetail1"
       >
         Step one details goes here
-      </p>
+      </div>
     </div>
   </div>
   <div
@@ -640,12 +640,12 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
       >
         Step two Heading
       </p>
-      <p
-        class="c7 c5 c0"
+      <div
+        class="c7 c0"
         id="StepDetail2"
       >
         Step two details goes here
-      </p>
+      </div>
     </div>
   </div>
   <div
@@ -669,12 +669,12 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
       >
         Step three Heading
       </p>
-      <p
-        class="c7 c5 c0"
+      <div
+        class="c7 c0"
         id="StepDetail3"
       >
         Step three details goes here
-      </p>
+      </div>
     </div>
   </div>
 </div>

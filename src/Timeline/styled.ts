@@ -1,6 +1,6 @@
 import { theme, palette } from 'styled-tools';
 
-import styled from '../styled';
+import styled, { space } from '../styled';
 import { Box } from '../primitives';
 import { TimelineStepProps, TimelineRowProps } from './TimelineStep';
 import { TimelineStepDetailProps } from './TimelineStepDetail';
@@ -24,11 +24,11 @@ export const TimelineRow = styled(Box)<TimelineRowProps>`
 
   &::before {
     content: '';
-    border: 1px solid ${props => props.lineColor || palette('textTint')};
+    border: 1px solid ${props => palette(props.lineColor || 'textTint', props.lineColor)};
     position: absolute;
     height: 100%;
-    left: 0.25rem;
-    margin-top: 1.25rem;
+    left: ${space(1)}rem;
+    margin-top: ${space(5)}rem;
   }
 
   &:last-child::before {
@@ -47,8 +47,8 @@ export const TimelineBullet = styled(Box)`
   display: inline-flex;
   height: 0.625rem;
   width: 0.625rem;
-  margin-top: 1rem;
-  margin-right: 0.5rem;
+  margin-top: ${space(4)}rem;
+  margin-right: ${space(2)}rem;
   z-index: 1;
 
   & {
@@ -57,14 +57,14 @@ export const TimelineBullet = styled(Box)`
 `;
 
 export const TimelineStepHeading = styled(Paragraph)<TimelineStepHeadingProps>`
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-top: ${space(2)}rem;
+  margin-bottom: ${space(1)}rem;
   line-height: 1.5rem;
   color: ${props => props.color || palette('text')};
 
   &:not(:last-child) {
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
+    margin-top: ${space(2)}rem;
+    margin-bottom: ${space(1)}rem;
   }
 
   & {
@@ -72,7 +72,7 @@ export const TimelineStepHeading = styled(Paragraph)<TimelineStepHeadingProps>`
   }
 `;
 
-export const TimelineStepDetail = styled(Paragraph)<TimelineStepDetailProps>`
+export const TimelineStepDetail = styled(Box)<TimelineStepDetailProps>`
   color: ${props => props.color || palette('text')};
 
   & {

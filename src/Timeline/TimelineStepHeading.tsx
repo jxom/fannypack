@@ -1,33 +1,28 @@
+/* eslint react/prop-types: 0 */
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
+import { ParagraphProps as ReakitParagraphProps } from 'reakit/ts/Paragraph/Paragraph';
 
 import { TimelineStepHeading as _TimelineStepHeading } from './styled';
 
 export type LocalTimelineStepHeadingProps = {
-  a11yTitleId?: string;
   children: React.ReactNode;
   color?: string;
 };
-export type TimelineStepHeadingProps = LocalTimelineStepHeadingProps;
+export type TimelineStepHeadingProps = ReakitParagraphProps & LocalTimelineStepHeadingProps;
 
-const TimelineStepHeading: React.FunctionComponent<LocalTimelineStepHeadingProps> = ({
-  a11yTitleId,
-  children,
-  color
-}) => (
-  <_TimelineStepHeading id={a11yTitleId} color={color} fontWeight="semibold">
+const TimelineStepHeading: React.FunctionComponent<LocalTimelineStepHeadingProps> = ({ children, color, ...props }) => (
+  <_TimelineStepHeading color={color} fontWeight="semibold" {...props}>
     {children}
   </_TimelineStepHeading>
 );
 
 TimelineStepHeading.propTypes = {
-  a11yTitleId: PropTypes.string,
   children: PropTypes.node.isRequired,
   color: PropTypes.string
 };
 
 TimelineStepHeading.defaultProps = {
-  a11yTitleId: undefined,
   color: undefined
 };
 

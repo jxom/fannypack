@@ -553,6 +553,9 @@ export type TimelineThemeConfig = {
   Bullet?: {
     base?: Stylesheet;
   };
+  Step?: {
+    base?: Stylesheet;
+  };
   StepHeading?: {
     base?: Stylesheet;
   };
