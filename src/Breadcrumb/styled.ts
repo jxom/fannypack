@@ -19,7 +19,7 @@ export const Breadcrumb = styled(Navigation)<BreadcrumbProps>`
   }
 
   & [aria-current='page'] {
-    font-weight: ${theme('fannypack.fontWeights.bold')};
+    font-weight: ${theme('fannypack.fontWeights.semibold')};
     text-decoration: none;
   }
 
