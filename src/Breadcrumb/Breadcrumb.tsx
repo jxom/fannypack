@@ -2,7 +2,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { Breadcrumb as _Breadcrumb, BreadcrumbList as _BreadcrumbList } from './styled';
-import BreadcrumbStep, { BreadcrumbStepProps } from './BreadcrumbStep';
+import BreadcrumbStep, { LocalBreadcrumbStepProps } from './BreadcrumbStep';
 
 export type LocalBreadcrumbProps = {
   children: React.ReactNode;
@@ -14,7 +14,7 @@ export type BreadcrumbProps = {
 };
 
 export type BreadcrumbComponents = {
-  Step: React.FunctionComponent<BreadcrumbStepProps>;
+  Step: React.FunctionComponent<LocalBreadcrumbStepProps>;
 };
 
 export const Breadcrumb: React.FunctionComponent<LocalBreadcrumbProps> & BreadcrumbComponents = ({

@@ -5,17 +5,15 @@ import * as PropTypes from 'prop-types';
 import { BreadcrumbStep as _BreadcrumbStep, BreadcrumbLink as _BreadcrumbLink } from './styled';
 
 export type LocalBreadcrumbStepProps = {
-  color: string;
+  color?: string;
   href: string;
-  isCurrent: boolean;
+  isCurrent?: boolean;
   text: string;
 };
 
-export type BreadcrumbStepProps = LocalBreadcrumbStepProps;
-
 const BreadcrumbStep: React.FunctionComponent<LocalBreadcrumbStepProps> = ({ color, href, isCurrent, text }) => (
   <_BreadcrumbStep>
-    <_BreadcrumbLink aria-current={isCurrent ? 'page' : undefined} href={href} color={color}>
+    <_BreadcrumbLink aria-current={isCurrent ? 'page' : undefined} color={color} href={href}>
       {text}
     </_BreadcrumbLink>
   </_BreadcrumbStep>
@@ -23,16 +21,15 @@ const BreadcrumbStep: React.FunctionComponent<LocalBreadcrumbStepProps> = ({ col
 
 BreadcrumbStep.propTypes = {
   color: PropTypes.string,
-  href: PropTypes.string.isRequired,
   isCurrent: PropTypes.bool,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
 };
 
 BreadcrumbStep.defaultProps = {
   color: '',
-  isCurrent: false,
+  isCurrent: false
 };
 
 // @ts-ignore
-const C: React.FunctionComponent<BreadcrumbStepProps> = BreadcrumbStep;
+const C: React.FunctionComponent<LocalBreadcrumbStepProps> = BreadcrumbStep;
 export default C;
