@@ -6,9 +6,9 @@ describe('Breadcrumb', () => {
   it('renders correctly', () => {
     const { container } = render(
       <Breadcrumb>
-        <Breadcrumb.Step text="Home" />
-        <Breadcrumb.Step text="Breadcrumb" />
-        <Breadcrumb.Step isCurrent text="Basic Usage" />
+        <Breadcrumb.Step>Home</Breadcrumb.Step>
+        <Breadcrumb.Step>Breadcrumb</Breadcrumb.Step>
+        <Breadcrumb.Step isCurrent>Basic Usage</Breadcrumb.Step>
       </Breadcrumb>
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -17,10 +17,10 @@ describe('Breadcrumb', () => {
   describe('with custom separationColor', () => {
     it('renders correctly', () => {
       const { container } = render(
-        <Breadcrumb separationColor="success">
-          <Breadcrumb.Step text="Home" />
-          <Breadcrumb.Step text="Breadcrumb" />
-          <Breadcrumb.Step isCurrent text="Basic Usage" />
+        <Breadcrumb>
+          <Breadcrumb.Step>Home</Breadcrumb.Step>
+          <Breadcrumb.Step>Breadcrumb</Breadcrumb.Step>
+          <Breadcrumb.Step isCurrent>Basic Usage</Breadcrumb.Step>
         </Breadcrumb>
       );
       expect(container.firstChild).toMatchSnapshot();
