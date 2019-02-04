@@ -2,7 +2,11 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import { BreadcrumbStep as _BreadcrumbStep, BreadcrumbLink as _BreadcrumbLink } from './styled';
+import {
+  BreadcrumbStep as _BreadcrumbStep,
+  BreadcrumbLink as _BreadcrumbLink,
+  BreadcrumbSpan as _BreadcrumbSpan
+} from './styled';
 
 export type LocalBreadcrumbStepProps = {
   children: React.ReactNode;
@@ -13,9 +17,15 @@ export type LocalBreadcrumbStepProps = {
 
 const BreadcrumbStep: React.FunctionComponent<LocalBreadcrumbStepProps> = ({ children, color, href, isCurrent }) => (
   <_BreadcrumbStep>
-    <_BreadcrumbLink aria-current={isCurrent ? 'page' : undefined} color={color} href={href}>
-      {children}
-    </_BreadcrumbLink>
+    {href ? (
+      <_BreadcrumbLink aria-current={isCurrent ? 'page' : undefined} color={color} href={href}>
+        {children}
+      </_BreadcrumbLink>
+    ) : (
+      <_BreadcrumbSpan aria-current={isCurrent ? 'page' : undefined} color={color}>
+        {children}
+      </_BreadcrumbSpan>
+    )}
   </_BreadcrumbStep>
 );
 
@@ -27,7 +37,7 @@ BreadcrumbStep.propTypes = {
 };
 
 BreadcrumbStep.defaultProps = {
-  color: '',
+  color: undefined,
   href: undefined,
   isCurrent: undefined
 };

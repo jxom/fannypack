@@ -4,6 +4,7 @@ import { List } from '../List';
 import { Navigation } from '../Navigation';
 import { Link } from '../Link';
 import { BreadcrumbProps } from './Breadcrumb';
+import { Inline } from '../primitives';
 
 export const Breadcrumb = styled(Navigation)<BreadcrumbProps>`
   & li + li::before {
@@ -41,6 +42,12 @@ export const BreadcrumbList = styled(List)`
 export const BreadcrumbStep = styled(List.Item)`
   & {
     ${theme('fannypack.Breadcrumb.Step.base')};
+  }
+`;
+
+export const BreadcrumbSpan = styled(Inline)`
+  & {
+    ${theme('fannypack.Breadcrumb.Span.base')};
   }
 `;
 

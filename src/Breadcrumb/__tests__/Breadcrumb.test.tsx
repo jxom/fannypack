@@ -26,4 +26,19 @@ describe('Breadcrumb', () => {
       expect(container.firstChild).toMatchSnapshot();
     });
   });
+
+  describe('with link', () => {
+    it('renders correctly', () => {
+      const { container } = render(
+        <Breadcrumb>
+          <Breadcrumb.Step href="/home">Home</Breadcrumb.Step>
+          <Breadcrumb.Step href="/breadcrumb">Breadcrumb</Breadcrumb.Step>
+          <Breadcrumb.Step href="/usage" isCurrent>
+            Basic Usage
+          </Breadcrumb.Step>
+        </Breadcrumb>
+      );
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
 });
