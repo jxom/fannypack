@@ -34,6 +34,9 @@ export type BreadcrumbThemeConfig = {
   Link?: {
     base?: Stylesheet;
   };
+  Span?: {
+    base?: Stylesheet;
+  };
 };
 export type ButtonThemeConfig = {
   base?: Stylesheet;
