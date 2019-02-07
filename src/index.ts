@@ -46,7 +46,7 @@ export { Heading } from './Heading';
 export { Hidden, HiddenContainer, HiddenShow, HiddenHide, HiddenToggle } from './Hidden';
 export { Icon } from './Icon';
 export { Image } from './Image';
-export { Input, InputField } from './Input';
+export { Input, InputField, FormikInput, FormikInputField } from './Input';
 export { Label } from './Label';
 export { Link } from './Link';
 export { List, ListItem } from './List';

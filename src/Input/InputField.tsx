@@ -124,20 +124,23 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
   </FieldWrapper>
 );
 
-InputField.propTypes = {
+export const inputFieldPropTypes = {
   addonBefore: PropTypes.element,
   addonAfter: PropTypes.element,
   isVertical: PropTypes.bool,
   ...fieldWrapperPropTypes,
   ...inputPropTypes
 };
-InputField.defaultProps = {
+InputField.propTypes = inputFieldPropTypes;
+
+export const inputFieldDefaultProps = {
   addonBefore: undefined,
   addonAfter: undefined,
   isVertical: false,
   ...fieldWrapperDefaultProps,
   ...inputDefaultProps
 };
+InputField.defaultProps = inputFieldDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<InputFieldProps> = InputField;

@@ -5,13 +5,16 @@ menu: Form
 ---
 
 import { Playground } from 'docz';
+import { Formik, Form, Field } from 'formik';
 import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
-import {Input} from './Input';
+import { Input } from './Input';
+import FormikInput from './adaptors/FormikInput';
+import FormikInputField from './adaptors/FormikInputField';
 import Button from '../Button';
 import Group from '../Group';
 import Select from '../Select';
-import {InputField} from './InputField';
+import { InputField } from './InputField';
 import Component from '@reactions/component';
 
 # Input
@@ -142,6 +145,35 @@ Using an accessibility label (`a11yLabel`), will enable screen readers to read t
 
 <Playground>
   <Input a11yLabel="name" placeholder="Jake Moxey" />
+</Playground>
+
+## Usage with form libraries
+
+
+### Formik
+
+```
+import { Formik, Form, Field } from 'formik'
+import { FormikInput, FormikInputField } from 'fannypack'
+```
+
+<Playground>
+  <Formik initialValues={{ name: '', name2: '' }} onSubmit={() => {}}>
+    <Form>
+      <Field display="block" component={FormikInput} name="name" validate={value => (!value ? 'This is required' : undefined)} />
+      <Field
+        display="block"
+        component={FormikInputField}
+        label="Name"
+        name="name2"
+        marginTop="major-2"
+        validate={value => (!value ? 'This is required' : undefined)}
+      />
+      <Button marginTop="major-2" type="submit">
+        Submit
+      </Button>
+    </Form>
+  </Formik>
 </Playground>
 
 ## `<Input>` Props
