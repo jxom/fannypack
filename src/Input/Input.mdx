@@ -9,8 +9,7 @@ import { Formik, Form, Field } from 'formik';
 import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
 import { Input } from './Input';
-import FormikInput from './adaptors/FormikInput';
-import FormikInputField from './adaptors/FormikInputField';
+import formikField from '../adaptors/formikField';
 import Button from '../Button';
 import Group from '../Group';
 import Select from '../Select';
@@ -153,17 +152,16 @@ Using an accessibility label (`a11yLabel`), will enable screen readers to read t
 ### Formik
 
 ```
-import { Formik, Form, Field } from 'formik'
-import { FormikInput, FormikInputField } from 'fannypack'
+import { Formik, Form, Field, formikField } from 'formik'
 ```
 
 <Playground>
   <Formik initialValues={{ name: '', name2: '' }} onSubmit={() => {}}>
     <Form>
-      <Field display="block" component={FormikInput} name="name" validate={value => (!value ? 'This is required' : undefined)} />
+      <Field display="block" component={formikField(Input)} name="name" validate={value => (!value ? 'This is required' : undefined)} />
       <Field
         display="block"
-        component={FormikInputField}
+        component={formikField(InputField)}
         label="Name"
         name="name2"
         marginTop="major-2"
