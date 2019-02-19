@@ -7,6 +7,7 @@ import { MenuGroup as _MenuGroup, MenuGroupTitle } from './styled';
 
 export type LocalMenuGroupProps = {
   children: React.ReactNode;
+  title?: string | React.ReactElement<any>;
 };
 export type MenuGroupProps = Omit<Omit<ReakitBoxProps, 'as'>, 'elementRef'> & LocalMenuGroupProps;
 
@@ -19,7 +20,7 @@ export const MenuGroup: React.FunctionComponent<MenuGroupProps> = ({ children, t
 
 MenuGroup.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 MenuGroup.defaultProps = {};
 
