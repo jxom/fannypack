@@ -1,0 +1,40 @@
+---
+name: Badge
+route: /utils/badge
+menu: Utilities
+---
+
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
+import { Box } from '../primitives/index';
+import { Badge } from './Badge';
+
+# Badge
+
+## Import
+
+`import { Badge } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Badge>
+    1
+  </Badge>
+</Playground>
+
+## Props
+
+<PropsTable component={Badge} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  Badge: {
+    base: css | Object
+  }
+}
+```
