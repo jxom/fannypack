@@ -4,40 +4,25 @@ import * as PropTypes from 'prop-types';
 import { ActionButtonsProps, actionButtonsPropTypes } from '../Button/ActionButtons';
 import { getUniqueId } from '../uniqueId';
 import Dialog from '../Dialog';
-import Modal, { ModalProps, LocalModalProps } from '../Modal/Modal';
-import {
-  Omit,
-  AnimateProps,
-  animateDefaultProps,
-  animatePropTypes,
-  RestrictHideProps,
-  restrictDefaultProps,
-  restrictHidePropTypes
-} from '../types';
+import Modal, { ModalProps, LocalModalProps, modalPropTypes, modalDefaultProps } from '../Modal/Modal';
+import { Omit } from '../types';
 
-export type LocalDialogModalProps = AnimateProps &
-  RestrictHideProps &
-  Omit<LocalModalProps, 'children'> & {
-    a11yDescriptionId?: string;
-    a11yTitleId?: string;
-    actionButtonsProps?: ActionButtonsProps;
-    children:
-      | (({ initialFocusRef }: { initialFocusRef: React.RefObject<HTMLElement> }) => React.ReactNode)
-      | React.ReactNode;
-    className?: string;
-    footer?:
-      | (({ initialFocusRef }: { initialFocusRef: React.RefObject<HTMLElement> }) => React.ReactNode)
-      | string
-      | React.ReactElement<any>;
-    hide?(): void;
-    /** Whether or not to show the modal component */
-    isVisible?: boolean;
-    kind?: 'alert';
-    showActionButtons?: boolean;
-    showCloseButton?: boolean;
-    title?: string | React.ReactElement<any>;
-    type?: string;
-  };
+export type LocalDialogModalProps = Omit<LocalModalProps, 'children'> & {
+  a11yDescriptionId?: string;
+  a11yTitleId?: string;
+  actionButtonsProps?: ActionButtonsProps;
+  children:
+    | (({ initialFocusRef }: { initialFocusRef: React.RefObject<HTMLElement> }) => React.ReactNode)
+    | React.ReactNode;
+  footer?:
+    | (({ initialFocusRef }: { initialFocusRef: React.RefObject<HTMLElement> }) => React.ReactNode)
+    | string
+    | React.ReactElement<any>;
+  hasScroll?: boolean;
+  kind?: 'alert';
+  title?: string | React.ReactElement<any>;
+  type?: string;
+};
 export type DialogModalProps = Omit<ModalProps, 'children'> & LocalDialogModalProps;
 
 export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
@@ -46,6 +31,7 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
   actionButtonsProps,
   children,
   footer,
+  hasScroll,
   hide,
   kind,
   showActionButtons,
@@ -74,6 +60,7 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
         elementRef={fallbackFocusRef}
         // @ts-ignore
         footer={typeof footer === 'function' ? footer({ initialFocusRef }) : footer}
+        hasScroll={hasScroll}
         onClickClose={hide}
         role={kind === 'alert' ? 'alertdialog' : 'dialog'}
         showActionButtons={showActionButtons || kind === 'alert'}
@@ -93,36 +80,27 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
 );
 
 DialogModal.propTypes = {
+  ...modalPropTypes,
   a11yDescriptionId: PropTypes.string,
   a11yTitleId: PropTypes.string,
   actionButtonsProps: PropTypes.shape(actionButtonsPropTypes),
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
-  className: PropTypes.string,
   footer: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element]),
-  hide: PropTypes.func,
-  isVisible: PropTypes.bool,
+  hasScroll: PropTypes.bool,
   kind: PropTypes.oneOf(['alert']) as PropTypes.Validator<LocalDialogModalProps['kind']>,
-  showActionButtons: PropTypes.bool,
-  showCloseButton: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  type: PropTypes.string,
-  ...animatePropTypes,
-  ...restrictHidePropTypes
+  type: PropTypes.string
 };
 DialogModal.defaultProps = {
+  ...modalDefaultProps,
   actionButtonsProps: {},
   a11yDescriptionId: getUniqueId('Modal'),
   a11yTitleId: getUniqueId('Modal'),
-  className: undefined,
   footer: undefined,
-  isVisible: false,
+  hasScroll: false,
   kind: undefined,
-  showActionButtons: false,
-  showCloseButton: false,
   title: undefined,
   type: undefined,
-  ...animateDefaultProps,
-  ...restrictDefaultProps,
   hideOnEsc: true,
   hideOnClickOutside: true
 };

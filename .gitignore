@@ -343,3 +343,9 @@ dist
 /Alert\Alert/
 /adaptors\index/
 /adaptors\fields/
+/Sidebar/
+
+.fab
+fab.zip
+.DS_Store
+src/.DS_Store

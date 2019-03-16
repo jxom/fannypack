@@ -190,6 +190,10 @@ exports[`renders correctly when a close button is present 1`] = `
   padding: 0 0.8rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   border: 1px solid #b3b3b3;
 }
 
@@ -335,7 +339,7 @@ samp.c6 {
   font-weight: 600;
 }
 
-.c4.c4 {
+.c4.c4:not(:last-child) {
   margin-bottom: 0.5em;
 }
 
@@ -545,7 +549,7 @@ samp.c6 {
   font-weight: 600;
 }
 
-.c4.c4 {
+.c4.c4:not(:last-child) {
   margin-bottom: 0.5em;
 }
 
@@ -859,7 +863,7 @@ samp.c10 {
   font-weight: 600;
 }
 
-.c8.c8 {
+.c8.c8:not(:last-child) {
   margin-bottom: 0.5em;
 }
 
@@ -1028,7 +1032,7 @@ h6.c9 {
   font-weight: 600;
 }
 
-.c8.c8 {
+.c8.c8:not(:last-child) {
   margin-bottom: 0.5em;
 }
 

@@ -4,6 +4,7 @@ import layout from './layout';
 import fontWeights from './fontWeights';
 import _palette from './palette';
 
+import Alert from './Alert';
 import Button from './Button';
 import Checkbox from './Checkbox';
 import Container from './Container';
@@ -12,6 +13,7 @@ import Input from './Input';
 import Label from './Label';
 import Select from './Select';
 import SelectMenu from './SelectMenu';
+import Toast from './Toast';
 
 export default {
   // Foundation
@@ -22,6 +24,7 @@ export default {
   palette: _palette,
 
   // Components
+  Alert,
   Button,
   Checkbox,
   Container,
@@ -29,5 +32,6 @@ export default {
   Input,
   Label,
   Select,
-  SelectMenu
+  SelectMenu,
+  Toast
 };
