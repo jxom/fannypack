@@ -24,7 +24,7 @@ export type LocalThemeProviderProps = {
   theme?: ThemeConfig;
 };
 export type State = {
-  theme: DerivedTheme;
+  theme: DerivedTheme | void;
 };
 
 const loadTheme = ({
@@ -66,16 +66,16 @@ class Provider extends React.Component<LocalThemeProviderProps, State> {
   };
 
   state = {
-    theme: loadTheme({ theme: this.props.theme, isStandalone: this.props.isStandalone })
+    theme: undefined
   };
 
-  componentDidUpdate(prevProps) {
-    if (this.props.theme !== prevProps.theme) {
-      console.log('test');
-      this.setState({
-        theme: loadTheme({ theme: this.props.theme, isStandalone: this.props.isStandalone })
-      });
+  static getDerivedStateFromProps(props: LocalThemeProviderProps, state: State) {
+    if (props.theme !== state.theme) {
+      return {
+        theme: loadTheme({ theme: props.theme, isStandalone: props.isStandalone })
+      };
     }
+    return {};
   }
 
   render = () => {

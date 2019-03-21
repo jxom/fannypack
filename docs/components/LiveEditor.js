@@ -6,8 +6,11 @@ import {
   LiveError as _LiveError
 } from 'react-live';
 import { withMDXComponents } from '@mdx-js/tag/dist/mdx-provider';
+import base64url from 'base64-url';
 
-import { palette, styled } from 'components';
+import Router from 'next/router';
+
+import { Box, Button, Link, palette, styled } from 'components';
 
 const LiveEditor = styled(_LiveEditor)`
   font-family: Menlo, monospace;
@@ -35,19 +38,47 @@ const LiveProvider = styled(_LiveProvider)`
   margin-bottom: 1em;
 `;
 
-export const LiveCode = withMDXComponents(({ components, scope, ...props }) => (
-  <LiveProvider
-    scope={{
-      ...components,
-      ...scope
-    }}
-    {...props}
-  >
-    <LivePreview />
-    <LiveEditor />
-    <LiveError />
-  </LiveProvider>
-));
+function getPlayroomUrl(code) {
+  const playroomUrl = `https://fannypack.style/playroom#?code=${code ? base64url.encode(code) : ''}`;
+  return playroomUrl;
+}
+
+export const LiveCode = withMDXComponents(({ components, scope, ...props }) => {
+  const [code, setCode] = React.useState(props.code);
+
+  const playroomUrl = React.useMemo(() => {
+    return `https://fannypack.style/playroom/#?code=${code ? base64url.encode(code) : ''}`;
+  }, [code]);
+
+  function handleClickPlayroom() {
+    window.open(playroomUrl, '_blank');
+  }
+
+  return (
+    <LiveProvider
+      scope={{
+        ...components,
+        ...scope
+      }}
+      {...props}
+      code={code}
+    >
+      <LivePreview />
+      <Box relative>
+        <Box absolute top="0.25rem" right="0.25rem">
+          <Button kind="ghost" palette="primary" size="small">
+            Copy
+          </Button>
+          <Button kind="ghost" palette="primary" size="small" onClick={handleClickPlayroom}>
+            Playroom
+          </Button>
+        </Box>
+        <LiveEditor onChange={setCode} />
+      </Box>
+      <LiveError />
+    </LiveProvider>
+  );
+});
 
 LiveCode.defaultProps = {
   mountStylesheet: false,

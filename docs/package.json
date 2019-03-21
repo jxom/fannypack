@@ -9,6 +9,7 @@
     "@babel/plugin-proposal-export-default-from": "7.2.0",
     "@mdx-js/mdx": "^0.15.0",
     "@zeit/next-typescript": "1.1.1",
+    "base64-url": "2.2.0",
     "mdx-docs": "^2.0.0-alpha.0",
     "next": "^7.0.1",
     "react": "16.8.4",

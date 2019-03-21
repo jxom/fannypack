@@ -2,12 +2,9 @@ import 'babel-polyfill';
 import React from 'react';
 import App, { Container } from 'next/app';
 import * as fannypack from 'fannypack';
-import themes from 'fannypack/themes';
-import merge from 'lodash/merge';
 
 import Layout from '../components/Layout';
 import DocsContext, { useDocsContext } from '../components/DocsContext';
-import docsTheme from '../theme';
 
 const routes = [
   { name: 'Home', path: '/', breakpoint: 'tablet' },
@@ -19,13 +16,9 @@ const routes = [
 
 function Wrapper({ children }) {
   const { layout } = useDocsContext();
-  const newTheme = merge(docsTheme, layout.theme === 'medipass' ? themes.medipass : {});
-  console.log(newTheme);
   return (
-    <fannypack.ThemeProvider theme={{ ...newTheme }}>
-      <Container>
-        <Layout>{children}</Layout>
-      </Container>
+    <fannypack.ThemeProvider theme={layout.theme}>
+      <Layout>{children}</Layout>
     </fannypack.ThemeProvider>
   );
 }
@@ -41,26 +34,16 @@ export default class MyApp extends App {
     return { page };
   }
 
-  // componentDidMount = async () => {
-  //   const query = qs.parse(window.location.search);
-  //   let newTheme = {};
-  //   if (query.theme) {
-  //     const module = await import(`../../src/themes/${query.theme}/index`);
-  //     newTheme = module.default;
-  //   }
-  //   this.setState({
-  //     theme: merge(docsTheme, newTheme)
-  //   });
-  // };
-
   render() {
     const { Component, page, headManager, ...props } = this.props;
     return (
-      <DocsContext.Provider {...props} routes={routes}>
-        <Wrapper>
-          <Component {...page} />
-        </Wrapper>
-      </DocsContext.Provider>
+      <Container>
+        <DocsContext.Provider {...props} routes={routes}>
+          <Wrapper>
+            <Component {...page} />
+          </Wrapper>
+        </DocsContext.Provider>
+      </Container>
     );
   }
 }

@@ -1,6 +1,6 @@
 module.exports = {
   components: './src/index.ts',
-  outputPath: './docs/playroom',
+  outputPath: './docs/out/playroom',
   frameComponent: './src/_playroom/Frame.tsx',
   webpackConfig: () => ({
     module: {

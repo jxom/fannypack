@@ -84,12 +84,11 @@ const components = {
 
 function Layout(props) {
   const { children } = props;
-
   const { layout, route } = useDocsContext();
 
   function handleChangeTheme(e) {
     const theme = e.target.value;
-    layout.setTheme(theme);
+    layout.changeTheme(theme);
   }
 
   return (
@@ -107,9 +106,14 @@ function Layout(props) {
         </fannypack.Button>
       )}
       <Sidebar route={route} />
-      <fannypack.Select
+      <fannypack.SelectField
+        position="fixed"
+        left="calc(250px + 1rem)"
+        top="1rem"
+        label="Theme"
         onChange={handleChangeTheme}
         options={[{ label: 'Default', value: 'default' }, { label: 'Medipass', value: 'medipass' }]}
+        value={layout.themeName}
       />
       <Content breakpoint={route.breakpoint}>
         <MDXStyle components={{ ...components }}>{children}</MDXStyle>
