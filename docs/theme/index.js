@@ -19,7 +19,7 @@ import {
   faExternalLinkAlt,
   faTrashAlt
 } from '@fortawesome/free-solid-svg-icons';
-import { css, palette } from '../../src/styled';
+import { css, palette } from 'fannypack';
 
 export default {
   global: {

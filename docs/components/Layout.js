@@ -1,63 +1,121 @@
 import React from 'react';
 import MDXStyle from 'mdx-style';
-import { DocsContext } from 'mdx-docs/dist/context';
-import defaultComponents from 'mdx-docs/dist/components';
-import useMedia from 'use-media';
-import { Button, Icon, Flex, withTheme } from '../../src';
+import Link from 'next/link';
+import * as fannypack from 'fannypack';
 
 import Content from './Content';
+import LiveEditor from './LiveEditor';
 import Sidebar from './Sidebar';
+import { useDocsContext } from './DocsContext';
 
-export const getNextRoute = props => props.routes.find(route => route.path === props.router.pathname) || {};
+const components = {
+  ...fannypack,
+  a: ({ href, ...props }) => (
+    <Link href={href}>
+      <fannypack.Link {...props} />
+    </Link>
+  ),
+  blockquote: ({ children }) => (
+    <fannypack.Blockquote
+      backgroundColor="primaryTint"
+      borderColor="primary"
+      marginTop="major-2"
+      marginBottom="major-2"
+    >
+      {children}
+    </fannypack.Blockquote>
+  ),
+  h1: ({ children, className, ...props }) => <fannypack.Heading {...props}>{children}</fannypack.Heading>,
+  h2: ({ children, className, ...props }) => (
+    <fannypack.Heading use="h2" marginTop="major-6" {...props}>
+      {children}
+    </fannypack.Heading>
+  ),
+  h3: ({ children, className, ...props }) => (
+    <fannypack.Heading use="h3" marginTop="major-6" {...props}>
+      {children}
+    </fannypack.Heading>
+  ),
+  h4: ({ children, className, ...props }) => (
+    <fannypack.Heading use="h4" marginTop="major-6" {...props}>
+      {children}
+    </fannypack.Heading>
+  ),
+  h5: ({ children, className, ...props }) => (
+    <fannypack.Heading use="h5" marginTop="major-6" {...props}>
+      {children}
+    </fannypack.Heading>
+  ),
+  h6: ({ children, className, ...props }) => (
+    <fannypack.Heading use="h6" marginTop="major-6" {...props}>
+      {children}
+    </fannypack.Heading>
+  ),
+  hr: ({ children }) => <fannypack.Divider>{children}</fannypack.Divider>,
+  p: ({ children }) => <fannypack.Paragraph>{children}</fannypack.Paragraph>,
+  strong: ({ children }) => <fannypack.Text fontWeight="semibold">{children}</fannypack.Text>,
+  em: ({ children }) => <fannypack.Text use="em">{children}</fannypack.Text>,
+  ul: ({ children }) => (
+    <fannypack.List listStyleType="disc" listStylePosition="inside">
+      {children}
+    </fannypack.List>
+  ),
+  ol: ({ children }) => (
+    <fannypack.List isOrdered listStylePosition="inside">
+      {children}
+    </fannypack.List>
+  ),
+  li: ({ children }) => <fannypack.List.Item>{children}</fannypack.List.Item>,
+  code: ({ children }) => <fannypack.Code>{children}</fannypack.Code>,
+  table: ({ children }) => (
+    <fannypack.Table isFullWidth isStriped>
+      {children}
+    </fannypack.Table>
+  ),
+  tbody: ({ children }) => <fannypack.Table.Body>{children}</fannypack.Table.Body>,
+  thead: ({ children }) => <fannypack.Table.Head>{children}</fannypack.Table.Head>,
+  tfoot: ({ children }) => <fannypack.Table.Foot>{children}</fannypack.Table.Foot>,
+  tr: ({ children }) => <fannypack.Table.Row>{children}</fannypack.Table.Row>,
+  td: ({ children }) => <fannypack.Table.Cell>{children}</fannypack.Table.Cell>,
+  th: ({ children }) => <fannypack.Table.HeadCell>{children}</fannypack.Table.HeadCell>,
+  img: ({ children, ...props }) => <fannypack.Image {...props}>{children}</fannypack.Image>,
+  pre: props => <LiveEditor fallback={props => <fannypack.Code isBlock {...props} />} {...props} />
+};
 
 function Layout(props) {
-  const { children, routes = [], components = {}, getRoute, theme, ...rest } = props;
-  const route = getRoute(props);
+  const { children } = props;
 
-  const [isMenuOpen, setMenuOpen] = React.useState();
+  const { layout, route } = useDocsContext();
 
-  const isMobile = useMedia({ maxWidth: theme.fannypack.layout.desktopBreakpoint });
-
-  const context = {
-    layout: {
-      isMenuOpen,
-      toggleMenu: () => setMenuOpen(!isMenuOpen),
-      openMenu: () => setMenuOpen(true),
-      closeMenu: () => setMenuOpen(false),
-      isMobile
-    },
-    routes,
-    route
-  };
+  function handleChangeTheme(e) {
+    const theme = e.target.value;
+    layout.setTheme(theme);
+  }
 
   return (
-    <DocsContext.Provider value={context}>
-      <Flex width="100%">
-        {isMobile && (
-          <Button
-            onClick={context.layout.openMenu}
-            position="fixed"
-            kind="ghost"
-            height="20px"
-            left="0.5rem"
-            top="0.5rem"
-          >
-            <Icon icon="solid-bars" />
-          </Button>
-        )}
-        <Sidebar route={route} />
-        <Content breakpoint={route.breakpoint}>
-          <MDXStyle components={{ ...components, ...defaultComponents }} {...rest}>
-            {children}
-          </MDXStyle>
-        </Content>
-      </Flex>
-    </DocsContext.Provider>
+    <fannypack.Flex width="100%">
+      {layout.isMobile && (
+        <fannypack.Button
+          onClick={layout.openMenu}
+          position="fixed"
+          kind="ghost"
+          height="20px"
+          left="0.5rem"
+          top="0.5rem"
+        >
+          <fannypack.Icon icon="solid-bars" />
+        </fannypack.Button>
+      )}
+      <Sidebar route={route} />
+      <fannypack.Select
+        onChange={handleChangeTheme}
+        options={[{ label: 'Default', value: 'default' }, { label: 'Medipass', value: 'medipass' }]}
+      />
+      <Content breakpoint={route.breakpoint}>
+        <MDXStyle components={{ ...components }}>{children}</MDXStyle>
+      </Content>
+    </fannypack.Flex>
   );
 }
 
-Layout.defaultProps = {
-  getRoute: getNextRoute
-};
-
-export default withTheme(Layout);
+export default fannypack.withTheme(Layout);

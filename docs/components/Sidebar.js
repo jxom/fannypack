@@ -1,20 +1,8 @@
 import React from 'react';
-import {
-  Box,
-  Icon,
-  Hidden,
-  Menu as _Menu,
-  Sidebar as PopoutSidebar,
-  palette,
-  space,
-  styled,
-  theme,
-  withTheme
-} from '../../src/index';
+import { Box, Icon, Hidden, Menu as _Menu, Sidebar as PopoutSidebar, palette, space, styled, theme } from 'fannypack';
 import Link from 'next/link';
-import { withDocs } from 'mdx-docs/dist/context';
 
-import env from '../utils/env';
+import { useDocsContext } from './DocsContext';
 
 const Spacer = styled(Box)`
   width: 250px;
@@ -44,11 +32,15 @@ const Menu = styled(_Menu)`
       background-color: unset;
       color: ${palette('primary')};
     }
+
+    &:focus {
+      background-color: unset;
+    }
   }
 `;
 
-function Sidebar(props) {
-  const { layout = {}, routes = [], route = {} } = props;
+function Sidebar() {
+  const { layout = {}, routes = [], route = {} } = useDocsContext();
 
   const MobileSidebar = React.useCallback(
     ({ children }) => (
@@ -99,8 +91,8 @@ function Sidebar(props) {
                         {hidden.isVisible && (
                           <Box paddingLeft="major-2" width="100%">
                             {menuItem.map((item, i) => (
-                              <Link key={i} href={`${env.basePath}${item.path}`}>
-                                <Menu.Item color={route.path === item.path ? 'primary' : undefined}>
+                              <Link key={i} href={item.path}>
+                                <Menu.Item color={route.path === item.path ? 'primary' : undefined} fontWeight="400">
                                   {item.name}
                                 </Menu.Item>
                               </Link>
@@ -111,7 +103,7 @@ function Sidebar(props) {
                     )}
                   </Hidden.Container>
                 ) : (
-                  <Link href={`${env.basePath}${menuItem.path}`}>
+                  <Link href={menuItem.path}>
                     <Menu.Item color={route.path === menuItem.path ? 'primary' : undefined}>{name}</Menu.Item>
                   </Link>
                 )}
@@ -124,4 +116,4 @@ function Sidebar(props) {
   );
 }
 
-export default withTheme(withDocs(Sidebar));
+export default Sidebar;

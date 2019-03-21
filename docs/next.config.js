@@ -42,7 +42,11 @@ module.exports = {
         }
       ]
     });
-
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      components: path.resolve(__dirname, '../src'),
+      fannypack: path.resolve(__dirname, '../src')
+    };
     return config;
   }
 };

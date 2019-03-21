@@ -1,18 +1,18 @@
 import React from 'react';
-import { Button, Flex } from '../../src/index';
+import { Button, Flex } from 'fannypack';
 import Link from 'next/link';
-import { withDocs } from 'mdx-docs/dist/context';
-import env from '../utils/env';
 
-function Pagination(props) {
-  const { routes, route } = props;
+import { useDocsContext } from './DocsContext';
+
+function Pagination() {
+  const { routes, route } = useDocsContext();
   const index = routes.indexOf(route);
   const previous = routes[index - 1];
   const next = routes[index + 1];
   return (
     <Flex justifyContent="space-between">
       {previous && (
-        <Link href={`${env.basePath}${previous.path}`}>
+        <Link href={previous.path}>
           <Button iconBefore="solid-arrow-left" kind="ghost" palette="primary">
             {previous.name}
           </Button>
@@ -20,7 +20,7 @@ function Pagination(props) {
       )}
       <div />
       {next && (
-        <Link href={`${env.basePath}${next.path}`}>
+        <Link href={next.path}>
           <Button iconAfter="solid-arrow-right" kind="ghost" palette="primary">
             {next.name}
           </Button>
@@ -30,4 +30,4 @@ function Pagination(props) {
   );
 }
 
-export default withDocs(Pagination);
+export default Pagination;

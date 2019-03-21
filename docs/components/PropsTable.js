@@ -5,9 +5,9 @@ import parsePropTypes from 'parse-prop-types';
 // @ts-ignore
 import _get from 'lodash/get';
 
-import Code from '../../src/Code';
-import Table from '../../src/Table';
-import Text from '../../src/Text';
+import Code from 'fannypack/Code';
+import Table from 'fannypack/Table';
+import Text from 'fannypack/Text';
 
 const renderType = type => {
   if (!type) return 'unknown';
@@ -51,7 +51,6 @@ const renderType = type => {
 };
 
 const PropsTable = ({ component }) => {
-  console.log('test');
   const propTypes = parsePropTypes(component);
   return (
     <Table isFullWidth isStriped>

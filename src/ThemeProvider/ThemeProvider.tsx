@@ -69,6 +69,15 @@ class Provider extends React.Component<LocalThemeProviderProps, State> {
     theme: loadTheme({ theme: this.props.theme, isStandalone: this.props.isStandalone })
   };
 
+  componentDidUpdate(prevProps) {
+    if (this.props.theme !== prevProps.theme) {
+      console.log('test');
+      this.setState({
+        theme: loadTheme({ theme: this.props.theme, isStandalone: this.props.isStandalone })
+      });
+    }
+  }
+
   render = () => {
     const { children, ...props } = this.props;
     const { theme } = this.state;

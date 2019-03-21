@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, LayoutSet } from '../../src/index';
+import { Container, LayoutSet } from 'fannypack';
 
 import Pagination from './Pagination';
 
