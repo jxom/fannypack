@@ -7,7 +7,7 @@ umd
 ts
 npm-debug.log*
 .docz
-docs
+.next
 dist
 /uniqueId/
 /types/
