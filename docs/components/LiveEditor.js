@@ -8,9 +8,7 @@ import {
 import { withMDXComponents } from '@mdx-js/tag/dist/mdx-provider';
 import base64url from 'base64-url';
 
-import Router from 'next/router';
-
-import { Box, Button, Link, palette, styled } from 'components';
+import { Box, Button, palette, styled } from 'components';
 
 const LiveEditor = styled(_LiveEditor)`
   font-family: Menlo, monospace;
@@ -37,11 +35,6 @@ const LiveProvider = styled(_LiveProvider)`
   margin-top: 1em;
   margin-bottom: 1em;
 `;
-
-function getPlayroomUrl(code) {
-  const playroomUrl = `https://fannypack.style/playroom#?code=${code ? base64url.encode(code) : ''}`;
-  return playroomUrl;
-}
 
 export const LiveCode = withMDXComponents(({ components, scope, ...props }) => {
   const [code, setCode] = React.useState(props.code);

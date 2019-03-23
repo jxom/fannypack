@@ -1,6 +1,19 @@
 import React from 'react';
-import { Box, Icon, Hidden, Menu as _Menu, Sidebar as PopoutSidebar, palette, space, styled, theme } from 'fannypack';
+import {
+  Box,
+  Hidden,
+  Icon,
+  Image,
+  Menu as _Menu,
+  Sidebar as PopoutSidebar,
+  palette,
+  space,
+  styled,
+  theme,
+  withTheme
+} from 'fannypack';
 import Link from 'next/link';
+import _get from 'lodash/get';
 
 import { useDocsContext } from './DocsContext';
 
@@ -39,7 +52,8 @@ const Menu = styled(_Menu)`
   }
 `;
 
-function Sidebar() {
+function Sidebar(props) {
+  const { theme } = props;
   const { layout = {}, routes = [], route = {} } = useDocsContext();
 
   const MobileSidebar = React.useCallback(
@@ -67,11 +81,24 @@ function Sidebar() {
     return newMenuItems;
   }, {});
 
+  const logoPath = _get(theme, 'fannypack._docs.logoPath');
+  const [logo, setLogo] = React.useState();
+  async function getLogo() {
+    try {
+      const logo = await import(`../../src/themes/${layout.themeName}/${logoPath}`);
+      setLogo(logo.default);
+    } catch (err) {}
+  }
+  React.useEffect(() => {
+    getLogo();
+  }, [layout.themeName, logoPath]);
+
   return (
     <React.Fragment>
       <Spacer />
       <SidebarContainer>
         <Wrapper isMenuOpen={layout.isMenuOpen}>
+          <Image src={logo} paddingLeft="major-3" paddingRight="major-3" paddingTop="major-3" />
           <Menu margin="major-2">
             {Object.entries(menuItems).map(([name, menuItem], i) => (
               <React.Fragment key={i}>
@@ -116,4 +143,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default withTheme(Sidebar);

@@ -1,8 +1,10 @@
+import _docs from './_docs';
+
 import global from './global';
 import webFontLoader from './webFontLoader';
 import layout from './layout';
 import fontWeights from './fontWeights';
-import _palette from './palette';
+import palette from './palette';
 
 import Alert from './Alert';
 import Checkbox from './Checkbox';
@@ -12,12 +14,14 @@ import Label from './Label';
 import Toast from './Toast';
 
 export default {
+  _docs,
+
   // Foundation
   global,
   webFontLoader,
   layout,
   fontWeights,
-  palette: _palette,
+  palette,
 
   // Components
   Alert,

@@ -6,6 +6,7 @@ const json = require('rollup-plugin-json');
 const { terser } = require('rollup-plugin-terser');
 const ignore = require('rollup-plugin-ignore');
 const proxyDirectories = require('rollup-plugin-proxy-directories');
+const url = require('rollup-plugin-url');
 
 const pkg = require('./package.json');
 
@@ -30,7 +31,8 @@ const commonPlugins = [
     extensions,
     exclude: ['node_modules/**']
   }),
-  resolve({ extensions, preferBuiltins: false })
+  resolve({ extensions, preferBuiltins: false }),
+  url()
 ];
 
 const getPlugins = umd =>
@@ -43,7 +45,7 @@ const getPlugins = umd =>
             './node_modules/react-is/index.js': ['isValidElementType', 'isElement', 'ForwardRef']
           }
         }),
-        ignore(['stream', 'react-test-renderer']),
+        ignore(['stream', 'react-test-renderer', '**/*.svg']),
         terser(),
         replace({
           'process.env.NODE_ENV': JSON.stringify('production')

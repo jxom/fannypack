@@ -1,5 +1,4 @@
 import React from 'react';
-import Router from 'next/router';
 import useMedia from 'use-media';
 import qs from 'query-string';
 import merge from 'lodash/merge';
@@ -20,12 +19,10 @@ export function Provider(props) {
   const [theme, setTheme] = React.useState(docsTheme);
   const [themeName, setThemeName] = React.useState(defaultThemeName);
   async function changeTheme(themeName) {
-    let overrideTheme = {};
-    if (themeName) {
-      const module = await import(`../../src/themes/${themeName}/index`);
-      overrideTheme = module.default;
-    }
-    Router.replace({ pathname: window.location.pathname, query: { theme: themeName } });
+    const module = await import(`../../src/themes/${themeName}/index`);
+    const overrideTheme = module.default;
+    const newUrl = `${window.location.origin}${window.location.pathname}?theme=${themeName}`;
+    window.history.pushState({ path: newUrl }, '', newUrl);
     setThemeName(themeName);
     setTheme(merge(cloneDeep(docsTheme), overrideTheme));
   }

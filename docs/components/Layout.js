@@ -106,13 +106,12 @@ function Layout(props) {
         </fannypack.Button>
       )}
       <Sidebar route={route} />
-      <fannypack.SelectField
+      <fannypack.Select
         position="fixed"
         left="calc(250px + 1rem)"
         top="1rem"
-        label="Theme"
         onChange={handleChangeTheme}
-        options={[{ label: 'Default', value: 'default' }, { label: 'Medipass', value: 'medipass' }]}
+        options={[{ label: 'Theme: Default', value: 'default' }, { label: 'Theme: Medipass', value: 'medipass' }]}
         value={layout.themeName}
       />
       <Content breakpoint={route.breakpoint}>

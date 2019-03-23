@@ -3,6 +3,7 @@ import _get from 'lodash/get';
 
 import { ThemeConfig } from '../../types';
 
+import _docs from './_docs';
 import global from './global';
 import palette from './palette';
 import layout from './layout';
@@ -18,6 +19,8 @@ import Table from './Table';
 function theme(overrides: ThemeConfig = {}): ThemeConfig {
   return {
     ...overrides,
+
+    _docs: _docs(overrides),
 
     global: global(overrides),
     palette: palette(overrides),
