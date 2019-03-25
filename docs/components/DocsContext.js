@@ -16,7 +16,7 @@ export function Provider(props) {
 
   const query = typeof window !== 'undefined' ? qs.parse(window.location.search) : {};
   const defaultThemeName = query.theme || 'default';
-  const [theme, setTheme] = React.useState(docsTheme);
+  const [theme, setTheme] = React.useState();
   const [themeName, setThemeName] = React.useState(defaultThemeName);
   async function changeTheme(themeName) {
     const module = await import(`../../src/themes/${themeName}/index`);
@@ -26,6 +26,9 @@ export function Provider(props) {
     setThemeName(themeName);
     setTheme(merge(cloneDeep(docsTheme), overrideTheme));
   }
+  React.useEffect(() => {
+    changeTheme(defaultThemeName);
+  }, []);
 
   const isMobile = useMedia({ maxWidth: 1024 });
   const context = {
@@ -43,6 +46,7 @@ export function Provider(props) {
     route
   };
 
+  if (!theme) return null;
   return <DocsContext.Provider value={context}>{children}</DocsContext.Provider>;
 }
 

@@ -12,7 +12,7 @@ import { Box, Button, palette, styled } from 'components';
 
 const LiveEditor = styled(_LiveEditor)`
   font-family: Menlo, monospace;
-  padding: 1em;
+  padding: 1.5em;
   margin: 0;
   background-color: ${palette('white700')};
   overflow-x: auto;
@@ -27,7 +27,7 @@ const LiveError = styled(_LiveError)`
   overflow-x: auto;
 `;
 const LivePreview = styled(_LivePreview)`
-  padding: 1em;
+  padding: 1.5em;
 `;
 const LiveProvider = styled(_LiveProvider)`
   border: 1px solid ${palette('white700')};
@@ -39,37 +39,44 @@ const LiveProvider = styled(_LiveProvider)`
 export const LiveCode = withMDXComponents(({ components, scope, ...props }) => {
   const [code, setCode] = React.useState(props.code);
 
-  const playroomUrl = React.useMemo(() => {
-    return `https://fannypack.style/playroom/#?code=${code ? base64url.encode(code) : ''}`;
-  }, [code]);
+  const playroomUrl = React.useMemo(
+    () => {
+      return `https://fannypack.style/playroom/#?code=${code ? base64url.encode(code) : ''}`;
+    },
+    [code]
+  );
 
   function handleClickPlayroom() {
     window.open(playroomUrl, '_blank');
   }
 
   return (
-    <LiveProvider
-      scope={{
-        ...components,
-        ...scope
-      }}
-      {...props}
-      code={code}
-    >
-      <LivePreview />
-      <Box relative>
-        <Box absolute top="0.25rem" right="0.25rem">
-          <Button kind="ghost" palette="primary" size="small">
-            Copy
-          </Button>
-          <Button kind="ghost" palette="primary" size="small" onClick={handleClickPlayroom}>
-            Playroom
-          </Button>
+    <Box marginBottom="major-4">
+      <LiveProvider
+        scope={{
+          ...components,
+          ...scope
+        }}
+        {...props}
+        code={code}
+      >
+        <LivePreview />
+        <Box relative>
+          <Box absolute top="0.25rem" right="0.25rem">
+            <Button kind="ghost" palette="primary" size="small">
+              Copy
+            </Button>
+            {/*
+              <Button kind="ghost" palette="primary" size="small" onClick={handleClickPlayroom}>
+                Playroom
+              </Button>
+             */}
+          </Box>
+          <LiveEditor onChange={setCode} />
         </Box>
-        <LiveEditor onChange={setCode} />
-      </Box>
-      <LiveError />
-    </LiveProvider>
+        <LiveError />
+      </LiveProvider>
+    </Box>
   );
 });
 
@@ -83,7 +90,14 @@ const REG = /language\-\.jsx/;
 export const MDXLive = ({ pre: Pre, fallback: Fallback, match = REG, children, metaString, ...props }) => {
   const isLive = match.test(props.className);
   const Comp = Pre || Fallback;
-  if (!isLive) return <Comp {...props}>{children}</Comp>;
+  if (!isLive) {
+    const lang = (props.className || '').split('-')[1];
+    return (
+      <Comp {...props} lang={lang}>
+        {children.replace(/\n$/, '')}
+      </Comp>
+    );
+  }
 
   const code = React.Children.toArray(children).join('\n');
 

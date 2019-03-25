@@ -4,18 +4,20 @@ import { palette } from 'styled-tools';
 // @ts-ignore
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/prism-light';
 // @ts-ignore
-import defaultTheme from 'react-syntax-highlighter/styles/prism/coy';
+import defaultTheme from './theme';
 // @ts-ignore
 import javascript from 'react-syntax-highlighter/languages/prism/javascript';
 // @ts-ignore
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 // @ts-ignore
 import json from 'react-syntax-highlighter/languages/prism/json';
-import _Code from './Code';
 import { BoxProps as ReakitBoxProps } from 'reakit/ts';
+// @ts-ignore
+import _get from 'lodash/get';
 
 import { Box } from '../primitives';
-import styled, { css } from '../styled';
+import styled, { css, withTheme } from '../styled';
+import _Code from './Code';
 
 const Wrapper = styled(Box)<HighlightedCodeProps>`
   ${props =>
@@ -45,6 +47,7 @@ export type LocalHighlightedCodeProps = {
   lang: string;
   showLabel?: boolean;
   showLineNumbers?: boolean;
+  theme?: Object;
 };
 export type HighlightedCodeProps = LocalHighlightedCodeProps & ReakitBoxProps;
 
@@ -64,7 +67,8 @@ export class HighlightedCode extends React.PureComponent<LocalHighlightedCodePro
     codeClassName: undefined,
     isBlock: false,
     showLabel: false,
-    showLineNumbers: false
+    showLineNumbers: false,
+    theme: {}
   };
 
   componentDidMount = () => {
@@ -74,7 +78,8 @@ export class HighlightedCode extends React.PureComponent<LocalHighlightedCodePro
   };
 
   render = () => {
-    const { children, className, codeClassName, isBlock, lang, showLineNumbers, ...props } = this.props;
+    const { children, className, codeClassName, isBlock, lang, showLineNumbers, theme, ...props } = this.props;
+    const style = defaultTheme({ palette: _get(theme, 'fannypack.palette') });
     return (
       <Wrapper lang={lang} {...props}>
         <SyntaxHighlighter
@@ -83,7 +88,7 @@ export class HighlightedCode extends React.PureComponent<LocalHighlightedCodePro
           block={isBlock}
           language={lang}
           showLineNumbers={showLineNumbers}
-          style={defaultTheme}
+          style={style}
           PreTag={_Code}
           wrapLines
         >
@@ -95,5 +100,5 @@ export class HighlightedCode extends React.PureComponent<LocalHighlightedCodePro
 }
 
 // @ts-ignore
-const C: React.FunctionComponent<HighlightedCodeProps> = HighlightedCode;
+const C: React.FunctionComponent<HighlightedCodeProps> = withTheme(HighlightedCode);
 export default C;

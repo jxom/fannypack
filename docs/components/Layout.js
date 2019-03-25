@@ -79,22 +79,23 @@ const components = {
   td: ({ children }) => <fannypack.Table.Cell>{children}</fannypack.Table.Cell>,
   th: ({ children }) => <fannypack.Table.HeadCell>{children}</fannypack.Table.HeadCell>,
   img: ({ children, ...props }) => <fannypack.Image {...props}>{children}</fannypack.Image>,
-  pre: props => <LiveEditor fallback={props => <fannypack.Code isBlock {...props} />} {...props} />
+  pre: props => (
+    <LiveEditor
+      fallback={props => <fannypack.HighlightedCode isBlock marginBottom="major-4" {...props} />}
+      {...props}
+    />
+  )
 };
 
 function Layout(props) {
   const { children } = props;
   const { layout, route } = useDocsContext();
 
-  function handleChangeTheme(e) {
-    const theme = e.target.value;
-    layout.changeTheme(theme);
-  }
-
   return (
     <fannypack.Flex width="100%">
       {layout.isMobile && (
         <fannypack.Button
+          backgroundColor="white"
           onClick={layout.openMenu}
           position="fixed"
           kind="ghost"
@@ -106,14 +107,6 @@ function Layout(props) {
         </fannypack.Button>
       )}
       <Sidebar route={route} />
-      <fannypack.Select
-        position="fixed"
-        left="calc(250px + 1rem)"
-        top="1rem"
-        onChange={handleChangeTheme}
-        options={[{ label: 'Theme: Default', value: 'default' }, { label: 'Theme: Medipass', value: 'medipass' }]}
-        value={layout.themeName}
-      />
       <Content breakpoint={route.breakpoint}>
         <MDXStyle components={{ ...components }}>{children}</MDXStyle>
       </Content>

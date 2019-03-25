@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   components: './src/index.ts',
   outputPath: './docs/out/playroom',
@@ -8,7 +10,10 @@ module.exports = {
         {
           test: /\.(js|ts|tsx)$/,
           use: {
-            loader: 'babel-loader'
+            loader: 'babel-loader',
+            options: {
+              cwd: path.join(__dirname, '..')
+            }
           }
         }
       ]

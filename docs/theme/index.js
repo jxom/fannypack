@@ -29,6 +29,18 @@ export default {
           color: ${palette('primary')};
         }
 
+        &.punctuation {
+          color: ${palette('text')};
+        }
+
+        &.string {
+          color: ${palette('text')};
+        }
+
+        &.operator {
+          color: ${palette('secondary')};
+        }
+
         &.attr-name {
           color: ${palette('secondary')};
         }

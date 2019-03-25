@@ -6,7 +6,7 @@ import Pagination from './Pagination';
 export default function Content(props) {
   const { breakpoint, children } = props;
   return (
-    <Container breakpoint={breakpoint} isFluid={!breakpoint} padding="major-8">
+    <Container breakpoint={breakpoint} isFluid={!breakpoint} padding="major-4" marginTop="major-2">
       <LayoutSet>
         {children}
         <Pagination />
