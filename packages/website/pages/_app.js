@@ -18,6 +18,10 @@ const routes = [
   { menu: 'Typography', name: 'List', path: '/typography/list', breakpoint: 'tablet' },
   { menu: 'Typography', name: 'Paragraph', path: '/typography/paragraph', breakpoint: 'tablet' },
   { menu: 'Typography', name: 'Text', path: '/typography/text', breakpoint: 'tablet' },
+  { menu: 'Layout', name: 'Columns', path: '/layout/columns', breakpoint: 'tablet' },
+  { menu: 'Layout', name: 'Container', path: '/layout/container' },
+  { menu: 'Layout', name: 'LayoutSet', path: '/layout/layoutset', breakpoint: 'tablet' },
+  { menu: 'Layout', name: 'Pane', path: '/layout/pane', breakpoint: 'tablet' },
   { menu: 'Components', name: 'ActionButton', path: '/components/actionbutton', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Button', path: '/components/button', breakpoint: 'tablet' },
   { menu: 'Utilities', name: 'Hidden', path: '/utils/hidden', breakpoint: 'tablet' }

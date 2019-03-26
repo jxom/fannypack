@@ -21,9 +21,11 @@ import { useDocsContext } from './DocsContext';
 
 const Spacer = styled(Box)`
   width: 250px;
+  min-width: 250px;
 
   @media screen and (max-width: ${theme('fannypack.layout.desktopBreakpoint')}px) {
     width: 0px;
+    min-width: 0px;
   }
 `;
 const Wrapper = styled(Box)`
@@ -91,9 +93,12 @@ function Sidebar(props) {
       setLogo(logo.default);
     } catch (err) {}
   }
-  React.useEffect(() => {
-    getLogo();
-  }, [layout.themeName, logoPath]);
+  React.useEffect(
+    () => {
+      getLogo();
+    },
+    [layout.themeName, logoPath]
+  );
 
   function handleChangeTheme(e) {
     const theme = e.target.value;
