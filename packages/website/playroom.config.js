@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  components: './src/index.ts',
-  outputPath: './docs/out/playroom',
-  frameComponent: './src/_playroom/Frame.tsx',
+  components: '../fannypack/src/index.ts',
+  outputPath: './out/playroom',
+  frameComponent: '../fannypack/src/_playroom/Frame.tsx',
   webpackConfig: () => ({
     module: {
       rules: [
@@ -12,7 +12,7 @@ module.exports = {
           use: {
             loader: 'babel-loader',
             options: {
-              cwd: path.join(__dirname, '..')
+              cwd: path.join(__dirname, '../..')
             }
           }
         }

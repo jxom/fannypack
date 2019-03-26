@@ -1,4 +1,5 @@
 {
+  "name": "website",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -6,7 +7,9 @@
     "build": "next build && next export && yarn playroom:build",
     "build:fab": "yarn build && yarn fab:compile",
     "fab:compile": "fab-static out/",
-    "fab:serve": "fab-serve ./fab.zip"
+    "fab:serve": "fab-serve ./fab.zip",
+    "playroom:start": "playroom start",
+    "playroom:build": "playroom build"
   },
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "7.2.0",
@@ -15,6 +18,8 @@
     "base64-url": "2.2.0",
     "mdx-docs": "^2.0.0-alpha.0",
     "next": "^7",
+    "parse-prop-types": "0.3.0",
+    "playroom": "0.7.2",
     "react": "16.8.4",
     "react-dom": "16.8.4",
     "react-live": "1.12.0",

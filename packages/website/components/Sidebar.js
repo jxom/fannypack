@@ -87,7 +87,7 @@ function Sidebar(props) {
   const [logo, setLogo] = React.useState();
   async function getLogo() {
     try {
-      const logo = await import(`../../src/themes/${layout.themeName}/${logoPath}`);
+      const logo = await import(`fannypack/themes/${layout.themeName}/${logoPath}`);
       setLogo(logo.default);
     } catch (err) {}
   }

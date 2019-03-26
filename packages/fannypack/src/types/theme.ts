@@ -138,6 +138,9 @@ export type ContainerThemeConfig = {
   fluidMargin: string;
   tabletMargin: string;
 };
+export type DocsThemeConfig = {
+  logoPath?: string;
+};
 export type DialogThemeConfig = {
   base?: Stylesheet;
   Header?: {
@@ -663,6 +666,7 @@ export type WebFontLoader = {
 export type ThemeConfig = {
   palette?: PaletteThemeConfig;
 
+  _docs?: DocsThemeConfig;
   global?: GlobalThemeConfig;
   layout?: LayoutThemeConfig;
   fontSizes?: FontSizeThemeConfig;

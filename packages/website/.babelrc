@@ -1,5 +1,5 @@
 {
-  "extends": "../babel.config.js",
+  "extends": "../../babel.config.js",
   "presets": ["next/babel"],
   "plugins": [["styled-components", { "ssr": true }]]
 }

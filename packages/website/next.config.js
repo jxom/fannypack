@@ -14,11 +14,11 @@ module.exports = {
     config.resolve.extensions.push('.ts', '.tsx');
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
-      include: [path.join(__dirname), path.join(__dirname, '../src')],
+      include: [path.join(__dirname), path.join(__dirname, '../fannypack')],
       exclude: /node_modules/,
       use: [defaultLoaders.babel]
     });
-    config.module.rules[config.module.rules.length - 1].use[0].options.cwd = path.join(__dirname, '..');
+    config.module.rules[config.module.rules.length - 1].use[0].options.cwd = path.join(__dirname, '../../');
     config.module.rules.push({
       test: /\.mdx?$/,
       use: [
@@ -41,8 +41,7 @@ module.exports = {
     });
     config.resolve.alias = {
       ...config.resolve.alias,
-      components: path.resolve(__dirname, '../src'),
-      fannypack: path.resolve(__dirname, '../src')
+      fannypack: path.resolve(__dirname, '../fannypack/src')
     };
     return config;
   }

@@ -29,7 +29,7 @@ const getExternal = (umd, pkg) => {
 const commonPlugins = [
   babel({
     extensions,
-    exclude: ['node_modules/**']
+    exclude: ['node_modules/**', '../../node_modules/**']
   }),
   resolve({ extensions, preferBuiltins: false }),
   url()
@@ -42,7 +42,7 @@ const getPlugins = umd =>
         commonjs({
           include: /node_modules/,
           namedExports: {
-            './node_modules/react-is/index.js': ['isValidElementType', 'isElement', 'ForwardRef']
+            '../../node_modules/react-is/index.js': ['isValidElementType', 'isElement', 'ForwardRef']
           }
         }),
         ignore(['stream', 'react-test-renderer', '**/*.svg']),

@@ -19,7 +19,7 @@ export function Provider(props) {
   const [theme, setTheme] = React.useState();
   const [themeName, setThemeName] = React.useState(defaultThemeName);
   async function changeTheme(themeName) {
-    const module = await import(`../../src/themes/${themeName}/index`);
+    const module = await import(`fannypack/themes/${themeName}/index`);
     const overrideTheme = module.default;
     const newUrl = `${window.location.origin}${window.location.pathname}?theme=${themeName}`;
     window.history.pushState({ path: newUrl }, '', newUrl);

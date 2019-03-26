@@ -8,7 +8,7 @@ import {
 import { withMDXComponents } from '@mdx-js/tag/dist/mdx-provider';
 import base64url from 'base64-url';
 
-import { Box, Button, palette, styled } from 'components';
+import { Box, Button, palette, styled } from 'fannypack';
 
 const LiveEditor = styled(_LiveEditor)`
   font-family: Menlo, monospace;
@@ -41,7 +41,7 @@ export const LiveCode = withMDXComponents(({ components, scope, ...props }) => {
 
   const playroomUrl = React.useMemo(
     () => {
-      return `https://fannypack.style/playroom/#?code=${code ? base64url.encode(code) : ''}`;
+      return `/playroom/#?code=${code ? base64url.encode(code) : ''}`;
     },
     [code]
   );
@@ -66,11 +66,9 @@ export const LiveCode = withMDXComponents(({ components, scope, ...props }) => {
             <Button kind="ghost" palette="primary" size="small">
               Copy
             </Button>
-            {/*
-              <Button kind="ghost" palette="primary" size="small" onClick={handleClickPlayroom}>
-                Playroom
-              </Button>
-             */}
+            <Button kind="ghost" palette="primary" size="small" onClick={handleClickPlayroom}>
+              Playroom
+            </Button>
           </Box>
           <LiveEditor onChange={setCode} />
         </Box>
