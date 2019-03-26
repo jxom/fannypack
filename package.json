@@ -4,11 +4,13 @@
   "author": "jxom <jakemoxey@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "build:fab": "lerna run build:fab",
     "clean": "lerna clean",
     "prepare": "lerna run prepare",
     "publish": "lerna publish",
-    "lint": "lerna run lint"
+    "lint": "lerna run lint",
+    "test": "lerna run test"
   },
   "devDependencies": {
     "@babel/cli": "7.2.0",

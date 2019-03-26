@@ -5,6 +5,9 @@
   "scripts": {
     "start": "next",
     "build": "next build && next export && yarn playroom:build",
+    "lint": "eslint src/ --ext js,ts,tsx",
+    "lint:fix": "eslint src/ --fix",
+    "test": "yarn lint",
     "build:fab": "yarn build && yarn fab:compile",
     "fab:compile": "fab-static out/",
     "fab:serve": "fab-serve ./fab.zip",
