@@ -91,12 +91,9 @@ function Sidebar(props) {
       setLogo(logo.default);
     } catch (err) {}
   }
-  React.useEffect(
-    () => {
-      getLogo();
-    },
-    [layout.themeName, logoPath]
-  );
+  React.useEffect(() => {
+    getLogo();
+  }, [layout.themeName, logoPath]);
 
   function handleChangeTheme(e) {
     const theme = e.target.value;
