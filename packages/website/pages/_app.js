@@ -1,3 +1,4 @@
+import 'parse-prop-types';
 import 'babel-polyfill';
 import React from 'react';
 import App, { Container } from 'next/app';
@@ -23,7 +24,16 @@ const routes = [
   { menu: 'Layout', name: 'LayoutSet', path: '/layout/layoutset', breakpoint: 'tablet' },
   { menu: 'Layout', name: 'Pane', path: '/layout/pane', breakpoint: 'tablet' },
   { menu: 'Components', name: 'ActionButton', path: '/components/actionbutton', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Alert', path: '/components/alert', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Avatar', path: '/components/avatar', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Badge', path: '/components/badge', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Button', path: '/components/button', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Breadcrumb', path: '/components/breadcrumb', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Callout', path: '/components/callout', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'CalloutOverlay', path: '/components/calloutoverlay', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Card', path: '/components/card', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Dialog', path: '/components/dialog', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'DialogModal', path: '/components/dialogmodal', breakpoint: 'tablet' },
   { menu: 'Utilities', name: 'Hidden', path: '/utils/hidden', breakpoint: 'tablet' }
 ];
 

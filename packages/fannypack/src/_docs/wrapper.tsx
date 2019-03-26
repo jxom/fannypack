@@ -1,5 +1,4 @@
 import * as React from 'react';
-import 'parse-prop-types';
 // @ts-ignore
 import qs from 'query-string';
 import {

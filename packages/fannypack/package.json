@@ -55,7 +55,6 @@
     "@types/react-dom": "16.8.2",
     "emotion-theming": "10.0.5",
     "flow-bin": "0.83.0",
-    "parse-prop-types": "0.3.0",
     "query-string": "6.2.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
