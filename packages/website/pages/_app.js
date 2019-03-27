@@ -34,6 +34,8 @@ const routes = [
   { menu: 'Components', name: 'Card', path: '/components/card', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Dialog', path: '/components/dialog', breakpoint: 'tablet' },
   { menu: 'Components', name: 'DialogModal', path: '/components/dialogmodal', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Divider', path: '/components/divider', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Icon', path: '/components/icon', breakpoint: 'tablet' },
   { menu: 'Utilities', name: 'Hidden', path: '/utils/hidden', breakpoint: 'tablet' }
 ];
 
