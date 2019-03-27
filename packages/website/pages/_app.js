@@ -36,6 +36,15 @@ const routes = [
   { menu: 'Components', name: 'DialogModal', path: '/components/dialogmodal', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Divider', path: '/components/divider', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Icon', path: '/components/icon', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Image', path: '/components/image', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Markdown', path: '/components/markdown', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Menu', path: '/components/menu', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Navigation', path: '/components/navigation', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Popover', path: '/components/popover', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Rating', path: '/components/rating', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Spinner', path: '/components/spinner', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Table', path: '/components/table', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Tabs', path: '/components/tabs', breakpoint: 'tablet' },
   { menu: 'Utilities', name: 'Hidden', path: '/utils/hidden', breakpoint: 'tablet' }
 ];
 
