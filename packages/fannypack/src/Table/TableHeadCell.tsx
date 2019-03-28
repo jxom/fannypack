@@ -18,7 +18,9 @@ export const TableHeadCell: React.FunctionComponent<LocalTableHeadCellProps> = (
 TableHeadCell.propTypes = {
   children: PropTypes.node
 };
-TableHeadCell.defaultProps = {};
+TableHeadCell.defaultProps = {
+  children: undefined
+};
 
 const C: React.FunctionComponent<TableHeadCellProps> = TableHeadCell;
 export default C;

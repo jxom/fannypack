@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 
 import { ButtonProps } from '../Button/Button';
 import Icon from '../Icon';
@@ -18,6 +19,11 @@ export const AlertClose: React.FunctionComponent<LocalAlertCloseProps> = ({ onCl
     <Icon a11yHidden icon="times" />
   </_AlertClose>
 );
+
+AlertClose.propTypes = {
+  isAbsolute: PropTypes.bool,
+  onClickClose: PropTypes.func
+};
 
 AlertClose.defaultProps = {
   isAbsolute: false,

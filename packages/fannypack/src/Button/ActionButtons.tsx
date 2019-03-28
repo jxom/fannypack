@@ -55,6 +55,7 @@ export const ActionButtons: React.FunctionComponent<LocalActionButtonsProps> = (
 );
 
 export const actionButtonsPropTypes = {
+  addonButtons: PropTypes.element,
   cancelProps: PropTypes.shape(_omit(buttonPropTypes, 'children')),
   cancelText: PropTypes.string,
   className: PropTypes.string,
@@ -69,6 +70,7 @@ export const actionButtonsPropTypes = {
 ActionButtons.propTypes = actionButtonsPropTypes;
 
 export const actionButtonsDefaultProps = {
+  addonButtons: undefined,
   cancelProps: {},
   cancelText: 'Cancel',
   className: undefined,

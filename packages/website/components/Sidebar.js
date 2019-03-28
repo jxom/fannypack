@@ -2,12 +2,10 @@ import React from 'react';
 import {
   Box,
   Hidden,
-  Flex,
   Icon,
   Image,
   Menu as _Menu,
   Sidebar as PopoutSidebar,
-  Select,
   palette,
   space,
   styled,

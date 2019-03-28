@@ -14,7 +14,6 @@ export type LocalTextareaProps = {
   autoComplete?: string;
   /** Automatically focus on the textarea */
   autoFocus?: boolean;
-  children?: React.ReactNode;
   className?: string;
   /** Default value of the textarea */
   defaultValue?: string;
@@ -85,7 +84,6 @@ export const textareaPropTypes = {
   a11yLabel: PropTypes.string,
   autoComplete: PropTypes.string,
   autoFocus: PropTypes.bool,
-  children: PropTypes.node,
   className: PropTypes.string,
   defaultValue: PropTypes.string,
   disabled: PropTypes.bool,

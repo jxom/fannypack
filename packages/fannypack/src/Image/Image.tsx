@@ -37,6 +37,7 @@ Image.propTypes = {
   isFixed: PropTypes.bool
 };
 Image.defaultProps = {
+  children: undefined,
   className: undefined,
   fit: undefined,
   fitPosition: undefined,

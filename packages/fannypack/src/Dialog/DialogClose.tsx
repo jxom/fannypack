@@ -8,6 +8,7 @@ import VisuallyHidden from '../VisuallyHidden';
 import { DialogClose as _DialogClose } from './styled';
 
 export type LocalDialogCloseProps = {
+  children: React.ReactNode,
   className?: string;
 };
 export type DialogCloseProps = LocalDialogCloseProps & Omit<ButtonProps, 'children'>;
@@ -20,6 +21,7 @@ export const DialogClose: React.FunctionComponent<LocalDialogCloseProps> = ({ ch
 );
 
 DialogClose.propTypes = {
+  children: PropTypes.node.isRequired,
   className: PropTypes.string
 };
 DialogClose.defaultProps = {

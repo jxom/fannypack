@@ -23,6 +23,7 @@ export const navigationPropTypes = {
   a11yTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  role: PropTypes.string,
   use: PropTypes.any
 };
 Navigation.propTypes = navigationPropTypes;
@@ -30,6 +31,7 @@ Navigation.propTypes = navigationPropTypes;
 export const navigationDefaultProps = {
   a11yTitle: undefined,
   className: undefined,
+  role: undefined,
   use: undefined
 };
 Navigation.defaultProps = navigationDefaultProps;

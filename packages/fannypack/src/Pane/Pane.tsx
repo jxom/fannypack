@@ -35,7 +35,8 @@ export const paneDefaultProps = {
   border: false,
   className: undefined,
   children: undefined,
-  isFullWidth: false
+  isFullWidth: false,
+  elevation: undefined
 };
 Pane.defaultProps = paneDefaultProps;
 

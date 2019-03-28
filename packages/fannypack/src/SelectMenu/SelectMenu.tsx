@@ -200,11 +200,11 @@ const optionsFilter = ({ options, searchText }: { options: SelectMenuItems; sear
   );
 
 const bottomActionsRenderer: LocalSelectMenuProps['renderBottomActions'] = ({
-  isDropdown,
-  isMultiSelect,
-  onClear,
-  popover,
-  selectedOptions
+  isDropdown, // eslint-disable-line
+  isMultiSelect, // eslint-disable-line
+  onClear, // eslint-disable-line
+  popover, // eslint-disable-line
+  selectedOptions // eslint-disable-line
 }) => (
   <React.Fragment>
     {isMultiSelect && Object.keys(selectedOptions).length > 0 ? (

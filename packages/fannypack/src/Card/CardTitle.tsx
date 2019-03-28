@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import { HeadingProps as ReakitHeadingProps } from 'reakit/ts/Heading/Heading';
 
 import { CardTitle as _CardTitle } from './styled';
@@ -14,6 +15,10 @@ const CardTitle: React.FunctionComponent<LocalCardTitleProps> = ({ children, ...
     {children}
   </_CardTitle>
 );
+
+CardTitle.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 CardTitle.defaultProps = {
   className: undefined
