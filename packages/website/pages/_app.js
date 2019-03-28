@@ -23,7 +23,7 @@ const routes = [
   { menu: 'Layout', name: 'Container', path: '/layout/container' },
   { menu: 'Layout', name: 'LayoutSet', path: '/layout/layoutset', breakpoint: 'tablet' },
   { menu: 'Layout', name: 'Pane', path: '/layout/pane', breakpoint: 'tablet' },
-  { menu: 'Components', name: 'ActionButton', path: '/components/actionbutton', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'ActionButtons', path: '/components/actionbuttons', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Alert', path: '/components/alert', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Avatar', path: '/components/avatar', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Badge', path: '/components/badge', breakpoint: 'tablet' },
@@ -45,6 +45,16 @@ const routes = [
   { menu: 'Components', name: 'Spinner', path: '/components/spinner', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Table', path: '/components/table', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Tabs', path: '/components/tabs', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Tag', path: '/components/tag', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Timeline', path: '/components/timeline', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Toast', path: '/components/toast', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'Tooltip', path: '/components/tooltip', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'Checkbox', path: '/form/checkbox', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'FieldSet', path: '/form/fieldset', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'FieldWrapper', path: '/form/fieldwrapper', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'Input', path: '/form/input', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'Label', path: '/form/label', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'Radio', path: '/form/radio', breakpoint: 'tablet' },
   { menu: 'Utilities', name: 'Hidden', path: '/utils/hidden', breakpoint: 'tablet' }
 ];
 

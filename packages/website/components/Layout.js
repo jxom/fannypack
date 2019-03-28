@@ -2,6 +2,7 @@ import React from 'react';
 import MDXStyle from 'mdx-style';
 import Link from 'next/link';
 import * as fannypack from 'fannypack';
+import Component from '@reactions/component';
 
 import Content from './Content';
 import LiveEditor from './LiveEditor';
@@ -10,6 +11,7 @@ import { useDocsContext } from './DocsContext';
 
 const components = {
   ...fannypack,
+  Component,
   a: ({ href, ...props }) => (
     <Link href={href}>
       <fannypack.Link {...props} />
