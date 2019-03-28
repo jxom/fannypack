@@ -54,7 +54,13 @@ const routes = [
   { menu: 'Form', name: 'FieldWrapper', path: '/form/fieldwrapper', breakpoint: 'tablet' },
   { menu: 'Form', name: 'Input', path: '/form/input', breakpoint: 'tablet' },
   { menu: 'Form', name: 'Label', path: '/form/label', breakpoint: 'tablet' },
-  { menu: 'Form', name: 'Radio', path: '/form/radio', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'Radio', path: '/form/ra  dio', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'RadioGroup', path: '/form/radiogroup', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'Select', path: '/form/select', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'SelectMenu', path: '/form/selectmenu', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'Switch', path: '/form/switch', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'Textarea', path: '/form/textarea', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'Usage with form libraries', path: '/form/usagewithformlibraries', breakpoint: 'tablet' },
   { menu: 'Utilities', name: 'Hidden', path: '/utils/hidden', breakpoint: 'tablet' }
 ];
 
