@@ -55,6 +55,7 @@ export class Menu extends React.Component<LocalMenuProps, State> {
   static defaultProps = {
     ...navigationDefaultProps,
     isHorizontal: false,
+    role: 'menu',
     setInitialFocus: true
   };
 
@@ -133,7 +134,6 @@ export class Menu extends React.Component<LocalMenuProps, State> {
     return (
       <_Menu
         elementRef={this.menu}
-        role="menu"
         aria-orientation={isHorizontal ? 'horizontal' : 'vertical'}
         isHorizontal={isHorizontal}
         onKeyDown={this.handleKeyDown}

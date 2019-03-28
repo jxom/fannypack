@@ -1,4 +1,6 @@
 import * as React from 'react';
+// @ts-ignore
+import _omit from 'lodash/omit';
 
 import { Omit } from '../types';
 import Textarea, { LocalTextareaProps, TextareaProps, textareaDefaultProps, textareaPropTypes } from './Textarea';
@@ -40,7 +42,7 @@ export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = (
 );
 
 TextareaField.propTypes = {
-  ...fieldWrapperPropTypes,
+  ..._omit(fieldWrapperPropTypes, 'children'),
   ...textareaPropTypes
 };
 
