@@ -33,8 +33,19 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+          <link rel="icon" href="/static/icon.png" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="generator" content="mdx-docs" />
+          <meta name="twitter:title" content="Fannypack" />
+          <meta name="twitter:creator" content="@jxom_" />
+          <meta name="twitter:description" content="A friendly, themeable, accessible React UI Kit" />
+          <meta name="twitter:url" content="https://fannypack.style" />
+          <meta name="twitter:image" content="/static/fannypack.png" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="og:type" content="website" />
+          <meta name="og:title" content="Fannypack" />
+          <meta name="og:description" content="A friendly, themeable, accessible React UI Kit" />
+          <title>Fannypack</title>
         </Head>
         <body>
           <Main />
