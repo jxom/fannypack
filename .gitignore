@@ -6,7 +6,7 @@ node_modules
 umd
 ts
 npm-debug.log*
-.docz
+
 .next
 out
 dist
