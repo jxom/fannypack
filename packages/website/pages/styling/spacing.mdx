@@ -1,17 +1,4 @@
----
-name: Spacing
-route: /styling/spacing
-menu: Styling & Theming
-order: 3
----
-
-import {Playground} from 'docz';
-import { Block } from 'src/primitives';
-import Button from 'src/Button'
-import Code from 'src/Code'
-import InputField from 'src/Input/InputField'
-import Table from 'src/Table'
-import FieldSet from 'src/FieldSet';
+import { Code, Table } from 'fannypack';
 
 # Spacing
 
@@ -74,13 +61,13 @@ The **8px major scale** is most commonly used for positional spacing. Like **hei
 
 ### Usage via CSS props
 
-<Playground>
-  <FieldSet isHorizontal spacing="major-2">
-    <InputField label="First name" />
-    <InputField label="Last name" />
-  </FieldSet>
-  <Button marginTop="major-2">Save</Button>
-</Playground>
+```.jsx
+<FieldSet isHorizontal spacing="major-2">
+  <InputField label="First name" />
+  <InputField label="Last name" />
+</FieldSet>
+<Button marginTop="major-2">Save</Button>
+```
 
 ### Usage via styled components
 
@@ -149,9 +136,9 @@ Fannypack also exports a utility function called `space` to help you with calcul
 
 ### Usage via CSS props
 
-<Playground>
-  <Button padding="minor-1">Save</Button>
-</Playground>
+```.jsx
+<Button padding="minor-1">Save</Button>
+```
 
 ### Usage via styled components
 

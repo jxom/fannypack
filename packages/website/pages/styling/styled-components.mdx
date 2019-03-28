@@ -1,16 +1,4 @@
----
-name: Styled Components
-route: /styling/styled-components
-menu: Styling & Theming
-order: 1
----
-
-import { Playground } from 'docz';
 import PropsTable from '../../components/PropsTable';
-import styled from 'src/styled';
-import { Box } from 'src/primitives';
-import Button from 'src/Button';
-import Text from 'src/Text';
 
 # Styled Components
 
@@ -29,7 +17,7 @@ const RedButton = styled(Button)`
 <RedButton>I am a red button!</RedButton>
 ```
 
-## Accessing the theme
+### Accessing the theme
 
 Fannypack exports a `theme` utility function which you can use to access theme variables:
 
@@ -41,7 +29,7 @@ const LargeText = styled(Button)`
 `;
 ```
 
-## Accessing the palette
+### Accessing the palette
 
 Fannypack exports a `palette` utility function which you can use to access palette colors:
 

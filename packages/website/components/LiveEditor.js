@@ -39,12 +39,9 @@ const LiveProvider = styled(_LiveProvider)`
 export const LiveCode = withMDXComponents(({ components, scope, ...props }) => {
   const [code, setCode] = React.useState(props.code);
 
-  const playroomUrl = React.useMemo(
-    () => {
-      return `/playroom/#?code=${code ? base64url.encode(code) : ''}`;
-    },
-    [code]
-  );
+  const playroomUrl = React.useMemo(() => {
+    return `/playroom/#?code=${code ? base64url.encode(code) : ''}`;
+  }, [code]);
 
   function handleClickPlayroom() {
     window.open(playroomUrl, '_blank');

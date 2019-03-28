@@ -1,13 +1,3 @@
----
-name: Fonts
-route: /styling/fonts
-menu: Styling & Theming
-order: 3
----
-
-import { Playground } from 'docz';
-import Text from 'src/Text';
-
 # Fonts
 
 By default, Fannypack uses the following fonts as it's default font set:
@@ -34,7 +24,7 @@ export default () => (
 )
 ```
 
-## Loading Custom Fonts via Web Font Loader
+### Loading Custom Fonts via Web Font Loader
 
 Fannypack uses [Typekit's Web Font Loader](https://github.com/typekit/webfontloader) which allows you to load in fonts regardless of the source - without `<link>`, `@font-face` or `@import`. You can asynchronously load in fonts from Google Fonts, Typekit, Fonts.com, and Fontdeck, as well as self-hosted web fonts. [Click here to read more about it.](https://github.com/typekit/webfontloader)
 
@@ -60,15 +50,15 @@ const theme = {
 
 **Note:** It is recommended that you set a fallback font family when loading in a custom font so the browser can use the fallback font and switch over when the custom font has loaded.
 
-## Font Weights
+### Font Weights
 
 Fannypack currently has three font weights: `normal`, `semibold` and `bold`. You can also add your own custom font weights in the theme config if you wish.
 
-<Playground>
-  <Text fontWeight="normal">Normal text</Text><br/>
-  <Text fontWeight="semibold">Semibold text</Text><br/>
-  <Text fontWeight="bold">Bold text</Text>
-</Playground>
+```.jsx
+<Text fontWeight="normal">Normal text</Text><br/>
+<Text fontWeight="semibold">Semibold text</Text><br/>
+<Text fontWeight="bold">Bold text</Text>
+```
 
 You can also access the font weights in Styled Components through the Fannypack Theme:
 
@@ -80,24 +70,24 @@ const BoldText = styled(Text)`
 `;
 ```
 
-## Font Sizes
+### Font Sizes
 
 Fannypack uses a scale from 100-900 for font sizes. We use a numeric scale, instead of a contextual scale (like `small`, `medium`, etc) to maximize flexibility so you can easily add sizes inbetween if you need.
 
 `200` (16px) is the base font size.
 
-<Playground>
-  <Text fontSize="100">Text 100 - 12px</Text><br/>
-  <Text fontSize="150">Text 150 - 14px</Text><br/>
-  <Text>Text 200 - 16px (normal)</Text><br/>
-  <Text fontSize="300">Text 300 - 20px</Text><br/>
-  <Text fontSize="400">Text 400 - 24px</Text><br/>
-  <Text fontSize="500">Text 500 - 32px</Text><br/>
-  <Text fontSize="600">Text 600 - 40px</Text><br/>
-  <Text fontSize="700">Text 700 - 48px</Text><br/>
-  <Text fontSize="800">Text 800 - 60px</Text><br/>
-  <Text fontSize="900">Text 900 - 72px</Text><br/>
-</Playground>
+```.jsx
+<Text fontSize="100">Text 100 - 12px</Text><br/>
+<Text fontSize="150">Text 150 - 14px</Text><br/>
+<Text>Text 200 - 16px (normal)</Text><br/>
+<Text fontSize="300">Text 300 - 20px</Text><br/>
+<Text fontSize="400">Text 400 - 24px</Text><br/>
+<Text fontSize="500">Text 500 - 32px</Text><br/>
+<Text fontSize="600">Text 600 - 40px</Text><br/>
+<Text fontSize="700">Text 700 - 48px</Text><br/>
+<Text fontSize="800">Text 800 - 60px</Text><br/>
+<Text fontSize="900">Text 900 - 72px</Text><br/>
+```
 
 You can also access the font sizes in Styled Components through the Fannypack Theme:
 
@@ -110,9 +100,9 @@ const LargeText = styled(Text)`
 ```
 
 
-## Theming
+### Theming
 
-### Schema
+#### Schema
 
 ```jsx
 {

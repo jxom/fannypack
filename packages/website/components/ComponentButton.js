@@ -1,9 +1,5 @@
 import * as React from 'react';
-import { palette } from 'styled-tools';
-
-import styled from '../../styled';
-import Heading from '../../Heading';
-import Pane from '../../Pane';
+import { Heading, Pane, styled, palette } from 'fannypack';
 
 const Wrapper = styled(Pane)`
   display: flex;
@@ -25,12 +21,7 @@ const IconWrapper = styled(Pane)`
   justify-content: center;
 `;
 
-type Props = {
-  href: string;
-  name: string;
-};
-
-class ComponentButton extends React.PureComponent<Props> {
+class ComponentButton extends React.PureComponent {
   state = { Icon: null };
 
   componentDidMount = () => {

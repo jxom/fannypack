@@ -1,10 +1,3 @@
----
-name: Global Styles
-route: /styling/global-styles
-menu: Styling & Theming
-order: 3
----
-
 # Global Styles
 
 To add global styles to Fannypack, you will need to inject them in the Fannypack theme:
@@ -28,14 +21,14 @@ export default () => (
 )
 ```
 
-## Theming
+### Theming
 
-### Schema
+#### Schema
 
 ```jsx
 {
   global: {
-    base: css | string
+    base: css | Object
   }
 }
 ```

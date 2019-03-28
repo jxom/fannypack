@@ -93,17 +93,9 @@ function Sidebar(props) {
       setLogo(logo.default);
     } catch (err) {}
   }
-  React.useEffect(
-    () => {
-      getLogo();
-    },
-    [layout.themeName, logoPath]
-  );
-
-  function handleChangeTheme(e) {
-    const theme = e.target.value;
-    layout.changeTheme(theme);
-  }
+  React.useEffect(() => {
+    getLogo();
+  }, [layout.themeName, logoPath]);
 
   return (
     <React.Fragment>
@@ -149,14 +141,6 @@ function Sidebar(props) {
               </React.Fragment>
             ))}
           </Menu>
-          <Flex justifyContent="center" marginTop="major-2" marginBottom="major-2" width="100%">
-            <Select
-              onChange={handleChangeTheme}
-              options={[{ label: 'Theme: Default', value: 'default' }, { label: 'Theme: Medipass', value: 'medipass' }]}
-              size="small"
-              value={layout.themeName}
-            />
-          </Flex>
         </Wrapper>
       </SidebarContainer>
     </React.Fragment>

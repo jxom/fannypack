@@ -1,16 +1,9 @@
-import * as React from 'react';
-import * as PropTypes from 'prop-types';
+import React from 'react';
+import { Table, Link } from 'fannypack';
 
-import { ComponentDetails } from '../utils/components';
-import Table from '../../../src/Table';
-import Link from '../../../src/Link';
 import ComponentStatusTag from './ComponentStatusTag';
 
-type Props = {
-  components: Array<ComponentDetails>;
-};
-
-const ComponentStatusTable: React.FunctionComponent<Props> = ({ components }) => {
+const ComponentStatusTable = ({ components }) => {
   return (
     <Table isFullWidth isStriped>
       <Table.Head>
@@ -39,10 +32,6 @@ const ComponentStatusTable: React.FunctionComponent<Props> = ({ components }) =>
       </Table.Body>
     </Table>
   );
-};
-
-ComponentStatusTable.propTypes = {
-  components: PropTypes.array.isRequired
 };
 
 export default ComponentStatusTable;

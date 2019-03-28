@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   components: '../fannypack/src/index.ts',
   outputPath: './out/playroom',
-  frameComponent: '../fannypack/src/_playroom/Frame.tsx',
+  frameComponent: './components/PlayroomFrame.js',
   webpackConfig: () => ({
     module: {
       rules: [

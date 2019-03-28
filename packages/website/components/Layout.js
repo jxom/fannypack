@@ -14,7 +14,7 @@ const components = {
   Component,
   a: ({ href, ...props }) => (
     <Link href={href}>
-      <fannypack.Link {...props} />
+      <fannypack.Link href={href} {...props} />
     </Link>
   ),
   blockquote: ({ children }) => (
@@ -93,6 +93,11 @@ function Layout(props) {
   const { children } = props;
   const { layout, route } = useDocsContext();
 
+  function handleChangeTheme(e) {
+    const theme = e.target.value;
+    layout.changeTheme(theme);
+  }
+
   return (
     <fannypack.Flex width="100%">
       {layout.isMobile && (
@@ -112,6 +117,15 @@ function Layout(props) {
       <Content breakpoint={route.breakpoint}>
         <MDXStyle components={{ ...components }}>{children}</MDXStyle>
       </Content>
+      <fannypack.Box fixed top="0.5rem" right="0.5rem" borderRadius="3px">
+        <fannypack.Select
+          border="5px solid white"
+          onChange={handleChangeTheme}
+          options={[{ label: 'Theme: Default', value: 'default' }, { label: 'Theme: Medipass', value: 'medipass' }]}
+          size={layout.isMobile ? 'small' : undefined}
+          value={layout.themeName}
+        />
+      </fannypack.Box>
     </fannypack.Flex>
   );
 }

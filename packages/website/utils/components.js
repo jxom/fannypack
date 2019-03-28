@@ -1,23 +1,9 @@
-import * as PropTypes from 'prop-types';
 // @ts-ignore
 import _groupBy from 'lodash/groupBy';
 
-export type ComponentDetails = {
-  name: string;
-  docsPath: string;
-  type: 'foundation' | 'component' | 'typography' | 'util' | 'layout' | 'form';
-  status: 'complete' | 'pending';
-};
-export const componentDetailsPropTypes = {
-  name: PropTypes.string.isRequired,
-  docsPath: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['foundation', 'component', 'typography', 'util', 'layout', 'form']).isRequired,
-  status: PropTypes.oneOf(['complete', 'pending']).isRequired
-};
+export const getSectionedComponents = () => _groupBy(componentList, component => component.type);
 
-export const getSectionedComponents = () => _groupBy(componentList, (component: ComponentDetails) => component.type);
-
-export const sectionTitles: { [key: string]: string } = {
+export const sectionTitles = {
   foundation: 'Foundation',
   typography: 'Typography',
   layout: 'Layout',
@@ -26,7 +12,7 @@ export const sectionTitles: { [key: string]: string } = {
   util: 'Utilities'
 };
 
-export const componentList: Array<ComponentDetails> = [
+export const componentList = [
   {
     name: 'Primitives',
     type: 'foundation',
@@ -104,12 +90,6 @@ export const componentList: Array<ComponentDetails> = [
     type: 'component',
     status: 'complete',
     docsPath: '/components/card'
-  },
-  {
-    name: 'Carousel',
-    type: 'component',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
   },
   {
     name: 'Checkbox',
@@ -271,7 +251,7 @@ export const componentList: Array<ComponentDetails> = [
     name: 'Popover',
     type: 'util',
     status: 'complete',
-    docsPath: '/utils/popover'
+    docsPath: '/components/popover'
   },
   {
     name: 'Portal',
@@ -380,11 +360,5 @@ export const componentList: Array<ComponentDetails> = [
     type: 'component',
     status: 'complete',
     docsPath: '/components/tooltip'
-  },
-  {
-    name: 'Video',
-    type: 'component',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
   }
 ];
