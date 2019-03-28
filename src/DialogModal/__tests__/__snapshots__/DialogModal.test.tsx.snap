@@ -951,6 +951,27 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   display: flex;
 }
 
+.c14 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.c14 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 .c16 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1050,27 +1071,6 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
 
 .c18:hover:active {
   background-color: #3137a9;
-}
-
-.c14 {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.c14 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
 }
 
 .c11 {
@@ -1360,6 +1360,27 @@ exports[`renders correctly for a dialog modal with kind alert 1`] = `
   display: flex;
 }
 
+.c11 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.c11 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 .c13 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1459,27 +1480,6 @@ exports[`renders correctly for a dialog modal with kind alert 1`] = `
 
 .c15:hover:active {
   background-color: #3137a9;
-}
-
-.c11 {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.c11 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
 }
 
 .c8 {

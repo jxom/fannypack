@@ -51,7 +51,7 @@ export const SelectMenuIcon = styled.svg`
   width: 20px;
   height: 20px;
   right: 2px;
-  z-index: 1;
+  z-index: 0;
   fill: ${palette('text')};
 
   ${theme('fannypack.SelectMenu.Icon.base')};

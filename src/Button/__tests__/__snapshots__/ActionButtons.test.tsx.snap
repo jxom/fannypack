@@ -91,6 +91,27 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   position: relative;
 }
 
+.c0 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.c0 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 .c3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -224,27 +245,6 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   opacity: 0;
 }
 
-.c0 {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.c0 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
 <div
   class="c0 c1 c2"
   spacing="minor-2"
@@ -335,6 +335,27 @@ exports[`renders correctly for action buttons with a type 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c0 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.c0 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .c3 {
@@ -438,27 +459,6 @@ exports[`renders correctly for action buttons with a type 1`] = `
   background-color: #3137a9;
 }
 
-.c0 {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.c0 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
 <div
   class="c0 c1 c2"
   spacing="minor-2"
@@ -537,6 +537,27 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c0 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.c0 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .c3 {
@@ -631,27 +652,6 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   pointer-events: unset;
 }
 
-.c0 {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.c0 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
 <div
   class="c0 c1 c2"
   spacing="minor-2"
@@ -731,6 +731,27 @@ exports[`renders correctly for action buttons with custom text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c0 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.c0 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .c3 {
@@ -832,27 +853,6 @@ exports[`renders correctly for action buttons with custom text 1`] = `
 
 .c5:hover:active {
   background-color: #3137a9;
-}
-
-.c0 {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.c0 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
 }
 
 <div
@@ -935,6 +935,27 @@ exports[`renders correctly for default action buttons 1`] = `
   display: flex;
 }
 
+.c0 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.c0 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 .c3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1036,27 +1057,6 @@ exports[`renders correctly for default action buttons 1`] = `
   background-color: #3137a9;
 }
 
-.c0 {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.c0 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
 <div
   class="c0 c1 c2"
   spacing="minor-2"
@@ -1135,6 +1135,27 @@ exports[`renders correctly when a palette prop is set 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c0 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.c0 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .c3 {
@@ -1236,27 +1257,6 @@ exports[`renders correctly when a palette prop is set 1`] = `
 
 .c5:hover:active {
   background-color: #30404f;
-}
-
-.c0 {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.c0 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
 }
 
 <div

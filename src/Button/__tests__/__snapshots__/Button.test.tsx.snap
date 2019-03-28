@@ -1294,6 +1294,27 @@ exports[`renders correctly for a list of buttons 1`] = `
   display: flex;
 }
 
+.c0 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.c0 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 .c3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1343,27 +1364,6 @@ exports[`renders correctly for a list of buttons 1`] = `
 
 .c3:hover:active {
   background-color: #e3e3e3;
-}
-
-.c0 {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.c0 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
 }
 
 <div
