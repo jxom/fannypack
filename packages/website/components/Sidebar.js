@@ -4,6 +4,7 @@ import {
   Hidden,
   Icon,
   Image,
+  Link as _Link,
   Menu as _Menu,
   Sidebar as PopoutSidebar,
   palette,
@@ -120,8 +121,13 @@ function Sidebar(props) {
                         {hidden.isVisible && (
                           <Box paddingLeft="major-2" width="100%">
                             {menuItem.map((item, i) => (
-                              <Link key={i} href={item.path}>
-                                <Menu.Item color={route.path === item.path ? 'primary' : undefined} fontWeight="400">
+                              <Link key={i} href={item.path} prefetch>
+                                <Menu.Item
+                                  use={_Link}
+                                  href={item.path}
+                                  color={route.path === item.path ? 'primary' : undefined}
+                                  fontWeight="400"
+                                >
                                   {item.name}
                                 </Menu.Item>
                               </Link>
@@ -132,7 +138,7 @@ function Sidebar(props) {
                     )}
                   </Hidden.Container>
                 ) : (
-                  <Link href={menuItem.path}>
+                  <Link href={menuItem.path} prefetch>
                     <Menu.Item color={route.path === menuItem.path ? 'primary' : undefined}>{name}</Menu.Item>
                   </Link>
                 )}

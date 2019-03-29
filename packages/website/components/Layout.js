@@ -13,7 +13,7 @@ const components = {
   ...fannypack,
   Component,
   a: ({ href, ...props }) => (
-    <Link href={href}>
+    <Link href={href} prefetch>
       <fannypack.Link href={href} {...props} />
     </Link>
   ),

@@ -45,7 +45,6 @@ export default class MyDocument extends Document {
           <meta name="og:type" content="website" />
           <meta name="og:title" content="Fannypack" />
           <meta name="og:description" content="A friendly, themeable, accessible React UI Kit" />
-          <title>Fannypack</title>
         </Head>
         <body>
           <Main />

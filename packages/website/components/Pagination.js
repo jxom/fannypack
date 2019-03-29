@@ -12,7 +12,7 @@ function Pagination() {
   return (
     <Flex justifyContent="space-between">
       {previous && (
-        <Link href={previous.path}>
+        <Link href={previous.path} prefetch>
           <Button iconBefore="solid-arrow-left" kind="ghost" palette="primary">
             {previous.name}
           </Button>
@@ -20,7 +20,7 @@ function Pagination() {
       )}
       <div />
       {next && (
-        <Link href={next.path}>
+        <Link href={next.path} prefetch>
           <Button iconAfter="solid-arrow-right" kind="ghost" palette="primary">
             {next.name}
           </Button>

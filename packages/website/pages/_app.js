@@ -1,6 +1,7 @@
 import 'parse-prop-types';
 import 'babel-polyfill';
 import React from 'react';
+import Head from 'next/head';
 import App, { Container } from 'next/app';
 import * as fannypack from 'fannypack';
 
@@ -32,6 +33,9 @@ export default class MyApp extends App {
     const { Component, page, headManager, ...props } = this.props;
     return (
       <Container>
+        <Head>
+          <title>Fannypack</title>
+        </Head>
         <DocsContext.Provider {...props} routes={routes}>
           <Wrapper>
             <Component {...page} />
