@@ -66,6 +66,6 @@ export default [
   { menu: 'Styling & Theming', name: 'Styled components', path: '/styling/styled-components', breakpoint: 'tablet' },
   { menu: 'Styling & Theming', name: 'Fonts', path: '/styling/fonts', breakpoint: 'tablet' },
   { menu: 'Styling & Theming', name: 'Spacing', path: '/styling/spacing', breakpoint: 'tablet' },
-  { name: 'Playroom', path: '/playroom' },
+  { name: 'Playroom', path: '/playroom/' },
   { name: 'Component Status', path: '/component-status', breakpoint: 'tablet' }
 ];
