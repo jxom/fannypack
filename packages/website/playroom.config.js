@@ -19,6 +19,9 @@ module.exports = {
       ]
     },
     resolve: {
+      alias: {
+        fannypack: path.resolve(__dirname, '../fannypack/src')
+      },
       extensions: ['.mjs', '.js', '.json', '.ts', '.tsx']
     }
   }),
