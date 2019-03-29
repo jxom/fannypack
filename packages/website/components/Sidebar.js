@@ -121,15 +121,16 @@ function Sidebar(props) {
                         {hidden.isVisible && (
                           <Box paddingLeft="major-2" width="100%">
                             {menuItem.map((item, i) => (
-                              <Menu.Item
-                                key={i}
-                                use={_Link}
-                                href={item.path}
-                                color={route.path === item.path ? 'primary' : undefined}
-                                fontWeight="400"
-                              >
-                                {item.name}
-                              </Menu.Item>
+                              <Link key={i} href={item.path} prefetch>
+                                <Menu.Item
+                                  use={_Link}
+                                  href={item.path}
+                                  color={route.path === item.path ? 'primary' : undefined}
+                                  fontWeight="400"
+                                >
+                                  {item.name}
+                                </Menu.Item>
+                              </Link>
                             ))}
                           </Box>
                         )}
@@ -137,16 +138,21 @@ function Sidebar(props) {
                     )}
                   </Hidden.Container>
                 ) : (
-                  <Menu.Item
-                    use={_Link}
-                    href={menuItem.path}
-                    color={route.path === menuItem.path ? 'primary' : undefined}
-                  >
-                    {name}
-                  </Menu.Item>
+                  <Link href={menuItem.path} prefetch>
+                    <Menu.Item
+                      use={_Link}
+                      href={menuItem.path}
+                      color={route.path === menuItem.path ? 'primary' : undefined}
+                    >
+                      {name}
+                    </Menu.Item>
+                  </Link>
                 )}
               </React.Fragment>
             ))}
+            <Menu.Item use={_Link} href="/playroom/" target="_blank" rel="noreferrer noopener">
+              Playroom
+            </Menu.Item>
           </Menu>
         </Wrapper>
       </SidebarContainer>
