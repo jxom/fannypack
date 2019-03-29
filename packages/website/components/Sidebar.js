@@ -139,7 +139,13 @@ function Sidebar(props) {
                   </Hidden.Container>
                 ) : (
                   <Link href={menuItem.path} prefetch>
-                    <Menu.Item color={route.path === menuItem.path ? 'primary' : undefined}>{name}</Menu.Item>
+                    <Menu.Item
+                      use={_Link}
+                      href={menuItem.path}
+                      color={route.path === menuItem.path ? 'primary' : undefined}
+                    >
+                      {name}
+                    </Menu.Item>
                   </Link>
                 )}
               </React.Fragment>
