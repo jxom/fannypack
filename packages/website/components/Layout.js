@@ -121,7 +121,7 @@ function Layout(props) {
         <fannypack.Select
           border="5px solid white"
           onChange={handleChangeTheme}
-          options={[{ label: 'Theme: Default', value: 'default' }, { label: 'Theme: Medipass', value: 'medipass' }]}
+          options={[{ label: 'Theme: Default', value: 'default' }]}
           size={layout.isMobile ? 'small' : undefined}
           value={layout.themeName}
         />
