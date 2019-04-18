@@ -1,0 +1,37 @@
+import PropsTable from '../../components/PropsTable';
+import { Box, Button, Menu, Set } from 'fannypack';
+import { ProgressBar } from 'fannypack/ProgressBar';
+
+# ProgressBar
+
+### Import
+
+```jsx
+import { ProgressBar } from 'fannypack'
+```
+
+### Basic Usage
+
+```.jsx
+<ProgressBar value={75} />
+```
+
+### Props
+
+<PropsTable component={ProgressBar} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  ProgressBar: {
+    base: css | Object,
+    sizes: {
+      medium: css | Object,
+      lərge: css | Object,
+    };
+  }
+}
+```
