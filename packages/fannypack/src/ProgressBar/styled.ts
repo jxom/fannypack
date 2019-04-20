@@ -1,24 +1,33 @@
+import { tint } from 'polished';
 import { Box } from '../primitives';
 import styled, { css, palette, theme } from '../styled';
 import { LocalProgressBarProps } from './ProgressBar';
 
 const sizeAttributes: any = {
-  medium: css``,
-  large: css``
+  small: css`
+    height: 0.6rem;
+  `,
+  medium: css`
+    height: 1.5rem;
+  `,
+  large: css`
+    height: 2rem;
+  `
 };
 
 export const ProgressBarIndicator = styled(Box)`
-  height: 1rem;
-  background-color: ${palette()};
-  width: ${props => props.value || '0'}%;
+  height: 100%;
+  background-color: ${(props: any) => palette(props.color, props.color)};
   transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  width: ${props => props.value || '0'}%;
 `;
 
 export const ProgressBar = styled(Box)<LocalProgressBarProps>`
-  /* rounded: border-radius: 1rem; */
+  border-radius: 3px;
+  overflow: hidden;
   width: 100%;
   height: 1rem;
-  background-color: ${props => palette(`${props.palette}Tint`)};
+  background-color: ${(props: any) => tint(0.9, palette(props.color, props.color)(props))};
 
   ${props => props.size && sizeAttributes[props.size]}
 
