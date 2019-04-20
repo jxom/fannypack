@@ -11,6 +11,7 @@ export const ProgressBarIndicator = styled(Box)`
   height: 1rem;
   background-color: ${palette()};
   width: ${props => props.value || '0'}%;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 `;
 
 export const ProgressBar = styled(Box)<LocalProgressBarProps>`

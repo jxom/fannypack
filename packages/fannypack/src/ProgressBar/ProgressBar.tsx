@@ -8,6 +8,7 @@ import _ProgressBar, { ProgressBarIndicator } from './styled';
 
 export type LocalProgressBarProps = {
   palette?: string;
+  value?: number;
 };
 export type ProgressBarProps = ReakitBoxProps & LocalProgressBarProps;
 
@@ -18,11 +19,13 @@ export const ProgressBar: React.FunctionComponent<LocalProgressBarProps> = ({ ..
 );
 
 ProgressBar.propTypes = {
-  palette: PropTypes.string
+  palette: PropTypes.string,
+  value: PropTypes.number
 };
 
 ProgressBar.defaultProps = {
-  palette: 'primary'
+  palette: 'primary',
+  value: undefined
 };
 
 // @ts-ignore
