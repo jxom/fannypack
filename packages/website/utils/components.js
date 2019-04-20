@@ -257,7 +257,7 @@ export const componentList = [
     name: 'ProgressBar',
     type: 'component',
     status: 'complete',
-    docsPath: '/components/progressbaar'
+    docsPath: '/components/progressbar'
   },
   {
     name: 'Portal',

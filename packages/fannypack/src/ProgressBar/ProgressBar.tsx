@@ -27,6 +27,7 @@ export const ProgressBar: React.FunctionComponent<LocalProgressBarProps> = ({ ma
   newValue = normalizeValue(newValue, newMaxValue);
   const percent = (newValue / newMaxValue) * 100;
   return (
+    // @ts-ignore
     <_ProgressBar role="progressbar" aria-valuenow={newValue} aria-valuemin={0} aria-valuemax={newMaxValue} {...props}>
       <ProgressBarIndicator color={props.color} value={percent} />
     </_ProgressBar>
