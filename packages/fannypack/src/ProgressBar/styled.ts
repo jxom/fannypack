@@ -6,12 +6,24 @@ import { LocalProgressBarProps } from './ProgressBar';
 const sizeAttributes: any = {
   small: css`
     height: 0.6rem;
+
+    & {
+      ${theme('fannypack.ProgressBar.sizes.small')};
+    }
   `,
   medium: css`
     height: 1.5rem;
+
+    & {
+      ${theme('fannypack.ProgressBar.sizes.medium')};
+    }
   `,
   large: css`
     height: 2rem;
+
+    & {
+      ${theme('fannypack.ProgressBar.sizes.large')};
+    }
   `
 };
 
@@ -20,6 +32,10 @@ export const ProgressBarIndicator = styled(Box)`
   background-color: ${(props: any) => palette(props.color, props.color)};
   transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   width: ${props => props.value || '0'}%;
+
+  & {
+    ${theme('fannypack.ProgressBar.indicator')};
+  }
 `;
 
 export const ProgressBar = styled(Box)<LocalProgressBarProps>`
@@ -29,10 +45,10 @@ export const ProgressBar = styled(Box)<LocalProgressBarProps>`
   height: 1rem;
   background-color: ${(props: any) => tint(0.9, palette(props.color, props.color)(props))};
 
-  ${props => props.size && sizeAttributes[props.size]}
+  ${props => props.size && sizeAttributes[props.size || '']}
 
   & {
-    ${theme('fannypack.Badge.base')};
+    ${theme('fannypack.ProgressBar.base')};
   }
 `;
 
