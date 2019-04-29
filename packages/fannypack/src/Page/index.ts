@@ -1,6 +1,6 @@
-import Plain from './Plain';
+import PageContent from './PageContent';
 
-export default { Plain };
+export default { Content: PageContent };
 
-export * from './Plain';
-export { default as Plain } from './Plain';
+export * from './PageContent';
+export { default as PageContent } from './PageContent';

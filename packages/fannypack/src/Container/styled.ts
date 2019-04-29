@@ -54,14 +54,16 @@ export const Container = styled(Box)<ContainerProps>`
   ${props =>
     props.isFluid &&
     css`
-      padding: ${theme('fannypack.Container.fluidMargin')};
+      padding-left: ${theme('fannypack.Container.fluidMargin')};
+      padding-right: ${theme('fannypack.Container.fluidMargin')};
     `};
 
   ${props =>
-    props.isLayout &&
+    (props.isLayout || props.isFluid) &&
     css`
       @media (max-width: ${theme('fannypack.layout.tabletBreakpoint')}px) {
-        padding: ${theme('fannypack.Container.tabletMargin')};
+        padding-left: ${theme('fannypack.Container.tabletMargin')};
+        padding-right: ${theme('fannypack.Container.tabletMargin')};
       }
     `};
 
