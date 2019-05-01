@@ -8,12 +8,12 @@ import _get from 'lodash/get';
 
 import { withTheme } from '../styled';
 
-export type Actions = {
+type Actions = {
   openSidebar: () => void;
   closeSidebar: () => void;
   handleChangeCollapsed: (isCollapsed: boolean) => void;
 };
-export type State = {
+type State = {
   isCollapsed: boolean;
   isSidebarOpen: boolean;
 };
