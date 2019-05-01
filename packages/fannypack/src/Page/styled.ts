@@ -3,7 +3,7 @@ import _get from 'lodash/get';
 import styled, { css, palette, space, theme } from '../styled';
 import { Box, Flex } from '../primitives';
 import { Container } from '../Container';
-import { Sidebar as _Sidebar } from '../Sidebar';
+import { Sidebar as _Sidebar, SidebarProps } from '../Sidebar';
 import { PageContentProps } from './PageContent';
 import { PageWithSidebarProps } from './PageWithSidebar';
 
@@ -35,12 +35,12 @@ export const PageContent = styled(Container)<PageContentProps>`
   }
 `;
 
-export const Spacer = styled(Box)`
-  width: ${theme('fannypack.Page.WithSidebar.sidebarWidth')};
-  min-width: ${theme('fannypack.Page.WithSidebar.sidebarWidth')};
+export const Spacer = styled(Box)<{ sidebarWidth?: string }>`
+  width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
+  min-width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
 
   @media screen and (max-width: ${props =>
-      theme(`fannypack.layout.${_get(props, 'theme.fannypack.Page.WithSidebar.breakpoint')}Breakpoint`)}px) {
+      theme(`fannypack.layout.${_get(props, 'theme.fannypack.Page.collapseBreakpoint')}Breakpoint`)}px) {
     width: 0px;
     min-width: 0px;
 
@@ -54,11 +54,11 @@ export const Spacer = styled(Box)`
   }
 `;
 
-export const Sidebar = styled(Box)`
+export const Sidebar = styled(Box)<{ sidebarWidth?: string }>`
   background-color: ${palette('white700')};
   height: 100vh;
-  min-width: ${theme('fannypack.Page.WithSidebar.sidebarWidth')};
-  width: ${theme('fannypack.Page.WithSidebar.sidebarWidth')};
+  min-width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
+  width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
   overflow-y: scroll;
   transform: translateX(0px);
 
@@ -71,7 +71,7 @@ export const DesktopSidebarWrapper = styled(Box)`
   position: fixed;
 
   @media screen and (max-width: ${props =>
-      theme(`fannypack.layout.${_get(props, 'theme.fannypack.Page.WithSidebar.breakpoint')}Breakpoint`)}px) {
+      theme(`fannypack.layout.${_get(props, 'theme.fannypack.Page.collapseBreakpoint')}Breakpoint`)}px) {
     display: none;
   }
 
@@ -80,18 +80,19 @@ export const DesktopSidebarWrapper = styled(Box)`
   }
 `;
 
-export const MobileSidebarWrapper = styled(_Sidebar)`
+export const MobileSidebarWrapper = styled(_Sidebar)<{ sidebarWidth?: string }>`
   @media screen and (min-width: ${props =>
-      theme(`fannypack.layout.${_get(props, 'theme.fannypack.Page.WithSidebar.breakpoint')}Breakpoint`)(props) + 1}px) {
+      theme(`fannypack.layout.${_get(props, 'theme.fannypack.Page.collapseBreakpoint')}Breakpoint`)(props) + 1}px) {
     display: none;
   }
+  width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
 
   & {
     ${theme('fannypack.Page.WithSidebar.MobileSidebarWrapper.base')};
   }
 `;
 
-export const PageWithSidebar = styled(Flex)<PageWithSidebarProps>`
+export const PageWithSidebar = styled(Flex)`
   & {
     ${theme('fannypack.Page.WithSidebar.base')};
   }

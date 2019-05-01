@@ -1,13 +1,14 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import Media from 'react-media';
 // @ts-ignore
 import _get from 'lodash/get';
 import { FlexProps as ReakitFlexProps } from 'reakit/ts';
 
+import { Omit } from '../types';
 import { Box } from '../primitives';
 import { withTheme } from '../styled';
-import { withPage } from './PageContainer';
+import { SidebarProps, sidebarPropTypes, sidebarDefaultProps } from '../Sidebar/Sidebar';
+import PageContainer from './PageContainer';
 import {
   PageWithSidebar as _PageWithSidebar,
   Spacer,
@@ -18,60 +19,64 @@ import {
 
 export type LocalPageWithSidebarProps = {
   children: React.ReactNode;
-  page: Object;
-  theme: Object;
+  sidebarContent: React.ReactElement<any>;
+  sidebarProps?: Omit<SidebarProps, 'children'>;
+  sidebarWidth?: string;
+  theme?: Object;
 };
 export type PageWithSidebarProps = ReakitFlexProps & LocalPageWithSidebarProps;
 
-// TODO:
-// - Sidebar content
-// - Sidebar props
-
 export const PageWithSidebar: React.FunctionComponent<LocalPageWithSidebarProps> = ({
   children,
-  page,
+  sidebarContent,
+  sidebarProps,
+  sidebarWidth,
   theme,
   ...props
 }) => {
-  const breakpoint = _get(theme, 'fannypack.Page.WithSidebar.breakpoint');
-  const breakpointPx = _get(theme, `fannypack.layout.${breakpoint}Breakpoint`);
   return (
-    <_PageWithSidebar {...props}>
-      <Spacer />
-      <Media query={`(max-width: ${breakpointPx}px)`}>
-        {isMobile =>
-          isMobile ? (
+    <PageContainer>
+      {page => (
+        <_PageWithSidebar {...props}>
+          <Spacer sidebarWidth={sidebarWidth} />
+          {page && page.isCollapsed ? (
+            // @ts-ignore
             <MobileSidebarWrapper
+              {...sidebarProps}
               isVisible={page.isSidebarOpen}
               onClickClose={page.closeSidebar}
               hide={page.closeSidebar}
+              width={sidebarWidth}
             >
-              <Sidebar>test</Sidebar>
+              <Sidebar sidebarWidth={sidebarWidth}>{sidebarContent}</Sidebar>
             </MobileSidebarWrapper>
           ) : (
             <DesktopSidebarWrapper>
-              <Sidebar>test</Sidebar>
+              <Sidebar sidebarWidth={sidebarWidth}>{sidebarContent}</Sidebar>
             </DesktopSidebarWrapper>
-          )
-        }
-      </Media>
-      <Box width="100%">{children}</Box>
-    </_PageWithSidebar>
+          )}
+          <Box width="100%">{children}</Box>
+        </_PageWithSidebar>
+      )}
+    </PageContainer>
   );
 };
 
 export const PageWithSidebarPropTypes = {
   children: PropTypes.node.isRequired,
-  page: PropTypes.object,
+  sidebarContent: PropTypes.element.isRequired,
+  sidebarProps: PropTypes.shape(sidebarPropTypes),
+  sidebarWidth: PropTypes.string,
   theme: PropTypes.object
 };
 PageWithSidebar.propTypes = PageWithSidebarPropTypes;
 
 export const PageWithSidebarDefaultProps = {
-  page: {},
+  sidebarProps: {},
+  sidebarWidth: '250px',
   theme: {}
 };
 PageWithSidebar.defaultProps = PageWithSidebarDefaultProps;
 
-const C: React.FunctionComponent<PageWithSidebarProps> = withPage(withTheme(PageWithSidebar));
+const C: React.FunctionComponent<PageWithSidebarProps> = withTheme(PageWithSidebar);
 export default C;

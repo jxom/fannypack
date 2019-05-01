@@ -66,7 +66,7 @@ export default [
     menu: 'Templates',
     name: 'Sidebar',
     path: '/templates/page-with-sidebar',
-    breakpoint: 'fullHD',
+    breakpoint: 'desktop',
     isBeta: true
   },
   { menu: 'Styling & Theming', name: 'Theming', path: '/styling/theming', breakpoint: 'tablet' },
