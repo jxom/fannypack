@@ -4,7 +4,7 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 // @ts-ignore
 import _get from 'lodash/get';
 
-import { Omit, Size } from '../types';
+import { Omit, Size, sizePropType } from '../types';
 import _ProgressBar, { ProgressBarIndicator } from './styled';
 
 export type LocalProgressBarProps = {
@@ -38,7 +38,7 @@ export const ProgressBar: React.FunctionComponent<LocalProgressBarProps> = ({ ma
 export const progressBarPropTypes = {
   color: PropTypes.string,
   maxValue: PropTypes.number,
-  size: PropTypes.string,
+  size: sizePropType,
   value: PropTypes.number
 };
 ProgressBar.propTypes = progressBarPropTypes;

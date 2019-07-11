@@ -48,7 +48,7 @@ export class Badge extends React.Component<LocalBadgeProps> {
   render = () => {
     const { children, ...props } = this.props;
     return (
-      <_Badge elementRef={this.badge} {...props}>
+      <_Badge elementRef={this.badge} size="size" {...props}>
         {children}
       </_Badge>
     );
