@@ -22,14 +22,21 @@ function normalizeValue(value: number, maxValue: number) {
   return newValue;
 }
 
-export const ProgressBar: React.FunctionComponent<LocalProgressBarProps> = ({ maxValue, value, ...props }) => {
+export const ProgressBar: React.FunctionComponent<LocalProgressBarProps> = ({ maxValue, size, value, ...props }) => {
   let newValue = value || 0;
   let newMaxValue = maxValue || 100;
   newValue = normalizeValue(newValue, newMaxValue);
   const percent = (newValue / newMaxValue) * 100;
   return (
     // @ts-ignore
-    <_ProgressBar role="progressbar" aria-valuenow={newValue} aria-valuemin={0} aria-valuemax={newMaxValue} {...props}>
+    <_ProgressBar
+      role="progressbar"
+      aria-valuenow={newValue}
+      aria-valuemin={0}
+      aria-valuemax={newMaxValue}
+      styledSize={size}
+      {...props}
+    >
       <ProgressBarIndicator color={props.color} value={percent} />
     </_ProgressBar>
   );
