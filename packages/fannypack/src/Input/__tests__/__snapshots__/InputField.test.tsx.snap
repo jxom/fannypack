@@ -92,7 +92,7 @@ exports[`renders correctly for a basic input field 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value=""
     />
@@ -194,7 +194,7 @@ exports[`renders correctly for a disabled input field 1`] = `
       aria-required="false"
       class="c2 c3"
       disabled=""
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value=""
     />
@@ -1185,7 +1185,7 @@ exports[`renders correctly for an input field with a default value 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value="Awesome value"
     />
@@ -1735,7 +1735,7 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       placeholder="Awesome placeholder"
       type="text"
       value=""
@@ -1916,7 +1916,7 @@ exports[`renders correctly for an input with a after component 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c8 c9"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value=""
     />
@@ -2096,7 +2096,7 @@ exports[`renders correctly for an input with a before component 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c8 c9"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value=""
     />
@@ -2433,7 +2433,7 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value=""
     />
@@ -2543,7 +2543,7 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value=""
     />
@@ -2652,7 +2652,7 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value=""
     />
@@ -2758,7 +2758,7 @@ exports[`states renders correctly for an input field with state danger 1`] = `
       aria-invalid="true"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value=""
     />
@@ -2864,7 +2864,7 @@ exports[`states renders correctly for an input field with state primary 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value=""
     />
@@ -2970,7 +2970,7 @@ exports[`states renders correctly for an input field with state success 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value=""
     />
@@ -3076,7 +3076,7 @@ exports[`states renders correctly for an input field with state warning 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="text"
       value=""
     />
@@ -3177,7 +3177,7 @@ exports[`types renders correctly for an input field with type date 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="date"
       value=""
     />
@@ -3278,7 +3278,7 @@ exports[`types renders correctly for an input field with type email 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="email"
       value=""
     />
@@ -3379,7 +3379,7 @@ exports[`types renders correctly for an input field with type number 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="number"
       value=""
     />
@@ -3480,7 +3480,7 @@ exports[`types renders correctly for an input field with type password 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="password"
       value=""
     />
@@ -3581,7 +3581,7 @@ exports[`types renders correctly for an input field with type search 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="search"
       value=""
     />
@@ -3682,7 +3682,7 @@ exports[`types renders correctly for an input field with type tel 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="tel"
       value=""
     />
@@ -3783,7 +3783,7 @@ exports[`types renders correctly for an input field with type time 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="time"
       value=""
     />
@@ -3884,7 +3884,7 @@ exports[`types renders correctly for an input field with type url 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
-      id="FieldWrapper1"
+      id="FieldWrapper"
       type="url"
       value=""
     />

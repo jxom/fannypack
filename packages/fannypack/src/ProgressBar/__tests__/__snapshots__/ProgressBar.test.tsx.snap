@@ -145,7 +145,6 @@ exports[`renders correctly when a size prop is set 1`] = `
   class="c0 c1"
   color="primary"
   role="progressbar"
-  style="size: large;"
 >
   <div
     class="c2 c1"

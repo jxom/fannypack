@@ -201,7 +201,7 @@ exports[`renders correctly for a basic field 1`] = `
         >
           <label
             class="c7 c8 c9 c3"
-            for="FieldWrapper1"
+            for="FieldWrapper"
           >
             First name
           </label>
@@ -215,7 +215,7 @@ exports[`renders correctly for a basic field 1`] = `
           aria-invalid="false"
           aria-required="false"
           class="c11 c12"
-          id="FieldWrapper1"
+          id="FieldWrapper"
           name="firstName"
           type="text"
           value=""
@@ -235,7 +235,7 @@ exports[`renders correctly for a basic field 1`] = `
         >
           <label
             class="c7 c8 c9 c3"
-            for="FieldWrapper2"
+            for="FieldWrapper"
           >
             Last name
           </label>
@@ -249,7 +249,7 @@ exports[`renders correctly for a basic field 1`] = `
           aria-invalid="false"
           aria-required="false"
           class="c11 c12"
-          id="FieldWrapper2"
+          id="FieldWrapper"
           name="lastName"
           type="text"
           value=""
@@ -270,7 +270,7 @@ exports[`renders correctly for a basic field 1`] = `
       >
         <label
           class="c7 c8 c9 c3"
-          for="FieldWrapper3"
+          for="FieldWrapper"
         >
           Username
         </label>
@@ -284,7 +284,7 @@ exports[`renders correctly for a basic field 1`] = `
         aria-invalid="false"
         aria-required="false"
         class="c11 c12"
-        id="FieldWrapper3"
+        id="FieldWrapper"
         name="username"
         type="text"
         value=""
@@ -304,7 +304,7 @@ exports[`renders correctly for a basic field 1`] = `
       >
         <label
           class="c7 c8 c9 c3"
-          for="FieldWrapper4"
+          for="FieldWrapper"
         >
           Password
         </label>
@@ -318,7 +318,7 @@ exports[`renders correctly for a basic field 1`] = `
         aria-invalid="false"
         aria-required="false"
         class="c11 c12"
-        id="FieldWrapper4"
+        id="FieldWrapper"
         name="password"
         type="password"
         value=""
