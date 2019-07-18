@@ -17,7 +17,8 @@ const Context = React.createContext(generateId);
 export function IdProvider({ children, prefix = '' }: IdProviderProps) {
   const count = React.useRef(0);
   const genId = React.useMemo(
-    () => (localPrefix: string = defaultPrefix) => `${prefix}${localPrefix}${++count.current}`,
+    () => (localPrefix: string = defaultPrefix) =>
+      `${prefix}${localPrefix}${process.env.NODE_ENV === 'test' ? '' : ++count.current}`,
     [prefix]
   );
   return <Context.Provider value={genId}>{children}</Context.Provider>;
