@@ -28,11 +28,24 @@ export type LocalRadioGroupProps = {
   onChange?: React.FormEventHandler<HTMLInputElement>;
 };
 export type RadioGroupProps = ReakitBoxProps & LocalRadioGroupProps;
-
-export const RadioGroup: React.FunctionComponent<LocalRadioGroupProps> & {
+export type RadioGroupComponents = {
   Formik: React.FunctionComponent<RadioGroupProps>;
   ReduxForm: React.FunctionComponent<RadioGroupProps>;
-} = ({ a11yId, a11yLabel, className, defaultValue, disabled, onChange, options, name, state, value, ...props }) => (
+};
+
+export const RadioGroup: React.FunctionComponent<LocalRadioGroupProps> & RadioGroupComponents = ({
+  a11yId,
+  a11yLabel,
+  className,
+  defaultValue,
+  disabled,
+  onChange,
+  options,
+  name,
+  state,
+  value,
+  ...props
+}) => (
   <_RadioGroup
     aria-describedby="label"
     aria-invalid={state === 'danger'}
@@ -89,5 +102,5 @@ export const radioGroupDefaultProps = {
 RadioGroup.defaultProps = radioGroupDefaultProps;
 
 // @ts-ignore
-const C: React.FunctionComponent<RadioGroupProps> = RadioGroup;
+const C: React.FunctionComponent<RadioGroupProps> & RadioGroupComponents = RadioGroup;
 export default C;

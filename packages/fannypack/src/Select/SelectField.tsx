@@ -26,11 +26,12 @@ export type LocalSelectFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
     selectProps?: Omit<LocalSelectProps, 'options'>;
   };
 export type SelectFieldProps = LocalSelectFieldProps & SelectProps;
+export type SelectFieldComponents = {
+  Formik: React.FunctionComponent<SelectFieldProps>;
+  ReduxForm: React.FunctionComponent<SelectFieldProps>;
+};
 
-export const SelectField: React.FunctionComponent<LocalSelectFieldProps> & {
-  Formik: React.FunctionComponent<LocalSelectFieldProps>;
-  ReduxForm: React.FunctionComponent<LocalSelectFieldProps>;
-} = ({
+export const SelectField: React.FunctionComponent<LocalSelectFieldProps> & SelectFieldComponents = ({
   a11yLabel,
   a11yId,
   addonBefore,
@@ -131,5 +132,5 @@ export const selectFieldDefaultProps = {
 SelectField.defaultProps = selectFieldDefaultProps;
 
 // @ts-ignore
-const C: React.FunctionComponent<SelectFieldProps> = SelectField;
+const C: React.FunctionComponent<SelectFieldProps> & SelectFieldComponents = SelectField;
 export default C;

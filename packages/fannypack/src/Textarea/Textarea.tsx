@@ -56,11 +56,20 @@ export type LocalTextareaProps = {
   onFocus?: React.FocusEventHandler<HTMLTextAreaElement>;
 };
 export type TextareaProps = Omit<ReakitInputProps, 'size'> & LocalTextareaProps;
-
-export const Textarea: React.FunctionComponent<LocalTextareaProps> & {
+export type TextareaComponents = {
   Formik: React.FunctionComponent<TextareaProps>;
   ReduxForm: React.FunctionComponent<TextareaProps>;
-} = ({ a11yId, a11yLabel, isLoading, isRequired, size, state, ...props }) => (
+};
+
+export const Textarea: React.FunctionComponent<LocalTextareaProps> & TextareaComponents = ({
+  a11yId,
+  a11yLabel,
+  isLoading,
+  isRequired,
+  size,
+  state,
+  ...props
+}) => (
   <Box relative>
     <_Textarea
       use="textarea"
@@ -136,5 +145,5 @@ export const textareaDefaultProps = {
 Textarea.defaultProps = textareaDefaultProps;
 
 // @ts-ignore
-const C: React.FunctionComponent<TextareaProps> = Textarea;
+const C: React.FunctionComponent<TextareaProps> & TextareaComponents = Textarea;
 export default Textarea;

@@ -50,6 +50,10 @@ export type LocalSelectProps = {
   onFocus?: React.FocusEventHandler<HTMLSelectElement>;
 };
 export type SelectProps = Omit<Omit<ReakitInlineBlockProps, 'children'>, 'size'> & LocalSelectProps;
+export type SelectComponents = {
+  Formik: React.FunctionComponent<SelectProps>;
+  ReduxForm: React.FunctionComponent<SelectProps>;
+};
 
 export type SelectState = {
   isPlaceholderSelected: boolean;
@@ -190,5 +194,5 @@ Select.Formik = formikField(Select);
 Select.ReduxForm = reduxFormField(Select);
 
 // @ts-ignore
-const C: React.FunctionComponent<SelectProps> = Select;
+const C: React.FunctionComponent<SelectProps> & SelectComponents = Select;
 export default C;

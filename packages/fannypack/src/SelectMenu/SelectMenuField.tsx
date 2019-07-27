@@ -32,11 +32,12 @@ export type LocalSelectMenuFieldProps = Omit<LocalFieldWrapperProps, 'children'>
     selectMenuProps?: LocalSelectMenuProps;
   };
 export type SelectMenuFieldProps = SelectMenuProps & LocalSelectMenuFieldProps;
+export type SelectMenuFieldComponents = {
+  Formik: React.FunctionComponent<SelectMenuFieldProps>;
+  ReduxForm: React.FunctionComponent<SelectMenuFieldProps>;
+};
 
-export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps> & {
-  Formik: React.FunctionComponent<LocalSelectMenuFieldProps>;
-  ReduxForm: React.FunctionComponent<LocalSelectMenuFieldProps>;
-} = ({
+export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps> & SelectMenuFieldComponents = ({
   a11yId: _a11yId,
   addonBefore,
   addonAfter,
@@ -166,5 +167,5 @@ export const selectMenuFieldDefaultProps = {
 SelectMenuField.defaultProps = selectMenuFieldDefaultProps;
 
 // @ts-ignore
-const C: React.FunctionComponent<SelectMenuFieldProps> = SelectMenuField;
+const C: React.FunctionComponent<SelectMenuFieldProps> & SelectMenuFieldComponents = SelectMenuField;
 export default C;

@@ -18,11 +18,12 @@ export type LocalCheckboxFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
     checkboxProps?: LocalCheckboxProps;
   };
 export type CheckboxFieldProps = LocalCheckboxFieldProps & CheckboxProps;
-
-export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> & {
+export type CheckboxFieldComponents = {
   Formik: React.FunctionComponent<CheckboxFieldProps>;
   ReduxForm: React.FunctionComponent<CheckboxFieldProps>;
-} = ({
+};
+
+export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> & CheckboxFieldComponents = ({
   a11yId,
   autoFocus,
   checkboxLabel,
@@ -99,5 +100,5 @@ CheckboxField.defaultProps = {
 };
 
 // @ts-ignore
-const C: React.FunctionComponent<CheckboxFieldProps> = CheckboxField;
+const C: React.FunctionComponent<CheckboxFieldProps> & CheckboxFieldComponents = CheckboxField;
 export default C;

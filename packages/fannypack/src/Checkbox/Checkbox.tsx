@@ -35,11 +35,12 @@ export type LocalCheckboxProps = {
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
 };
 export type CheckboxProps = LocalCheckboxProps & ReakitLabelProps;
-
-export const Checkbox: React.FunctionComponent<LocalCheckboxProps> & {
+export type CheckboxComponents = {
   Formik: React.FunctionComponent<CheckboxProps>;
   ReduxForm: React.FunctionComponent<CheckboxProps>;
-} = ({
+};
+
+export const Checkbox: React.FunctionComponent<LocalCheckboxProps> & CheckboxComponents = ({
   autoFocus,
   checked,
   className,
@@ -131,5 +132,5 @@ export const checkboxDefaultProps = {
 Checkbox.defaultProps = checkboxDefaultProps;
 
 // @ts-ignore
-const C: React.FunctionComponent<CheckboxProps> = Checkbox;
+const C: React.FunctionComponent<CheckboxProps> & CheckboxComponents = Checkbox;
 export default C;

@@ -34,11 +34,12 @@ export type LocalRadioProps = {
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
 };
 export type RadioProps = ReakitLabelProps & LocalRadioProps;
-
-export const Radio: React.FunctionComponent<LocalRadioProps> & {
+export type RadioComponents = {
   Formik: React.FunctionComponent<RadioProps>;
   ReduxForm: React.FunctionComponent<RadioProps>;
-} = ({
+};
+
+export const Radio: React.FunctionComponent<LocalRadioProps> & RadioComponents = ({
   a11yId,
   autoFocus,
   checked,
@@ -122,5 +123,5 @@ export const radioDefaultProps = {
 Radio.defaultProps = radioDefaultProps;
 
 // @ts-ignore
-const C: React.FunctionComponent<RadioProps> = Radio;
+const C: React.FunctionComponent<RadioProps> & RadioComponents = Radio;
 export default C;

@@ -20,11 +20,12 @@ export type LocalSwitchFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
     switchProps?: LocalSwitchProps;
   };
 export type SwitchFieldProps = LocalSwitchFieldProps & SwitchProps;
+export type SwitchFieldComponents = {
+  Formik: React.FunctionComponent<SwitchFieldProps>;
+  ReduxForm: React.FunctionComponent<SwitchFieldProps>;
+};
 
-export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> & {
-  Formik: React.FunctionComponent<LocalSwitchFieldProps>;
-  ReduxForm: React.FunctionComponent<LocalSwitchFieldProps>;
-} = ({
+export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> & SwitchFieldComponents = ({
   a11yId,
   description,
   hint,
@@ -104,5 +105,5 @@ export const switchFieldDefaultProps = {
 SwitchField.defaultProps = switchFieldDefaultProps;
 
 // @ts-ignore
-const C: React.FunctionComponent<SwitchFieldProps> = SwitchField;
+const C: React.FunctionComponent<SwitchFieldProps> & SwitchFieldComponents = SwitchField;
 export default C;

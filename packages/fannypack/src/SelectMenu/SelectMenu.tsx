@@ -133,6 +133,8 @@ export type SelectMenuComponents = {
   Popover: React.FunctionComponent<MenuPopoverProps>;
   Tag: React.FunctionComponent<TagProps>;
   TopSection: React.FunctionComponent<BoxProps>;
+  Formik: React.FunctionComponent<SelectMenuProps>;
+  ReduxForm: React.FunctionComponent<SelectMenuProps>;
 };
 
 const selectMenuItemObjectPropType = PropTypes.shape({

@@ -36,11 +36,12 @@ export type LocalSwitchProps = {
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
 };
 export type SwitchProps = LocalSwitchProps & Omit<ReakitLabelProps, 'children'>;
-
-export const Switch: React.FunctionComponent<LocalSwitchProps> & {
+export type SwitchComponents = {
   Formik: React.FunctionComponent<SwitchProps>;
   ReduxForm: React.FunctionComponent<SwitchProps>;
-} = ({
+};
+
+export const Switch: React.FunctionComponent<LocalSwitchProps> & SwitchComponents = ({
   autoFocus,
   checked,
   className,
@@ -131,5 +132,5 @@ export const switchDefaultProps = {
 };
 Switch.defaultProps = switchDefaultProps;
 
-const C: React.FunctionComponent<SwitchProps> = Switch;
+const C: React.FunctionComponent<SwitchProps> & SwitchComponents = Switch;
 export default C;

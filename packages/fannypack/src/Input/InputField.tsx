@@ -24,11 +24,12 @@ export type LocalInputFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
     isVertical?: boolean;
   };
 export type InputFieldProps = LocalInputFieldProps & InputProps;
-
-export const InputField: React.FunctionComponent<LocalInputFieldProps> & {
+export type InputFieldComponents = {
   Formik: React.FunctionComponent<InputFieldProps>;
   ReduxForm: React.FunctionComponent<InputFieldProps>;
-} = ({
+};
+
+export const InputField: React.FunctionComponent<LocalInputFieldProps> & InputFieldComponents = ({
   addonBefore,
   addonAfter,
   a11yId,
@@ -156,5 +157,5 @@ export const inputFieldDefaultProps = {
 InputField.defaultProps = inputFieldDefaultProps;
 
 // @ts-ignore
-const C: React.FunctionComponent<InputFieldProps> = InputField;
+const C: React.FunctionComponent<InputFieldProps> & InputFieldComponents = InputField;
 export default C;

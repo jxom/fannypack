@@ -23,11 +23,12 @@ export type LocalRadioGroupFieldProps = Omit<LocalFieldWrapperProps, 'children'>
     radioGroupProps?: Omit<Omit<LocalRadioGroupProps, 'options'>, 'name'>;
   };
 export type RadioGroupFieldProps = RadioGroupProps & LocalRadioGroupFieldProps;
-
-export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps> & {
+export type RadioGroupFieldComponents = {
   Formik: React.FunctionComponent<RadioGroupFieldProps>;
   ReduxForm: React.FunctionComponent<RadioGroupFieldProps>;
-} = ({
+};
+
+export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps> & RadioGroupFieldComponents = ({
   a11yId,
   a11yLabel,
   className,
@@ -97,5 +98,5 @@ export const radioGroupFieldDefaultProps = {
 RadioGroupField.defaultProps = radioGroupFieldDefaultProps;
 
 // @ts-ignore
-const C: React.FunctionComponent<RadioGroupFieldProps> = RadioGroupField;
+const C: React.FunctionComponent<RadioGroupFieldProps> & RadioGroupFieldComponents = RadioGroupField;
 export default C;

@@ -18,11 +18,12 @@ export type LocalTextareaFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
     textareaProps?: LocalTextareaProps;
   };
 export type TextareaFieldProps = LocalTextareaFieldProps & TextareaProps;
+export type TextareaFieldComponents = {
+  Formik: React.FunctionComponent<TextareaFieldProps>;
+  ReduxForm: React.FunctionComponent<TextareaFieldProps>;
+};
 
-export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> & {
-  Formik: React.FunctionComponent<LocalTextareaFieldProps>;
-  ReduxForm: React.FunctionComponent<LocalTextareaFieldProps>;
-} = ({
+export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> & TextareaFieldComponents = ({
   a11yId,
   a11yLabel,
   autoComplete,
@@ -115,5 +116,5 @@ export const textareaFieldDefaultProps = {
 TextareaField.defaultProps = textareaFieldDefaultProps;
 
 // @ts-ignore
-const C: React.FunctionComponent<TextareaFieldProps> = TextareaField;
+const C: React.FunctionComponent<TextareaFieldProps> & TextareaFieldComponents = TextareaField;
 export default C;
