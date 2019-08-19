@@ -22,6 +22,7 @@ import _FieldWrapper, {
   HintText,
   OptionalText,
   RequiredText,
+  TooltipButton,
   TooltipPopover,
   ValidationText
 } from './styled';
@@ -89,17 +90,10 @@ export const FieldWrapper: React.FunctionComponent<LocalFieldWrapperProps> = ({
                 {...tooltipPopoverProps}
               >
                 {tooltipTrigger || (
-                  <Button
-                    kind="ghost"
-                    size="small"
-                    marginLeft="minor-1"
-                    minHeight="unset"
-                    height="14px"
-                    padding="0.1em 0.5em"
-                  >
+                  <TooltipButton kind="ghost" size="small">
                     <VisuallyHidden>Toggle tooltip</VisuallyHidden>
                     <Icon a11yHidden icon="question-circle" />
-                  </Button>
+                  </TooltipButton>
                 )}
               </TooltipPopover>
             )}

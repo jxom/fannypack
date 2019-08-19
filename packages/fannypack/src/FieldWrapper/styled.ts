@@ -5,6 +5,7 @@ import styled, { space } from '../styled';
 import { Omit } from '../types';
 // @ts-ignore
 import _Label from '../Label';
+import Button from '../Button';
 import Popover from '../Popover';
 // @ts-ignore
 import _Text from '../Text';
@@ -56,6 +57,17 @@ export const RequiredText = styled(_Text)`
 
   & {
     ${theme('fannypack.FieldWrapper.required')};
+  }
+`;
+
+export const TooltipButton = styled(Button)`
+  margin-left: ${space(1)}rem;
+  min-height: unset;
+  height: 14px;
+  padding: 0.1em 0.5em;
+
+  & {
+    ${theme('fannypack.FieldWrapper.TooltipButton.base')};
   }
 `;
 

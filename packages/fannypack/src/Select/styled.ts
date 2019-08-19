@@ -19,6 +19,10 @@ export const Icon = styled.svg`
   fill: ${palette('text')};
   transform: translateY(50%);
   pointer-events: none;
+
+  & {
+    ${theme('fannypack.Select.Icon.base')};
+  }
 `;
 
 export const LoadingSpinner = styled(Spinner)`

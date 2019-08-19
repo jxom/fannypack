@@ -14,9 +14,13 @@ import Container from './Container';
 import FieldSet from './FieldSet';
 import FieldWrapper from './FieldWrapper';
 import Heading from './Heading';
+import Input from './Input';
 import Label from './Label';
 import Page from './Page';
+import Select from './Select';
+import SelectMenu from './SelectMenu';
 import Table from './Table';
+import Tag from './Tag';
 import Toast from './Toast';
 
 export default {
@@ -38,8 +42,12 @@ export default {
   FieldSet,
   FieldWrapper,
   Heading,
+  Input,
   Label,
   Page,
+  Select,
+  SelectMenu,
   Table,
+  Tag,
   Toast
 };
