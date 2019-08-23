@@ -10,7 +10,7 @@ export default {
     border-radius: 0px;
     border: 2px solid ${(props: any) => (props.palette === 'default' ? palette('gray700') : 'transparent')};
     color: ${(props: any) => (props.palette === 'default' ? palette('gray700') : palette(`${props.palette}Inverted`))};
-    height: 44px;
+    min-height: 44px;
     padding: 0 ${space(4)}rem;
     font-size: 15px;
     text-transform: uppercase;
