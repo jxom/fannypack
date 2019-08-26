@@ -13,6 +13,7 @@ import Checkbox from './Checkbox';
 import Container from './Container';
 import FieldSet from './FieldSet';
 import FieldWrapper from './FieldWrapper';
+import Group from './Group';
 import Heading from './Heading';
 import Input from './Input';
 import Label from './Label';
@@ -41,6 +42,7 @@ export default {
   Container,
   FieldSet,
   FieldWrapper,
+  Group,
   Heading,
   Input,
   Label,
