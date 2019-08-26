@@ -47,9 +47,20 @@ export const PageContentWrapper = styled(Box)`
   }
 `;
 
-export const Spacer = styled(Box)<{ sidebarWidth?: string; hideSidebarOnDesktop?: string; isMinimized?: boolean }>`
+export const Spacer = styled(Box)<{
+  sidebarWidth?: string;
+  hideSidebarOnDesktop?: string;
+  isMinimized?: boolean;
+  isVisible?: boolean;
+}>`
   width: ${getWidth};
   min-width: ${getWidth};
+
+  ${props =>
+    !props.isVisible &&
+    css`
+      display: none;
+    `};
 
   @media screen and (max-width: ${props =>
       theme(`fannypack.layout.${_get(props, 'theme.fannypack.Page.collapseBreakpoint')}Breakpoint`)}px) {
@@ -92,11 +103,17 @@ export const Sidebar = styled(Box)<{ sidebarWidth?: string; isMinimized?: boolea
   }
 `;
 
-export const DesktopSidebarWrapper = styled(Box)`
+export const DesktopSidebarWrapper = styled(Box)<{ isVisible?: boolean }>`
   position: fixed;
 
+  ${props =>
+    !props.isVisible &&
+    css`
+      display: none;
+    `}
+
   @media screen and (max-width: ${props =>
-      theme(`fannypack.layout.${_get(props, 'theme.fannypack.Page.collapseBreakpoint')}Breakpoint`)}px) {
+    theme(`fannypack.layout.${_get(props, 'theme.fannypack.Page.collapseBreakpoint')}Breakpoint`)}px) {
     display: none;
   }
 

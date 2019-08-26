@@ -26,7 +26,7 @@ export type PageContainerProps = {
   theme?: Object;
 };
 
-const initialState = { isSidebarOpen: false, isCollapsed: false, isMinimized: false };
+const initialState = { isSidebarOpen: true, isCollapsed: false, isMinimized: false };
 
 const actions: ActionMap<State, Actions> = {
   openSidebar: () => () => ({
@@ -44,7 +44,7 @@ const actions: ActionMap<State, Actions> = {
   handleChangeCollapsed: isCollapsed => state => ({
     isCollapsed,
     isMinimized: isCollapsed ? false : state.isMinimized,
-    isSidebarOpen: false
+    isSidebarOpen: !isCollapsed
   })
 };
 
