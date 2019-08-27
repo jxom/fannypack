@@ -377,7 +377,7 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
       searchText
     });
 
-    if (options.length === 0) {
+    if (options.length === 0 && page > 1) {
       this.setState({ blockLoad: true });
     }
 
