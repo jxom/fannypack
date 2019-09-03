@@ -8,6 +8,7 @@ export default {
     hasHorizontalBar: true
   },
   base: css`
+    border-radius: 0px;
     width: 480px;
 
     @media screen and (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {

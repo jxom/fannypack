@@ -9,8 +9,11 @@ import palette from './palette';
 import ActionButtons from './ActionButtons';
 import Alert from './Alert';
 import Button from './Button';
+import Callout from './Callout';
+import Card from './Card';
 import Checkbox from './Checkbox';
 import Container from './Container';
+import Dialog from './Dialog';
 import FieldSet from './FieldSet';
 import FieldWrapper from './FieldWrapper';
 import Group from './Group';
@@ -18,6 +21,7 @@ import Heading from './Heading';
 import Input from './Input';
 import Label from './Label';
 import Page from './Page';
+import Popover from './Popover';
 import Select from './Select';
 import SelectMenu from './SelectMenu';
 import Table from './Table';
@@ -38,8 +42,11 @@ export default {
   ActionButtons,
   Alert,
   Button,
+  Callout,
+  Card,
   Checkbox,
   Container,
+  Dialog,
   FieldSet,
   FieldWrapper,
   Group,
@@ -47,6 +54,7 @@ export default {
   Input,
   Label,
   Page,
+  Popover,
   Select,
   SelectMenu,
   Table,
