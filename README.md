@@ -61,7 +61,7 @@ Feel like contributing? That's awesome! We have a [Contributing guide](/CONTRIBU
 
 ## Happy Customers
 
-- "If anyone had to marry a UI kit, they’d marry Fannypack because its the whole package." - Claudia Nadalin, [Wedding Bird](https://weddingbird.co/)
+- "If anyone had to marry a UI kit, they’d marry Fannypack because its the whole package." - Claudia Nadalin, [Weddingbird](https://weddingbird.co/)
 
 ## Acknowledgements
 
