@@ -59,6 +59,10 @@ Feel like contributing? That's awesome! We have a [Contributing guide](/CONTRIBU
 | [<img src="https://avatars2.githubusercontent.com/u/309754?v=4" width="100px;"/><br /><sub><b>Wez Pyke</b></sub>](http://twitter.com/wezpyke)<br />[💻](https://github.com/jxom/fannypack/commits?author=wezpyke "Code") | [<img src="https://media.licdn.com/dms/image/C5603AQH8xjLoHfaGfw/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=4BiZeiXhdfdlo-W9gt47KgeS8AjuxQc7VlZBXMOYgS8" width="100px;"/><br /><sub><b>Robert Gilmore</b></sub>](https://github.com/aaaaaaaaaaaaaaaaaaaaaaa)<br />[🎨](#design-aaaaaaaaaaaaaaaaaaaaaaa "Design") [🤔](#ideas-aaaaaaaaaaaaaaaaaaaaaaa "Ideas, Planning, & Feedback") | [<img src="https://avatars2.githubusercontent.com/u/40446421?v=4" width="100px;"/><br /><sub><b>Claudia</b></sub>](https://github.com/thepenskefile)<br />[💻](https://github.com/jxom/fannypack/commits?author=thepenskefile "Code") | [<img src="https://avatars3.githubusercontent.com/u/496255?v=4" width="100px;"/><br /><sub><b>Benjamin Gudehus</b></sub>](https://github.com/hastebrot)<br />[💻](https://github.com/jxom/fannypack/commits?author=hastebrot "Code") | [<img src="https://avatars2.githubusercontent.com/u/7591767?v=4" width="100px;"/><br /><sub><b>Adrian Kremer</b></sub>](https://github.com/adriankremer)<br />[💻](https://github.com/jxom/fannypack/commits?author=adriankremer "Code") [🔌](#plugin-adriankremer "Plugin/utility libraries") |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
+## Happy Customers
+
+- "If anyone had to marry a UI kit, they’d marry Fannypack because its the whole package." - Claudia Nadalin, [Wedding Bird](https://weddingbird.co/)
+
 ## Acknowledgements
 
 Thanks [Luke Edwards](https://twitter.com/lukeed05) for handing over the `fannypack` npm name!
