@@ -24,6 +24,7 @@ import Page from './Page';
 import Popover from './Popover';
 import Select from './Select';
 import SelectMenu from './SelectMenu';
+import Tabs from './Tabs';
 import Table from './Table';
 import Tag from './Tag';
 import Toast from './Toast';
@@ -57,6 +58,7 @@ export default {
   Popover,
   Select,
   SelectMenu,
+  Tabs,
   Table,
   Tag,
   Toast
