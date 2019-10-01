@@ -21,14 +21,8 @@ export default {
   },
   Content: {
     wrapper: css`
+      background-color: white;
       border-bottom: 1px solid ${palette('white900')};
-
-      &div:nth-child(even) {
-        background-color: white;
-      }
-      &div:nth-child(odd) {
-        background-color: ${palette('white600')};
-      }
     `
   }
 };
