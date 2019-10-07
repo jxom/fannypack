@@ -70,6 +70,7 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
   renderEmpty,
   renderError,
   renderOption,
+  renderTrigger,
   renderValue,
   selectMenuProps,
   searchInputProps,
@@ -126,6 +127,7 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
             renderEmpty={renderEmpty}
             renderError={renderError}
             renderOption={renderOption}
+            renderTrigger={renderTrigger}
             renderValue={renderValue}
             searchInputProps={searchInputProps}
             state={state}
