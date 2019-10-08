@@ -7,7 +7,7 @@ const bindFns = (...fns: Array<Function>) => (...args: any) => {
 
 export function formikField(
   Component: any,
-  { hasFieldWrapper = false, isCheckbox = false, isSelectMenu = false } = {}
+  { hasFieldWrapper = false, isCheckbox = false, isSelectMenu = false, useValue = false } = {}
 ) {
   return ({ field = {}, form = {}, ...props }: any) => {
     let overrideProps = {};
@@ -52,6 +52,9 @@ export function formikField(
       // @ts-ignore
       onChange = (value: any, option: any, newValues: any) => form.setFieldValue(field.name, newValues);
     }
+    if (useValue) {
+      onChange = (value: any) => form.setFieldValue(field.name, value);
+    }
     overrideProps = {
       ...overrideProps,
       onBlur: bindFns(onBlur, props.onBlur),
@@ -64,7 +67,7 @@ export function formikField(
 
 export function reduxFormField(
   Component: any,
-  { hasFieldWrapper = false, isCheckbox = false, isSelectMenu = false } = {}
+  { hasFieldWrapper = false, isCheckbox = false, isSelectMenu = false, useValue = false } = {}
 ) {
   return ({ input = {}, meta = {}, ...props }: any) => {
     let overrideProps = {};
@@ -105,6 +108,9 @@ export function reduxFormField(
       // @ts-ignore
       onChange = (value: any, option: any, newValues: any) => input.onChange(newValues);
       onBlur = () => input.onBlur(input.value);
+    }
+    if (useValue) {
+      onChange = (value: any) => input.onChange(value);
     }
 
     overrideProps = {
