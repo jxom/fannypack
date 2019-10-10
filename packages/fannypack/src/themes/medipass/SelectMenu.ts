@@ -35,5 +35,22 @@ export default {
     base: css`
       top: 13px;
     `
+  },
+  Tag: {
+    base: css`
+      border-radius: 0px;
+      background-color: ${palette('secondary')};
+      & button {
+        &:hover {
+          background-color: ${palette('secondary700')};
+        }
+        &:focus,
+        &:hover:focus {
+          background-color: ${palette('secondary700')};
+          box-shadow: inset ${palette('secondary')} 0px 0px 0px 2px;
+          outline-color: ${palette('secondary')};
+        }
+      }
+    `
   }
 };
