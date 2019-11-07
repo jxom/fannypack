@@ -6,6 +6,7 @@ import { Omit } from '../types';
 // @ts-ignore
 import _Label from '../Label';
 import Button from '../Button';
+import Pane from '../Pane';
 import Popover from '../Popover';
 // @ts-ignore
 import _Text from '../Text';
@@ -71,10 +72,13 @@ export const TooltipButton = styled(Button)`
   }
 `;
 
-export const TooltipPopover = styled(Popover)`
+export const TooltipPopover = styled(Pane)`
+  position: absolute;
   padding: ${space(1, 'major')}rem;
+  margin-top: ${space(1, 'major')}rem;
   width: max-content;
   max-width: 400px;
+  z-index: 999999;
 
   & {
     ${theme('fannypack.FieldWrapper.TooltipPopover.base')};

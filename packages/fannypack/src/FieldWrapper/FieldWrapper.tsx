@@ -7,13 +7,13 @@ import _omit from 'lodash/omit';
 import _get from 'lodash/get';
 
 import { Box, Flex } from '../primitives';
-import Button from '../Button';
+import Hidden from '../Hidden';
 import Icon from '../Icon';
-import Popover from '../Popover';
-import { LocalPopoverProps, popoverPropTypes } from '../Popover/Popover';
 import Text from '../Text';
+import { LocalPopoverProps, popoverPropTypes } from '../Popover/Popover';
 import { useUniqueId } from '../uniqueId';
 import VisuallyHidden from '../VisuallyHidden';
+import OutsideClickHandler from '../_utils/OutsideClickHandler';
 import { withTheme } from '../styled';
 import { Omit } from '../types';
 import _FieldWrapper, {
@@ -83,19 +83,30 @@ export const FieldWrapper: React.FunctionComponent<LocalFieldWrapperProps> = ({
             {isOptional && <OptionalText>OPTIONAL</OptionalText>}
             {isRequired && <RequiredText>*</RequiredText>}
             {tooltip && (
-              <TooltipPopover
-                placement="bottom-start"
-                content={typeof tooltip === 'string' ? <Text fontSize="150">{tooltip}</Text> : tooltip}
-                gutter={4}
-                {...tooltipPopoverProps}
-              >
-                {tooltipTrigger || (
-                  <TooltipButton kind="ghost" size="small">
-                    <VisuallyHidden>Toggle tooltip</VisuallyHidden>
-                    <Icon a11yHidden icon="question-circle" />
-                  </TooltipButton>
+              <Hidden.Container>
+                {hidden => (
+                  // @ts-ignore
+                  <OutsideClickHandler onOutsideClick={hidden.hide}>
+                    <Box relative>
+                      {tooltipTrigger ? (
+                        // @ts-ignore
+                        React.cloneElement(tooltipTrigger, { onClick: hidden.toggle })
+                      ) : (
+                        // @ts-ignore
+                        <TooltipButton onClick={hidden.toggle} kind="ghost" size="small">
+                          <VisuallyHidden>Toggle tooltip</VisuallyHidden>
+                          <Icon a11yHidden icon="question-circle" />
+                        </TooltipButton>
+                      )}
+                      {hidden.isVisible && (
+                        <TooltipPopover elevation="200" {...tooltipPopoverProps}>
+                          {typeof tooltip === 'string' ? <Text fontSize="150">{tooltip}</Text> : tooltip}
+                        </TooltipPopover>
+                      )}
+                    </Box>
+                  </OutsideClickHandler>
                 )}
-              </TooltipPopover>
+              </Hidden.Container>
             )}
           </Flex>
           {typeof description === 'string' ? (
