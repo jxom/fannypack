@@ -1,6 +1,6 @@
 {
   "name": "fannypack",
-  "version": "4.21.23",
+  "version": "4.21.24",
   "description": "An accessible, composable, and friendly React UI Kit",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -84,5 +84,5 @@
     "accessible",
     "composable"
   ],
-  "gitHead": "4ffc07c9ef0fee2e28ff70e16fed5cbe3ee6efff"
+  "gitHead": "af1bc21b26be48b34770a96cefa41c9e32c70d94"
 }
