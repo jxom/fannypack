@@ -61,8 +61,12 @@ it('renders correctly for an input with a after component', () => {
 });
 
 it('renders correctly for an input with inputProps data-testid attribute', () => {
-  const { container } = render(<Input inputProps={{
-    'data-testid': 'someTestId' 
-  }} />);
+  const { container } = render(
+    <Input
+      inputProps={{
+        'data-testid': 'someTestId'
+      }}
+    />
+  );
   expect(container.firstChild).toMatchSnapshot();
 });
