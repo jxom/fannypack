@@ -10,6 +10,10 @@ import { Omit } from '../types';
 import _Select, { LoadingSpinner } from './styled';
 import Icon from './Icon';
 
+type DataAttrProps = {
+  'data-testid'?: string;
+};
+
 export type LocalSelectProps = {
   /** ID for the select field */
   a11yId?: string;
@@ -35,7 +39,7 @@ export type LocalSelectProps = {
   options: Array<{ label: string; value: string; disabled?: boolean }>;
   /** Hint text to display */
   placeholder?: string;
-  selectProps?: ReakitInputProps;
+  selectProps?: ReakitInputProps & DataAttrProps;
   /** Alters the size of the select field. Can be "small", "medium" or "large" */
   size?: string;
   /** State of the select field. Can be any color in the palette. */

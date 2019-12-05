@@ -106,3 +106,19 @@ describe('states', () => {
     });
   });
 });
+
+it('renders correctly for a Select with inputProps data-testid attribute', () => {
+  const { container } = render(
+    <Select
+      selectProps={{
+        'data-testid': 'myTestId'
+      }}
+      options={[
+        { label: 'Sunny', value: 'sunny' },
+        { label: 'Windy', value: 'windy' },
+        { label: 'Overcast', value: 'overcast' }
+      ]}
+    />
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});
