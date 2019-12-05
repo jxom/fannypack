@@ -59,3 +59,10 @@ it('renders correctly for an input with a after component', () => {
   const { container } = render(<Input after={<Input.Icon a11yLabel="Search" icon="info-circle" />} />);
   expect(container.firstChild).toMatchSnapshot();
 });
+
+it('renders correctly for an input with inputProps data-testid attribute', () => {
+  const { container } = render(<Input inputProps={{
+    'data-testid': 'someTestId' 
+  }} />);
+  expect(container.firstChild).toMatchSnapshot();
+});

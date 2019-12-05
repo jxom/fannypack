@@ -12,6 +12,10 @@ import { Omit, Size, sizePropType } from '../types';
 import { IconProps } from '../Icon/Icon';
 import _Input, { Icon, InputWrapper, LoadingSpinner } from './styled';
 
+type DataAttrProps = {
+  'data-testid'?: string;
+};
+
 export type LocalInputProps = {
   after?: React.ReactElement<any>;
   /** An accessible identifier for the input */
@@ -28,7 +32,7 @@ export type LocalInputProps = {
   defaultValue?: string | string[];
   /** Disables the input */
   disabled?: boolean;
-  inputProps?: Omit<ReakitInputProps, 'ref'>;
+  inputProps?: Omit<ReakitInputProps, 'ref'> & DataAttrProps;
   inputRef?: React.RefObject<any>;
   /** Adds a cute loading indicator to the input field */
   isLoading?: boolean;
