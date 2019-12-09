@@ -28,8 +28,7 @@ export const PageContent = styled(Container)<PageContentProps>`
   ${props =>
     props.isFluid &&
     css`
-      padding-top: ${space(2, 'major')}rem;
-      padding-bottom: ${space(2, 'major')}rem;
+      padding: ${space(2, 'major')}rem ${theme('fannypack.Container.fluidMargin')};
 
       & {
         ${theme('fannypack.Page.Content.fluid')};
