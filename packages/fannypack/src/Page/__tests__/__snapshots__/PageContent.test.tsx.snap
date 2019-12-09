@@ -26,8 +26,7 @@ exports[`renders correctly for a PageContent with a fluid container 1`] = `
 
 .c1 {
   padding: 2rem 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 2rem;
 }
 
 @media (max-width:768px) {

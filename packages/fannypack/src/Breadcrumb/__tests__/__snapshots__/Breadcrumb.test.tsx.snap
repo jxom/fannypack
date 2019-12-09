@@ -64,8 +64,7 @@ exports[`Breadcrumb renders correctly 1`] = `
   content: '';
   display: inline-block;
   height: 0.8rem;
-  margin: 0 1rem;
-  margin-right: 0;
+  margin: 0 0.5rem;
   -webkit-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
   transform: rotate(15deg);
@@ -184,8 +183,7 @@ exports[`Breadcrumb with custom separationColor renders correctly 1`] = `
   content: '';
   display: inline-block;
   height: 0.8rem;
-  margin: 0 1rem;
-  margin-right: 0;
+  margin: 0 0.5rem;
   -webkit-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
   transform: rotate(15deg);
@@ -336,8 +334,7 @@ exports[`Breadcrumb with link renders correctly 1`] = `
   content: '';
   display: inline-block;
   height: 0.8rem;
-  margin: 0 1rem;
-  margin-right: 0;
+  margin: 0 0.5rem;
   -webkit-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
   transform: rotate(15deg);
