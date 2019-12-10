@@ -27,6 +27,7 @@ import SelectMenu from './SelectMenu';
 import Tabs from './Tabs';
 import Table from './Table';
 import Tag from './Tag';
+import Textarea from './Textarea';
 import Toast from './Toast';
 
 export default {
@@ -61,5 +62,6 @@ export default {
   Tabs,
   Table,
   Tag,
+  Textarea,
   Toast
 };
