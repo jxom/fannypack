@@ -542,7 +542,7 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     const selectedOptionsValues: SelectMenuItems = Object.values(selectedOptions);
 
     return (
-      <Loads context={contextKey} delay={0} load={this.loadOptions} defer={!this.loadOptions}>
+      <Loads context={contextKey} load={this.loadOptions} defer={!this.loadOptions}>
         {({ load, isPending }: { load: () => any; isPending: boolean }) => (
           <_SelectMenu setInitialFocus={!isSearchable} {...(isDropdown ? {} : props)}>
             {isSearchable && (

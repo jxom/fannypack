@@ -2,8 +2,6 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import ThemeProvider from 'reakit/Provider';
 // @ts-ignore
-import { LoadsContext } from 'react-loads-next';
-// @ts-ignore
 import _get from 'lodash/get';
 
 import { ThemeConfig } from '../types';
@@ -84,17 +82,15 @@ class Provider extends React.Component<LocalThemeProviderProps, State> {
     const { theme } = this.state;
     return (
       <ThemeProvider {...props} theme={theme}>
-        <LoadsContext.Provider>
-          <IdProvider>
-            <React.Fragment>
-              {/*
+        <IdProvider>
+          <React.Fragment>
+            {/*
             // @ts-ignore */}
-              {process.env.NODE_ENV !== 'test' && <Global />}
-              {process.env.NODE_ENV !== 'test' && !_get(theme, 'fannypack.Toast.disabled') && <ToastManager />}
-              {children}
-            </React.Fragment>
-          </IdProvider>
-        </LoadsContext.Provider>
+            {process.env.NODE_ENV !== 'test' && <Global />}
+            {process.env.NODE_ENV !== 'test' && !_get(theme, 'fannypack.Toast.disabled') && <ToastManager />}
+            {children}
+          </React.Fragment>
+        </IdProvider>
       </ThemeProvider>
     );
   };
