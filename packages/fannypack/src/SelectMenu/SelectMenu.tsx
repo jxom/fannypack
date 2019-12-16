@@ -543,7 +543,7 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
 
     return (
       <Loads context={contextKey} load={this.loadOptions} defer={!this.loadOptions}>
-        {({ load, isPending }: { load: () => any; isPending: boolean }) => (
+        {({ load, error, isPending, isResolved, isRejected }: { load: () => any; isPending: boolean }) => (
           <_SelectMenu setInitialFocus={!isSearchable} {...(isDropdown ? {} : props)}>
             {isSearchable && (
               <SelectMenuSearchInput
@@ -557,7 +557,7 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
               />
             )}
             {useTags && selectedOptionsValues.length > 0 && this.renderTopSection({ selectedOptionsValues })}
-            {this.renderOptions({ isLoading: isPending, load })}
+            {this.renderOptions({ error, isLoading: isPending, isResolved, isRejected, load })}
             {(isMultiSelect || isDropdown) && this.renderBottomSection({ popover, selectedOptionsValues })}
           </_SelectMenu>
         )}
@@ -583,7 +583,19 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     );
   };
 
-  renderOptions = ({ isLoading, load }: { isLoading: boolean; load: () => any }) => {
+  renderOptions = ({
+    error,
+    isLoading,
+    isResolved,
+    isRejected,
+    load
+  }: {
+    error: any;
+    isLoading: boolean;
+    isResolved: boolean;
+    isRejected: boolean;
+    load: () => any;
+  }) => {
     const { emptyText, isDropdown, isMultiSelect, renderEmpty, renderError, renderOption, useTags } = this.props;
     const { options, selectedOptions } = this.state;
     return (
@@ -612,13 +624,13 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
             </SelectMenuItem>
           );
         })}
-        <Loads.Pending>
+        {isLoading && (
           <SelectMenuStaticItem>
             <SelectMenuLoadingItemSpinner color="text" size="1rem" />
           </SelectMenuStaticItem>
-        </Loads.Pending>
-        <Loads.Resolved>{options.length === 0 && renderEmpty && renderEmpty({ emptyText })}</Loads.Resolved>
-        <Loads.Rejected>{({ error }: any) => renderError && renderError({ error })}</Loads.Rejected>
+        )}
+        {isResolved && options.length === 0 && renderEmpty && renderEmpty({ emptyText })}
+        {isRejected && error && renderError && renderError({ error })}
       </SelectMenuGroup>
     );
   };
