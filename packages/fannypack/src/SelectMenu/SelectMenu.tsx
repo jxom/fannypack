@@ -543,7 +543,7 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
 
     return (
       // @ts-ignore
-      <Loads context={contextKey} load={this.loadOptions} defer={!this.loadOptions}>
+      <Loads context={contextKey} fn={this.loadOptions} defer={!this.loadOptions}>
         {({
           load,
           error,
