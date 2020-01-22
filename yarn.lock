@@ -10559,10 +10559,10 @@ react-live@1.12.0, react-live@^1.11.0:
     prop-types "^15.5.8"
     unescape "^0.2.0"
 
-react-loads-next@9.0.0-beta.3:
-  version "9.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/react-loads-next/-/react-loads-next-9.0.0-beta.3.tgz#cdcf6b0c7e6831a4f494d0076d95ac2fe124b7ea"
-  integrity sha512-i2yYPpunt+6+yP0qhSa+Hl2l9ObQtlkmAjAySqrvrL7WzCXQE/GPQIRZ4/BR30tLJOpUcdMlCQHi+cn7cTCboA==
+react-loads-next@9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/react-loads-next/-/react-loads-next-9.0.1.tgz#4225c90e5be0b8014831f1d786726ec9abfd1d8f"
+  integrity sha512-B/TkmyUwm3yVbngPf7CYYQ2u+e/Vz3U59MNEseKIq9s5EFsv2xCSWfkzqu9i7wlbI5YKlLqJYo3LYeYNr87QZw==
 
 react-media@1.9.2:
   version "1.9.2"

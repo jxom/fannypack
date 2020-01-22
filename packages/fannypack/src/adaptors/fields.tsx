@@ -7,7 +7,14 @@ const bindFns = (...fns: Array<Function>) => (...args: any) => {
 
 export function formikField(
   Component: any,
-  { hasFieldWrapper = false, isCheckbox = false, isSelectMenu = false, useValue = false } = {}
+  {
+    disableBlurEvent = false,
+    disableFocusEvent = false,
+    hasFieldWrapper = false,
+    isCheckbox = false,
+    isSelectMenu = false,
+    useValue = false
+  } = {}
 ) {
   return ({ field = {}, form = {}, ...props }: any) => {
     let overrideProps = {};
@@ -47,6 +54,7 @@ export function formikField(
 
     let onBlur = field.onBlur;
     let onChange = field.onChange;
+    let onFocus = field.onFocus;
     if (isSelectMenu) {
       onBlur = () => form.setFieldTouched(field.name);
       // @ts-ignore
@@ -57,8 +65,9 @@ export function formikField(
     }
     overrideProps = {
       ...overrideProps,
-      onBlur: bindFns(onBlur, props.onBlur),
-      onChange: bindFns(onChange, props.onChange)
+      onBlur: bindFns(disableBlurEvent ? () => {} : onBlur, props.onBlur),
+      onChange: bindFns(onChange, props.onChange),
+      onFocus: bindFns(disableFocusEvent ? () => {} : onFocus, props.onFocus)
     };
 
     return <Component {...props} {...field} {...overrideProps} />;
@@ -67,7 +76,14 @@ export function formikField(
 
 export function reduxFormField(
   Component: any,
-  { hasFieldWrapper = false, isCheckbox = false, isSelectMenu = false, useValue = false } = {}
+  {
+    disableBlurEvent = false,
+    disableFocusEvent = false,
+    hasFieldWrapper = false,
+    isCheckbox = false,
+    isSelectMenu = false,
+    useValue = false
+  } = {}
 ) {
   return ({ input = {}, meta = {}, ...props }: any) => {
     let overrideProps = {};
@@ -104,6 +120,7 @@ export function reduxFormField(
 
     let onBlur = input.onBlur;
     let onChange = input.onChange;
+    let onFocus = input.onFocus;
     if (isSelectMenu) {
       // @ts-ignore
       onChange = (value: any, option: any, newValues: any) => input.onChange(newValues);
@@ -115,8 +132,9 @@ export function reduxFormField(
 
     overrideProps = {
       ...overrideProps,
-      onBlur: bindFns(onBlur, props.onBlur),
-      onChange: bindFns(onChange, props.onChange)
+      onBlur: bindFns(disableBlurEvent ? () => {} : onBlur, props.onBlur),
+      onChange: bindFns(onChange, props.onChange),
+      onFocus: bindFns(disableFocusEvent ? () => {} : onFocus, props.onFocus)
     };
 
     return <Component {...props} {...input} {...overrideProps} />;
