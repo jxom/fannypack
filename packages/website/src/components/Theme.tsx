@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Box, Code, Text } from 'fannypack';
+import HighlightedCode, { highlightedCodeStyles } from 'fannypack-addon-highlighted-code';
 import _set from 'lodash/set';
 
 export default function Theme(props) {
@@ -13,6 +14,10 @@ export default function Theme(props) {
     _set(overrides, key, {
       [highlightAttribute || override.highlightAttribute || 'background']: '#ffe3a4 !important'
     });
+
+    let themeObject = {};
+    _set(themeObject, key, { background: '#ffe3a4' });
+    const themeExample = `const theme = ${JSON.stringify(themeObject, null, 2).replace(/\"([^(\")"]+)\":/g, '$1:')}`;
 
     return (
       // @ts-ignore
@@ -33,6 +38,7 @@ export default function Theme(props) {
             );
           })}
         </Box>
+        <HighlightedCode marginTop="major-1" isBlock code={themeExample} language="js" />
       </Box>
     );
   });
