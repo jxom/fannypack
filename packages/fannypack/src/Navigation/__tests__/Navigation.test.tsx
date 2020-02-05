@@ -91,7 +91,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Navigation.base should render correctly', () => {
     const { container } = render(
-      <Navigation overrides={{ Navigation: { base: { backgroundColor: 'red' } } }}>
+      <Navigation overrides={{ Navigation: { css: { root: { backgroundColor: 'red' } } } }}>
         <List>
           <List.Item>
             <Link href="https://google.com">Google</Link>
@@ -120,7 +120,7 @@ describe('theming', () => {
         </List>
       </Navigation>,
       {
-        theme: { Navigation: { base: { backgroundColor: 'red' } } }
+        theme: { Navigation: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

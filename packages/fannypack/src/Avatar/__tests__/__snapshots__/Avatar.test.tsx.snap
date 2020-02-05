@@ -56,14 +56,6 @@ exports[`overrides Avatar.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-1 {
-  max-width: 100%;
-}
-
-.emotion-1 {
-  background-color: red;
-}
-
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -74,7 +66,11 @@ exports[`overrides Avatar.base should render correctly 1`] = `
   font-size: 24px;
 }
 
-.emotion-0 {
+.emotion-1 {
+  max-width: 100%;
+}
+
+.emotion-1 {
   background-color: red;
 }
 
@@ -608,14 +604,6 @@ exports[`theming Avatar.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-1 {
-  max-width: 100%;
-}
-
-.emotion-1 {
-  background-color: red;
-}
-
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -626,7 +614,11 @@ exports[`theming Avatar.base should render correctly 1`] = `
   font-size: 24px;
 }
 
-.emotion-0 {
+.emotion-1 {
+  max-width: 100%;
+}
+
+.emotion-1 {
   background-color: red;
 }
 

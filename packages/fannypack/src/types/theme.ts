@@ -121,77 +121,109 @@ export type PaletteThemeConfig = {
 };
 
 export type ActionButtonsThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<ActionButtonsProps>;
 };
 export type AlertThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   Content?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Description?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Title?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   IconWrapper?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   CloseButton?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<AlertProps>;
 };
 export type AvatarThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  circle?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  sizes?: {
-    small?: ThemeAttribute<Stylesheet>;
-    default?: ThemeAttribute<Stylesheet>;
-    medium?: ThemeAttribute<Stylesheet>;
-    large?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    circle?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    sizes?: {
+      small?: ThemeAttribute<Stylesheet>;
+      default?: ThemeAttribute<Stylesheet>;
+      medium?: ThemeAttribute<Stylesheet>;
+      large?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<AvatarProps>;
 };
 export type BadgeThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  attached?: ThemeAttribute<Stylesheet>;
-  sizes?: {
-    default?: ThemeAttribute<Stylesheet>;
-    medium?: ThemeAttribute<Stylesheet>;
-    large?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    attached?: ThemeAttribute<Stylesheet>;
+    sizes?: {
+      default?: ThemeAttribute<Stylesheet>;
+      medium?: ThemeAttribute<Stylesheet>;
+      large?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<BadgeProps>;
 };
 export type BreadcrumbThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   Item?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<BreadcrumbItemProps>;
   };
   Separator?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<BreadcrumbSeparatorProps>;
   };
   Link?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<BreadcrumbLinkProps>;
   };
   defaultProps?: Partial<BreadcrumbProps>;
 };
 export type BlockThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<BlockProps>;
 };
 export type BlockquoteThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<BlockquoteProps>;
 };
 export type BoxThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<BoxProps>;
 };
 export type ButtonThemeConfig = {
@@ -337,7 +369,9 @@ export type DividerThemeConfig = {
   defaultProps?: Partial<DividerProps>;
 };
 export type FieldSetThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<FieldSetProps>;
 };
 export type FieldWrapperThemeConfig = {
@@ -455,15 +489,11 @@ export type IconThemeConfig = {
   defaultProps?: Partial<IconProps>;
 };
 export type ImageThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  fixed?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  cover?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  contain?: {
-    base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    fixed?: ThemeAttribute<Stylesheet>;
+    cover?: ThemeAttribute<Stylesheet>;
+    contain?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<ImageProps>;
 };
@@ -524,13 +554,15 @@ export type LabelThemeConfig = {
   defaultProps?: Partial<LabelProps>;
 };
 export type LayoutSetThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  horizontal?: ThemeAttribute<Stylesheet>;
-  vertical?: ThemeAttribute<Stylesheet>;
-  child?: {
-    base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
     horizontal?: ThemeAttribute<Stylesheet>;
     vertical?: ThemeAttribute<Stylesheet>;
+    child?: {
+      root?: ThemeAttribute<Stylesheet>;
+      horizontal?: ThemeAttribute<Stylesheet>;
+      vertical?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<LayoutSetProps>;
 };
@@ -574,7 +606,9 @@ export type ModalThemeConfig = {
   };
 };
 export type NavigationThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<NavigationProps>;
 };
 export type OverlayThemeConfig = {
@@ -810,13 +844,15 @@ export type SelectFieldThemeConfig = {
   defaultProps?: Partial<SelectFieldProps>;
 };
 export type SetThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  horizontal?: ThemeAttribute<Stylesheet>;
-  vertical?: ThemeAttribute<Stylesheet>;
-  child?: {
-    base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
     horizontal?: ThemeAttribute<Stylesheet>;
     vertical?: ThemeAttribute<Stylesheet>;
+    child?: {
+      root?: ThemeAttribute<Stylesheet>;
+      horizontal?: ThemeAttribute<Stylesheet>;
+      vertical?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<SetProps>;
 };

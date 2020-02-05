@@ -108,7 +108,7 @@ describe('props', () => {
   });
 
   it('should render correctly with overrides', () => {
-    const { container } = render(<Box overrides={{ Box: { base: { backgroundColor: 'red' } } }} />);
+    const { container } = render(<Box overrides={{ Box: { css: { root: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 });
@@ -138,13 +138,15 @@ describe('composition', () => {
 
 describe('theming', () => {
   it('Box.base should render correctly', () => {
-    const { container } = render(<Box>hello world</Box>, { theme: { Box: { base: { backgroundColor: 'red' } } } });
+    const { container } = render(<Box>hello world</Box>, {
+      theme: { Box: { css: { root: { backgroundColor: 'red' } } } }
+    });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Box.base should render correctly', () => {
     const { container } = render(<Box color="green">hello world</Box>, {
-      theme: { Box: { base: props => ({ backgroundColor: props.color }) } }
+      theme: { Box: { css: { root: props => ({ backgroundColor: props.color }) } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

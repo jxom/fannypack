@@ -93,7 +93,9 @@ describe('composition', () => {
 
 describe('overrides', () => {
   it('ActionButtons.base should render correctly', () => {
-    const { container } = render(<ActionButtons overrides={{ ActionButtons: { base: { backgroundColor: 'red' } } }} />);
+    const { container } = render(
+      <ActionButtons overrides={{ ActionButtons: { css: { root: { backgroundColor: 'red' } } } }} />
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
@@ -101,7 +103,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('ActionButtons.base should render correctly', () => {
     const { container } = render(<ActionButtons />, {
-      theme: { ActionButtons: { base: { backgroundColor: 'red' } } }
+      theme: { ActionButtons: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

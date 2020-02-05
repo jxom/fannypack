@@ -108,21 +108,21 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Alert.base should render correctly', () => {
     const { container } = render(
-      <Alert overrides={{ Alert: { base: { backgroundColor: 'red' } } }}>hello world</Alert>
+      <Alert overrides={{ Alert: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Alert>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.Content.base should render correctly', () => {
     const { container } = render(
-      <Alert overrides={{ Alert: { Content: { base: { backgroundColor: 'red' } } } }}>hello world</Alert>
+      <Alert overrides={{ Alert: { Content: { css: { root: { backgroundColor: 'red' } } } } }}>hello world</Alert>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.Title.base should render correctly', () => {
     const { container } = render(
-      <Alert title="This is a title" overrides={{ Alert: { Title: { base: { backgroundColor: 'red' } } } }}>
+      <Alert title="This is a title" overrides={{ Alert: { Title: { css: { root: { backgroundColor: 'red' } } } } }}>
         hello world
       </Alert>
     );
@@ -131,14 +131,14 @@ describe('overrides', () => {
 
   it('Alert.Description.base should render correctly', () => {
     const { container } = render(
-      <Alert overrides={{ Alert: { Description: { base: { backgroundColor: 'red' } } } }}>hello world</Alert>
+      <Alert overrides={{ Alert: { Description: { css: { root: { backgroundColor: 'red' } } } } }}>hello world</Alert>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.IconWrapper.base should render correctly', () => {
     const { container } = render(
-      <Alert hasIcon overrides={{ Alert: { IconWrapper: { base: { backgroundColor: 'red' } } } }}>
+      <Alert hasIcon overrides={{ Alert: { IconWrapper: { css: { root: { backgroundColor: 'red' } } } } }}>
         hello world
       </Alert>
     );
@@ -147,7 +147,7 @@ describe('overrides', () => {
 
   it('Alert.CloseButton.base should render correctly', () => {
     const { container } = render(
-      <Alert showCloseButton overrides={{ Alert: { CloseButton: { base: { backgroundColor: 'red' } } } }}>
+      <Alert showCloseButton overrides={{ Alert: { CloseButton: { css: { root: { backgroundColor: 'red' } } } } }}>
         hello world
       </Alert>
     );
@@ -158,42 +158,42 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Alert.base should render correctly', () => {
     const { container } = render(<Alert>hello world</Alert>, {
-      theme: { Alert: { base: { backgroundColor: 'red' } } }
+      theme: { Alert: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.Content.base should render correctly', () => {
     const { container } = render(<Alert>hello world</Alert>, {
-      theme: { Alert: { Content: { base: { backgroundColor: 'red' } } } }
+      theme: { Alert: { Content: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.Title.base should render correctly', () => {
     const { container } = render(<Alert title="This is a title">hello world</Alert>, {
-      theme: { Alert: { Title: { base: { backgroundColor: 'red' } } } }
+      theme: { Alert: { Title: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.Description.base should render correctly', () => {
     const { container } = render(<Alert>hello world</Alert>, {
-      theme: { Alert: { Description: { base: { backgroundColor: 'red' } } } }
+      theme: { Alert: { Description: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.IconWrapper.base should render correctly', () => {
     const { container } = render(<Alert hasIcon>hello world</Alert>, {
-      theme: { Alert: { IconWrapper: { base: { backgroundColor: 'red' } } } }
+      theme: { Alert: { IconWrapper: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.CloseButton.base should render correctly', () => {
     const { container } = render(<Alert showCloseButton>hello world</Alert>, {
-      theme: { Alert: { CloseButton: { base: { backgroundColor: 'red' } } } }
+      theme: { Alert: { CloseButton: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

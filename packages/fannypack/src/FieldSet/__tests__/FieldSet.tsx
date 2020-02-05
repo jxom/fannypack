@@ -92,7 +92,7 @@ describe('theming', () => {
       </FieldSet>,
       {
         // @ts-ignore
-        theme: { FieldSet: { base: { backgroundColor: 'red' } } }
+        theme: { FieldSet: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
