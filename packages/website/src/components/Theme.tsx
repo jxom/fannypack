@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Code, Text } from 'fannypack';
+import { Box, Button, Code, Hidden, Text } from 'fannypack';
 import HighlightedCode, { highlightedCodeStyles } from 'fannypack-addon-highlighted-code';
 import _set from 'lodash/set';
 
@@ -17,7 +17,11 @@ export default function Theme(props) {
 
     let themeObject = {};
     _set(themeObject, key, { background: '#ffe3a4' });
-    const themeExample = `const theme = ${JSON.stringify(themeObject, null, 2).replace(/\"([^(\")"]+)\":/g, '$1:')}`;
+    const themeExample = `import { ThemeProvider } from 'fannypack';
+
+const theme = ${JSON.stringify(themeObject, null, 2).replace(/\"([^(\")"]+)\":/g, '$1:')}
+
+<ThemeProvider theme={theme}>...</ThemeProvider>`;
 
     return (
       // @ts-ignore
@@ -38,7 +42,22 @@ export default function Theme(props) {
             );
           })}
         </Box>
-        <HighlightedCode marginTop="major-1" isBlock code={themeExample} language="js" />
+        <Hidden.State>
+          {hidden => (
+            <React.Fragment>
+              <Hidden.Disclosure {...hidden}>
+                {props => (
+                  <Button marginTop="major-1" kind="ghost" palette="primary" size="small" {...props}>
+                    {hidden.visible ? 'Hide' : 'Show'} example
+                  </Button>
+                )}
+              </Hidden.Disclosure>
+              <Hidden {...hidden}>
+                <HighlightedCode marginTop="major-1" isBlock code={themeExample} language="js" />
+              </Hidden>
+            </React.Fragment>
+          )}
+        </Hidden.State>
       </Box>
     );
   });

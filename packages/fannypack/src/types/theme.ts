@@ -227,21 +227,23 @@ export type BoxThemeConfig = {
   defaultProps?: Partial<BoxProps>;
 };
 export type ButtonThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  disabled?: ThemeAttribute<Stylesheet>;
-  focus?: ThemeAttribute<Stylesheet>;
-  ghost?: ThemeAttribute<Stylesheet>;
-  hover?: ThemeAttribute<Stylesheet>;
-  hoveractive?: ThemeAttribute<Stylesheet>;
-  loading?: ThemeAttribute<Stylesheet>;
-  link?: ThemeAttribute<Stylesheet>;
-  outlined?: ThemeAttribute<Stylesheet>;
-  static?: ThemeAttribute<Stylesheet>;
-  sizes?: {
-    small?: ThemeAttribute<Stylesheet>;
-    default?: ThemeAttribute<Stylesheet>;
-    medium?: ThemeAttribute<Stylesheet>;
-    large?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    disabled?: ThemeAttribute<Stylesheet>;
+    focus?: ThemeAttribute<Stylesheet>;
+    ghost?: ThemeAttribute<Stylesheet>;
+    hover?: ThemeAttribute<Stylesheet>;
+    hoveractive?: ThemeAttribute<Stylesheet>;
+    loading?: ThemeAttribute<Stylesheet>;
+    link?: ThemeAttribute<Stylesheet>;
+    outlined?: ThemeAttribute<Stylesheet>;
+    static?: ThemeAttribute<Stylesheet>;
+    sizes?: {
+      small?: ThemeAttribute<Stylesheet>;
+      default?: ThemeAttribute<Stylesheet>;
+      medium?: ThemeAttribute<Stylesheet>;
+      large?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<ButtonProps>;
 };
