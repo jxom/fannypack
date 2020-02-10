@@ -771,52 +771,72 @@ export type OverlayThemeConfig = {
   };
 };
 export type ParagraphThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<ParagraphProps>;
 };
 export type PopoverThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    placements?: {
+      center?: ThemeAttribute<Stylesheet>;
+      top?: ThemeAttribute<Stylesheet>;
+      left?: ThemeAttribute<Stylesheet>;
+      right?: ThemeAttribute<Stylesheet>;
+      bottom?: ThemeAttribute<Stylesheet>;
+      topStart?: ThemeAttribute<Stylesheet>;
+      topEnd?: ThemeAttribute<Stylesheet>;
+      bottomStart?: ThemeAttribute<Stylesheet>;
+      bottomEnd?: ThemeAttribute<Stylesheet>;
+    };
+  };
   Arrow?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<PopoverArrowProps>;
   };
   Backdrop?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<PopoverBackdropProps>;
   };
   Content?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<PopoverContentProps>;
   };
   Close?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Disclosure?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<PopoverDisclosureProps>;
   };
   Header?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<PopoverHeaderProps>;
   };
   Footer?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<PopoverFooterProps>;
   };
   Title?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<PopoverTitleProps>;
-  };
-  placements?: {
-    center?: ThemeAttribute<Stylesheet>;
-    top?: ThemeAttribute<Stylesheet>;
-    left?: ThemeAttribute<Stylesheet>;
-    right?: ThemeAttribute<Stylesheet>;
-    bottom?: ThemeAttribute<Stylesheet>;
-    topStart?: ThemeAttribute<Stylesheet>;
-    topEnd?: ThemeAttribute<Stylesheet>;
-    bottomStart?: ThemeAttribute<Stylesheet>;
-    bottomEnd?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<PopoverProps>;
 };
