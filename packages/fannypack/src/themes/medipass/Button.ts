@@ -33,12 +33,19 @@ export default {
     border: 2px solid transparent;
 
     &:hover {
-      color: ${(props: any) => (props.palette === 'default' ? palette('text') : palette(props.palette))};
+      color: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
+      fill: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
+      background-color: ${palette()};
+    }
+
+    &:hover:active {
+      color: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
+      fill: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
+      background-color: ${palette()};
     }
 
     &:focus {
-      outline: unset;
-      border-color: ${(props: any) => (props.palette === 'default' ? palette('text') : palette(props.palette))};
+      border: 2px solid white;
       background-color: unset;
       color: ${(props: any) => (props.palette === 'default' ? palette('text') : palette(props.palette))};
     }
