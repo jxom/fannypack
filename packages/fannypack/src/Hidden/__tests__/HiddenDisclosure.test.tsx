@@ -103,7 +103,10 @@ describe('overrides', () => {
     function Component() {
       const hidden = Hidden.useState({ baseId: 'test' });
       return (
-        <Hidden.Disclosure overrides={{ Hidden: { Disclosure: { base: { backgroundColor: 'red' } } } }} {...hidden}>
+        <Hidden.Disclosure
+          overrides={{ Hidden: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } }}
+          {...hidden}
+        >
           Toggle
         </Hidden.Disclosure>
       );
@@ -120,7 +123,7 @@ describe('theming', () => {
       return <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Hidden: { Disclosure: { base: { backgroundColor: 'red' } } } }
+      theme: { Hidden: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

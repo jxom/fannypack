@@ -47,7 +47,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('InlineFlex.base should render correctly', () => {
     const { container } = render(<InlineFlex>hello world</InlineFlex>, {
-      theme: { InlineFlex: { base: { backgroundColor: 'red' } } }
+      theme: { InlineFlex: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

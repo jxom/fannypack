@@ -55,7 +55,9 @@ describe('props', () => {
 
 describe('overrides', () => {
   it('InputField.base should render correctly', () => {
-    const { container } = render(<InputField overrides={{ InputField: { base: { backgroundColor: 'red' } } }} />);
+    const { container } = render(
+      <InputField overrides={{ InputField: { css: { root: { backgroundColor: 'red' } } } }} />
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
@@ -64,7 +66,7 @@ describe('theming', () => {
   it('InputField.base should render correctly', () => {
     const { container } = render(<InputField />, {
       // @ts-ignore
-      theme: { InputField: { base: { backgroundColor: 'red' } } }
+      theme: { InputField: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

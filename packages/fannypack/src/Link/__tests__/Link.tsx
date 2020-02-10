@@ -40,12 +40,16 @@ describe('composition', () => {
 
 describe('overrides', () => {
   it('Link.base should render correctly', () => {
-    const { container } = render(<Link overrides={{ Link: { base: { backgroundColor: 'red' } } }}>hello world</Link>);
+    const { container } = render(
+      <Link overrides={{ Link: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Link>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Link.hover should render correctly', () => {
-    const { container } = render(<Link overrides={{ Link: { hover: { backgroundColor: 'red' } } }}>hello world</Link>);
+    const { container } = render(
+      <Link overrides={{ Link: { css: { hover: { backgroundColor: 'red' } } } }}>hello world</Link>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
@@ -53,14 +57,14 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Link.base should render correctly', () => {
     const { container } = render(<Link>hello world</Link>, {
-      theme: { Link: { base: { backgroundColor: 'red' } } }
+      theme: { Link: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Link.hover should render correctly', () => {
     const { container } = render(<Link>hello world</Link>, {
-      theme: { Link: { hover: { backgroundColor: 'red' } } }
+      theme: { Link: { css: { hover: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

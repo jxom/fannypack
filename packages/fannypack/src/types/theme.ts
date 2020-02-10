@@ -315,82 +315,118 @@ export type CardThemeConfig = {
   defaultProps?: Partial<CardProps>;
 };
 export type CheckboxThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   Icon?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Label?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   HiddenInput?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<CheckboxProps>;
 };
 export type CheckboxFieldThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<CheckboxFieldProps>;
 };
 export type CheckboxGroupThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<CheckboxGroupProps>;
 };
 export type CheckboxGroupFieldThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<CheckboxGroupFieldProps>;
 };
 export type CodeThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  block?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    block?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<CodeProps>;
 };
 export type ColumnsThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  defaultProps?: Partial<ColumnsProps>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   Column?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<ColumnProps>;
   };
+  defaultProps?: Partial<ColumnsProps>;
 };
 export type ContainerThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  layout?: ThemeAttribute<Stylesheet>;
-  fluid?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    layout?: ThemeAttribute<Stylesheet>;
+    fluid?: ThemeAttribute<Stylesheet>;
+  };
   tabletMargin?: ThemeAttribute<number>;
   fluidMargin?: ThemeAttribute<number>;
   defaultProps?: Partial<ContainerProps>;
 };
 export type DialogThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   Content?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<DialogContentProps>;
   };
   Header?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<DialogHeaderProps>;
   };
   Title?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<DialogTitleProps>;
   };
   Footer?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<DialogFooterProps>;
   };
   IconWrapper?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<DialogIconProps>;
   };
   Close?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<DialogProps>;
 };
 export type DividerThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  vertical?: {
-    base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    vertical?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<DividerProps>;
 };
@@ -401,104 +437,162 @@ export type FieldSetThemeConfig = {
   defaultProps?: Partial<FieldSetProps>;
 };
 export type FieldWrapperThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   Label?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   DescriptionText?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   HintText?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   OptionalText?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   RequiredText?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   ValidationText?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   TooltipTrigger?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   TooltipPopover?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<FieldWrapperProps>;
 };
 export type FlexThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<FlexProps>;
 };
 export type GridThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   Item?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<GridItemProps>;
   };
   defaultProps?: Partial<GridProps>;
 };
 export type GroupThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<GroupProps>;
   Item?: {
-    base?: ThemeAttribute<Stylesheet>;
-    first?: ThemeAttribute<Stylesheet>;
-    middle?: ThemeAttribute<Stylesheet>;
-    last?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+      first?: ThemeAttribute<Stylesheet>;
+      middle?: ThemeAttribute<Stylesheet>;
+      last?: ThemeAttribute<Stylesheet>;
+    };
   };
 };
 export type HeadingThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   h1?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   h2?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   h3?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   h4?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   h5?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   h6?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   subHeading?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<HeadingProps>;
 };
 export type HiddenThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<HiddenProps>;
   Disclosure?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<HiddenDisclosureProps>;
   };
 };
 export type HighlightedCodeThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  block?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    block?: ThemeAttribute<Stylesheet>;
+  };
   Pre?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Line?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Token?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<CodeProps>;
 };
 export type IconThemeConfig = {
-  base?: Stylesheet;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   iconSets?: Array<{
     icons: IconDefinition[];
     prefix?: ParseIconsOpts['prefix'];
@@ -524,59 +618,63 @@ export type ImageThemeConfig = {
   defaultProps?: Partial<ImageProps>;
 };
 export type InlineThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<InlineProps>;
 };
 export type InlineBlockThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<InlineBlockProps>;
 };
 export type InlineFlexThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<InlineFlexProps>;
 };
 export type InputThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  disabled?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  focus?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  placeholder?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  sizes?: {
-    small?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
-    default?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
-    medium?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
-    large?: {
-      base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    disabled?: ThemeAttribute<Stylesheet>;
+    focus?: ThemeAttribute<Stylesheet>;
+    placeholder?: ThemeAttribute<Stylesheet>;
+    sizes?: {
+      small?: ThemeAttribute<Stylesheet>;
+      default?: ThemeAttribute<Stylesheet>;
+      medium?: ThemeAttribute<Stylesheet>;
+      large?: ThemeAttribute<Stylesheet>;
     };
   };
   Wrapper?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Icon?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Spinner?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<InputProps>;
 };
 export type InputFieldThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<InputFieldProps>;
 };
 export type LabelThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<LabelProps>;
 };
 export type LayoutSetThemeConfig = {
@@ -593,41 +691,53 @@ export type LayoutSetThemeConfig = {
   defaultProps?: Partial<LayoutSetProps>;
 };
 export type LinkThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  hover?: ThemeAttribute<Stylesheet>;
-  focus?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    hover?: ThemeAttribute<Stylesheet>;
+    focus?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<LinkProps>;
 };
 export type ListThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  ordered?: ThemeAttribute<Stylesheet>;
-  horizontal?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    ordered?: ThemeAttribute<Stylesheet>;
+    horizontal?: ThemeAttribute<Stylesheet>;
+  };
   Item?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<ListItemProps>;
   };
   defaultProps?: Partial<ListProps>;
 };
 export type ModalThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  placements?: {
-    center?: ThemeAttribute<Stylesheet>;
-    top?: ThemeAttribute<Stylesheet>;
-    left?: ThemeAttribute<Stylesheet>;
-    right?: ThemeAttribute<Stylesheet>;
-    bottom?: ThemeAttribute<Stylesheet>;
-    topStart?: ThemeAttribute<Stylesheet>;
-    topEnd?: ThemeAttribute<Stylesheet>;
-    bottomStart?: ThemeAttribute<Stylesheet>;
-    bottomEnd?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    placements?: {
+      center?: ThemeAttribute<Stylesheet>;
+      top?: ThemeAttribute<Stylesheet>;
+      left?: ThemeAttribute<Stylesheet>;
+      right?: ThemeAttribute<Stylesheet>;
+      bottom?: ThemeAttribute<Stylesheet>;
+      topStart?: ThemeAttribute<Stylesheet>;
+      topEnd?: ThemeAttribute<Stylesheet>;
+      bottomStart?: ThemeAttribute<Stylesheet>;
+      bottomEnd?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<ModalProps>;
   Disclosure?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<ModalDisclosureProps>;
   };
   Backdrop?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<ModalBackdropProps>;
   };
 };
@@ -638,22 +748,26 @@ export type NavigationThemeConfig = {
   defaultProps?: Partial<NavigationProps>;
 };
 export type OverlayThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  placements?: {
-    center?: ThemeAttribute<Stylesheet>;
-    top?: ThemeAttribute<Stylesheet>;
-    left?: ThemeAttribute<Stylesheet>;
-    right?: ThemeAttribute<Stylesheet>;
-    bottom?: ThemeAttribute<Stylesheet>;
-    topStart?: ThemeAttribute<Stylesheet>;
-    topEnd?: ThemeAttribute<Stylesheet>;
-    bottomStart?: ThemeAttribute<Stylesheet>;
-    bottomEnd?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    placements?: {
+      center?: ThemeAttribute<Stylesheet>;
+      top?: ThemeAttribute<Stylesheet>;
+      left?: ThemeAttribute<Stylesheet>;
+      right?: ThemeAttribute<Stylesheet>;
+      bottom?: ThemeAttribute<Stylesheet>;
+      topStart?: ThemeAttribute<Stylesheet>;
+      topEnd?: ThemeAttribute<Stylesheet>;
+      bottomStart?: ThemeAttribute<Stylesheet>;
+      bottomEnd?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<OverlayProps>;
   Disclosure?: {
-    base?: ThemeAttribute<Stylesheet>;
-    defaultProps?: Partial<OverlayDisclosureProps>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<ModalDisclosureProps>;
   };
 };
 export type ParagraphThemeConfig = {

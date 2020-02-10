@@ -83,7 +83,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Hidden.base should render correctly', () => {
     const { container } = render(
-      <Hidden baseId="test" overrides={{ Hidden: { base: { backgroundColor: 'red' } } }}>
+      <Hidden baseId="test" overrides={{ Hidden: { css: { root: { backgroundColor: 'red' } } } }}>
         hello world
       </Hidden>
     );
@@ -94,7 +94,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Hidden.base should render correctly', () => {
     const { container } = render(<Hidden baseId="test">hello world</Hidden>, {
-      theme: { Hidden: { base: { backgroundColor: 'red' } } }
+      theme: { Hidden: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

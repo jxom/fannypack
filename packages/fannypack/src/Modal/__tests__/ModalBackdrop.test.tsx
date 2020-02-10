@@ -62,7 +62,7 @@ describe('overrides', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
-        <Modal.Backdrop overrides={{ Modal: { Backdrop: { base: { backgroundColor: 'red' } } } }} {...modal}>
+        <Modal.Backdrop overrides={{ Modal: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } }} {...modal}>
           Toggle
         </Modal.Backdrop>
       );
@@ -79,7 +79,7 @@ describe('theming', () => {
       return <Modal.Backdrop {...modal}>Toggle</Modal.Backdrop>;
     }
     const { container } = render(<Component />, {
-      theme: { Modal: { Backdrop: { base: { backgroundColor: 'red' } } } }
+      theme: { Modal: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

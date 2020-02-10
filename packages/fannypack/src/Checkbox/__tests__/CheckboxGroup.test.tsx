@@ -130,7 +130,7 @@ describe('overrides', () => {
       <CheckboxGroup
         name="weather"
         options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
-        overrides={{ CheckboxGroup: { base: { backgroundColor: 'red' } } }}
+        overrides={{ CheckboxGroup: { css: { root: { backgroundColor: 'red' } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -146,7 +146,7 @@ describe('theming', () => {
       />,
       {
         // @ts-ignore
-        theme: { CheckboxGroup: { base: { backgroundColor: 'red' } } }
+        theme: { CheckboxGroup: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

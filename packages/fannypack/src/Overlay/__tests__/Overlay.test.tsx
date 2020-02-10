@@ -148,7 +148,7 @@ describe('overrides', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
-        <Overlay {...overlay} aria-label="test" overrides={{ Overlay: { base: { backgroundColor: 'red' } } }}>
+        <Overlay {...overlay} aria-label="test" overrides={{ Overlay: { css: { root: { backgroundColor: 'red' } } } }}>
           Hello world
         </Overlay>
       );
@@ -164,7 +164,7 @@ describe('overrides', () => {
         <Overlay
           {...overlay}
           aria-label="test"
-          overrides={{ Overlay: { placements: { center: { backgroundColor: 'red' } } } }}
+          overrides={{ Overlay: { css: { placements: { center: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -182,7 +182,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="top"
-          overrides={{ Overlay: { placements: { top: { backgroundColor: 'red' } } } }}
+          overrides={{ Overlay: { css: { placements: { top: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -200,7 +200,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="left"
-          overrides={{ Overlay: { placements: { left: { backgroundColor: 'red' } } } }}
+          overrides={{ Overlay: { css: { placements: { left: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -218,7 +218,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="right"
-          overrides={{ Overlay: { placements: { right: { backgroundColor: 'red' } } } }}
+          overrides={{ Overlay: { css: { placements: { right: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -236,7 +236,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="bottom"
-          overrides={{ Overlay: { placements: { bottom: { backgroundColor: 'red' } } } }}
+          overrides={{ Overlay: { css: { placements: { bottom: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -254,7 +254,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="top-start"
-          overrides={{ Overlay: { placements: { topStart: { backgroundColor: 'red' } } } }}
+          overrides={{ Overlay: { css: { placements: { topStart: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -272,7 +272,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="top-end"
-          overrides={{ Overlay: { placements: { topEnd: { backgroundColor: 'red' } } } }}
+          overrides={{ Overlay: { css: { placements: { topEnd: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -290,7 +290,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="bottom-start"
-          overrides={{ Overlay: { placements: { bottomStart: { backgroundColor: 'red' } } } }}
+          overrides={{ Overlay: { css: { placements: { bottomStart: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -308,7 +308,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="bottom-end"
-          overrides={{ Overlay: { placements: { bottomEnd: { backgroundColor: 'red' } } } }}
+          overrides={{ Overlay: { css: { placements: { bottomEnd: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -330,7 +330,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { base: { backgroundColor: 'red' } } }
+      theme: { Overlay: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -345,7 +345,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { placements: { center: { backgroundColor: 'red' } } } }
+      theme: { Overlay: { css: { placements: { center: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -360,7 +360,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { placements: { top: { backgroundColor: 'red' } } } }
+      theme: { Overlay: { css: { placements: { top: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -375,7 +375,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { placements: { left: { backgroundColor: 'red' } } } }
+      theme: { Overlay: { css: { placements: { left: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -390,7 +390,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { placements: { right: { backgroundColor: 'red' } } } }
+      theme: { Overlay: { css: { placements: { right: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -405,7 +405,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { placements: { bottom: { backgroundColor: 'red' } } } }
+      theme: { Overlay: { css: { placements: { bottom: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -420,7 +420,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { placements: { topStart: { backgroundColor: 'red' } } } }
+      theme: { Overlay: { css: { placements: { topStart: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -435,7 +435,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { placements: { topEnd: { backgroundColor: 'red' } } } }
+      theme: { Overlay: { css: { placements: { topEnd: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -450,7 +450,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { placements: { bottomStart: { backgroundColor: 'red' } } } }
+      theme: { Overlay: { css: { placements: { bottomStart: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -465,7 +465,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { placements: { bottomEnd: { backgroundColor: 'red' } } } }
+      theme: { Overlay: { css: { placements: { bottomEnd: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });

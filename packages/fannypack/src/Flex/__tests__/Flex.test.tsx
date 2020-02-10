@@ -45,7 +45,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('Flex.base should render correctly', () => {
     const { container } = render(<Flex>hello world</Flex>, {
-      theme: { Flex: { base: { backgroundColor: 'red' } } }
+      theme: { Flex: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

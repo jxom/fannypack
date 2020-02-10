@@ -328,7 +328,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Columns.base should render correctly', () => {
     const { container } = render(
-      <Columns overrides={{ Columns: { base: { backgroundColor: 'red' } } }}>
+      <Columns overrides={{ Columns: { css: { root: { backgroundColor: 'red' } } } }}>
         <Columns.Column>Column</Columns.Column>
         <Columns.Column>Column</Columns.Column>
         <Columns.Column>Column</Columns.Column>
@@ -341,7 +341,7 @@ describe('overrides', () => {
   it('Columns.Column.base should render correctly', () => {
     const { container } = render(
       <Columns>
-        <Columns.Column overrides={{ Columns: { Column: { base: { backgroundColor: 'red' } } } }}>
+        <Columns.Column overrides={{ Columns: { Column: { css: { root: { backgroundColor: 'red' } } } } }}>
           Column
         </Columns.Column>
         <Columns.Column>Column</Columns.Column>
@@ -363,7 +363,7 @@ describe('theming', () => {
         <Columns.Column>Column</Columns.Column>
       </Columns>,
       {
-        theme: { Columns: { base: { backgroundColor: 'red' } } }
+        theme: { Columns: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -378,7 +378,7 @@ describe('theming', () => {
         <Columns.Column>Column</Columns.Column>
       </Columns>,
       {
-        theme: { Columns: { Column: { base: { backgroundColor: 'red' } } } }
+        theme: { Columns: { Column: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

@@ -135,7 +135,7 @@ describe('theming', () => {
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { base: { backgroundColor: 'red' } } }
+        theme: { FieldWrapper: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -148,7 +148,7 @@ describe('theming', () => {
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { Label: { base: { backgroundColor: 'red' } } } }
+        theme: { FieldWrapper: { Label: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -161,7 +161,7 @@ describe('theming', () => {
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { DescriptionText: { base: { backgroundColor: 'red' } } } }
+        theme: { FieldWrapper: { DescriptionText: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -174,7 +174,7 @@ describe('theming', () => {
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { HintText: { base: { backgroundColor: 'red' } } } }
+        theme: { FieldWrapper: { HintText: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -187,7 +187,7 @@ describe('theming', () => {
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { OptionalText: { base: { backgroundColor: 'red' } } } }
+        theme: { FieldWrapper: { OptionalText: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -200,7 +200,7 @@ describe('theming', () => {
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { RequiredText: { base: { backgroundColor: 'red' } } } }
+        theme: { FieldWrapper: { RequiredText: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -213,7 +213,7 @@ describe('theming', () => {
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { ValidationText: { base: { backgroundColor: 'red' } } } }
+        theme: { FieldWrapper: { ValidationText: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -226,7 +226,7 @@ describe('theming', () => {
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { TooltipTrigger: { base: { backgroundColor: 'red' } } } }
+        theme: { FieldWrapper: { TooltipTrigger: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -239,7 +239,7 @@ describe('theming', () => {
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { TooltipPopover: { base: { backgroundColor: 'red' } } } }
+        theme: { FieldWrapper: { TooltipPopover: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

@@ -322,15 +322,15 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
   component={FieldWrapper}
   label="This is a label"
   overrides={[
-    'FieldWrapper.base',
-    { key: 'FieldWrapper.Label.base' },
-    { key: 'FieldWrapper.DescriptionText.base', props: { description: 'This is a description' } },
-    { key: 'FieldWrapper.HintText.base', props: { hint: 'This is a description' } },
-    { key: 'FieldWrapper.OptionalText.base', props: { isOptional: true } },
-    { key: 'FieldWrapper.RequiredText.base', props: { isRequired: true } },
-    { key: 'FieldWrapper.ValidationText.base', props: { validationText: 'This is validation text' } },
-    { key: 'FieldWrapper.TooltipTrigger.base', props: { tooltip: 'This is a tooltip' } },
-    { key: 'FieldWrapper.TooltipPopover.base', props: { tooltip: 'This is a tooltip' } }
+    'FieldWrapper.css.root',
+    { key: 'FieldWrapper.Label.css.root' },
+    { key: 'FieldWrapper.DescriptionText.css.root', props: { description: 'This is a description' } },
+    { key: 'FieldWrapper.HintText.css.root', props: { hint: 'This is a description' } },
+    { key: 'FieldWrapper.OptionalText.css.root', props: { isOptional: true } },
+    { key: 'FieldWrapper.RequiredText.css.root', props: { isRequired: true } },
+    { key: 'FieldWrapper.ValidationText.css.root', props: { validationText: 'This is validation text' } },
+    { key: 'FieldWrapper.TooltipTrigger.css.root', props: { tooltip: 'This is a tooltip' } },
+    { key: 'FieldWrapper.TooltipPopover.css.root', props: { tooltip: 'This is a tooltip' } }
 ]}>
   <Input />
 </Theme>

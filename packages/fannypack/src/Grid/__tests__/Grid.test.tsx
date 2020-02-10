@@ -45,7 +45,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('Grid.base should render correctly', () => {
     const { container } = render(<Grid>hello world</Grid>, {
-      theme: { Grid: { base: { backgroundColor: 'red' } } }
+      theme: { Grid: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

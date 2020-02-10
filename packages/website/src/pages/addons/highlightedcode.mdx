@@ -72,47 +72,47 @@ The following languages are supported:
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">code</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">code</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 The code to be placed into the highlighted code area.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">language</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">language</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Language of the code.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isBlock</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isBlock</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Should the code appear as a block?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">preProps</Code>** <Code fontSize="150" palette="primary">Object</Code> 
+**<Code marginRight="major-1">preProps</Code>** <Code fontSize="150" palette="primary">Object</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">lineProps</Code>** <Code fontSize="150" palette="primary">Object</Code> 
+**<Code marginRight="major-1">lineProps</Code>** <Code fontSize="150" palette="primary">Object</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">tokenProps</Code>** <Code fontSize="150" palette="primary">Object</Code> 
+**<Code marginRight="major-1">tokenProps</Code>** <Code fontSize="150" palette="primary">Object</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">wrapperProps</Code>** <Code fontSize="150" palette="primary">Object</Code> 
+**<Code marginRight="major-1">wrapperProps</Code>** <Code fontSize="150" palette="primary">Object</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>** <Code fontSize="150" palette="primary">any</Code> 
+**<Code marginRight="major-1">overrides</Code>** <Code fontSize="150" palette="primary">any</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -122,11 +122,11 @@ Should the code appear as a block?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -145,28 +145,28 @@ Should the code appear as a block?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 
@@ -174,23 +174,23 @@ Should the code appear as a block?
   component={HighlightedCode}
   overrides={[
     {
-      key: 'HighlightedCode.base',
+      key: 'HighlightedCode.css.root',
       props: { code: 'console.log(\'hello world\')', language: 'javascript' }
     },
     {
-      key: 'HighlightedCode.block',
+      key: 'HighlightedCode.css.block',
       props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript', padding: 'major-2' }
     },
     {
-      key: 'HighlightedCode.Pre.base',
+      key: 'HighlightedCode.Pre.css.root',
       props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
     },
     {
-      key: 'HighlightedCode.Line.base',
+      key: 'HighlightedCode.Line.css.root',
       props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
     },
     {
-      key: 'HighlightedCode.Token.base',
+      key: 'HighlightedCode.Token.css.root',
       props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
     }
   ]}/>

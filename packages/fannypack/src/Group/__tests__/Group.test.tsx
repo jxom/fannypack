@@ -67,7 +67,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Group.base should render correctly', () => {
     const { container } = render(
-      <Group overrides={{ Group: { base: { backgroundColor: 'red' } } }}>
+      <Group overrides={{ Group: { css: { root: { backgroundColor: 'red' } } } }}>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>
@@ -77,7 +77,7 @@ describe('overrides', () => {
 
   it('Group.Item.base should render correctly', () => {
     const { container } = render(
-      <Group overrides={{ Group: { Item: { base: { backgroundColor: 'red' } } } }}>
+      <Group overrides={{ Group: { Item: { css: { root: { backgroundColor: 'red' } } } } }}>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>
@@ -87,7 +87,7 @@ describe('overrides', () => {
 
   it('Group.Item.first should render correctly', () => {
     const { container } = render(
-      <Group overrides={{ Group: { Item: { first: { backgroundColor: 'red' } } } }}>
+      <Group overrides={{ Group: { Item: { css: { first: { backgroundColor: 'red' } } } } }}>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>
@@ -97,7 +97,7 @@ describe('overrides', () => {
 
   it('Group.Item.middle should render correctly', () => {
     const { container } = render(
-      <Group overrides={{ Group: { Item: { middle: { backgroundColor: 'red' } } } }}>
+      <Group overrides={{ Group: { Item: { css: { middle: { backgroundColor: 'red' } } } } }}>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>
@@ -107,7 +107,7 @@ describe('overrides', () => {
 
   it('Group.Item.last should render correctly', () => {
     const { container } = render(
-      <Group overrides={{ Group: { Item: { last: { backgroundColor: 'red' } } } }}>
+      <Group overrides={{ Group: { Item: { css: { last: { backgroundColor: 'red' } } } } }}>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>
@@ -124,7 +124,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { base: { backgroundColor: 'red' } } }
+        theme: { Group: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -137,7 +137,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { base: { backgroundColor: 'red' } } } }
+        theme: { Group: { Item: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -150,7 +150,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { first: { backgroundColor: 'red' } } } }
+        theme: { Group: { Item: { css: { first: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -163,7 +163,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { last: { backgroundColor: 'red' } } } }
+        theme: { Group: { Item: { css: { last: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -176,7 +176,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { middle: { backgroundColor: 'red' } } } }
+        theme: { Group: { Item: { css: { middle: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
