@@ -248,45 +248,69 @@ export type ButtonThemeConfig = {
   defaultProps?: Partial<ButtonProps>;
 };
 export type CalloutThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   Content?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<CalloutContentProps>;
   };
   Header?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<CalloutHeaderProps>;
   };
   Title?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<CalloutTitleProps>;
   };
   Footer?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<CalloutFooterProps>;
   };
   IconWrapper?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<CalloutIconProps>;
   };
   Close?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<CalloutProps>;
 };
 export type CardThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   Content?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Header?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Footer?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Title?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<CardProps>;
 };
@@ -741,7 +765,9 @@ export type TagThemeConfig = {
   defaultProps?: Partial<TagProps>;
 };
 export type TextThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<TextProps>;
 };
 export type TextareaThemeConfig = {
