@@ -59,7 +59,7 @@ describe('overrides', () => {
     const { container } = render(
       <Tooltip
         content="This is content"
-        overrides={{ Tooltip: { Content: { base: { backgroundColor: 'red' } } } }}
+        overrides={{ Tooltip: { Content: { css: { root: { backgroundColor: 'red' } } } } }}
         baseId="test"
       >
         hello world
@@ -72,7 +72,7 @@ describe('overrides', () => {
     const { container } = render(
       <Tooltip
         content="This is content"
-        overrides={{ Tooltip: { Reference: { base: { backgroundColor: 'red' } } } }}
+        overrides={{ Tooltip: { Reference: { css: { root: { backgroundColor: 'red' } } } } }}
         baseId="test"
       >
         hello world
@@ -90,7 +90,7 @@ describe('theming', () => {
       </Tooltip>,
       {
         // @ts-ignore
-        theme: { Tooltip: { Content: { base: { backgroundColor: 'red' } } } }
+        theme: { Tooltip: { Content: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -103,7 +103,7 @@ describe('theming', () => {
       </Tooltip>,
       {
         // @ts-ignore
-        theme: { Tooltip: { Reference: { base: { backgroundColor: 'red' } } } }
+        theme: { Tooltip: { Reference: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

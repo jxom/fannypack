@@ -841,59 +841,75 @@ export type PopoverThemeConfig = {
   defaultProps?: Partial<PopoverProps>;
 };
 export type PortalThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<PortalProps>;
 };
 export type RadioThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   Icon?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Label?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   HiddenInput?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<RadioProps>;
 };
 export type RadioGroupThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<RadioGroupProps>;
 };
 export type RadioGroupFieldThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<RadioGroupFieldProps>;
 };
 export type RoverThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<RoverProps>;
 };
 export type TabbableThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  disabled?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    disabled?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<TabbableProps>;
 };
 export type TagThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    outlined?: ThemeAttribute<Stylesheet>;
+    sizes?: {
+      default?: ThemeAttribute<Stylesheet>;
+      medium?: ThemeAttribute<Stylesheet>;
+      large?: ThemeAttribute<Stylesheet>;
+    };
+  };
   Content?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Close?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  outlined?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  sizes?: {
-    default?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
-    medium?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
-    large?: {
-      base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
     };
   };
   defaultProps?: Partial<TagProps>;
@@ -905,104 +921,108 @@ export type TextThemeConfig = {
   defaultProps?: Partial<TextProps>;
 };
 export type TextareaThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  disabled?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  focus?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  placeholder?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  sizes?: {
-    small?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
-    default?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
-    medium?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
-    large?: {
-      base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    disabled?: ThemeAttribute<Stylesheet>;
+    focus?: ThemeAttribute<Stylesheet>;
+    placeholder?: ThemeAttribute<Stylesheet>;
+    sizes?: {
+      small?: ThemeAttribute<Stylesheet>;
+      default?: ThemeAttribute<Stylesheet>;
+      medium?: ThemeAttribute<Stylesheet>;
+      large?: ThemeAttribute<Stylesheet>;
     };
   };
   Wrapper?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Icon?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Spinner?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<TextareaProps>;
 };
 export type TextareaFieldThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<TextareaFieldProps>;
 };
 export type TooltipThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    placements?: {
+      center?: ThemeAttribute<Stylesheet>;
+      top?: ThemeAttribute<Stylesheet>;
+      left?: ThemeAttribute<Stylesheet>;
+      right?: ThemeAttribute<Stylesheet>;
+      bottom?: ThemeAttribute<Stylesheet>;
+      topStart?: ThemeAttribute<Stylesheet>;
+      topEnd?: ThemeAttribute<Stylesheet>;
+      bottomStart?: ThemeAttribute<Stylesheet>;
+      bottomEnd?: ThemeAttribute<Stylesheet>;
+    };
+  };
   Arrow?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<TooltipArrowProps>;
   };
   Content?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<TooltipContentProps>;
   };
   Reference?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
     defaultProps?: Partial<TooltipReferenceProps>;
-  };
-  placements?: {
-    center?: ThemeAttribute<Stylesheet>;
-    top?: ThemeAttribute<Stylesheet>;
-    left?: ThemeAttribute<Stylesheet>;
-    right?: ThemeAttribute<Stylesheet>;
-    bottom?: ThemeAttribute<Stylesheet>;
-    topStart?: ThemeAttribute<Stylesheet>;
-    topEnd?: ThemeAttribute<Stylesheet>;
-    bottomStart?: ThemeAttribute<Stylesheet>;
-    bottomEnd?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<TooltipProps>;
 };
 export type SelectThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
-  disabled?: {
-    base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    disabled?: ThemeAttribute<Stylesheet>;
+    sizes?: {
+      small?: ThemeAttribute<Stylesheet>;
+      default?: ThemeAttribute<Stylesheet>;
+      medium?: ThemeAttribute<Stylesheet>;
+      large?: ThemeAttribute<Stylesheet>;
+    };
   };
   Wrapper?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Icon?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Spinner?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  sizes?: {
-    small?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
-    default?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
-    medium?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
-    large?: {
-      base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
     };
   };
   defaultProps?: Partial<SelectProps>;
 };
 export type SelectFieldThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<SelectFieldProps>;
 };
 export type SetThemeConfig = {
@@ -1019,47 +1039,69 @@ export type SetThemeConfig = {
   defaultProps?: Partial<SetProps>;
 };
 export type SpinnerThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    sizes?: {
+      small?: ThemeAttribute<Stylesheet>;
+      default?: ThemeAttribute<Stylesheet>;
+      medium?: ThemeAttribute<Stylesheet>;
+      large?: ThemeAttribute<Stylesheet>;
+    };
+  };
   vector?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   loaderCircle?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   trackCircle?: {
-    base?: ThemeAttribute<Stylesheet>;
-  };
-  sizes?: {
-    small?: ThemeAttribute<Stylesheet>;
-    default?: ThemeAttribute<Stylesheet>;
-    medium?: ThemeAttribute<Stylesheet>;
-    large?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<SpinnerProps>;
 };
 export type SwitchThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   Icon?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   Label?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   HiddenInput?: {
-    base?: ThemeAttribute<Stylesheet>;
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
   };
   defaultProps?: Partial<SwitchProps>;
 };
 export type SwitchFieldThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<SwitchFieldProps>;
 };
 export type SwitchGroupThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<SwitchGroupProps>;
 };
 export type SwitchGroupFieldThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<SwitchGroupFieldProps>;
 };
 

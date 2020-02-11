@@ -188,7 +188,7 @@ describe('overrides', () => {
           { label: 'Windy', value: 'windy' },
           { label: 'Overcast', value: 'overcast' }
         ]}
-        overrides={{ SelectField: { base: { backgroundColor: 'red' } } }}
+        overrides={{ SelectField: { css: { root: { backgroundColor: 'red' } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -209,7 +209,7 @@ describe('theming', () => {
       />,
       {
         // @ts-ignore
-        theme: { SelectField: { base: { backgroundColor: 'red' } } }
+        theme: { SelectField: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

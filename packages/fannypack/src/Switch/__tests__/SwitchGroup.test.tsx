@@ -130,7 +130,7 @@ describe('overrides', () => {
       <SwitchGroup
         name="weather"
         options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
-        overrides={{ SwitchGroup: { base: { backgroundColor: 'red' } } }}
+        overrides={{ SwitchGroup: { css: { root: { backgroundColor: 'red' } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -143,7 +143,7 @@ describe('theming', () => {
       <SwitchGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />,
       {
         // @ts-ignore
-        theme: { SwitchGroup: { base: { backgroundColor: 'red' } } }
+        theme: { SwitchGroup: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

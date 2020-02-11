@@ -47,20 +47,20 @@ describe('props', () => {
 
 describe('overrides', () => {
   it('Textarea.base should render correctly', () => {
-    const { container } = render(<Textarea overrides={{ Textarea: { base: { backgroundColor: 'red' } } }} />);
+    const { container } = render(<Textarea overrides={{ Textarea: { css: { root: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Textarea.Wrapper.base should render correctly', () => {
     const { container } = render(
-      <Textarea overrides={{ Textarea: { Wrapper: { base: { backgroundColor: 'red' } } } }} />
+      <Textarea overrides={{ Textarea: { Wrapper: { css: { root: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Textarea.placeholder.base should render correctly', () => {
     const { container } = render(
-      <Textarea overrides={{ Textarea: { placeholder: { base: { backgroundColor: 'red' } } } }} />
+      <Textarea overrides={{ Textarea: { css: { placeholder: { backgroundColor: 'red' } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -70,7 +70,7 @@ describe('theming', () => {
   it('Textarea.base should render correctly', () => {
     const { container } = render(<Textarea />, {
       // @ts-ignore
-      theme: { Textarea: { base: { backgroundColor: 'red' } } }
+      theme: { Textarea: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -78,7 +78,7 @@ describe('theming', () => {
   it('Textarea.Wrapper.base should render correctly', () => {
     const { container } = render(<Textarea />, {
       // @ts-ignore
-      theme: { Textarea: { Wrapper: { base: { backgroundColor: 'red' } } } }
+      theme: { Textarea: { Wrapper: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -86,7 +86,7 @@ describe('theming', () => {
   it('Textarea.placeholder.base should render correctly', () => {
     const { container } = render(<Textarea />, {
       // @ts-ignore
-      theme: { Textarea: { placeholder: { base: { backgroundColor: 'red' } } } }
+      theme: { Textarea: { css: { placeholder: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

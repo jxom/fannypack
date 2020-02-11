@@ -62,7 +62,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Tabbable.base should render correctly', () => {
     const { container } = render(
-      <Tabbable use="div" overrides={{ Tabbable: { base: { backgroundColor: 'red' } } }}>
+      <Tabbable use="div" overrides={{ Tabbable: { css: { root: { backgroundColor: 'red' } } } }}>
         Tabbable
       </Tabbable>
     );
@@ -73,7 +73,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Tabbable.base should render correctly', () => {
     const { container } = render(<Tabbable use="div">Tabbable</Tabbable>, {
-      theme: { Tabbable: { base: { backgroundColor: 'red' } } }
+      theme: { Tabbable: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
