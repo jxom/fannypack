@@ -4,7 +4,6 @@ import { BackdropProps as ReakitBackdropProps } from 'reakit/ts/Backdrop/Backdro
 
 import _Backdrop from './styled';
 import {
-  Omit,
   AnimateProps,
   animatePropTypes,
   animateDefaultProps,

@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 // @ts-ignore
 import propTypeUtils from 'airbnb-prop-types';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts';
+import { ReakitBoxProps } from '../types';
 // @ts-ignore
 import _get from 'lodash/get';
 
