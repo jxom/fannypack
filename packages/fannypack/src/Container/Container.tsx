@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts';
+import { ReakitBoxProps } from '../types';
 
 import { Breakpoint, breakpointPropType } from '../types';
 import _Container from './styled';

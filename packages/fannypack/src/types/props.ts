@@ -1,4 +1,5 @@
 import * as PropTypes from 'prop-types';
+import { BoxProps } from 'reakit/ts';
 
 export type ButtonType = 'default' | 'outlined' | 'link' | 'ghost';
 export const buttonTypePropType = PropTypes.oneOf(['default', 'outlined', 'link', 'ghost']) as PropTypes.Validator<
@@ -129,4 +130,9 @@ export const restrictDefaultProps = {
 export type StyledProps = {
   theme: {};
   tone?: number;
+};
+
+export type ReakitBoxProps = BoxProps & {
+  hiddenBreakpoint?: Breakpoint;
+  showBreakpoint?: Breakpoint;
 };

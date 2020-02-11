@@ -11,7 +11,7 @@ import javascript from 'react-syntax-highlighter/languages/prism/javascript';
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 // @ts-ignore
 import json from 'react-syntax-highlighter/languages/prism/json';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts';
+import { ReakitBoxProps } from '../types';
 // @ts-ignore
 import _get from 'lodash/get';
 

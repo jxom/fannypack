@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts';
+import { ReakitBoxProps } from '../types';
 
 import { formikField, reduxFormField } from '../adaptors/fields';
 import { RadioGroup as _RadioGroup } from './styled';
