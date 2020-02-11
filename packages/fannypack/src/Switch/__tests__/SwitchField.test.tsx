@@ -88,7 +88,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('SwitchField.base should render correctly', () => {
+  it('SwitchField.root should render correctly', () => {
     const { container } = render(
       <SwitchField overrides={{ SwitchField: { css: { root: { backgroundColor: 'red' } } } }} />
     );
@@ -97,7 +97,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('SwitchField.base should render correctly', () => {
+  it('SwitchField.root should render correctly', () => {
     const { container } = render(<SwitchField />, {
       // @ts-ignore
       theme: { SwitchField: { css: { root: { backgroundColor: 'red' } } } }

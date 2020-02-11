@@ -33,16 +33,16 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('Avatar.base should render correctly', () => {
+  it('Avatar.root should render correctly', () => {
     const { container } = render(
       <Avatar src="test.png" overrides={{ Avatar: { css: { root: { backgroundColor: 'red' } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Avatar.circle.base should render correctly', () => {
+  it('Avatar.circle.root should render correctly', () => {
     const { container } = render(
-      <Avatar src="test.png" overrides={{ Avatar: { css: { circle: { base: { backgroundColor: 'red' } } } } }} />
+      <Avatar src="test.png" overrides={{ Avatar: { css: { circle: { backgroundColor: 'red' } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -89,16 +89,16 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Avatar.base should render correctly', () => {
+  it('Avatar.root should render correctly', () => {
     const { container } = render(<Avatar src="test.png" />, {
       theme: { Avatar: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Avatar.circle.base should render correctly', () => {
+  it('Avatar.circle.root should render correctly', () => {
     const { container } = render(<Avatar src="test.png" />, {
-      theme: { Avatar: { css: { circle: { base: { backgroundColor: 'red' } } } } }
+      theme: { Avatar: { css: { circle: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

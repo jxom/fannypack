@@ -104,21 +104,21 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Dialog.base should render correctly', () => {
+  it('Dialog.root should render correctly', () => {
     const { container } = render(
       <Dialog overrides={{ Dialog: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Dialog>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.Content.base should render correctly', () => {
+  it('Dialog.Content.root should render correctly', () => {
     const { container } = render(
       <Dialog overrides={{ Dialog: { Content: { css: { root: { backgroundColor: 'red' } } } } }}>hello world</Dialog>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.Header.base should render correctly', () => {
+  it('Dialog.Header.root should render correctly', () => {
     const { container } = render(
       <Dialog title="This is a title" overrides={{ Dialog: { Header: { css: { root: { backgroundColor: 'red' } } } } }}>
         hello world
@@ -127,7 +127,7 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.Title.base should render correctly', () => {
+  it('Dialog.Title.root should render correctly', () => {
     const { container } = render(
       <Dialog title="This is a title" overrides={{ Dialog: { Title: { css: { root: { backgroundColor: 'red' } } } } }}>
         hello world
@@ -136,7 +136,7 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.Footer.base should render correctly', () => {
+  it('Dialog.Footer.root should render correctly', () => {
     const { container } = render(
       <Dialog
         footer="This is a footer"
@@ -148,7 +148,7 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.IconWrapper.base should render correctly', () => {
+  it('Dialog.IconWrapper.root should render correctly', () => {
     const { container } = render(
       <Dialog overrides={{ Dialog: { IconWrapper: { css: { root: { backgroundColor: 'red' } } } } }}>
         hello world
@@ -157,7 +157,7 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.Close.base should render correctly', () => {
+  it('Dialog.Close.root should render correctly', () => {
     const { container } = render(
       <Dialog showCloseButton overrides={{ Dialog: { Close: { css: { root: { backgroundColor: 'red' } } } } }}>
         hello world
@@ -168,49 +168,49 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Dialog.base should render correctly', () => {
+  it('Dialog.root should render correctly', () => {
     const { container } = render(<Dialog>hello world</Dialog>, {
       theme: { Dialog: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.Content.base should render correctly', () => {
+  it('Dialog.Content.root should render correctly', () => {
     const { container } = render(<Dialog>hello world</Dialog>, {
       theme: { Dialog: { Content: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.Header.base should render correctly', () => {
+  it('Dialog.Header.root should render correctly', () => {
     const { container } = render(<Dialog title="This is a title">hello world</Dialog>, {
       theme: { Dialog: { Header: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.Title.base should render correctly', () => {
+  it('Dialog.Title.root should render correctly', () => {
     const { container } = render(<Dialog title="This is a title">hello world</Dialog>, {
       theme: { Dialog: { Title: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.Footer.base should render correctly', () => {
+  it('Dialog.Footer.root should render correctly', () => {
     const { container } = render(<Dialog footer="This is a footer">hello world</Dialog>, {
       theme: { Dialog: { Footer: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.IconWrapper.base should render correctly', () => {
+  it('Dialog.IconWrapper.root should render correctly', () => {
     const { container } = render(<Dialog>hello world</Dialog>, {
       theme: { Dialog: { IconWrapper: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Dialog.Close.base should render correctly', () => {
+  it('Dialog.Close.root should render correctly', () => {
     const { container } = render(<Dialog showCloseButton>hello world</Dialog>, {
       theme: { Dialog: { Close: { css: { root: { backgroundColor: 'red' } } } } }
     });

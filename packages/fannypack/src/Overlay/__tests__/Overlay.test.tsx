@@ -144,7 +144,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Overlay.base should render correctly', () => {
+  it('Overlay.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -157,7 +157,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.center.base should render correctly', () => {
+  it('Overlay.center.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -174,7 +174,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.top.base should render correctly', () => {
+  it('Overlay.top.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -192,7 +192,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.left.base should render correctly', () => {
+  it('Overlay.left.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -210,7 +210,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.right.base should render correctly', () => {
+  it('Overlay.right.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -228,7 +228,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottom.base should render correctly', () => {
+  it('Overlay.bottom.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -246,7 +246,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.topStart.base should render correctly', () => {
+  it('Overlay.topStart.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -264,7 +264,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.topEnd.base should render correctly', () => {
+  it('Overlay.topEnd.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -282,7 +282,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottomStart.base should render correctly', () => {
+  it('Overlay.bottomStart.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -300,7 +300,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottomEnd.base should render correctly', () => {
+  it('Overlay.bottomEnd.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -320,7 +320,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Overlay.base should render correctly', () => {
+  it('Overlay.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -335,7 +335,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.center.base should render correctly', () => {
+  it('Overlay.center.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -350,7 +350,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.top.base should render correctly', () => {
+  it('Overlay.top.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -365,7 +365,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.left.base should render correctly', () => {
+  it('Overlay.left.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -380,7 +380,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.right.base should render correctly', () => {
+  it('Overlay.right.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -395,7 +395,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottom.base should render correctly', () => {
+  it('Overlay.bottom.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -410,7 +410,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.topStart.base should render correctly', () => {
+  it('Overlay.topStart.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -425,7 +425,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.topEnd.base should render correctly', () => {
+  it('Overlay.topEnd.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -440,7 +440,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottomStart.base should render correctly', () => {
+  it('Overlay.bottomStart.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -455,7 +455,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottomEnd.base should render correctly', () => {
+  it('Overlay.bottomEnd.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (

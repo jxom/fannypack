@@ -178,7 +178,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('SelectField.base should render correctly', () => {
+  it('SelectField.root should render correctly', () => {
     const { container } = render(
       <SelectField
         label="This is a label"
@@ -196,7 +196,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('SelectField.base should render correctly', () => {
+  it('SelectField.root should render correctly', () => {
     const { container } = render(
       <SelectField
         label="This is a label"

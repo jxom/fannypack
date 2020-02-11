@@ -125,7 +125,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('CheckboxGroup.base should render correctly', () => {
+  it('CheckboxGroup.root should render correctly', () => {
     const { container } = render(
       <CheckboxGroup
         name="weather"
@@ -138,7 +138,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('CheckboxGroup.base should render correctly', () => {
+  it('CheckboxGroup.root should render correctly', () => {
     const { container } = render(
       <CheckboxGroup
         name="weather"

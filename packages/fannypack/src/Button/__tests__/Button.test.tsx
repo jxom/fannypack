@@ -203,7 +203,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Button.base should render correctly', () => {
+  it('Button.root should render correctly', () => {
     const { container } = render(
       <Button
         overrides={{ Button: { css: { root: { backgroundColor: 'red' }, disabled: { backgroundColor: 'red' } } } }}
@@ -302,7 +302,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Button.base should render correctly', () => {
+  it('Button.root should render correctly', () => {
     const { container } = render(<Button>hello world</Button>, {
       theme: { Button: { css: { root: { backgroundColor: 'red' }, disabled: { backgroundColor: 'red' } } } }
     });

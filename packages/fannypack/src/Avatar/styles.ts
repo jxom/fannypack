@@ -12,7 +12,7 @@ export const Avatar = styleProps => cssClass`
       border-radius: 50%;
 
       & {
-        ${theme(`${styleProps.themeKey}.circle.base`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.circle.root`)(styleProps)};
       }
     `}
 
@@ -28,7 +28,7 @@ export const Avatar = styleProps => cssClass`
   ${getSizeAttributes(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.css.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 

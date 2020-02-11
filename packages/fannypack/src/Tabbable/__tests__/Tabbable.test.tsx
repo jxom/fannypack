@@ -60,7 +60,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Tabbable.base should render correctly', () => {
+  it('Tabbable.root should render correctly', () => {
     const { container } = render(
       <Tabbable use="div" overrides={{ Tabbable: { css: { root: { backgroundColor: 'red' } } } }}>
         Tabbable
@@ -71,7 +71,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Tabbable.base should render correctly', () => {
+  it('Tabbable.root should render correctly', () => {
     const { container } = render(<Tabbable use="div">Tabbable</Tabbable>, {
       theme: { Tabbable: { css: { root: { backgroundColor: 'red' } } } }
     });

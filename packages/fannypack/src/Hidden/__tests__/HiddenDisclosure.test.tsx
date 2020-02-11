@@ -99,7 +99,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Hidden.Disclosure.base should render correctly', () => {
+  it('Hidden.Disclosure.root should render correctly', () => {
     function Component() {
       const hidden = Hidden.useState({ baseId: 'test' });
       return (
@@ -117,7 +117,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Hidden.Disclosure.base should render correctly', () => {
+  it('Hidden.Disclosure.root should render correctly', () => {
     function Component() {
       const hidden = Hidden.useState({ baseId: 'test' });
       return <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>;

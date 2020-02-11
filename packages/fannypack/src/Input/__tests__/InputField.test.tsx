@@ -54,7 +54,7 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('InputField.base should render correctly', () => {
+  it('InputField.root should render correctly', () => {
     const { container } = render(
       <InputField overrides={{ InputField: { css: { root: { backgroundColor: 'red' } } } }} />
     );
@@ -63,7 +63,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('InputField.base should render correctly', () => {
+  it('InputField.root should render correctly', () => {
     const { container } = render(<InputField />, {
       // @ts-ignore
       theme: { InputField: { css: { root: { backgroundColor: 'red' } } } }

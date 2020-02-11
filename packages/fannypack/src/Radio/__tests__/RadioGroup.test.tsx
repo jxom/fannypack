@@ -114,7 +114,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('RadioGroup.base should render correctly', () => {
+  it('RadioGroup.root should render correctly', () => {
     const { container } = render(
       <RadioGroup
         name="weather"
@@ -127,7 +127,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('RadioGroup.base should render correctly', () => {
+  it('RadioGroup.root should render correctly', () => {
     const { container } = render(
       <RadioGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />,
       {

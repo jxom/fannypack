@@ -40,7 +40,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 />
 `;
 
-exports[`overrides Avatar.base should render correctly 1`] = `
+exports[`overrides Avatar.circle.root should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -56,6 +56,10 @@ exports[`overrides Avatar.base should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-1 {
+  max-width: 100%;
+}
+
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -64,6 +68,28 @@ exports[`overrides Avatar.base should render correctly 1`] = `
   width: 60px;
   height: 60px;
   font-size: 24px;
+}
+
+<img
+  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`overrides Avatar.root should render correctly 1`] = `
+.emotion-2 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-2:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .emotion-1 {
@@ -74,32 +100,6 @@ exports[`overrides Avatar.base should render correctly 1`] = `
   background-color: red;
 }
 
-<img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`overrides Avatar.circle.base should render correctly 1`] = `
-.emotion-2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-2:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-1 {
-  max-width: 100%;
-}
-
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -108,6 +108,10 @@ exports[`overrides Avatar.circle.base should render correctly 1`] = `
   width: 60px;
   height: 60px;
   font-size: 24px;
+}
+
+.emotion-0 {
+  background-color: red;
 }
 
 <img
@@ -588,7 +592,7 @@ exports[`props should render correctly with kind circle 1`] = `
 />
 `;
 
-exports[`theming Avatar.base should render correctly 1`] = `
+exports[`theming Avatar.circle.root should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -604,6 +608,10 @@ exports[`theming Avatar.base should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-1 {
+  max-width: 100%;
+}
+
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -612,6 +620,28 @@ exports[`theming Avatar.base should render correctly 1`] = `
   width: 60px;
   height: 60px;
   font-size: 24px;
+}
+
+<img
+  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar"
+  src="test.png"
+/>
+`;
+
+exports[`theming Avatar.root should render correctly 1`] = `
+.emotion-2 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-2:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .emotion-1 {
@@ -622,32 +652,6 @@ exports[`theming Avatar.base should render correctly 1`] = `
   background-color: red;
 }
 
-<img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar"
-  src="test.png"
-/>
-`;
-
-exports[`theming Avatar.circle.base should render correctly 1`] = `
-.emotion-2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-2:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-1 {
-  max-width: 100%;
-}
-
 .emotion-0 {
   width: 60px;
   height: 60px;
@@ -656,6 +660,10 @@ exports[`theming Avatar.circle.base should render correctly 1`] = `
   width: 60px;
   height: 60px;
   font-size: 24px;
+}
+
+.emotion-0 {
+  background-color: red;
 }
 
 <img

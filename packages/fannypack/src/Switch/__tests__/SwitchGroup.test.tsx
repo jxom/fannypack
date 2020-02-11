@@ -125,7 +125,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('SwitchGroup.base should render correctly', () => {
+  it('SwitchGroup.root should render correctly', () => {
     const { container } = render(
       <SwitchGroup
         name="weather"
@@ -138,7 +138,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('SwitchGroup.base should render correctly', () => {
+  it('SwitchGroup.root should render correctly', () => {
     const { container } = render(
       <SwitchGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />,
       {

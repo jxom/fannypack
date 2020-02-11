@@ -65,7 +65,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Group.base should render correctly', () => {
+  it('Group.root should render correctly', () => {
     const { container } = render(
       <Group overrides={{ Group: { css: { root: { backgroundColor: 'red' } } } }}>
         <Button>Hello</Button>
@@ -75,7 +75,7 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Group.Item.base should render correctly', () => {
+  it('Group.Item.root should render correctly', () => {
     const { container } = render(
       <Group overrides={{ Group: { Item: { css: { root: { backgroundColor: 'red' } } } } }}>
         <Button>Hello</Button>
@@ -117,7 +117,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Group.base should render correctly', () => {
+  it('Group.root should render correctly', () => {
     const { container } = render(
       <Group>
         <Button>Hello</Button>
@@ -130,7 +130,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Group.Item.base should render correctly', () => {
+  it('Group.Item.root should render correctly', () => {
     const { container } = render(
       <Group>
         <Button>Hello</Button>

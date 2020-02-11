@@ -39,7 +39,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('GridItem.base should render correctly', () => {
+  it('GridItem.root should render correctly', () => {
     const { container } = render(<GridItem>hello world</GridItem>, {
       theme: { Grid: { Item: { css: { root: { backgroundColor: 'red' } } } } }
     });

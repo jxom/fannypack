@@ -90,7 +90,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('List.base should render correctly', () => {
+  it('List.root should render correctly', () => {
     const { container } = render(
       <List overrides={{ Link: { css: { root: { backgroundColor: 'red' } } } }}>hello world</List>
     );
@@ -99,7 +99,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('List.base should render correctly', () => {
+  it('List.root should render correctly', () => {
     const { container } = render(
       <List>
         <List.Item>Item One</List.Item>
@@ -144,7 +144,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('List.Item.base should render correctly', () => {
+  it('List.Item.root should render correctly', () => {
     const { container } = render(
       <List>
         <List.Item>Item One</List.Item>

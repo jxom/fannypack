@@ -126,7 +126,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Popover.base should render correctly', () => {
+  it('Popover.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -141,7 +141,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Arrow.base should render correctly', () => {
+  it('Popover.Arrow.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -156,7 +156,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Content.base should render correctly', () => {
+  it('Popover.Content.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -171,7 +171,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Close.base should render correctly', () => {
+  it('Popover.Close.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -186,7 +186,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Header.base should render correctly', () => {
+  it('Popover.Header.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -201,7 +201,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Title.base should render correctly', () => {
+  it('Popover.Title.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -216,7 +216,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Footer.base should render correctly', () => {
+  it('Popover.Footer.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -253,7 +253,7 @@ describe('theming', () => {
 });
 
 describe('overrides', () => {
-  it('Popover.base should render correctly', () => {
+  it('Popover.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -266,7 +266,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Arrow.base should render correctly', () => {
+  it('Popover.Arrow.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -284,7 +284,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Content.base should render correctly', () => {
+  it('Popover.Content.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -301,7 +301,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Close.base should render correctly', () => {
+  it('Popover.Close.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -320,7 +320,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Header.base should render correctly', () => {
+  it('Popover.Header.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -338,7 +338,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Title.base should render correctly', () => {
+  it('Popover.Title.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -356,7 +356,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Footer.base should render correctly', () => {
+  it('Popover.Footer.root should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (

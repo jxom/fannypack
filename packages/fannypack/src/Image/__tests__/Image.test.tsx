@@ -31,7 +31,7 @@ describe('props', () => {
 });
 
 describe('theming', () => {
-  it('Image.base should render correctly', () => {
+  it('Image.root should render correctly', () => {
     const { container } = render(<Image src="test.png" />, {
       theme: { Image: { css: { root: { backgroundColor: 'red' } } } }
     });

@@ -326,7 +326,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Columns.base should render correctly', () => {
+  it('Columns.root should render correctly', () => {
     const { container } = render(
       <Columns overrides={{ Columns: { css: { root: { backgroundColor: 'red' } } } }}>
         <Columns.Column>Column</Columns.Column>
@@ -338,7 +338,7 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Columns.Column.base should render correctly', () => {
+  it('Columns.Column.root should render correctly', () => {
     const { container } = render(
       <Columns>
         <Columns.Column overrides={{ Columns: { Column: { css: { root: { backgroundColor: 'red' } } } } }}>
@@ -354,7 +354,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Columns.base should render correctly', () => {
+  it('Columns.root should render correctly', () => {
     const { container } = render(
       <Columns>
         <Columns.Column>Column</Columns.Column>
@@ -369,7 +369,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Columns.Column.base should render correctly', () => {
+  it('Columns.Column.root should render correctly', () => {
     const { container } = render(
       <Columns>
         <Columns.Column>Column</Columns.Column>

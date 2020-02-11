@@ -160,7 +160,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Modal.base should render correctly', () => {
+  it('Modal.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -173,7 +173,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.center.base should render correctly', () => {
+  it('Modal.center.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -190,7 +190,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.top.base should render correctly', () => {
+  it('Modal.top.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -208,7 +208,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.left.base should render correctly', () => {
+  it('Modal.left.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -226,7 +226,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.right.base should render correctly', () => {
+  it('Modal.right.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -244,7 +244,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottom.base should render correctly', () => {
+  it('Modal.bottom.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -262,7 +262,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.topStart.base should render correctly', () => {
+  it('Modal.topStart.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -280,7 +280,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.topEnd.base should render correctly', () => {
+  it('Modal.topEnd.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -298,7 +298,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottomStart.base should render correctly', () => {
+  it('Modal.bottomStart.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -316,7 +316,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottomEnd.base should render correctly', () => {
+  it('Modal.bottomEnd.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -336,7 +336,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Modal.base should render correctly', () => {
+  it('Modal.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -351,7 +351,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.center.base should render correctly', () => {
+  it('Modal.center.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -366,7 +366,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.top.base should render correctly', () => {
+  it('Modal.top.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -381,7 +381,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.left.base should render correctly', () => {
+  it('Modal.left.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -396,7 +396,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.right.base should render correctly', () => {
+  it('Modal.right.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -411,7 +411,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottom.base should render correctly', () => {
+  it('Modal.bottom.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -426,7 +426,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.topStart.base should render correctly', () => {
+  it('Modal.topStart.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -441,7 +441,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.topEnd.base should render correctly', () => {
+  it('Modal.topEnd.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -456,7 +456,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottomStart.base should render correctly', () => {
+  it('Modal.bottomStart.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -471,7 +471,7 @@ describe('theming', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottomEnd.base should render correctly', () => {
+  it('Modal.bottomEnd.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (

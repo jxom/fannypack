@@ -39,7 +39,7 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('TextareaField.base should render correctly', () => {
+  it('TextareaField.root should render correctly', () => {
     const { container } = render(
       <TextareaField overrides={{ TextareaField: { css: { root: { backgroundColor: 'red' } } } }} />
     );
@@ -48,7 +48,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('TextareaField.base should render correctly', () => {
+  it('TextareaField.root should render correctly', () => {
     const { container } = render(<TextareaField />, {
       // @ts-ignore
       theme: { TextareaField: { css: { root: { backgroundColor: 'red' } } } }

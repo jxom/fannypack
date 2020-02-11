@@ -98,7 +98,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Modal.Disclosure.base should render correctly', () => {
+  it('Modal.Disclosure.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -116,7 +116,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Modal.Disclosure.base should render correctly', () => {
+  it('Modal.Disclosure.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return <Modal.Disclosure {...modal}>Toggle</Modal.Disclosure>;

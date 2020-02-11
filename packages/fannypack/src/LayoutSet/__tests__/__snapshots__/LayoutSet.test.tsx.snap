@@ -263,7 +263,7 @@ exports[`defaultProps should render correctly for isHorizontal 1`] = `
 </div>
 `;
 
-exports[`overrides LayoutSet.base should render correctly 1`] = `
+exports[`overrides LayoutSet.child.horizontal should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -277,10 +277,6 @@ exports[`overrides LayoutSet.base should render correctly 1`] = `
 
 .emotion-0:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  display: block;
 }
 
 .emotion-5 {
@@ -301,8 +297,8 @@ exports[`overrides LayoutSet.base should render correctly 1`] = `
   margin-bottom: 2rem;
 }
 
-.emotion-5 {
-  background-color: red;
+.emotion-4 {
+  display: block;
 }
 
 <div
@@ -321,7 +317,7 @@ exports[`overrides LayoutSet.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides LayoutSet.child.base should render correctly 1`] = `
+exports[`overrides LayoutSet.child.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -361,60 +357,6 @@ exports[`overrides LayoutSet.child.base should render correctly 1`] = `
 
 .emotion-5 > *:not(:last-child) {
   margin-bottom: 2rem;
-}
-
-<div
-  class="emotion-4 emotion-5 emotion-0 emotion-1 fp-Box fp-LayoutSet"
->
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`overrides LayoutSet.child.horizontal should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.emotion-5 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-4 {
-  display: block;
 }
 
 <div
@@ -527,6 +469,64 @@ exports[`overrides LayoutSet.horizontal should render correctly 1`] = `
 
 .emotion-4 {
   display: block;
+}
+
+<div
+  class="emotion-4 emotion-5 emotion-0 emotion-1 fp-Box fp-LayoutSet"
+>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`overrides LayoutSet.root should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-5 {
+  background-color: red;
 }
 
 <div

@@ -43,7 +43,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Flex.base should render correctly', () => {
+  it('Flex.root should render correctly', () => {
     const { container } = render(<Flex>hello world</Flex>, {
       theme: { Flex: { css: { root: { backgroundColor: 'red' } } } }
     });

@@ -99,7 +99,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Icon.base should render correctly', () => {
+  it('Icon.root should render correctly', () => {
     const { container } = render(
       <Icon icon="info-circle" overrides={{ Icon: { css: { root: { backgroundColor: 'red' } } } }}>
         hello world
@@ -181,7 +181,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Icon.base should render correctly', () => {
+  it('Icon.root should render correctly', () => {
     const { container } = render(<Icon icon="info-circle">hello world</Icon>, {
       theme: { Icon: { css: { root: { backgroundColor: 'red' } } } }
     });

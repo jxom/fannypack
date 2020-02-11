@@ -81,26 +81,26 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Switch.base should render correctly', () => {
+  it('Switch.root should render correctly', () => {
     const { container } = render(<Switch overrides={{ Switch: { css: { root: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.Icon.base should render correctly', () => {
+  it('Switch.Icon.root should render correctly', () => {
     const { container } = render(
       <Switch overrides={{ Switch: { Icon: { css: { root: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.Label.base should render correctly', () => {
+  it('Switch.Label.root should render correctly', () => {
     const { container } = render(
       <Switch overrides={{ Switch: { Label: { css: { root: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.HiddenInput.base should render correctly', () => {
+  it('Switch.HiddenInput.root should render correctly', () => {
     const { container } = render(
       <Switch overrides={{ Switch: { HiddenInput: { css: { root: { backgroundColor: 'red' } } } } }} />
     );
@@ -109,7 +109,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Switch.base should render correctly', () => {
+  it('Switch.root should render correctly', () => {
     const { container } = render(<Switch />, {
       // @ts-ignore
       theme: { Switch: { css: { root: { backgroundColor: 'red' } } } }
@@ -117,7 +117,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.Icon.base should render correctly', () => {
+  it('Switch.Icon.root should render correctly', () => {
     const { container } = render(<Switch />, {
       // @ts-ignore
       theme: { Switch: { Icon: { css: { root: { backgroundColor: 'red' } } } } }
@@ -125,7 +125,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.Label.base should render correctly', () => {
+  it('Switch.Label.root should render correctly', () => {
     const { container } = render(<Switch />, {
       // @ts-ignore
       theme: { Switch: { Label: { css: { root: { backgroundColor: 'red' } } } } }
@@ -133,7 +133,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.HiddenInput.base should render correctly', () => {
+  it('Switch.HiddenInput.root should render correctly', () => {
     const { container } = render(<Switch />, {
       // @ts-ignore
       theme: { Switch: { HiddenInput: { css: { root: { backgroundColor: 'red' } } } } }

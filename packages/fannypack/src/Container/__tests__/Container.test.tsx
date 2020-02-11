@@ -99,7 +99,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Container.base should render correctly', () => {
+  it('Container.root should render correctly', () => {
     const { container } = render(
       <Container overrides={{ Container: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Container>
     );
@@ -144,7 +144,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Container.base should render correctly', () => {
+  it('Container.root should render correctly', () => {
     const { container } = render(<Container>hello world</Container>, {
       theme: { Container: { css: { root: { backgroundColor: 'red' } } } }
     });

@@ -94,7 +94,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Set.base should render correctly', () => {
+  it('Set.root should render correctly', () => {
     const { container } = render(
       <Set overrides={{ Set: { css: { root: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
@@ -104,7 +104,7 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.child.base should render correctly', () => {
+  it('Set.child.root should render correctly', () => {
     const { container } = render(
       <Set overrides={{ Set: { css: { child: { root: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
@@ -156,7 +156,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Set.base should render correctly', () => {
+  it('Set.root should render correctly', () => {
     const { container } = render(
       <Set>
         <Box>hello</Box>
@@ -169,7 +169,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.child.base should render correctly', () => {
+  it('Set.child.root should render correctly', () => {
     const { container } = render(
       <Set>
         <Box>hello</Box>

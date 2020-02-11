@@ -78,7 +78,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Rover.base should render correctly', () => {
+  it('Rover.root should render correctly', () => {
     function Component() {
       const hidden = Rover.useState();
       return (
@@ -93,7 +93,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Rover.base should render correctly', () => {
+  it('Rover.root should render correctly', () => {
     function Component() {
       const hidden = Rover.useState();
       return (

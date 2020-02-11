@@ -44,7 +44,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Divider.base should render correctly', () => {
+  it('Divider.root should render correctly', () => {
     const { container } = render(<Divider />, {
       // @ts-ignore
       theme: { Divider: { css: { root: { borderColor: 'red' } } } }
@@ -52,7 +52,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Divider.vertical.base should render correctly', () => {
+  it('Divider.vertical.root should render correctly', () => {
     const { container } = render(<Divider />, {
       // @ts-ignore
       theme: { Divider: { css: { vertical: { borderColor: 'red' } } } }

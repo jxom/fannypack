@@ -128,7 +128,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('FieldWrapper.base should render correctly', () => {
+  it('FieldWrapper.root should render correctly', () => {
     const { container } = render(
       <FieldWrapper>
         <Input />
@@ -141,7 +141,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.Label.base should render correctly', () => {
+  it('FieldWrapper.Label.root should render correctly', () => {
     const { container } = render(
       <FieldWrapper label="This is a label">
         <Input />
@@ -154,7 +154,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.DescriptionText.base should render correctly', () => {
+  it('FieldWrapper.DescriptionText.root should render correctly', () => {
     const { container } = render(
       <FieldWrapper description="This is a description">
         <Input />
@@ -167,7 +167,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.HintText.base should render correctly', () => {
+  it('FieldWrapper.HintText.root should render correctly', () => {
     const { container } = render(
       <FieldWrapper hint="This is a hint">
         <Input />
@@ -180,7 +180,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.OptionalText.base should render correctly', () => {
+  it('FieldWrapper.OptionalText.root should render correctly', () => {
     const { container } = render(
       <FieldWrapper isOptional>
         <Input />
@@ -193,7 +193,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.RequiredText.base should render correctly', () => {
+  it('FieldWrapper.RequiredText.root should render correctly', () => {
     const { container } = render(
       <FieldWrapper isRequired>
         <Input />
@@ -206,7 +206,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.ValidationText.base should render correctly', () => {
+  it('FieldWrapper.ValidationText.root should render correctly', () => {
     const { container } = render(
       <FieldWrapper validationText="This is validation text">
         <Input />
@@ -219,7 +219,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.TooltipTrigger.base should render correctly', () => {
+  it('FieldWrapper.TooltipTrigger.root should render correctly', () => {
     const { container } = render(
       <FieldWrapper tooltip="This is a tooltip">
         <Input />
@@ -232,7 +232,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.TooltipPopover.base should render correctly', () => {
+  it('FieldWrapper.TooltipPopover.root should render correctly', () => {
     const { container } = render(
       <FieldWrapper tooltip="This is a tooltip">
         <Input />

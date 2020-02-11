@@ -137,14 +137,14 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Box.base should render correctly', () => {
+  it('Box.root should render correctly', () => {
     const { container } = render(<Box>hello world</Box>, {
       theme: { Box: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Box.base should render correctly', () => {
+  it('Box.root should render correctly', () => {
     const { container } = render(<Box color="green">hello world</Box>, {
       theme: { Box: { css: { root: props => ({ backgroundColor: props.color }) } } }
     });

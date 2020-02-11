@@ -98,7 +98,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Overlay.Disclosure.base should render correctly', () => {
+  it('Overlay.Disclosure.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -116,7 +116,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Overlay.Disclosure.base should render correctly', () => {
+  it('Overlay.Disclosure.root should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return <Overlay.Disclosure {...overlay}>Toggle</Overlay.Disclosure>;

@@ -46,19 +46,19 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('Textarea.base should render correctly', () => {
+  it('Textarea.root should render correctly', () => {
     const { container } = render(<Textarea overrides={{ Textarea: { css: { root: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Textarea.Wrapper.base should render correctly', () => {
+  it('Textarea.Wrapper.root should render correctly', () => {
     const { container } = render(
       <Textarea overrides={{ Textarea: { Wrapper: { css: { root: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Textarea.placeholder.base should render correctly', () => {
+  it('Textarea.placeholder.root should render correctly', () => {
     const { container } = render(
       <Textarea overrides={{ Textarea: { css: { placeholder: { backgroundColor: 'red' } } } }} />
     );
@@ -67,7 +67,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Textarea.base should render correctly', () => {
+  it('Textarea.root should render correctly', () => {
     const { container } = render(<Textarea />, {
       // @ts-ignore
       theme: { Textarea: { css: { root: { backgroundColor: 'red' } } } }
@@ -75,7 +75,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Textarea.Wrapper.base should render correctly', () => {
+  it('Textarea.Wrapper.root should render correctly', () => {
     const { container } = render(<Textarea />, {
       // @ts-ignore
       theme: { Textarea: { Wrapper: { css: { root: { backgroundColor: 'red' } } } } }
@@ -83,7 +83,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Textarea.placeholder.base should render correctly', () => {
+  it('Textarea.placeholder.root should render correctly', () => {
     const { container } = render(<Textarea />, {
       // @ts-ignore
       theme: { Textarea: { css: { placeholder: { backgroundColor: 'red' } } } }

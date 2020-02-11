@@ -86,26 +86,26 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Checkbox.base should render correctly', () => {
+  it('Checkbox.root should render correctly', () => {
     const { container } = render(<Checkbox overrides={{ Checkbox: { css: { root: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Checkbox.Icon.base should render correctly', () => {
+  it('Checkbox.Icon.root should render correctly', () => {
     const { container } = render(
       <Checkbox overrides={{ Checkbox: { Icon: { css: { root: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Checkbox.Label.base should render correctly', () => {
+  it('Checkbox.Label.root should render correctly', () => {
     const { container } = render(
       <Checkbox overrides={{ Checkbox: { Label: { css: { root: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Checkbox.HiddenInput.base should render correctly', () => {
+  it('Checkbox.HiddenInput.root should render correctly', () => {
     const { container } = render(
       <Checkbox overrides={{ Checkbox: { HiddenInput: { css: { root: { backgroundColor: 'red' } } } } }} />
     );
@@ -114,7 +114,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Checkbox.base should render correctly', () => {
+  it('Checkbox.root should render correctly', () => {
     const { container } = render(<Checkbox />, {
       // @ts-ignore
       theme: { Checkbox: { css: { root: { backgroundColor: 'red' } } } }
@@ -122,7 +122,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Checkbox.Icon.base should render correctly', () => {
+  it('Checkbox.Icon.root should render correctly', () => {
     const { container } = render(<Checkbox />, {
       // @ts-ignore
       theme: { Checkbox: { Icon: { css: { root: { backgroundColor: 'red' } } } } }
@@ -130,7 +130,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Checkbox.Label.base should render correctly', () => {
+  it('Checkbox.Label.root should render correctly', () => {
     const { container } = render(<Checkbox />, {
       // @ts-ignore
       theme: { Checkbox: { Label: { css: { root: { backgroundColor: 'red' } } } } }
@@ -138,7 +138,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Checkbox.HiddenInput.base should render correctly', () => {
+  it('Checkbox.HiddenInput.root should render correctly', () => {
     const { container } = render(<Checkbox />, {
       // @ts-ignore
       theme: { Checkbox: { HiddenInput: { css: { root: { backgroundColor: 'red' } } } } }

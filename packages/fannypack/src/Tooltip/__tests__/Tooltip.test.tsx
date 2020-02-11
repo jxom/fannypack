@@ -55,7 +55,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Tooltip.Content.base should render correctly', () => {
+  it('Tooltip.Content.root should render correctly', () => {
     const { container } = render(
       <Tooltip
         content="This is content"
@@ -68,7 +68,7 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tooltip.Reference.base should render correctly', () => {
+  it('Tooltip.Reference.root should render correctly', () => {
     const { container } = render(
       <Tooltip
         content="This is content"
@@ -83,7 +83,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Tooltip.Content.base should render correctly', () => {
+  it('Tooltip.Content.root should render correctly', () => {
     const { container } = render(
       <Tooltip content="This is content" baseId="test">
         hello world
@@ -96,7 +96,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tooltip.Reference.base should render correctly', () => {
+  it('Tooltip.Reference.root should render correctly', () => {
     const { container } = render(
       <Tooltip content="This is content" baseId="test">
         hello world

@@ -81,7 +81,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Hidden.base should render correctly', () => {
+  it('Hidden.root should render correctly', () => {
     const { container } = render(
       <Hidden baseId="test" overrides={{ Hidden: { css: { root: { backgroundColor: 'red' } } } }}>
         hello world
@@ -92,7 +92,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Hidden.base should render correctly', () => {
+  it('Hidden.root should render correctly', () => {
     const { container } = render(<Hidden baseId="test">hello world</Hidden>, {
       theme: { Hidden: { css: { root: { backgroundColor: 'red' } } } }
     });

@@ -45,7 +45,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('InlineFlex.base should render correctly', () => {
+  it('InlineFlex.root should render correctly', () => {
     const { container } = render(<InlineFlex>hello world</InlineFlex>, {
       theme: { InlineFlex: { css: { root: { backgroundColor: 'red' } } } }
     });

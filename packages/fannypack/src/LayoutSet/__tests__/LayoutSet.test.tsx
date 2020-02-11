@@ -74,7 +74,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('LayoutSet.base should render correctly', () => {
+  it('LayoutSet.root should render correctly', () => {
     const { container } = render(
       <LayoutSet overrides={{ LayoutSet: { css: { root: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
@@ -84,7 +84,7 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.child.base should render correctly', () => {
+  it('LayoutSet.child.root should render correctly', () => {
     const { container } = render(
       <LayoutSet overrides={{ LayoutSet: { css: { child: { root: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>

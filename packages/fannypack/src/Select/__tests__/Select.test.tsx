@@ -167,7 +167,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Select.base should render correctly', () => {
+  it('Select.root should render correctly', () => {
     const { container } = render(
       <Select
         placeholder="Please select..."
@@ -184,7 +184,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Select.base should render correctly', () => {
+  it('Select.root should render correctly', () => {
     const { container } = render(
       <Select
         placeholder="Please select..."

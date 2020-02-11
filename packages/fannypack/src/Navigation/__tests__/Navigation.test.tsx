@@ -89,7 +89,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Navigation.base should render correctly', () => {
+  it('Navigation.root should render correctly', () => {
     const { container } = render(
       <Navigation overrides={{ Navigation: { css: { root: { backgroundColor: 'red' } } } }}>
         <List>
@@ -107,7 +107,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Navigation.base should render correctly', () => {
+  it('Navigation.root should render correctly', () => {
     const { container } = render(
       <Navigation>
         <List>

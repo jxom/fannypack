@@ -133,7 +133,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('RadioGroupField.base should render correctly', () => {
+  it('RadioGroupField.root should render correctly', () => {
     const { container } = render(
       <RadioGroupField
         label="Test label"
@@ -147,7 +147,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('RadioGroupField.base should render correctly', () => {
+  it('RadioGroupField.root should render correctly', () => {
     const { container } = render(
       <RadioGroupField
         label="Test label"

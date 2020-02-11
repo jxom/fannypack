@@ -93,7 +93,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('CheckboxField.base should render correctly', () => {
+  it('CheckboxField.root should render correctly', () => {
     const { container } = render(
       <CheckboxField overrides={{ CheckboxField: { css: { root: { backgroundColor: 'red' } } } }} />
     );
@@ -102,7 +102,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('CheckboxField.base should render correctly', () => {
+  it('CheckboxField.root should render correctly', () => {
     const { container } = render(<CheckboxField />, {
       // @ts-ignore
       theme: { CheckboxField: { css: { root: { backgroundColor: 'red' } } } }

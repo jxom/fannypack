@@ -101,7 +101,9 @@ export type BorderRadiiThemeConfig = {
   [key: string]: ThemeAttribute<string>;
 };
 export type GlobalThemeConfig = {
-  base?: ThemeAttribute<Stylesheet>;
+  css?: {
+    root: ThemeAttribute<Stylesheet>;
+  };
   fontFamily?: string;
   fontSize?: number;
 };
@@ -160,9 +162,7 @@ export type AlertThemeConfig = {
 export type AvatarThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
-    circle?: {
-      base?: ThemeAttribute<Stylesheet>;
-    };
+    circle?: ThemeAttribute<Stylesheet>;
     sizes?: {
       small?: ThemeAttribute<Stylesheet>;
       default?: ThemeAttribute<Stylesheet>;
