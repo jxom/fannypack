@@ -84,7 +84,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('FieldSet.base should render correctly', () => {
+  it('FieldSet.root should render correctly', () => {
     const { container } = render(
       <FieldSet>
         <Box />

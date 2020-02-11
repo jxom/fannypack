@@ -41,7 +41,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Paragraph.base should render correctly', () => {
+  it('Paragraph.root should render correctly', () => {
     const { container } = render(<Paragraph>hello world</Paragraph>, {
       theme: { Paragraph: { css: { root: { backgroundColor: 'red' } } } }
     });

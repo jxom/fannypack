@@ -41,7 +41,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Blockquote.base should render correctly', () => {
+  it('Blockquote.root should render correctly', () => {
     const { container } = render(<Blockquote>hello world</Blockquote>, {
       theme: { Blockquote: { css: { root: { backgroundColor: 'red' } } } }
     });

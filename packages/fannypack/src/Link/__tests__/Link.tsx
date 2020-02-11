@@ -39,7 +39,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Link.base should render correctly', () => {
+  it('Link.root should render correctly', () => {
     const { container } = render(
       <Link overrides={{ Link: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Link>
     );
@@ -55,7 +55,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Link.base should render correctly', () => {
+  it('Link.root should render correctly', () => {
     const { container } = render(<Link>hello world</Link>, {
       theme: { Link: { css: { root: { backgroundColor: 'red' } } } }
     });
