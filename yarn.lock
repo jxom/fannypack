@@ -10569,10 +10569,10 @@ react-loads-next@9.0.1:
   resolved "https://registry.yarnpkg.com/react-loads-next/-/react-loads-next-9.0.1.tgz#4225c90e5be0b8014831f1d786726ec9abfd1d8f"
   integrity sha512-B/TkmyUwm3yVbngPf7CYYQ2u+e/Vz3U59MNEseKIq9s5EFsv2xCSWfkzqu9i7wlbI5YKlLqJYo3LYeYNr87QZw==
 
-react-media@1.9.2:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/react-media/-/react-media-1.9.2.tgz#423ee12f952e1d69f1b994a58d3cbed21a92b370"
-  integrity sha512-JUYECMcJIm0V61LSVKd1e+II4ZTYO0GuR7xtlvKETlmThZ416BqZjZdJ1uGqgmMAGFeJ3TG4TX/3Kg4qbR3EJw==
+react-media@1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/react-media/-/react-media-1.10.0.tgz#7b0c5fe8ac55a53ce31b5249db3aaf8a22ff7703"
+  integrity sha512-FjgYmFoaPTImST06jqotuu0Mk8LOXiGYS/fIyiXuLnf20l3DPniBwtrxi604/HxxjqvmHS3oz5rAwnqdvosV4A==
   dependencies:
     "@babel/runtime" "^7.2.0"
     invariant "^2.2.2"
