@@ -196,9 +196,7 @@ samp.c7 {
   class="c0"
 >
   <label
-    aria-describedby="label"
     aria-invalid="false"
-    aria-label="Check me"
     aria-required="false"
     class="c1 c2 c0"
   >
@@ -212,7 +210,6 @@ samp.c7 {
     />
     <span
       class="c7 c8"
-      id="label"
     >
       Check me
     </span>
@@ -417,9 +414,7 @@ samp.c7 {
   class="c0"
 >
   <label
-    aria-describedby="label"
     aria-invalid="false"
-    aria-label="Check me"
     aria-required="false"
     class="c1 c2 c0"
   >
@@ -434,7 +429,6 @@ samp.c7 {
     />
     <span
       class="c7 c8"
-      id="label"
     >
       Check me
     </span>
@@ -749,9 +743,7 @@ samp.c7 {
     <div />
   </div>
   <label
-    aria-describedby="label"
     aria-invalid="false"
-    aria-label="Check me"
     aria-required="true"
     class="c8 c5 c0"
   >
@@ -765,7 +757,6 @@ samp.c7 {
     />
     <span
       class="c7 c13"
-      id="label"
     >
       Check me
     </span>
@@ -1077,9 +1068,7 @@ samp.c7 {
     </span>
   </div>
   <label
-    aria-describedby="label"
     aria-invalid="false"
-    aria-label="Check me"
     aria-required="false"
     class="c8 c5 c0"
   >
@@ -1093,7 +1082,6 @@ samp.c7 {
     />
     <span
       class="c7 c13"
-      id="label"
     >
       Check me
     </span>
@@ -1402,9 +1390,7 @@ samp.c11 {
     <div />
   </div>
   <label
-    aria-describedby="label"
     aria-invalid="false"
-    aria-label="Check me"
     aria-required="false"
     class="c6 c5 c0"
   >
@@ -1418,7 +1404,6 @@ samp.c11 {
     />
     <span
       class="c11 c12"
-      id="label"
     >
       Check me
     </span>
@@ -1737,9 +1722,7 @@ samp.c7 {
     <div />
   </div>
   <label
-    aria-describedby="label"
     aria-invalid="false"
-    aria-label="Check me"
     aria-required="false"
     class="c8 c5 c0"
   >
@@ -1753,7 +1736,6 @@ samp.c7 {
     />
     <span
       class="c7 c13"
-      id="label"
     >
       Check me
     </span>
@@ -2009,9 +1991,7 @@ samp.c7 {
   class="c0"
 >
   <label
-    aria-describedby="label"
     aria-invalid="true"
-    aria-label="Check me"
     aria-required="false"
     class="c1 c2 c0"
   >
@@ -2025,7 +2005,6 @@ samp.c7 {
     />
     <span
       class="c7 c8"
-      id="label"
     >
       Check me
     </span>
@@ -2281,9 +2260,7 @@ samp.c7 {
   class="c0"
 >
   <label
-    aria-describedby="label"
     aria-invalid="false"
-    aria-label="Check me"
     aria-required="false"
     class="c1 c2 c0"
   >
@@ -2297,7 +2274,6 @@ samp.c7 {
     />
     <span
       class="c7 c8"
-      id="label"
     >
       Check me
     </span>
@@ -2553,9 +2529,7 @@ samp.c7 {
   class="c0"
 >
   <label
-    aria-describedby="label"
     aria-invalid="false"
-    aria-label="Check me"
     aria-required="false"
     class="c1 c2 c0"
   >
@@ -2569,7 +2543,6 @@ samp.c7 {
     />
     <span
       class="c7 c8"
-      id="label"
     >
       Check me
     </span>
@@ -2825,9 +2798,7 @@ samp.c7 {
   class="c0"
 >
   <label
-    aria-describedby="label"
     aria-invalid="false"
-    aria-label="Check me"
     aria-required="false"
     class="c1 c2 c0"
   >
@@ -2841,7 +2812,6 @@ samp.c7 {
     />
     <span
       class="c7 c8"
-      id="label"
     >
       Check me
     </span>
