@@ -45,7 +45,7 @@ export const Toast: React.FunctionComponent<LocalToastProps> & ToastComponents =
   type,
   ...props
 }) => (
-  <_Toast type={type} {...props}>
+  <_Toast role="alert" type={type} {...props}>
     {showCountdownBar && (
       <React.Fragment>
         <CountdownBar isHorizontal={hasHorizontalBar} type={type} isBackground />

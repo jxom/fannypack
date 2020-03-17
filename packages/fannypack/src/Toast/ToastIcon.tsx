@@ -17,7 +17,7 @@ export const ToastIcon: React.FunctionComponent<LocalToastIconProps> = ({ size, 
   <ToastIconWrapper {...props}>
     {/*
       // @ts-ignore */}
-    <_ToastIcon a11yLabel={type} color={type} icon={type} size={size} />
+    <_ToastIcon aria-hidden a11yLabel={type} color={type} icon={type} size={size} />
   </ToastIconWrapper>
 );
 
