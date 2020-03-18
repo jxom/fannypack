@@ -38,6 +38,7 @@ export type LocalAlertProps = {
   title?: string;
   type?: string;
 };
+
 export type AlertProps = LocalAlertProps & ReakitBoxProps;
 
 export const Alert: React.FunctionComponent<LocalAlertProps> = ({
@@ -55,7 +56,7 @@ export const Alert: React.FunctionComponent<LocalAlertProps> = ({
     <Flex alignItems="center">
       {hasIcon && type && (
         <IconWrapper>
-          <Icon a11yLabel={type} color={type} icon={type} size={children ? '400' : undefined} />
+          <Icon a11yHidden color={type} icon={type} size={children ? '400' : undefined} />
         </IconWrapper>
       )}
       <ContentWrapper hasIcon={hasIcon}>
