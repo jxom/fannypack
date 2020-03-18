@@ -55,7 +55,7 @@ export const Alert: React.FunctionComponent<LocalAlertProps> = ({
     <Flex alignItems="center">
       {hasIcon && type && (
         <IconWrapper>
-          <Icon a11yLabel={type} color={type} icon={type} size={children ? '400' : undefined} />
+          <Icon a11yHidden a11yLabel={type} color={type} icon={type} size={children ? '400' : undefined} />
         </IconWrapper>
       )}
       <ContentWrapper hasIcon={hasIcon}>
