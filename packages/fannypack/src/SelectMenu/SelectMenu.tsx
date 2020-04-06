@@ -148,6 +148,7 @@ const selectMenuItemPropType = PropTypes.oneOfType([PropTypes.string, selectMenu
 const selectMenuItemsPropType = PropTypes.arrayOf(selectMenuItemPropType);
 
 const getSelectedOptionsFromValue = (value: SelectMenuItem | SelectMenuItems) => {
+  if (!value) return {};
   if (typeof value === 'string') {
     return { [value]: value };
   }
@@ -352,7 +353,7 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     const { loadQuery, options, value } = this.props;
     const { loadQuery: prevLoadQuery, options: prevOptions, value: prevValue } = prevProps;
 
-    if (value && value !== prevValue) {
+    if (value !== prevValue) {
       this.setState({ selectedOptions: getSelectedOptionsFromValue(value) });
     }
     if (options && _get(options, 'length') !== _get(prevOptions, 'length')) {
@@ -540,7 +541,6 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     } = this.props;
     const { contextKey, selectedOptions } = this.state;
     const selectedOptionsValues: SelectMenuItems = Object.values(selectedOptions);
-
     return (
       // @ts-ignore
       <Loads context={contextKey} fn={this.loadOptions} defer={!this.loadOptions}>
