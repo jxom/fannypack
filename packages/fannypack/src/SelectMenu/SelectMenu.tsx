@@ -147,7 +147,7 @@ const selectMenuItemObjectPropType = PropTypes.shape({
 const selectMenuItemPropType = PropTypes.oneOfType([PropTypes.string, selectMenuItemObjectPropType]);
 const selectMenuItemsPropType = PropTypes.arrayOf(selectMenuItemPropType);
 
-const getSelectedOptionsFromValue = (value: SelectMenuItem | SelectMenuItems) => {
+const getSelectedOptionsFromValue = (value: SelectMenuItem | SelectMenuItems | void) => {
   if (!value) return {};
   if (typeof value === 'string') {
     return { [value]: value };
