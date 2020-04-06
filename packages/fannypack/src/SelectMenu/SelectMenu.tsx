@@ -63,6 +63,7 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
   emptyText?: string;
   filterOptions?: ({ options, searchText }: { options: SelectMenuItems; searchText: string }) => SelectMenuItems;
   isDropdown?: boolean;
+  isFullWidth?: boolean;
   isLoading?: boolean;
   isMultiSelect?: boolean;
   isPaginated?: boolean;
@@ -270,6 +271,7 @@ export const selectMenuPropTypes = {
   emptyText: PropTypes.string,
   filterOptions: PropTypes.func,
   isDropdown: PropTypes.bool,
+  isFullWidth: PropTypes.bool,
   isLoading: PropTypes.bool,
   isMultiSelect: PropTypes.bool,
   isPaginated: PropTypes.bool,
@@ -300,6 +302,7 @@ export const selectMenuDefaultProps = {
   emptyText: 'No results found',
   filterOptions: optionsFilter,
   isDropdown: false,
+  isFullWidth: false,
   isLoading: false,
   isMultiSelect: false,
   isPaginated: true,

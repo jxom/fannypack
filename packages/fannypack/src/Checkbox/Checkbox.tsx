@@ -58,13 +58,7 @@ export const Checkbox: React.FunctionComponent<LocalCheckboxProps> & CheckboxCom
   value,
   ...props
 }) => (
-  <_Checkbox
-    aria-describedby="label"
-    aria-invalid={state === 'danger'}
-    aria-label={label}
-    aria-required={isRequired}
-    {...props}
-  >
+  <_Checkbox aria-invalid={state === 'danger'} aria-required={isRequired} {...props}>
     <HiddenCheckbox
       autoFocus={autoFocus}
       checked={checked}
@@ -82,11 +76,7 @@ export const Checkbox: React.FunctionComponent<LocalCheckboxProps> & CheckboxCom
       value={value}
     />
     <CheckboxIcon state={state} />
-    {label && (
-      <Text id="label" htmlFor={id} marginLeft="minor-2">
-        {label}
-      </Text>
-    )}
+    {label && <Text marginLeft="minor-2">{label}</Text>}
   </_Checkbox>
 );
 
