@@ -36,6 +36,7 @@ export type LocalSelectProps = {
   /** Hint text to display */
   placeholder?: string;
   selectProps?: ReakitInputProps;
+  selectRef?: React.RefObject<any>;
   /** Alters the size of the select field. Can be "small", "medium" or "large" */
   size?: string;
   /** State of the select field. Can be any color in the palette. */
@@ -76,6 +77,7 @@ export const selectDefaultProps = {
   onFocus: undefined,
   placeholder: undefined,
   selectProps: {},
+  selectRef: undefined,
   size: 'default',
   state: undefined,
   value: undefined
@@ -95,6 +97,7 @@ export const selectPropTypes = {
   options: PropTypes.array.isRequired,
   placeholder: PropTypes.string,
   selectProps: PropTypes.object,
+  selectRef: PropTypes.object as PropTypes.Validator<LocalSelectProps['selectRef']>,
   size: PropTypes.string,
   state: PropTypes.string,
   value: PropTypes.string,
@@ -136,6 +139,7 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
       options,
       placeholder,
       selectProps,
+      selectRef,
       size,
       state,
       value,
@@ -162,6 +166,7 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
           onBlur={onBlur}
           onChange={this.handleChange}
           onFocus={onFocus}
+          elementRef={selectRef}
           styledSize={size}
           state={state}
           value={value}

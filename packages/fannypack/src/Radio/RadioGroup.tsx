@@ -19,7 +19,7 @@ export type LocalRadioGroupProps = {
   isHorizontal?: boolean;
   name: string;
   /** Radio group options */
-  options: Array<{ disabled?: boolean; label: string; value: string }>;
+  options: Array<{ disabled?: boolean; label: string; value: string; radioRef?: React.RefObject<any> }>;
   /** State of the radio group. Can be any color in the palette. */
   state?: string;
   /** Controlled value of the radio group */
@@ -63,6 +63,7 @@ export const RadioGroup: React.FunctionComponent<LocalRadioGroupProps> & RadioGr
         name={name}
         label={option.label}
         onChange={onChange}
+        radioRef={option.radioRef}
         state={state}
         value={option.value}
       />

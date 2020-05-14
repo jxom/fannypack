@@ -48,6 +48,7 @@ export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> & T
   size,
   state,
   textareaProps,
+  textareaRef,
   validationText,
   value,
   onBlur,
@@ -87,6 +88,7 @@ export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> & T
         rows={rows}
         spellCheck={spellCheck}
         state={state}
+        textareaRef={textareaRef}
         value={value}
         onBlur={onBlur}
         onChange={onChange}

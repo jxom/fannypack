@@ -46,6 +46,7 @@ export type LocalTextareaProps = {
   spellCheck?: boolean;
   /** State of the input. Can be any color in the palette. */
   state?: string;
+  textareaRef?: React.RefObject<any>;
   /** Value of the input */
   value?: string;
   /** Function to invoke when focus is lost */
@@ -77,6 +78,7 @@ export const Textarea: React.FunctionComponent<LocalTextareaProps> & TextareaCom
       aria-label={a11yLabel}
       aria-required={isRequired}
       id={a11yId}
+      elementRef={textareaRef}
       styledSize={size}
       state={state}
       {...props}
@@ -109,6 +111,7 @@ export const textareaPropTypes = {
   rows: PropTypes.number,
   spellCheck: PropTypes.bool,
   state: PropTypes.string,
+  textareaRef: PropTypes.object as PropTypes.Validator<LocalTextareaProps['textareaRef']>,
   value: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
@@ -140,6 +143,7 @@ export const textareaDefaultProps = {
   spellCheck: undefined,
   size: 'default',
   state: undefined,
+  textareaRef: undefined,
   value: undefined
 };
 Textarea.defaultProps = textareaDefaultProps;

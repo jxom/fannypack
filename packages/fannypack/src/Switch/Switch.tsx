@@ -26,6 +26,7 @@ export type LocalSwitchProps = {
   palette?: string;
   /** State of the switch. Can be any color in the palette. */
   state?: string;
+  switchRef?: React.RefObject<any>;
   /** Initial value of the switch */
   value?: string;
   /** Function to invoke when focus is lost */
@@ -56,6 +57,7 @@ export const Switch: React.FunctionComponent<LocalSwitchProps> & SwitchComponent
   name,
   palette,
   state,
+  switchRef,
   value,
   ...props
 }) => (
@@ -72,6 +74,7 @@ export const Switch: React.FunctionComponent<LocalSwitchProps> & SwitchComponent
       checked={checked}
       defaultChecked={defaultChecked}
       disabled={disabled}
+      elementRef={switchRef}
       id={id}
       onBlur={onBlur}
       onChange={onChange}
@@ -106,6 +109,7 @@ export const switchPropTypes = {
   name: PropTypes.string,
   palette: PropTypes.string,
   state: PropTypes.string,
+  switchRef: PropTypes.object as PropTypes.Validator<LocalSwitchProps['switchRef']>,
   value: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
@@ -128,6 +132,7 @@ export const switchDefaultProps = {
   palette: undefined,
   name: undefined,
   state: undefined,
+  switchRef: undefined,
   value: undefined
 };
 Switch.defaultProps = switchDefaultProps;

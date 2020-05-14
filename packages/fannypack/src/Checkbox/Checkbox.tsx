@@ -10,6 +10,7 @@ export type LocalCheckboxProps = {
   /** Automatically focus on the checkbox */
   autoFocus?: boolean;
   checked?: boolean;
+  checkboxRef?: React.RefObject<any>;
   className?: string;
   /** Is the checkbox checked by default? */
   defaultChecked?: boolean;
@@ -43,6 +44,7 @@ export type CheckboxComponents = {
 export const Checkbox: React.FunctionComponent<LocalCheckboxProps> & CheckboxComponents = ({
   autoFocus,
   checked,
+  checkboxRef,
   className,
   defaultChecked,
   disabled,
@@ -64,6 +66,7 @@ export const Checkbox: React.FunctionComponent<LocalCheckboxProps> & CheckboxCom
       checked={checked}
       defaultChecked={defaultChecked}
       disabled={disabled}
+      elementRef={checkboxRef}
       id={id}
       indeterminate={indeterminate}
       onBlur={onBlur}
@@ -87,6 +90,7 @@ export const checkboxPropTypes = {
   autoFocus: PropTypes.bool,
   checked: PropTypes.bool,
   className: PropTypes.string,
+  checkboxRef: PropTypes.object as PropTypes.Validator<LocalCheckboxProps['checkboxRef']>,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
   id: PropTypes.string,
@@ -106,6 +110,7 @@ export const checkboxDefaultProps = {
   autoFocus: false,
   checked: undefined,
   className: undefined,
+  checkboxRef: undefined,
   defaultChecked: undefined,
   disabled: false,
   id: undefined,

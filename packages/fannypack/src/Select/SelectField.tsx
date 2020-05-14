@@ -56,6 +56,7 @@ export const SelectField: React.FunctionComponent<LocalSelectFieldProps> & Selec
   options,
   placeholder,
   selectProps,
+  selectRef,
   size,
   state,
   validationText,
@@ -94,6 +95,7 @@ export const SelectField: React.FunctionComponent<LocalSelectFieldProps> & Selec
           options={options}
           placeholder={placeholder}
           selectProps={selectProps}
+          selectRef={selectRef}
           size={size}
           state={state}
           value={value}

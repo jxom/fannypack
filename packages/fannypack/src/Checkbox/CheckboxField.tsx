@@ -28,6 +28,7 @@ export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> & C
   autoFocus,
   checkboxLabel,
   checkboxProps,
+  checkboxRef,
   checked,
   className,
   defaultChecked,
@@ -63,6 +64,7 @@ export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> & C
       <Checkbox
         autoFocus={autoFocus}
         checked={checked}
+        checkboxRef={checkboxRef}
         className={className}
         defaultChecked={defaultChecked}
         disabled={disabled}

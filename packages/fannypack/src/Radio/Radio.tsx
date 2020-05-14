@@ -22,6 +22,7 @@ export type LocalRadioProps = {
   /** radio label */
   label: string;
   name?: string;
+  radioRef?: React.RefObject<any>;
   /** State of the radio. Can be any color in the palette. */
   state?: string;
   /** Controlled value of the radio */
@@ -52,6 +53,7 @@ export const Radio: React.FunctionComponent<LocalRadioProps> & RadioComponents =
   onChange,
   onFocus,
   name,
+  radioRef,
   state,
   value,
   ...props
@@ -66,6 +68,7 @@ export const Radio: React.FunctionComponent<LocalRadioProps> & RadioComponents =
     <HiddenRadio
       autoFocus={autoFocus}
       checked={checked}
+      elementRef={radioRef}
       defaultChecked={defaultChecked}
       disabled={disabled}
       id={a11yId}
@@ -100,6 +103,7 @@ export const radioPropTypes = {
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   name: PropTypes.string,
+  radioRef: PropTypes.object as PropTypes.Validator<LocalRadioProps['radioRef']>,
   state: PropTypes.string,
   value: PropTypes.string
 };
@@ -117,6 +121,7 @@ export const radioDefaultProps = {
   onChange: undefined,
   onFocus: undefined,
   name: undefined,
+  radioRef: undefined,
   state: undefined,
   value: undefined
 };

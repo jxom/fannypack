@@ -43,6 +43,7 @@ export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> & Switc
   id,
   name,
   palette,
+  switchRef,
   value,
   onBlur,
   onChange,
@@ -73,6 +74,7 @@ export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> & Switc
         name={name}
         palette={palette}
         state={state}
+        switchRef={switchRef}
         value={value}
         onBlur={onBlur}
         onChange={onChange}
