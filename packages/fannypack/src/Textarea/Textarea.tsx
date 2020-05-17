@@ -69,6 +69,7 @@ export const Textarea: React.FunctionComponent<LocalTextareaProps> & TextareaCom
   isRequired,
   size,
   state,
+  textareaRef,
   ...props
 }) => (
   <Box relative>
