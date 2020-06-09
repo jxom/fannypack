@@ -1,4 +1,4 @@
-import { css, palette } from '../../styled';
+import { css, theme, palette } from '../../styled';
 
 export default {
   collapseBreakpoint: 'widescreen',
@@ -20,6 +20,14 @@ export default {
     }
   },
   Content: {
+    base: css`
+      padding: 2rem;
+
+      @media screen and (max-width: ${theme('fannypack.layout.tabletBreakpoint')}px) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    `,
     wrapper: css`
       background-color: white;
       border-bottom: 1px solid ${palette('white900')};
