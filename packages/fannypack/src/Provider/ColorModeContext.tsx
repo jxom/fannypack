@@ -8,23 +8,27 @@ type Props = {
 };
 
 export function Provider(props: Props) {
-  const { children, mode: _mode } = props;
+  const { children, mode: defaultMode } = props;
 
   ////////////////////////////////////
 
-  const [mode, setMode] = React.useState(_mode);
-  React.useEffect(() => {
-    setMode(mode);
-  }, [mode]);
+  const [mode, setMode] = React.useState(localStorage.getItem('fp.colorMode') || defaultMode);
+
+  ////////////////////////////////////
+
+  const setColorMode = React.useCallback((colorMode) => {
+    setMode(colorMode);
+    localStorage.setItem('fp.colorMode', colorMode);
+  }, []);
 
   ////////////////////////////////////
 
   const value = React.useMemo(
     () => ({
       colorMode: mode,
-      setColorMode: setMode,
+      setColorMode,
     }),
-    [mode]
+    [mode, setColorMode]
   );
 
   ////////////////////////////////////
