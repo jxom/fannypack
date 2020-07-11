@@ -147,6 +147,11 @@ export type GlobalThemeConfig = {
   };
   fontSize?: number;
 };
+export type ModesThemeConfig = {
+  localStoragePrefix: string;
+  enableLocalStorage?: boolean;
+  useSystemColorMode?: boolean;
+};
 export type FontsThemeConfig = {
   importUrls?: Array<string>;
   default?: string;
@@ -1835,6 +1840,7 @@ export type ThemeConfig = {
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
   global?: GlobalThemeConfig;
+  modes?: ModesThemeConfig;
   spacing?: SpacingThemeConfig;
   palette?: PaletteThemeConfig;
 

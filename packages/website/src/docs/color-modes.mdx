@@ -173,6 +173,57 @@ const App = () => (
 
 ## Configuration
 
-- local storage config
-- system color mode config
+### Disabling local storage
+
+You can disable Fannypack storing the current color mode in local storage by setting `enableLocalStorage: false` in the theme.
+
+```jsx
+const theme = {
+  modes: {
+    enableLocalStorage: false
+  }
+}
+
+const App = () => (
+  <FannypackProvider theme={theme}>
+    ...
+  </FannypackProvider>
+);
+```
+
+### Using system color modes
+
+You can use the system color mode by default with the `useSystemColorMode` attribute. If set to `true`, this will set the color mode to the system's preferred color scheme.
+
+```jsx
+const theme = {
+  modes: {
+    useSystemColorMode: true
+  }
+}
+
+const App = () => (
+  <FannypackProvider theme={theme}>
+    ...
+  </FannypackProvider>
+);
+```
+
+### Custom local storage prefix
+
+By default, the local storage prefix is set to `"fp"`. However, you can change this with the `localStoragePrefix` attribute.
+
+```jsx
+const theme = {
+  modes: {
+    localStoragePrefix: 'myTheme'
+  }
+}
+
+const App = () => (
+  <FannypackProvider theme={theme}>
+    ...
+  </FannypackProvider>
+);
+```
 
