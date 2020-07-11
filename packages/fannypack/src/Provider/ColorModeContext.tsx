@@ -18,8 +18,6 @@ export function Provider(props: Props) {
   const { theme } = useTheme();
   const localStorage = useLocalStorage();
 
-  ////////////////////////////////////
-
   const defaultMode = React.useMemo(() => getDefaultMode(_defaultMode, { localStorage, theme }), [
     _defaultMode,
     localStorage,

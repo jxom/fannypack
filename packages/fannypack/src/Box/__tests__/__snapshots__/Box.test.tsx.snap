@@ -223,39 +223,6 @@ exports[`defaultProps should render correctly 1`] = `
 </div>
 `;
 
-exports[`modes should render correctly when a variant exists with a color mode 1`] = `
-.emotion-1 {
-  color: #eeedfd !important;
-  padding: 1rem !important;
-}
-
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  margin: 1rem;
-  background-color: red;
-}
-
-<div
-  class="emotion-0 emotion-1 fp-Box"
->
-  hello world
-</div>
-`;
-
 exports[`modes should render correctly when colorMode is set globally 1`] = `
 .emotion-0 {
   margin: unset;
@@ -270,14 +237,6 @@ exports[`modes should render correctly when colorMode is set globally 1`] = `
 
 .emotion-0:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-.emotion-1 {
-  color: #eeedfd !important;
 }
 
 <div

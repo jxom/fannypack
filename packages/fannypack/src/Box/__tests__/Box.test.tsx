@@ -240,29 +240,6 @@ describe('modes', () => {
     });
     expect(container.firstChild).toMatchSnapshot();
   });
-
-  it('should render correctly when a variant exists with a color mode', () => {
-    const { container } = render(<Box variant="test">hello world</Box>, {
-      colorMode: 'test',
-      theme: {
-        Box: {
-          variants: {
-            test: {
-              css: { root: { margin: '1rem' } },
-              defaultProps: { padding: 'major-2' },
-            },
-          },
-          modes: {
-            test: {
-              css: { root: { backgroundColor: 'red' } },
-              defaultProps: { color: 'primaryTint' },
-            },
-          },
-        },
-      },
-    });
-    expect(container.firstChild).toMatchSnapshot();
-  });
 });
 
 describe('defaultProps', () => {
