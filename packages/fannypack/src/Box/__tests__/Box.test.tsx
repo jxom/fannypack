@@ -2,7 +2,7 @@ import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { Box } from '../index';
 import { Button } from '../../Button';
-import { Link } from '../../Link';
+import { applyTheme } from '../../utils/applyTheme';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
@@ -205,6 +205,24 @@ describe('variants', () => {
     });
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('renders correctly for applyTheme', () => {
+    const Card = applyTheme(Box, {
+      defaultProps: {
+        altitude: '100',
+        padding: 'major-2',
+      },
+      variants: {
+        test: {
+          defaultProps: {
+            color: 'red',
+          },
+        },
+      },
+    });
+    const { container } = render(<Card variant="test" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('modes', () => {
@@ -238,6 +256,24 @@ describe('modes', () => {
         },
       },
     });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('renders correctly for applyTheme', () => {
+    const Card = applyTheme(Box, {
+      defaultProps: {
+        altitude: '100',
+        padding: 'major-2',
+      },
+      modes: {
+        test: {
+          defaultProps: {
+            color: 'red',
+          },
+        },
+      },
+    });
+    const { container } = render(<Card colorMode="test" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 });

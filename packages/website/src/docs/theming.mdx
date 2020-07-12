@@ -76,38 +76,61 @@ const App = () => (
 
 ## Component theming
 
-It is possible to override the global theme on the component themselves using the `override` prop on any component.
+### applyTheme
 
 ```function-live noInline
-const theme = {
-  Box: {
-    css: {
-      root: {
-        // Here, we are setting the box default color to 'red'
-        // on the global theme.
-        color: 'red'
+const Card = applyTheme(Box, {
+  defaultProps: {
+    altitude: '100',
+    padding: 'major-2'
+  },
+  variants: {
+    dope: {
+      defaultProps: {
+        fontFamily: 'Comic Sans MS'
       }
     }
   }
-};
+})
 
+function Example() {
+  return (
+    <Card variant="dope">
+      Welcome to Fannypack!
+    </Card>
+  )
+}
+
+render(Example)
+```
+
+### Overrides prop
+
+It is possible to override the global theme on the component themselves using the `override` prop on any component.
+
+```function-live noInline
 function Example() {
   return (
     <Provider theme={theme}>
       <Box
+        variant="dope"
         overrides={{
           Box: {
-            css: {
-              root: {
-                // However, we can override the global theme on any
-                // component with the `overrides` prop.
-                color: 'blue'
+            defaultProps: {
+              altitude: '100',
+              padding: 'major-2'
+            },
+            variants: {
+              dope: {
+                defaultProps: {
+                  fontFamily: 'Comic Sans MS'
+                }
               }
             }
           }
         }}
       >
-        A box straight from the Fannypack.
+        Welcome to Fannypack!
       </Box>
     </Provider>
   )

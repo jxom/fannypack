@@ -64,7 +64,7 @@ Object {
   >
     <React.Fragment>
       <ForwardRef(Comp)>
-        <ForwardRef(Comp) />
+        <Box />
       </ForwardRef(Comp)>
     </React.Fragment>
   </Context.Provider>,
