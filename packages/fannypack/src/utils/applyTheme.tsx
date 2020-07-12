@@ -1,13 +1,10 @@
 import * as React from 'react';
+import _set from 'lodash/set';
 
 export function applyTheme<ThemeConfig>(Comp: React.FunctionComponent<any>, theme: ThemeConfig) {
   return function <Props>(props: Props) {
-    return (
-      <Comp
-        {...props}
-        // @ts-ignore
-        overrides={{ ...props.overrides, [Comp.displayName]: { ...props.overrides?.[Comp.displayName], ...theme } }}
-      />
-    );
+    // @ts-ignore
+    const newOverrides = _set(props.overrides || {}, Comp.displayName, theme);
+    return <Comp {...props} overrides={newOverrides} />;
   };
 }

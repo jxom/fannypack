@@ -118,9 +118,9 @@ Object {
       display="flex"
     >
       <React.Fragment>
-        <ForwardRef(Comp) />
+        <Callout.IconWrapper />
         <Box>
-          <ForwardRef(Comp) />
+          <Callout.Content />
         </Box>
       </React.Fragment>
     </Box>

@@ -76,7 +76,18 @@ const App = () => (
 
 ## Component theming
 
+Fannypack also allows you to define themes on a component level. This can be done in two ways:
+
+- Hoisting the component theme via the `applyTheme` function.
+- Applying the component theme via the `overrides` prop on the component.
+
 ### applyTheme
+
+You can apply the theme on a component level via the `applyTheme` utility function. This function accepts two parameters: the first being the **component**, and the second being the **component theme config**.
+
+```jsx
+import { applyTheme } from 'fannypack';
+```
 
 ```function-live noInline
 const Card = applyTheme(Box, {
@@ -138,8 +149,6 @@ function Example() {
 
 render(Example)
 ```
-
-> An alternative method to this could be to use [styled components](/styling-components) or [CSS props](/css-props). However, `overrides` provides more flexibility.
 
 ## Theme schema
 
