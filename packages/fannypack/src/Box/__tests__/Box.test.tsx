@@ -205,6 +205,41 @@ describe('variants', () => {
     });
     expect(container.firstChild).toMatchSnapshot();
   });
+});
+
+describe('modes', () => {
+  it('should render correctly when colorMode is set globally', () => {
+    const { container } = render(<Box>hello world</Box>, {
+      colorMode: 'test',
+      theme: {
+        Box: {
+          modes: {
+            test: {
+              css: { root: { backgroundColor: 'red' } },
+              defaultProps: { color: 'primaryTint' },
+            },
+          },
+        },
+      },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly when colorMode set as prop', () => {
+    const { container } = render(<Box colorMode="test">hello world</Box>, {
+      theme: {
+        Box: {
+          modes: {
+            test: {
+              css: { root: { backgroundColor: 'red' } },
+              defaultProps: { color: 'primaryTint' },
+            },
+          },
+        },
+      },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
 
   it('renders correctly for applyTheme', () => {
     const Card = applyTheme(Box, {
