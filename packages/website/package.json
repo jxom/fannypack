@@ -20,7 +20,7 @@
     "@zeit/next-typescript": "1.1.1",
     "base64-url": "2.2.0",
     "mdx-docs": "^2.0.0-alpha.0",
-    "next": "^7",
+    "next": "^9",
     "parse-prop-types": "0.3.0",
     "playroom": "0.9.1",
     "prop-types": "15.7.2",
