@@ -62,15 +62,17 @@ export const Popover: React.FunctionComponent<LocalPopoverProps> & PopoverCompon
           : children
           ? React.cloneElement(children as React.ReactElement<any>, { use: PopoverToggle, ...popover })
           : null}
-        <PopoverPopover elevation="200" {...props} {...popover} use={Pane}>
-          {({ initialFocusRef }) => (
-            <React.Fragment>
-              {showCloseButton && <PopoverClose elementRef={initialFocusRef} {...popover} />}
+        {popover.isVisible && (
+          <PopoverPopover elevation="200" {...props} {...popover} use={Pane}>
+            {({ initialFocusRef }) => (
+              <React.Fragment>
+                {showCloseButton && <PopoverClose elementRef={initialFocusRef} {...popover} />}
               {/* eslint-disable-line */}
-              {typeof content === 'function' ? content({ initialFocusRef, ...popover }) : content}
-            </React.Fragment>
-          )}
-        </PopoverPopover>
+                {typeof content === 'function' ? content({ initialFocusRef, ...popover }) : content}
+              </React.Fragment>
+            )}
+          </PopoverPopover>
+        )}
       </InlineBlock>
     )}
   </PopoverContainer>
