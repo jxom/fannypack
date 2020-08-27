@@ -502,35 +502,42 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
 
   render = () => {
     const { isDropdown, isLoading, popoverProps, placeholder, renderTrigger, renderValue, ...props } = this.props;
-    const { selectedOptions } = this.state;
+    const { contextKey, selectedOptions } = this.state;
 
-    return isDropdown ? (
-      <SelectMenuPopover content={this.renderMenu} {...popoverProps}>
-        {renderTrigger &&
-          renderTrigger({
-            isLoading,
-            placeholder,
-            props: {
-              ...props,
-              children:
-                Object.keys(selectedOptions).length > 0 && renderValue
-                  ? renderValue(
-                      getAttribute(selectedOptions, 'value'),
-                      getAttributes(selectedOptions, 'value'),
-                      selectedOptions
-                    )
-                  : placeholder
-            },
-            selectedOptions,
-            renderValue
-          })}
-      </SelectMenuPopover>
-    ) : (
-      this.renderMenu()
+    return (
+      // @ts-ignore
+      <Loads context={contextKey} fn={this.loadOptions} defer={!this.loadOptions}>
+        {record =>
+          isDropdown ? (
+            <SelectMenuPopover content={this.renderMenu(record)} {...popoverProps}>
+              {renderTrigger &&
+                renderTrigger({
+                  isLoading,
+                  placeholder,
+                  props: {
+                    ...props,
+                    children:
+                      Object.keys(selectedOptions).length > 0 && renderValue
+                        ? renderValue(
+                            getAttribute(selectedOptions, 'value'),
+                            getAttributes(selectedOptions, 'value'),
+                            selectedOptions
+                          )
+                        : placeholder
+                  },
+                  selectedOptions,
+                  renderValue
+                })}
+            </SelectMenuPopover>
+          ) : (
+            this.renderMenu(record)()
+          )
+        }
+      </Loads>
     );
   };
 
-  renderMenu = (popover?: PopoverContainerRenderProps) => {
+  renderMenu = ({ load, error, isPending, isResolved, isRejected }) => (popover?: PopoverContainerRenderProps) => {
     const {
       renderBottomActions,
       isDropdown,
@@ -542,42 +549,25 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
       useTags,
       ...props
     } = this.props;
-    const { contextKey, selectedOptions } = this.state;
+    const { selectedOptions } = this.state;
     const selectedOptionsValues: SelectMenuItems = Object.values(selectedOptions);
     return (
-      // @ts-ignore
-      <Loads context={contextKey} fn={this.loadOptions} defer={!this.loadOptions}>
-        {({
-          load,
-          error,
-          isPending,
-          isResolved,
-          isRejected
-        }: {
-          error: any;
-          load: () => any;
-          isPending: boolean;
-          isResolved: boolean;
-          isRejected: boolean;
-        }) => (
-          <_SelectMenu setInitialFocus={!isSearchable} {...(isDropdown ? {} : props)}>
-            {isSearchable && (
-              <SelectMenuSearchInput
-                isDropdownActive={popover && popover.isVisible}
-                isLoading={isPending}
-                onChange={event => {
-                  event.persist();
-                  this.handleSearch({ event, load });
-                }}
-                {...searchInputProps}
-              />
-            )}
-            {useTags && selectedOptionsValues.length > 0 && this.renderTopSection({ selectedOptionsValues })}
-            {this.renderOptions({ error, isLoading: isPending, isResolved, isRejected, load })}
-            {(isMultiSelect || isDropdown) && this.renderBottomSection({ popover, selectedOptionsValues })}
-          </_SelectMenu>
+      <_SelectMenu setInitialFocus={!isSearchable} {...(isDropdown ? {} : props)}>
+        {isSearchable && (
+          <SelectMenuSearchInput
+            isDropdownActive={popover && popover.isVisible}
+            isLoading={isPending}
+            onChange={event => {
+              event.persist();
+              this.handleSearch({ event, load });
+            }}
+            {...searchInputProps}
+          />
         )}
-      </Loads>
+        {useTags && selectedOptionsValues.length > 0 && this.renderTopSection({ selectedOptionsValues })}
+        {this.renderOptions({ error, isLoading: isPending, isResolved, isRejected, load })}
+        {(isMultiSelect || isDropdown) && this.renderBottomSection({ popover, selectedOptionsValues })}
+      </_SelectMenu>
     );
   };
 
